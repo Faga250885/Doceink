@@ -1,6 +1,6 @@
 # Doceink
 
-Firmware para el lector de tinta electrónica **Metalio E-Ink4 (ESP32-S3)**. Incluye lectura de libros, tareas, calculadora y Gemini por Wi-Fi.
+Firmware para el lector de tinta electrónica **Metalio E-Ink4 (ESP32-S3)**. Incluye lectura de libros, tareas, calculadora y conversación con ChatGPT por Wi-Fi mediante la API de OpenAI. El asistente requiere una clave propia con crédito disponible y guarda el historial en la tarjeta del lector.
 
 ## Actualizar el lector
 
