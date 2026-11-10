@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.152](https://github.com/Faga250885/Doceink/releases/tag/v0.75.152).
-- [OTA firmware: 0.75.150](https://github.com/Faga250885/Doceink/releases/download/v0.75.152/Doceink-EInk4.bin).
+- [Documented version: 0.75.153](https://github.com/Faga250885/Doceink/releases/tag/v0.75.153).
+- [OTA firmware: 0.75.150](https://github.com/Faga250885/Doceink/releases/download/v0.75.153/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.153
+
+- News setup is positioned below its toolbar from the first opening. No Wi-Fi connection is requested on entry; Configure News connects on demand and generates the QR.
+- Settings → Display → Display now offers automatic or manual screen refresh. In manual mode press the microphone button once to refresh the current screen. This setting persists across restarts.
+- Firmware build and all 64 automated tests passed. Manual refresh and first-time News setup still require verification on physical Metalio.
 
 ## Changes in 0.75.152
 
@@ -44,4 +50,4 @@ Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files ar
 - Cover previews avoid upscaling existing low-resolution images and use a single monochrome conversion without an ordered grid or slow two-pass grayscale refresh.
 - English is the fresh-install default. English, Spanish and Simplified Chinese catalogs and pairing/file-transfer pages were reviewed. OTA retains the selected language and user data.
 
-Validation: all 64 automated tests pass, ESP32-S3 compilation succeeds, and the clean image has verified blank personal-data regions. Firmware: 5,110,960 bytes, leaving 147,056 bytes in its 5 MiB OTA partition. Recorder behavior during standby and cover appearance still require on-device verification. The owner confirmed a previous clean installation from Windows; macOS USB installation remains unverified on hardware.
+Validation: all 64 automated tests pass, ESP32-S3 compilation succeeds, and the clean image has verified blank personal-data regions. Firmware: 5,112,736 bytes, leaving 147,056 bytes in its 5 MiB OTA partition. Recorder behavior during standby and cover appearance still require on-device verification. The owner confirmed a previous clean installation from Windows; macOS USB installation remains unverified on hardware.
