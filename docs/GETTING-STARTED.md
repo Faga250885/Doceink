@@ -4,7 +4,7 @@
 
 [Back to the main page](../README.md)
 
-English menu names below describe their functions. Some firmware labels may still appear in Spanish; the relevant names are included where helpful.
+English is the fresh-install default. Spanish and Simplified Chinese are available in Settings. OTA retains your choice.
 
 ## Basic controls
 
@@ -31,6 +31,7 @@ Data is organized under `metalio/e-ink/` on the card:
 | `metalio/e-ink/wallpaper/` | Wallpapers |
 | `metalio/e-ink/fonts/` | Reading fonts in `.ef` format |
 | `metalio/e-ink/fonts_ttf/` | TTF/OTF files for the import process; these are not equivalent to converted `.ef` fonts |
+| `metalio/e-ink/recordings/` | Local WAV recordings |
 | `metalio/e-ink/chat_log/` | Conversation history |
 | `metalio/e-ink/personal_tasks.json` | Personal tasks |
 | `metalio/e-ink/work_tasks.json` | Work tasks |
@@ -68,6 +69,12 @@ Set your city in Weather. Press **Refresh / Actualizar** to download data for th
 
 Configure your own API key in ChatGPT settings. The package does not include a shared account. Make sure your account has access to the service you plan to use.
 
-A new conversation requires internet access. History stored on microSD can be opened offline for reading; sending more messages requires a connection.
+A new conversation requires internet access. History stored on microSD can be opened offline for reading; voice messages are disabled in history. Start a new conversation to send voice messages.
 
 Tasks provides local **Personal** and **Work / Trabajo** lists. Dictation uses Wi-Fi; this version does not offer offline speech recognition. Jira is not required.
+
+## Offline Recorder
+
+Hold a Home shortcut and select **Recorder**. Insert the microSD and disable USB disk mode, then press **Start recording**. Audio is written as you speak to a temporary WAV file on the card, without Wi-Fi, an API key or cloud processing. You can pause and resume. Recording continues during standby; wake Metalio and return to Recorder to stop it. Confirm Stop, then choose Save to microSD or Discard. Files are under `metalio/e-ink/recordings/`. This app records sound; it does not transcribe speech.
+
+Wi-Fi stays disconnected at startup until you explicitly connect or use a feature that needs it, such as Refresh, dictation or a new conversation. Opening cached News, Weather or history does not request a connection.

@@ -29,6 +29,7 @@ El sistema organiza los datos bajo `metalio/e-ink/` en la tarjeta. Algunas ubica
 | `metalio/e-ink/wallpaper/` | Fondos |
 | `metalio/e-ink/fonts/` | Tipografías de lectura en formato `.ef` |
 | `metalio/e-ink/fonts_ttf/` | Archivos TTF/OTF para el proceso de importación; no son equivalentes a una fuente `.ef` ya convertida |
+| `metalio/e-ink/recordings/` | Grabaciones WAV locales |
 | `metalio/e-ink/chat_log/` | Historial de conversaciones |
 | `metalio/e-ink/personal_tasks.json` | Tareas personales |
 | `metalio/e-ink/work_tasks.json` | Tareas de trabajo |
@@ -66,6 +67,12 @@ En Clima, configura tu ciudad. Pulsa **Actualizar** para descargar datos por pri
 
 Configura tu propia clave API desde los ajustes de ChatGPT. El paquete no incluye una cuenta compartida. Comprueba que tu cuenta tenga acceso al servicio que vas a utilizar.
 
-Una conversación nueva necesita internet. El historial guardado en la microSD se puede abrir para consultar conversaciones sin conexión. Continuar enviando mensajes necesita conexión.
+Una conversación nueva necesita internet. El historial guardado en la microSD se puede abrir para consultar conversaciones sin conexión. El envío de voz está bloqueado en el historial; inicia una conversación nueva para enviar mensajes.
 
 Tareas ofrece dos listas **Personal** y **Trabajo**, guardadas localmente. El dictado utiliza Wi-Fi; esta versión no ofrece reconocimiento de voz sin conexión. No necesitas Jira.
+
+## Grabadora local
+
+Mantén pulsado un acceso del Home y selecciona **Grabadora**. Inserta la microSD y desactiva Disco USB; pulsa **Empezar a grabar**. El audio se escribe durante la grabación en un WAV temporal de la tarjeta, sin Wi-Fi, clave API ni servicios externos. Puedes pausar y reanudar. La grabación continúa durante standby; despierta Metalio y vuelve a Grabadora para detenerla. Confirma Detener y elige Guardar en microSD o No guardar. Los archivos quedan en `metalio/e-ink/recordings/`. La aplicación graba sonido; no transcribe la voz.
+
+Wi-Fi permanece desconectado al arrancar hasta que lo conectes o uses una función que lo necesite, como Actualizar, dictar o iniciar una conversación. Abrir Noticias, Clima o historial guardados no solicita conexión. El idioma predeterminado al instalar desde cero es inglés; puedes elegir español o chino simplificado en Ajustes. OTA conserva tu elección.

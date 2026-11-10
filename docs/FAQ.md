@@ -18,7 +18,7 @@ No. The full image replaces internal flash but does not format the card. Use an 
 
 ### Why is the image 16 MB if the firmware is smaller?
 
-The full image includes the bootloader, fonts, resources and empty regions. In 0.75.149, the application uses 4,989,152 bytes of a 5 MiB partition, leaving 253,728 bytes in that partition. That is not user storage for books; personal files are stored on microSD.
+The full image includes the bootloader, fonts, resources and empty regions. In 0.75.150, the application uses 5,095,824 bytes of a 5 MiB partition, leaving 147,056 bytes in that partition. That is not user storage for books; personal files are stored on microSD.
 
 ### Can I install the full image over Wi-Fi?
 
@@ -54,7 +54,7 @@ Each application needs an initial download saved to microSD. Connect Wi-Fi, chec
 
 ### Does voice input work without internet?
 
-Not in this version. ChatGPT and task dictation use Wi-Fi. Tasks are saved locally and history can be read from microSD.
+ChatGPT and task dictation use Wi-Fi. The separate Recorder app captures WAV audio to microSD entirely offline; it does not transcribe speech. Tasks are saved locally and history can be read from microSD.
 
 ### Do I need Python, commands or a COM port on Windows or Mac?
 

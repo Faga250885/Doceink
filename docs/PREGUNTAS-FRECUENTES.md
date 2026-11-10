@@ -18,7 +18,7 @@ No. La imagen completa reemplaza la memoria interna, pero no formatea la tarjeta
 
 ### ¿Por qué la imagen mide 16 MB si el firmware ocupa menos?
 
-La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.149 la aplicación ocupa 4.989.152 bytes de una partición de 5 MiB. Quedan 253.728 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
+La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.150 la aplicación ocupa 5.095.824 bytes de una partición de 5 MiB. Quedan 147.056 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
 
 ### ¿Puedo instalar la imagen completa por Wi-Fi?
 
@@ -54,7 +54,7 @@ Cada aplicación necesita una descarga inicial guardada en la microSD. Conecta W
 
 ### ¿La voz funciona sin internet?
 
-No en esta versión. ChatGPT y el dictado de tareas usan Wi-Fi. Las tareas se guardan localmente y el historial puede consultarse desde la microSD.
+ChatGPT y el dictado de tareas usan Wi-Fi. La aplicación Grabadora registra audio WAV en microSD sin internet; no transcribe la voz. Las tareas se guardan localmente y el historial puede consultarse desde la microSD.
 
 ### ¿Dónde está el código para compilar?
 
