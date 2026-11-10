@@ -10,7 +10,7 @@ import re
 import sys
 import threading
 
-VERSION = '0.75.147'
+VERSION = '0.75.148'
 FLASH_BYTES = 16 * 1024 * 1024
 TEXT = {
  'title': ('DoceInk Setup', 'Instalar DoceInk'),
@@ -34,7 +34,7 @@ TEXT = {
  'help_text': ('Disable USB disk mode on Metalio and close serial-terminal apps. Use a data cable. If automatic connection fails, hold the physical BOOT button while restarting Metalio, release it, then retry. BOOT is the GPIO0 hardware button, not the red on-screen key. The port may change. If several devices are listed, disconnect the others or select your Metalio.', 'Desactiva Disco USB y cierra las aplicaciones de puerto serie. Usa un cable de datos. Si no conecta automáticamente, mantén el botón físico BOOT al reiniciar Metalio, suéltalo y reintenta. BOOT es el botón de hardware GPIO0, no el botón rojo de la pantalla. El puerto puede cambiar. Si aparecen varios dispositivos, desconecta los demás o selecciona tu Metalio.'),
  'details': ('Details', 'Detalles'),
  'licenses': ('Licenses', 'Licencias'),
- 'credit': ('Created by Franko García · Faga12@gmail.com', 'Creado por Franko García · Faga12@gmail.com'),
+ 'credit': ('Created by faga12@gmail.com', 'Creado por faga12@gmail.com'),
  'offline': ('Firmware included · No Python or commands required', 'Firmware incluido · Sin Python ni comandos'),
 }
 

@@ -18,7 +18,7 @@ No. The full image replaces internal flash but does not format the card. Use an 
 
 ### Why is the image 16 MB if the firmware is smaller?
 
-The full image includes the bootloader, fonts, resources and empty regions. In 0.75.147, the application uses 4,988,880 bytes of a 5 MiB partition, leaving 254,000 bytes in that partition. That is not user storage for books; personal files are stored on microSD.
+The full image includes the bootloader, fonts, resources and empty regions. In 0.75.148, the application uses 4,989,072 bytes of a 5 MiB partition, leaving 253,808 bytes in that partition. That is not user storage for books; personal files are stored on microSD.
 
 ### Can I install the full image over Wi-Fi?
 
@@ -58,7 +58,7 @@ Not in this version. ChatGPT and task dictation use Wi-Fi. Tasks are saved local
 
 ### Do I need Python or commands on Windows?
 
-No. Download `DoceInk-Setup-0.75.147.exe`, connect Metalio and run it. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or other operating systems.
+No. Download `DoceInk-Setup-0.75.148.exe`, connect Metalio and run it. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or other operating systems.
 
 ### Where is the source project for building the firmware?
 

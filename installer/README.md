@@ -23,8 +23,8 @@ The source distribution attached to the release includes the installer source an
 The packaged executable also supports internal verification modes:
 
 ```powershell
-.\DoceInk-Setup-0.75.147.exe --self-test result.json
-.\DoceInk-Setup-0.75.147.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.148.exe --self-test result.json
+.\DoceInk-Setup-0.75.148.exe --smoke-test gui.json
 ```
 
 These verify included resources and the GUI without enumerating or opening serial ports. They do not replace a real hardware installation test.

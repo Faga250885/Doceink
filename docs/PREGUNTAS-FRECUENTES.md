@@ -18,7 +18,7 @@ No. La imagen completa reemplaza la memoria interna, pero no formatea la tarjeta
 
 ### ¿Por qué la imagen mide 16 MB si el firmware ocupa menos?
 
-La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.147 la aplicación ocupa 4.988.880 bytes de una partición de 5 MiB. Quedan 254.000 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
+La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.148 la aplicación ocupa 4.989.072 bytes de una partición de 5 MiB. Quedan 253.808 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
 
 ### ¿Puedo instalar la imagen completa por Wi-Fi?
 

@@ -6,7 +6,7 @@
 
 ## Windows: connect and run
 
-1. [Download DoceInk Setup 0.75.147](https://github.com/Faga250885/Doceink/releases/download/v0.75.147/DoceInk-Setup-0.75.147.exe).
+1. [Download DoceInk Setup 0.75.148](https://github.com/Faga250885/Doceink/releases/download/v0.75.148/DoceInk-Setup-0.75.148.exe).
 2. Connect **Metalio E-Ink4** with a USB data cable. Disable USB disk mode if it is active.
 3. Open the downloaded `.exe`. It includes the firmware and tools; you do not need Python, a terminal or another download.
 4. The installer automatically selects a single matching ESP USB connection. If several devices are connected, select your Metalio or disconnect the others.
@@ -47,7 +47,7 @@ Metalio should restart and show the DoceInk symbol and name for two seconds befo
 
 ## Advanced installation: macOS/Linux or manual recovery
 
-Download the [full-image ZIP](https://github.com/Faga250885/Doceink/releases/download/v0.75.147/Metalio-0.75.147-instalacion-limpia.zip) and extract it. The image is `Metalio-instalacion-limpia.bin`; that filename is retained for compatibility. Windows users normally do not need this ZIP.
+Download the [full-image ZIP](https://github.com/Faga250885/Doceink/releases/download/v0.75.148/Metalio-0.75.148-instalacion-limpia.zip) and extract it. The image is `Metalio-instalacion-limpia.bin`; that filename is retained for compatibility. Windows users normally do not need this ZIP.
 
 In a terminal inside the extracted folder:
 
@@ -60,7 +60,7 @@ python -m pip install esptool==4.12.0
 Check the full image with `shasum -a 256 Metalio-instalacion-limpia.bin` on macOS or `sha256sum Metalio-instalacion-limpia.bin` on Linux. Expected SHA-256:
 
 ```text
-88a3522d9c07837c9e972b676a29e7398bddfbb7b26d61900ba4739ab1bfce8a
+d98256c5a2c0dfe308a33763f85233d12cfd4ae379a092114e9bcc43ed802ebf
 ```
 
 Replace `PORT` with the actual serial port. Typical names are `/dev/cu.usbmodem…` on macOS or `/dev/ttyACM…` on Linux. **This manual command writes directly, erases internal settings and does not show the Windows installer's confirmation.**
@@ -75,6 +75,6 @@ This uses [Espressif's esptool 4.12.0](https://pypi.org/project/esptool/4.12.0/)
 
 The firmware compiles successfully. Startup rendering, display/input regression tests and installer safety tests passed. The packaged Windows executable passed firmware-integrity and GUI smoke tests without opening a USB port. **A full clean installation on a physical Metalio remains pending validation.**
 
-The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.147-manifest.json).
+The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.148-manifest.json).
 
-The image is 16 MB including empty space. The application is **4,988,880 bytes**. Neither the complete image nor the `.exe` is an OTA file; use `Doceink-EInk4.bin` for firmware updates.
+The image is 16 MB including empty space. The application is **4,989,072 bytes**. Neither the complete image nor the `.exe` is an OTA file; use `Doceink-EInk4.bin` for firmware updates.

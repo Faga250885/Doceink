@@ -6,11 +6,11 @@
 
 Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 16 MB of flash. Books, local tasks, voice conversations with ChatGPT, RSS news, weather, a clock, a calculator and games in one interface.
 
-**Documented version: 0.75.147.** This repository provides downloads and documentation for installing and using Metalio.
+**Documented version: 0.75.148.** This repository provides downloads and documentation for installing and using Metalio.
 
 ## Install from scratch
 
-### [Download for Windows — connect Metalio and run](https://github.com/Faga250885/Doceink/releases/download/v0.75.147/DoceInk-Setup-0.75.147.exe)
+### [Download for Windows — connect Metalio and run](https://github.com/Faga250885/Doceink/releases/download/v0.75.148/DoceInk-Setup-0.75.148.exe)
 
 **Connect Metalio → open the `.exe` → click Install.** No Python, terminal commands or separate firmware download. English by default; Spanish is available in the language selector.
 
@@ -26,7 +26,7 @@ The package is built from firmware build outputs and system resources. **It cont
 
 | I want to… | File or method | What happens to my data |
 | --- | --- | --- |
-| Install from scratch on compatible hardware | `DoceInk-Setup-0.75.147.exe`, over USB | Replaces internal flash; preserves the microSD card |
+| Install from scratch on compatible hardware | `DoceInk-Setup-0.75.148.exe`, over USB | Replaces internal flash; preserves the microSD card |
 | Update Metalio with Doceink already installed | Settings → System → Information → Check for updates | Preserves accounts, settings and files |
 | Download the update firmware | `Doceink-EInk4.bin` in Releases | Contains the OTA application, not a complete installer |
 
@@ -34,7 +34,7 @@ The package is built from firmware build outputs and system resources. **It cont
 
 - [Latest release and downloads](https://github.com/Faga250885/Doceink/releases/latest)
 - [Update without erasing your data](docs/UPDATES.md)
-- [SHA-256 checksums for 0.75.147](SHA256SUMS.txt)
+- [SHA-256 checksums for 0.75.148](SHA256SUMS.txt)
 - [Release history](https://github.com/Faga250885/Doceink/releases)
 
 ## Features
@@ -74,4 +74,4 @@ This installer is intended **only for Metalio E-Ink4 with an ESP32-S3 and 16 MB 
 
 The firmware uses ESP-IDF, LVGL and other third-party components, which retain their respective licenses. The main license does not replace those component licenses.
 
-Created by **Franko García** · Faga12@gmail.com
+Created by faga12@gmail.com

@@ -23,8 +23,8 @@ El paquete de código adjunto a la publicación incluye el instalador y los arch
 El ejecutable admite estos modos de verificación internos:
 
 ```powershell
-.\DoceInk-Setup-0.75.147.exe --self-test result.json
-.\DoceInk-Setup-0.75.147.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.148.exe --self-test result.json
+.\DoceInk-Setup-0.75.148.exe --smoke-test gui.json
 ```
 
 Comprueban recursos e interfaz sin enumerar ni abrir puertos serie. No sustituyen una prueba de instalación en hardware.
