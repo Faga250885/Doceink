@@ -1,6 +1,14 @@
 name: Build desktop installers
 on:
   workflow_dispatch:
+    inputs:
+      target:
+        description: Build all platforms, or use the alternate Apple Silicon runner
+        type: choice
+        default: all
+        options:
+          - all
+          - apple-silicon
 permissions:
   contents: read
 jobs:
@@ -8,11 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - runner: macos-15
-            arch: arm64
-          - runner: macos-15-intel
-            arch: x86_64
+        include: ${{ fromJSON(inputs.target == 'apple-silicon' && '[{"runner":"macos-26","arch":"arm64"}]' || '[{"runner":"macos-15","arch":"arm64"},{"runner":"macos-15-intel","arch":"x86_64"}]') }}
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 25
     steps:
@@ -35,6 +39,7 @@ jobs:
             installer/build/*test*.json
           if-no-files-found: error
   windows:
+    if: inputs.target != 'apple-silicon'
     runs-on: windows-latest
     timeout-minutes: 25
     steps:
