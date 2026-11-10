@@ -4,7 +4,7 @@
 
 Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, grabadora local, reloj, calculadora y juegos en una misma interfaz.
 
-**Versión documentada: 0.75.151.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
+**Versión documentada: 0.75.152.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
 
 ## Instalar desde cero
 
@@ -18,7 +18,7 @@ Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y
 
 **Conecta Metalio → abre DoceInk Setup → pulsa Instalar.** Lo detecta automáticamente, sin elegir puertos COM ni serie. Sin Python, comandos ni descargar el firmware manualmente. Cada instalación obtiene la última versión estable de GitHub y requiere internet. Se abre en inglés y permite cambiar a español. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
 
-El instalador **0.75.149.1** añade detección automática y versiones de macOS; el firmware está en **0.75.151**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
+El instalador **0.75.149.1** añade detección automática y versiones de macOS; el firmware está en **0.75.152**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
 
 El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 
@@ -38,7 +38,7 @@ El paquete se genera con los archivos del firmware y sus recursos: **no incluye 
 
 - [Última publicación y descargas](https://github.com/Faga250885/Doceink/releases/latest)
 - [Actualizar conservando los datos](docs/ACTUALIZACIONES.md)
-- [Huellas SHA-256 de 0.75.151](SHA256SUMS.txt)
+- [Huellas SHA-256 de 0.75.152](SHA256SUMS.txt)
 - [Historial de versiones](https://github.com/Faga250885/Doceink/releases)
 
 ## Qué incluye

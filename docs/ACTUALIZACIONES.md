@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.151](https://github.com/Faga250885/Doceink/releases/tag/v0.75.151).
-- [Firmware OTA 0.75.151](https://github.com/Faga250885/Doceink/releases/download/v0.75.151/Doceink-EInk4.bin).
+- [Versión documentada 0.75.152](https://github.com/Faga250885/Doceink/releases/tag/v0.75.152).
+- [Firmware OTA 0.75.152](https://github.com/Faga250885/Doceink/releases/download/v0.75.152/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.152
+
+- Grabadora local: acceso desde la toolbar a las grabaciones identificadas por fecha y hora, reproducción local y borrado con confirmación. Pausa/reanudar y detener aparecen lado a lado. Un indicador avisa de la grabación en la topbar y en standby. El icono del Home usa el micrófono de Lucide.
+- Los estados iniciales de Noticias y ChatGPT conservan la topbar y la toolbar, con el mensaje en la tarjeta de contenido.
+- Pasan 64 pruebas automáticas, incluida la validación WAV y los estados del indicador. Falta verificar en Metalio la reproducción, el borrado, standby y la apariencia de las pantallas de configuración.
 
 ## Novedades de 0.75.151
 
@@ -38,4 +44,4 @@ No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No interc
 - Las portadas evitan ampliar imágenes de baja resolución y usan una conversión monocroma sin trama ordenada ni el refresco lento de dos pasadas de grises.
 - Inglés predeterminado al instalar desde cero. Revisión de los catálogos inglés, español y chino simplificado y de las páginas de vinculación y transferencia. OTA conserva el idioma y los datos del usuario.
 
-Validación: pasan las 64 pruebas automáticas, compila el firmware ESP32-S3 y la imagen limpia tiene verificadas sus regiones de datos personales vacías. Firmware: 5.095.824 bytes; quedan 147.056 bytes en su partición OTA de 5 MiB. La grabación durante standby y el aspecto de las portadas requieren prueba física. El propietario confirmó previamente la instalación limpia desde Windows; la instalación USB desde macOS sigue sin validar en hardware.
+Validación: pasan las 64 pruebas automáticas, compila el firmware ESP32-S3 y la imagen limpia tiene verificadas sus regiones de datos personales vacías. Firmware: 5.110.960 bytes; quedan 147.056 bytes en su partición OTA de 5 MiB. La grabación durante standby y el aspecto de las portadas requieren prueba física. El propietario confirmó previamente la instalación limpia desde Windows; la instalación USB desde macOS sigue sin validar en hardware.
