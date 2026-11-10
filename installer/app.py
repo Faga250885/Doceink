@@ -10,7 +10,7 @@ import re
 import sys
 import threading
 
-VERSION = '0.75.146'
+VERSION = '0.75.147'
 FLASH_BYTES = 16 * 1024 * 1024
 TEXT = {
  'title': ('DoceInk Setup', 'Instalar DoceInk'),
@@ -34,6 +34,7 @@ TEXT = {
  'help_text': ('Disable USB disk mode on Metalio and close serial-terminal apps. Use a data cable. If automatic connection fails, hold the physical BOOT button while restarting Metalio, release it, then retry. BOOT is the GPIO0 hardware button, not the red on-screen key. The port may change. If several devices are listed, disconnect the others or select your Metalio.', 'Desactiva Disco USB y cierra las aplicaciones de puerto serie. Usa un cable de datos. Si no conecta automáticamente, mantén el botón físico BOOT al reiniciar Metalio, suéltalo y reintenta. BOOT es el botón de hardware GPIO0, no el botón rojo de la pantalla. El puerto puede cambiar. Si aparecen varios dispositivos, desconecta los demás o selecciona tu Metalio.'),
  'details': ('Details', 'Detalles'),
  'licenses': ('Licenses', 'Licencias'),
+ 'credit': ('Created by Franko García · Faga12@gmail.com', 'Creado por Franko García · Faga12@gmail.com'),
  'offline': ('Firmware included · No Python or commands required', 'Firmware incluido · Sin Python ni comandos'),
 }
 
@@ -158,6 +159,7 @@ class Window:
         self.install = ttk.Button(panel, style='Install.TButton', command=self.start); self.install.pack(fill='x', pady=(16, 12))
         self.notice = ttk.Label(panel, wraplength=545, foreground='#555555', font=('Segoe UI', 10)); self.notice.pack(anchor='w')
         self.offline = ttk.Label(panel, foreground='#777777', font=('Segoe UI', 9)); self.offline.pack(anchor='w', pady=(10, 8))
+        self.credit = ttk.Label(panel, foreground='#555555', font=('Segoe UI', 10)); self.credit.pack(anchor='w', pady=(0, 12))
         bottom = ttk.Frame(panel); bottom.pack(fill='x')
         self.help = ttk.Button(bottom, command=self.show_help); self.help.pack(side='left')
         self.details = ttk.Button(bottom, command=self.show_details); self.details.pack(side='left', padx=8)
@@ -172,7 +174,7 @@ class Window:
 
     def translate(self):
         self.root.title(self.text('title'))
-        for name in ('subtitle','compat','connect','install','notice','offline','help','details','licenses'):
+        for name in ('subtitle','compat','connect','install','notice','offline','help','details','licenses','credit'):
             getattr(self, name).configure(text=self.text(name))
         self.status.configure(text=self.text(self.stage))
         self.install.configure(state='normal' if self.port.get() and not self.busy else 'disabled')

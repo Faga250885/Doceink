@@ -16,18 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.146](https://github.com/Faga250885/Doceink/releases/tag/v0.75.146).
-- [OTA firmware: 0.75.146](https://github.com/Faga250885/Doceink/releases/download/v0.75.146/Doceink-EInk4.bin).
+- [Documented version: 0.75.147](https://github.com/Faga250885/Doceink/releases/tag/v0.75.147).
+- [OTA firmware: 0.75.147](https://github.com/Faga250885/Doceink/releases/download/v0.75.147/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
 
-## Changes in 0.75.146
+## Changes in 0.75.147
+
+- Creator credit in the installer and in the Firmware card: Franko García · Faga12@gmail.com.
 
 - Original DoceInk symbol and name displayed for two seconds at power-on.
 - One Windows executable with firmware included, automatic port selection and English/Spanish UI.
 - English-first public documentation with full Spanish guides.
 - Normal Wi-Fi updates continue to preserve accounts, settings and microSD data.
 
-The application is 4,988,704 bytes. No percentage speed improvement is claimed. See [Releases](https://github.com/Faga250885/Doceink/releases) for earlier versions.
+The application is 4,988,880 bytes. No percentage speed improvement is claimed. See [Releases](https://github.com/Faga250885/Doceink/releases) for earlier versions.

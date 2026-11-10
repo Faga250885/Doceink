@@ -2,7 +2,7 @@
 param([string]$FirmwareZip)
 $ErrorActionPreference='Stop'
 $project=Split-Path -Parent $PSScriptRoot
-$version='0.75.146'
+$version='0.75.147'
 $payload=Join-Path $PSScriptRoot 'payload'
 $venv=Join-Path $PSScriptRoot '.venv'
 Push-Location -LiteralPath $project

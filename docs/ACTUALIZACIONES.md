@@ -16,18 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.146](https://github.com/Faga250885/Doceink/releases/tag/v0.75.146).
-- [Firmware OTA 0.75.146](https://github.com/Faga250885/Doceink/releases/download/v0.75.146/Doceink-EInk4.bin).
+- [Versión documentada 0.75.147](https://github.com/Faga250885/Doceink/releases/tag/v0.75.147).
+- [Firmware OTA 0.75.147](https://github.com/Faga250885/Doceink/releases/download/v0.75.147/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
 
-## Novedades de 0.75.146
+## Novedades de 0.75.147
 
 - Símbolo original y nombre DoceInk durante dos segundos al encender.
 - Instalador Windows en un único ejecutable, firmware incluido, selección automática de puerto e interfaz en inglés y español.
 - Documentación pública principalmente en inglés, con traducción completa al español.
 - Las actualizaciones Wi-Fi siguen conservando cuentas, ajustes y datos de la microSD.
 
-La aplicación ocupa 4.988.704 bytes. No se atribuye un porcentaje de mejora de velocidad. Las notas anteriores están en [Releases](https://github.com/Faga250885/Doceink/releases).
+La aplicación ocupa 4.988.880 bytes. No se atribuye un porcentaje de mejora de velocidad. Las notas anteriores están en [Releases](https://github.com/Faga250885/Doceink/releases).
+
+- Crédito del creador en el instalador y en la tarjeta Firmware: Franko García · Faga12@gmail.com.
