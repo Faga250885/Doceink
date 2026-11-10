@@ -6,13 +6,22 @@
 
 ## Windows: conectar y ejecutar
 
-1. [Descarga DoceInk Setup 0.75.149](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.exe).
+1. [Descarga DoceInk Setup 0.75.149.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe).
 2. Conecta **Metalio E-Ink4** con un cable USB de datos. Desactiva Disco USB si está activo.
 3. Abre el `.exe`. Incluye las herramientas y descarga automáticamente el firmware estable más reciente de GitHub. No necesitas Python ni comandos. Requiere internet.
-4. El instalador selecciona automáticamente una conexión USB ESP compatible cuando solo hay una. Si hay varios dispositivos, selecciona tu Metalio o desconecta los demás.
+4. Detecta Metalio automáticamente, sin selector de puertos COM. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
 5. Elige **Español** arriba, pulsa **Instalar DoceInk**, confirma y mantén el USB conectado hasta que termine. Metalio se reiniciará.
 
-![Vista del instalador](../assets/installer-preview.png)
+## macOS: app con detección USB automática
+
+1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) para M1 o posterior, o el [DMG para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg). Requiere **macOS 15 o posterior**.
+2. Abre el DMG, arrastra **DoceInk Setup** a Aplicaciones y abre la app.
+3. Conecta Metalio con un cable USB de datos, con Disco USB desactivado. Detecta la conexión automáticamente: no necesitas terminal, instalar Python ni elegir puertos.
+4. Pulsa **Instalar DoceInk** y confirma. Descarga y verifica el firmware estable más reciente de GitHub antes de escribir.
+
+**Firma:** la app tiene una firma ad hoc para comprobar su integridad, pero todavía no tiene firma Apple Developer ID ni notarización. Gatekeeper podría impedir abrirla. Aún no es una distribución notarizada sin avisos; no desactives Gatekeeper. Las compilaciones nativas y las pruebas automáticas no equivalen a una instalación USB física validada.
+
+La versión del instalador **0.75.149.1** es independiente del firmware **0.75.149**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
 
 ## Qué pasa con los datos
 
@@ -25,7 +34,7 @@ El paquete no contiene cuentas, contraseñas, claves API ni conversaciones perso
 ## Requisitos y comprobaciones
 
 - Metalio E-Ink4, ESP32-S3 y **flash de 16 MB**. No está preparado para otras placas.
-- Windows 10/11 de 64 bits x86 y cable USB de datos.
+- Windows 10/11 x64 o macOS 15+ (Apple Silicon o Intel), con cable USB de datos.
 - Cada instalación consulta GitHub y descarga su última versión estable. Verifica SHA-256 y manifiesto antes de abrir el puerto USB. No recurre a una versión antigua sin conexión.
 - El instalador verifica tamaño y SHA-256 de la imagen, rechaza otros chips ESP y comprueba que la memoria sea de 16 MB antes de escribir. No puede distinguir todas las placas que usan ese mismo chip; conecta únicamente el modelo de Metalio indicado.
 
@@ -35,7 +44,7 @@ El paquete no contiene cuentas, contraseñas, claves API ni conversaciones perso
 
 Pulsa **Ayuda de conexión**. Revisa el cable de datos, desactiva Disco USB y cierra programas que estén usando el puerto serie.
 
-Normalmente se puede entrar automáticamente en modo de descarga. Si tu conexión no lo permite, mantén el botón físico **BOOT** al reiniciar Metalio, suéltalo y reintenta. BOOT es el botón de hardware GPIO0, no el botón rojo táctil de la interfaz. Consulta las instrucciones del fabricante para localizarlo. El puerto puede cambiar; el instalador actualiza la lista automáticamente.
+Normalmente se puede entrar automáticamente en modo de descarga. Si tu conexión no lo permite, mantén el botón físico **BOOT** al reiniciar Metalio, suéltalo y reintenta. BOOT es el botón de hardware GPIO0, no el botón rojo táctil de la interfaz. Consulta las instrucciones del fabricante para localizarlo. La detección se actualiza automáticamente, incluso al reconectar. Si cambia la conexión durante la descarga, el instalador se detiene antes de escribir y permite reintentar.
 
 No desconectes el USB mientras escribe. Si falla, muestra detalles y permite reintentar; no informa que terminó correctamente si la operación falló.
 
@@ -43,9 +52,9 @@ No desconectes el USB mientras escribe. Si falla, muestra detalles y permite rei
 
 Metalio debería reiniciarse y mostrar el símbolo con **DoceInk** debajo durante dos segundos antes de la pantalla principal. Si permanece en modo de descarga, reinicia sin mantener BOOT. Sigue los [primeros pasos](PRIMEROS-PASOS.md) para configurar microSD, Wi-Fi y cuentas.
 
-## Instalación avanzada: macOS/Linux o recuperación manual
+## Instalación avanzada: Linux o recuperación manual
 
-Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/Metalio-0.75.149-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows normalmente basta con el `.exe`.
+Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/Metalio-0.75.149-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows y Mac normalmente se utiliza el instalador gráfico de arriba.
 
 En una terminal dentro de la carpeta extraída:
 
@@ -71,7 +80,7 @@ Se utiliza [esptool 4.12.0 de Espressif](https://pypi.org/project/esptool/4.12.0
 
 ## Validación y contenido
 
-La compilación del firmware, las pruebas del arranque, pantalla y entrada táctil, y las pruebas de seguridad del instalador pasaron. El ejecutable empaquetado pasó las comprobaciones de integridad e interfaz sin abrir puertos USB. **La instalación limpia completa en un Metalio físico sigue pendiente de validación.**
+La compilación del firmware y las pruebas del arranque, pantalla y entrada táctil pasaron. El instalador 0.75.149.1 tiene dieciséis pruebas automáticas de detección USB, desconexión, cancelación, validación del firmware y descargas. Las comprobaciones de la aplicación empaquetada verifican recursos, interfaz bilingüe y una descarga real sin abrir puertos USB. En macOS también se comprueba el DMG y se monta en modo de solo lectura. **La instalación limpia completa en un Metalio físico sigue pendiente de validación.**
 
 La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.149-manifest.json).
 

@@ -10,11 +10,17 @@ Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 1
 
 ## Install from scratch
 
-### [Download for Windows — connect Metalio and run](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.exe)
+### Download the installer
 
-**Connect Metalio → open the `.exe` → click Install.** No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release, even from an older copy of this installer (0.75.149 or later). English by default, with a Spanish selector.
+| Computer | Download |
+| --- | --- |
+| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe) |
+| Mac · Apple Silicon (M1 or later) · macOS 15+ | [DoceInk Setup for Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) |
+| Mac · Intel · macOS 15+ | [DoceInk Setup for Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg) |
 
-Follow the **[step-by-step installation guide](docs/INSTALLATION.md)** for requirements, USB installation on Windows, the macOS/Linux alternative and connection troubleshooting.
+**Connect Metalio → open DoceInk Setup → click Install.** Detection is automatic; there is no COM/serial-port selector. No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release. English by default, with a Spanish selector. If several compatible USB devices are connected, leave only Metalio connected.
+
+Installer **0.75.149.1** adds automatic detection and macOS packages; firmware remains **0.75.149**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
 
 The package is built from firmware build outputs and system resources. **It contains no developer accounts, API keys, saved Wi-Fi networks, conversations or personal files.** Each user sets up their own Metalio.
 
@@ -26,7 +32,7 @@ The package is built from firmware build outputs and system resources. **It cont
 
 | I want to… | File or method | What happens to my data |
 | --- | --- | --- |
-| Install from scratch on compatible hardware | `DoceInk-Setup-0.75.149.exe`, over USB | Replaces internal flash; preserves the microSD card |
+| Install from scratch on compatible hardware | DoceInk Setup for Windows or macOS, over USB | Replaces internal flash; preserves the microSD card |
 | Update Metalio with Doceink already installed | Settings → System → Information → Check for updates | Preserves accounts, settings and files |
 | Download the update firmware | `Doceink-EInk4.bin` in Releases | Contains the OTA application, not a complete installer |
 

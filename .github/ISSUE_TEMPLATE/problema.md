@@ -25,6 +25,7 @@ assignees: ''
 
 **Si es un problema de instalación:**
 - Sistema operativo del ordenador:
+- Versión del instalador y chip del Mac (Apple Silicon/Intel), si corresponde:
 - Versión de esptool:
 - Archivo que intentabas instalar:
 - Salida de error (sin datos privados):

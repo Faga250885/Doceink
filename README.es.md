@@ -8,11 +8,17 @@ Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y
 
 ## Instalar desde cero
 
-### [Descargar para Windows — conecta Metalio y ejecuta](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.exe)
+### Descargar el instalador
 
-**Conecta Metalio → abre el `.exe` → pulsa Instalar.** Sin Python, comandos ni descargar el firmware manualmente. Requiere internet: siempre descarga la última versión estable de GitHub, incluso desde una copia anterior de este instalador (0.75.149 o posterior). Se abre en inglés y permite cambiar a español.
+| Ordenador | Descarga |
+| --- | --- |
+| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe) |
+| Mac · Apple Silicon (M1 o posterior) · macOS 15+ | [DoceInk Setup para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) |
+| Mac · Intel · macOS 15+ | [DoceInk Setup para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg) |
 
-Sigue la **[guía de instalación paso a paso](docs/INSTALACION.md)**. Incluye requisitos, instalación por USB desde Windows, alternativa para macOS/Linux y cómo resolver problemas de conexión.
+**Conecta Metalio → abre DoceInk Setup → pulsa Instalar.** Lo detecta automáticamente, sin elegir puertos COM ni serie. Sin Python, comandos ni descargar el firmware manualmente. Cada instalación obtiene la última versión estable de GitHub y requiere internet. Se abre en inglés y permite cambiar a español. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
+
+El instalador **0.75.149.1** añade detección automática y versiones de macOS; el firmware sigue en **0.75.149**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
 
 El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 
@@ -24,7 +30,7 @@ El paquete se genera con los archivos del firmware y sus recursos: **no incluye 
 
 | Quiero… | Archivo o método | Qué ocurre con mis datos |
 | --- | --- | --- |
-| Instalar desde cero en un Metalio compatible | `DoceInk-Setup-0.75.149.exe`, por USB | Reemplaza toda la memoria interna; conserva la microSD |
+| Instalar desde cero en un Metalio compatible | DoceInk Setup para Windows o macOS, por USB | Reemplaza toda la memoria interna; conserva la microSD |
 | Actualizar un Metalio que ya utiliza Doceink | Ajustes → Sistema → Información → Comprobar actualización | Conserva cuentas, ajustes y archivos |
 | Obtener el firmware de actualización | `Doceink-EInk4.bin` en Releases | Es la aplicación OTA, no un instalador completo |
 

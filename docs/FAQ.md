@@ -30,7 +30,7 @@ Check that the cable supports data, try another USB port and disable USB disk mo
 
 ### The port is busy or the connection times out
 
-Close other programs using the COM port, verify that the correct port is selected and that Metalio is in download mode. For unstable connections, try another cable and a direct USB connection. Include the tool's error message when reporting the problem.
+Close other programs using USB serial connections and leave only Metalio connected. Detection is automatic; there is no port selector. For unstable connections, try another data cable and a direct USB connection. Include the tool's error message when reporting the problem.
 
 ### Windows shows an unknown-publisher warning
 
@@ -56,13 +56,13 @@ Each application needs an initial download saved to microSD. Connect Wi-Fi, chec
 
 Not in this version. ChatGPT and task dictation use Wi-Fi. Tasks are saved locally and history can be read from microSD.
 
-### Do I need Python or commands on Windows?
+### Do I need Python, commands or a COM port on Windows or Mac?
 
-No. Download `DoceInk-Setup-0.75.149.exe`, connect Metalio and run it. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or other operating systems.
+No. Download installer 0.75.149.1 for Windows or your Mac architecture, connect Metalio and open the app. It detects the connection automatically. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or Linux. Mac requires macOS 15+; Developer ID signing/notarization is still pending, so Gatekeeper may block opening the app.
 
 ### Where is the source project for building the firmware?
 
-This repository currently distributes firmware and user documentation, and includes the Windows installer source under `installer/`. GitHub's automatic “Source code” download contains this repository's files; it is not the installation ZIP or the full firmware build project.
+This repository currently distributes firmware and user documentation, and includes the Windows/macOS installer source under `installer/`. GitHub's automatic “Source code” download contains this repository's files; it is not the installation ZIP or the full firmware build project.
 
 ### How do I report a problem?
 

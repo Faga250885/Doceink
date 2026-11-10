@@ -58,7 +58,11 @@ No en esta versión. ChatGPT y el dictado de tareas usan Wi-Fi. Las tareas se gu
 
 ### ¿Dónde está el código para compilar?
 
-Este repositorio distribuye firmware y documentación, e incluye el código del instalador Windows en `installer/`. La descarga automática «Source code» de GitHub corresponde al contenido de este repositorio; no sustituye al ZIP de instalación ni contiene el proyecto completo de compilación.
+Este repositorio distribuye firmware y documentación, e incluye el código del instalador Windows/macOS en `installer/`. La descarga automática «Source code» de GitHub corresponde al contenido de este repositorio; no sustituye al ZIP de instalación ni contiene el proyecto completo de compilación.
+
+### ¿Tengo que elegir un puerto o instalar Python en Windows o Mac?
+
+No. El instalador 0.75.149.1 incluye las herramientas y detecta el USB automáticamente. Conecta Metalio, abre la app y pulsa Instalar. Si hay varios dispositivos compatibles, deja conectado solo el Metalio. Hay versiones de Mac para Apple Silicon e Intel con macOS 15+. La firma Developer ID y notarización de Apple siguen pendientes, por lo que Gatekeeper podría impedir abrir la app.
 
 ### ¿Cómo informo de un problema?
 

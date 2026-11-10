@@ -25,6 +25,7 @@ assignees: ''
 
 **For installation problems:**
 - Computer operating system:
+- Installer version and Mac chip (Apple Silicon/Intel), if relevant:
 - esptool version:
 - File you tried to install:
 - Error output (without private data):

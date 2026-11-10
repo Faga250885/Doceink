@@ -3,3 +3,7 @@
 d92bc14e3b77d5cdb54b38ea7a36d6d4e6084b94f80d784d97eb863b0d74e4f3  Metalio-0.75.149-instalacion-limpia.zip
 8cf305cf3c9f65e25dcdf3e5f33b9d84a88e25b8a38fee0c61ca30379fb99b71  Metalio-instalacion-limpia.bin
 045a678709e5419ce4921d74ef17628c1cee69137af37dc8ef2a062f1a720354  DoceInk-Setup-0.75.149-source.zip
+bce79dbc30bfaa62b07af2b85f77ced17c40e885b8b7ffb0c87afedbbef59269  DoceInk-Setup-0.75.149.1.exe
+e43841a324e57191475ac943fe1ba32307e6240b465dd4fa6bfdee177fea74e6  DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg
+aca8f2712dfbd9d26c9ca632d6be4bd19cefbf342f44936af2bdbbeb27767413  DoceInk-Setup-0.75.149.1-macOS-arm64.dmg
+55dc843c5ab3357b8ce3be44e92165aae6dff7fa22193c18c1c6d55a155481dd  DoceInk-Setup-0.75.149.1-source.zip
