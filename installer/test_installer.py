@@ -1,6 +1,7 @@
 import importlib.util
 import io
 import json
+import hashlib
 from pathlib import Path
 import shutil
 from types import SimpleNamespace
@@ -10,7 +11,12 @@ from unittest.mock import patch
 
 spec=importlib.util.spec_from_file_location('installer',Path(__file__).with_name('app.py'))
 a=importlib.util.module_from_spec(spec);spec.loader.exec_module(a)
-PAYLOAD=Path(__file__).resolve().parent/'payload'
+fixture=tempfile.TemporaryDirectory(prefix='install-tests-',dir=Path(__file__).resolve().parent)
+PAYLOAD=Path(fixture.name)
+image=bytes(16*1024*1024)
+(PAYLOAD/'Metalio-instalacion-limpia.bin').write_bytes(image)
+(PAYLOAD/'manifest.json').write_text(json.dumps({'version':'0.75.999','bytes':len(image),
+    'sha256':hashlib.sha256(image).hexdigest()}),encoding='utf-8')
 
 class InstallTests(unittest.TestCase):
     def test_valid_image(self):

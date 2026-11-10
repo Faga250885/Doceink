@@ -9,8 +9,10 @@ import queue
 import re
 import sys
 import threading
+import tempfile
+from download import download_latest
 
-VERSION = '0.75.148'
+VERSION = '0.75.149'
 FLASH_BYTES = 16 * 1024 * 1024
 TEXT = {
  'title': ('DoceInk Setup', 'Instalar DoceInk'),
@@ -24,7 +26,9 @@ TEXT = {
  'notice': ('Clean installation · Internal accounts and settings will be erased.\nYour microSD card is not erased. Wi-Fi updates preserve your data.', 'Instalación limpia · Se borrarán cuentas y ajustes internos.\nLa microSD no se borra. Las actualizaciones Wi-Fi conservan tus datos.'),
  'compat': ('Only for Metalio E-Ink4 · ESP32-S3 · 16 MB flash', 'Solo para Metalio E-Ink4 · ESP32-S3 · flash de 16 MB'),
  'confirm': ('Install on {port}?\n\nThis replaces all internal firmware, accounts, Wi-Fi networks and settings. It does not erase the microSD card.\n\nConfirm that the connected device is a Metalio E-Ink4. Keep the cable connected until installation finishes.', '¿Instalar en {port}?\n\nSe reemplazarán el firmware, las cuentas, redes Wi-Fi y ajustes internos. La microSD no se borra.\n\nConfirma que conectaste un Metalio E-Ink4. Mantén el cable conectado hasta que termine.'),
- 'checking': ('Checking the included firmware…', 'Comprobando el firmware incluido…'),
+ 'latest': ('Checking the latest GitHub release…', 'Consultando la última versión en GitHub…'),
+ 'downloading': ('Downloading the latest firmware…', 'Descargando la última versión del firmware…'),
+ 'checking': ('Verifying downloaded firmware…', 'Verificando el firmware descargado…'),
  'connecting': ('Connecting and checking hardware…', 'Conectando y comprobando el hardware…'),
  'writing': ('Installing… Keep USB connected.', 'Instalando… Mantén el USB conectado.'),
  'done': ('Installation complete. Metalio is restarting.', 'Instalación terminada. Metalio se está reiniciando.'),
@@ -35,7 +39,7 @@ TEXT = {
  'details': ('Details', 'Detalles'),
  'licenses': ('Licenses', 'Licencias'),
  'credit': ('Created by faga12@gmail.com', 'Creado por faga12@gmail.com'),
- 'offline': ('Firmware included · No Python or commands required', 'Firmware incluido · Sin Python ni comandos'),
+ 'offline': ('Downloads the latest firmware · Internet required', 'Descarga el firmware más reciente · Requiere internet'),
 }
 
 
@@ -43,9 +47,11 @@ def assets() -> Path:
     return Path(getattr(sys, '_MEIPASS', Path(__file__).resolve().parent)) / 'payload'
 
 
-def verify_image(folder: Path) -> Path:
+def verify_image(folder: Path, expected_version=None) -> Path:
     manifest = json.loads((folder / 'manifest.json').read_text(encoding='utf-8'))
-    if manifest['version'] != VERSION or manifest['bytes'] != FLASH_BYTES:
+    if ((expected_version is not None and manifest['version'] != expected_version)
+            or not re.fullmatch(r'\d+\.\d+\.\d+', manifest['version'])
+            or manifest['bytes'] != FLASH_BYTES):
         raise ValueError('Unexpected firmware version or size / Versión o tamaño incorrectos')
     image = folder / 'Metalio-instalacion-limpia.bin'
     if image.stat().st_size != FLASH_BYTES:
@@ -71,7 +77,7 @@ class Capture(io.TextIOBase):
         self.tail = (self.tail + value)[-300:]
         matches = re.findall(r'\((\d+)\s*%\)', self.tail)
         if matches:
-            self.emit('progress', min(99, 10 + int(matches[-1]) * .89))
+            self.emit('progress', min(99, 30 + int(matches[-1]) * .69))
         return len(value)
 
     def flush(self):
@@ -81,14 +87,14 @@ class Capture(io.TextIOBase):
         return False
 
 
-def run_install(folder, port, emit, runner=None):
+def run_install(folder, port, emit, runner=None, expected_version=None):
     """Called only after UI confirmation. No filesystem or SD erase operations."""
     emit('stage', 'checking')
-    image = verify_image(folder)
+    image = verify_image(folder, expected_version)
     if runner is None:
         import esptool
         runner = esptool.main
-    emit('progress', 3)
+    emit('progress', 25)
     emit('stage', 'connecting')
     probe = Capture(emit)
     # The --chip guard rejects non-S3 devices before any flash write.
@@ -97,7 +103,7 @@ def run_install(folder, port, emit, runner=None):
     if not re.search(r'Detected flash size:\s*16MB\b', ''.join(probe.parts)):
         raise ValueError('A 16 MB flash chip is required. Nothing was written. / Se requiere flash de 16 MB. No se escribió nada.')
     emit('stage', 'writing')
-    emit('progress', 10)
+    emit('progress', 30)
     output = Capture(emit)
     with contextlib.redirect_stdout(output), contextlib.redirect_stderr(output):
         runner(['--chip', 'esp32s3', '--port', port, '--baud', '460800',
@@ -150,7 +156,8 @@ class Window:
         ttk.Label(panel, text='DoceInk', font=('Segoe UI Semibold', 27)).pack()
         self.subtitle = ttk.Label(panel); self.subtitle.pack(pady=(4, 20))
         self.compat = ttk.Label(panel, foreground='#555555'); self.compat.pack()
-        ttk.Label(panel, text=VERSION, foreground='#777777').pack(pady=(3, 14))
+        self.firmware = ttk.Label(panel, text='Installer '+VERSION, foreground='#777777')
+        self.firmware.pack(pady=(3, 14))
         self.connect = ttk.Label(panel); self.connect.pack(anchor='w')
         self.select = ttk.Combobox(panel, textvariable=self.port, state='readonly')
         self.select.pack(fill='x', pady=(8, 12)); self.select.bind('<<ComboboxSelected>>', lambda _: self.port_changed())
@@ -208,7 +215,7 @@ class Window:
         self.busy = True
         port = self.port.get()
         self.log = ''
-        self.stage = 'checking'
+        self.stage = 'latest'
         self.progress['value'] = 0
         self.select.configure(state='disabled')
         self.lang.configure(state='disabled')
@@ -217,7 +224,12 @@ class Window:
 
     def worker(self, port):
         try:
-            run_install(assets(), port, lambda kind, value: self.queue.put((kind, value)))
+            emit = lambda kind, value: self.queue.put((kind, value))
+            # Every installation fetches latest anew; no bundled or cached fallback.
+            with tempfile.TemporaryDirectory(prefix='DoceInk-') as directory:
+                folder = Path(directory)
+                version = download_latest(folder, emit)
+                run_install(folder, port, emit, expected_version=version)
         except (Exception, SystemExit) as exc:
             self.queue.put(('log', '\n' + str(exc) + '\n'))
             self.queue.put(('stage','error'))
@@ -231,6 +243,7 @@ class Window:
                 if kind == 'log': self.log = (self.log + value)[-100000:]
                 elif kind == 'progress': self.progress['value'] = value
                 elif kind == 'stage': self.stage = value; self.translate()
+                elif kind == 'firmware': self.firmware.configure(text='Firmware '+value)
                 elif kind == 'finished':
                     self.busy = False
                     self.select.configure(state='readonly'); self.lang.configure(state='readonly')
@@ -267,8 +280,10 @@ def main():
         import esptool
         from serial.tools import list_ports
         from esptool.loader import ESPLoader
-        verify_image(assets())
-        result = {'image_integrity': True, 'esptool': esptool.__version__}
+        assert (assets() / 'doceink-symbol.png').is_file()
+        assert (assets() / 'THIRD-PARTY.txt').is_file()
+        from download import LATEST
+        result = {'latest_endpoint': LATEST, 'esptool': esptool.__version__}
         # Load the exact ESP32-S3 stub resource the real installer will need.
         from esptool.targets.esp32s3 import ESP32S3ROM
         from esptool.loader import StubFlasher

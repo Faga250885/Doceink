@@ -12,7 +12,7 @@ Utiliza Windows x64 y Python 3.14.3, como en el entorno de la publicación:
 .\installer\build.ps1
 ```
 
-El script crea un entorno local, instala las dependencias fijadas, descarga la imagen completa, ejecuta las pruebas y genera el ejecutable con PyInstaller. No abre puertos ni instala nada en un Metalio. `-FirmwareZip` permite indicar un ZIP local de imagen completa.
+El script crea un entorno local, instala dependencias fijadas, ejecuta las pruebas del instalador y descarga, y genera el ejecutable con PyInstaller. Empaqueta herramientas, arte e información de licencias, nunca firmware. Al instalar, `download.py` obtiene la última versión estable de Faga250885/Doceink y verifica su SHA-256 y manifiesto antes de pasarla a la instalación confirmada.
 
 El paquete de código adjunto a la publicación incluye el instalador y los archivos de código originales de esptool y PyInstaller. Cada dependencia conserva su licencia; el botón Licencias muestra los avisos incluidos. esptool usa GPL-2.0-o-posterior y PyInstaller incluye una excepción para su bootloader. Consulta las licencias originales en esos archivos.
 
@@ -23,8 +23,8 @@ El paquete de código adjunto a la publicación incluye el instalador y los arch
 El ejecutable admite estos modos de verificación internos:
 
 ```powershell
-.\DoceInk-Setup-0.75.148.exe --self-test result.json
-.\DoceInk-Setup-0.75.148.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.149.exe --self-test result.json
+.\DoceInk-Setup-0.75.149.exe --smoke-test gui.json
 ```
 
 Comprueban recursos e interfaz sin enumerar ni abrir puertos serie. No sustituyen una prueba de instalación en hardware.

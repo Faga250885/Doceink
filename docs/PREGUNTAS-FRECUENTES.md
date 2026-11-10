@@ -18,7 +18,7 @@ No. La imagen completa reemplaza la memoria interna, pero no formatea la tarjeta
 
 ### ¿Por qué la imagen mide 16 MB si el firmware ocupa menos?
 
-La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.148 la aplicación ocupa 4.989.072 bytes de una partición de 5 MiB. Quedan 253.808 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
+La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.149 la aplicación ocupa 4.989.152 bytes de una partición de 5 MiB. Quedan 253.728 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
 
 ### ¿Puedo instalar la imagen completa por Wi-Fi?
 
@@ -63,3 +63,7 @@ Este repositorio distribuye firmware y documentación, e incluye el código del 
 ### ¿Cómo informo de un problema?
 
 Abre un [issue](https://github.com/Faga250885/Doceink/issues/new?template=problema.md) con la versión exacta, los pasos y el mensaje de error. Si el problema ocurre al instalar, incluye tu sistema operativo y la salida de esptool. No publiques claves API, contraseñas Wi-Fi ni conversaciones privadas. Puedes adjuntar una foto del error ocultando esos datos.
+
+### Chrome o Defender bloquea el instalador
+
+Windows Defender detectó `Trojan:Win32/Wacatac.B!ml` en el ejecutable 0.75.148. No omitas el bloqueo ni desactives el antivirus. El instalador 0.75.149 se reconstruyó sin firmware incrustado; el análisis local personalizado de Microsoft Defender no detectó amenazas. Esto no garantiza que Chrome o los controles en la nube lo acepten, ni confirma que la detección anterior fuera un falso positivo. Si vuelve a aparecer, informa del nombre exacto y de la versión del archivo. Microsoft ofrece un [portal de análisis de archivos](https://www.microsoft.com/en-us/wdsi/filesubmission).

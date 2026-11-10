@@ -18,7 +18,7 @@ No. The full image replaces internal flash but does not format the card. Use an 
 
 ### Why is the image 16 MB if the firmware is smaller?
 
-The full image includes the bootloader, fonts, resources and empty regions. In 0.75.148, the application uses 4,989,072 bytes of a 5 MiB partition, leaving 253,808 bytes in that partition. That is not user storage for books; personal files are stored on microSD.
+The full image includes the bootloader, fonts, resources and empty regions. In 0.75.149, the application uses 4,989,152 bytes of a 5 MiB partition, leaving 253,728 bytes in that partition. That is not user storage for books; personal files are stored on microSD.
 
 ### Can I install the full image over Wi-Fi?
 
@@ -58,7 +58,7 @@ Not in this version. ChatGPT and task dictation use Wi-Fi. Tasks are saved local
 
 ### Do I need Python or commands on Windows?
 
-No. Download `DoceInk-Setup-0.75.148.exe`, connect Metalio and run it. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or other operating systems.
+No. Download `DoceInk-Setup-0.75.149.exe`, connect Metalio and run it. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or other operating systems.
 
 ### Where is the source project for building the firmware?
 
@@ -67,3 +67,7 @@ This repository currently distributes firmware and user documentation, and inclu
 ### How do I report a problem?
 
 [Open an issue](https://github.com/Faga250885/Doceink/issues/new?template=bug-report.md) with the exact version, steps and error message. For installation problems, include your operating system and esptool output. Do not post API keys, Wi-Fi passwords or private conversations. You can attach a photo with private details hidden.
+
+### Chrome or Defender blocks the installer
+
+Windows Defender reported `Trojan:Win32/Wacatac.B!ml` for the 0.75.148 executable. Do not bypass the block or disable antivirus protection. The 0.75.149 installer was rebuilt without embedded firmware; a local Microsoft Defender custom scan found no threats. This does not guarantee that Chrome or cloud-based checks will accept it, and the earlier detection has not been declared a confirmed false positive. Report any new detection with its exact name and file version. Microsoft provides a [file-analysis submission portal](https://www.microsoft.com/en-us/wdsi/filesubmission).

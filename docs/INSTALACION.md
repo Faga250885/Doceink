@@ -6,9 +6,9 @@
 
 ## Windows: conectar y ejecutar
 
-1. [Descarga DoceInk Setup 0.75.148](https://github.com/Faga250885/Doceink/releases/download/v0.75.148/DoceInk-Setup-0.75.148.exe).
+1. [Descarga DoceInk Setup 0.75.149](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.exe).
 2. Conecta **Metalio E-Ink4** con un cable USB de datos. Desactiva Disco USB si está activo.
-3. Abre el `.exe`. Incluye firmware y herramientas: no necesitas Python, comandos ni otra descarga.
+3. Abre el `.exe`. Incluye las herramientas y descarga automáticamente el firmware estable más reciente de GitHub. No necesitas Python ni comandos. Requiere internet.
 4. El instalador selecciona automáticamente una conexión USB ESP compatible cuando solo hay una. Si hay varios dispositivos, selecciona tu Metalio o desconecta los demás.
 5. Elige **Español** arriba, pulsa **Instalar DoceInk**, confirma y mantén el USB conectado hasta que termine. Metalio se reiniciará.
 
@@ -26,7 +26,7 @@ El paquete no contiene cuentas, contraseñas, claves API ni conversaciones perso
 
 - Metalio E-Ink4, ESP32-S3 y **flash de 16 MB**. No está preparado para otras placas.
 - Windows 10/11 de 64 bits x86 y cable USB de datos.
-- El firmware viene incluido; no hace falta descargar nada durante la instalación.
+- Cada instalación consulta GitHub y descarga su última versión estable. Verifica SHA-256 y manifiesto antes de abrir el puerto USB. No recurre a una versión antigua sin conexión.
 - El instalador verifica tamaño y SHA-256 de la imagen, rechaza otros chips ESP y comprueba que la memoria sea de 16 MB antes de escribir. No puede distinguir todas las placas que usan ese mismo chip; conecta únicamente el modelo de Metalio indicado.
 
 [SHA256SUMS.txt](../SHA256SUMS.txt) contiene las huellas de los archivos. El ejecutable todavía no tiene firma digital, por lo que Windows puede mostrar un aviso de editor desconocido o SmartScreen. Descárgalo de la publicación oficial y verifica el archivo si Windows solicita revisarlo; no es necesario cambiar el antivirus.
@@ -45,7 +45,7 @@ Metalio debería reiniciarse y mostrar el símbolo con **DoceInk** debajo durant
 
 ## Instalación avanzada: macOS/Linux o recuperación manual
 
-Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.148/Metalio-0.75.148-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows normalmente basta con el `.exe`.
+Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/Metalio-0.75.149-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows normalmente basta con el `.exe`.
 
 En una terminal dentro de la carpeta extraída:
 
@@ -58,7 +58,7 @@ python -m pip install esptool==4.12.0
 Comprueba la imagen con `shasum -a 256 Metalio-instalacion-limpia.bin` en macOS o `sha256sum Metalio-instalacion-limpia.bin` en Linux. La huella debe ser:
 
 ```text
-d98256c5a2c0dfe308a33763f85233d12cfd4ae379a092114e9bcc43ed802ebf
+8cf305cf3c9f65e25dcdf3e5f33b9d84a88e25b8a38fee0c61ca30379fb99b71
 ```
 
 Sustituye `PUERTO` por el puerto serie real, normalmente `/dev/cu.usbmodem…` en macOS o `/dev/ttyACM…` en Linux. **Este comando escribe directamente y borra los ajustes internos; no muestra la confirmación del instalador de Windows.**
@@ -73,6 +73,6 @@ Se utiliza [esptool 4.12.0 de Espressif](https://pypi.org/project/esptool/4.12.0
 
 La compilación del firmware, las pruebas del arranque, pantalla y entrada táctil, y las pruebas de seguridad del instalador pasaron. El ejecutable empaquetado pasó las comprobaciones de integridad e interfaz sin abrir puertos USB. **La instalación limpia completa en un Metalio físico sigue pendiente de validación.**
 
-La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.148-manifest.json).
+La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.149-manifest.json).
 
-La imagen mide 16 MB porque incluye espacio vacío. La aplicación ocupa **4.989.072 bytes**. Ni la imagen completa ni el `.exe` sirven como archivo OTA: para actualizar se utiliza `Doceink-EInk4.bin`.
+La imagen mide 16 MB porque incluye espacio vacío. La aplicación ocupa **4.989.152 bytes**. Ni la imagen completa ni el `.exe` sirven como archivo OTA: para actualizar se utiliza `Doceink-EInk4.bin`.

@@ -12,7 +12,7 @@ Use Windows x64 and Python 3.14.3, matching the published build environment:
 .\installer\build.ps1
 ```
 
-The script creates a local environment, installs the pinned dependencies, downloads the full firmware image, runs the installer tests and packages a windowed executable with PyInstaller. It does not open a serial port or flash hardware. You can supply `-FirmwareZip` with a local full-image ZIP.
+The script creates a local environment, installs pinned dependencies, runs the installer/download tests and packages a windowed executable with PyInstaller. It bundles tools, artwork and licenses, never firmware. At installation time `download.py` fetches the latest stable release from Faga250885/Doceink, verifies its asset digest and image manifest, and passes the verified image to the confirmed installation flow.
 
 The source distribution attached to the release includes the installer source and the unmodified esptool and PyInstaller source archives. Dependencies retain their licenses; the installed application's Licenses button shows the bundled notices. esptool is GPL-2.0-or-later; PyInstaller has a bootloader exception. See the upstream license texts in the source archives.
 
@@ -23,8 +23,8 @@ The source distribution attached to the release includes the installer source an
 The packaged executable also supports internal verification modes:
 
 ```powershell
-.\DoceInk-Setup-0.75.148.exe --self-test result.json
-.\DoceInk-Setup-0.75.148.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.149.exe --self-test result.json
+.\DoceInk-Setup-0.75.149.exe --smoke-test gui.json
 ```
 
 These verify included resources and the GUI without enumerating or opening serial ports. They do not replace a real hardware installation test.
