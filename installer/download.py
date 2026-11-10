@@ -4,6 +4,7 @@ import json
 from pathlib import Path
 import re
 import time
+import sys
 import urllib.request
 import urllib.parse
 import zipfile
@@ -37,7 +38,13 @@ def open_url(url):
     request = urllib.request.Request(url, headers={
         'User-Agent': 'DoceInk-Setup', 'Accept': 'application/vnd.github+json',
         'Cache-Control': 'no-cache', 'X-GitHub-Api-Version': '2022-11-28'})
-    return urllib.request.build_opener(GitHubRedirect()).open(request, timeout=30)
+    handlers = [GitHubRedirect()]
+    if sys.platform == 'darwin':
+        # Frozen macOS Python must not depend on a developer-machine CA path.
+        import ssl
+        import certifi
+        handlers.append(urllib.request.HTTPSHandler(context=ssl.create_default_context(cafile=certifi.where())))
+    return urllib.request.build_opener(*handlers).open(request, timeout=30)
 
 
 def latest_package(opener=open_url):

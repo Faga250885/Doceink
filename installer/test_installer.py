@@ -58,13 +58,39 @@ class InstallTests(unittest.TestCase):
         self.assertEqual(a.preferred_port([port('COM1')]),'COM1')
         self.assertEqual(a.preferred_port([port('COM1'),port('COM2')]),'')
         self.assertEqual(a.preferred_port([]),'')
+        self.assertEqual(a.preferred_port([SimpleNamespace(device='COM9',vid=0x1234,pid=0x1001)]),'')
+        self.assertEqual(a.preferred_port([port('/dev/cu.usbmodem1'),port('/dev/tty.usbmodem1')]),'/dev/cu.usbmodem1')
+    def test_detection_removes_disconnected_or_ambiguous_target(self):
+        import tkinter as tk
+        root=tk.Tk();root.withdraw()
+        window=a.Window(root,scan=False)
+        def port(name):return SimpleNamespace(device=name,vid=0x303a,pid=0x1001)
+        with patch('serial.tools.list_ports.comports',return_value=[port('COM3')]):
+            window.refresh_detection()
+            self.assertEqual(window.port.get(),'COM3')
+        for ports in ([],[port('COM3'),port('COM4')]):
+            with patch('serial.tools.list_ports.comports',return_value=ports),patch('tkinter.messagebox.askyesno') as ask:
+                window.start()
+                self.assertEqual(window.port.get(),'')
+                self.assertIn('disabled',window.install.state())
+                ask.assert_not_called()
+        self.assertFalse(hasattr(window,'select'))
+        root.destroy()
+    def test_target_changed_during_download_never_opens_serial(self):
+        import queue
+        window=object.__new__(a.Window);window.queue=queue.Queue()
+        with patch.object(a,'download_latest',return_value='0.75.999'),patch('serial.tools.list_ports.comports',return_value=[]),patch.object(a,'run_install') as run:
+            window.worker('SIMULATED')
+            run.assert_not_called()
+        self.assertIn(('stage','error'),list(window.queue.queue))
     def test_ui_cancel_never_starts_worker(self):
         import tkinter as tk
         root=tk.Tk();root.withdraw()
         with patch.object(a,'assets',return_value=PAYLOAD):
             window=a.Window(root,scan=False);window.port.set('SIMULATED')
-            with patch('tkinter.messagebox.askyesno',return_value=False),patch.object(a.threading,'Thread') as thread:
+            with patch('serial.tools.list_ports.comports',return_value=[SimpleNamespace(device='SIMULATED',vid=0x303a,pid=0x1001)]),patch('tkinter.messagebox.askyesno',return_value=False) as ask,patch.object(a.threading,'Thread') as thread:
                 window.start();thread.assert_not_called();self.assertFalse(window.busy)
+                ask.assert_called_once()
             window.language.set('Español');window.translate();root.update()
             self.assertEqual(window.install.cget('text'),'Instalar DoceInk')
             window.language.set('English');window.translate();root.update()

@@ -1,7 +1,7 @@
 # Rebuild the Windows installer; this script never flashes a device.
 $ErrorActionPreference='Stop'
 $project=Split-Path -Parent $PSScriptRoot
-$version='0.75.149'
+$version='0.75.149.1'
 $payload=Join-Path $PSScriptRoot 'payload'
 $venv=Join-Path $PSScriptRoot '.venv'
 Push-Location -LiteralPath $project
