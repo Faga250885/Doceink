@@ -32,12 +32,15 @@ class GitHubRedirect(urllib.request.HTTPRedirectHandler):
         return super().redirect_request(request, fp, code, msg, headers, newurl)
 
 
-def open_url(url):
+def open_url(url, token=None):
     if not allowed_url(url):
         raise ValueError('Unexpected download host / Servidor no permitido')
     request = urllib.request.Request(url, headers={
         'User-Agent': 'DoceInk-Setup', 'Accept': 'application/vnd.github+json',
         'Cache-Control': 'no-cache', 'X-GitHub-Api-Version': '2022-11-28'})
+    if token and urllib.parse.urlsplit(url).hostname == 'api.github.com':
+        # CI download test only: never forward credentials on release-asset redirects.
+        request.add_unredirected_header('Authorization', 'Bearer ' + token)
     handlers = [GitHubRedirect()]
     if sys.platform == 'darwin':
         # Frozen macOS Python must not depend on a developer-machine CA path.

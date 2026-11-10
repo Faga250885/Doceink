@@ -23,6 +23,8 @@ jobs:
       - name: Install pinned dependencies
         run: python -m pip install -r installer/requirements-lock.txt
       - name: Build and verify native app and DMG
+        env:
+          DOCEINK_TEST_GITHUB_TOKEN: ${{ github.token }}
         run: python installer/build_macos.py
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -44,6 +46,8 @@ jobs:
         shell: pwsh
         run: ./installer/build.ps1
       - name: Verify packaged installer without USB access
+        env:
+          DOCEINK_TEST_GITHUB_TOKEN: ${{ github.token }}
         shell: pwsh
         run: |
           $app = Resolve-Path 'installer/dist/DoceInk-Setup-0.75.149.1.exe'

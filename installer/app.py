@@ -283,8 +283,14 @@ class Window:
 def main():
     # Test entry points never enumerate or open a serial port.
     if len(sys.argv) == 3 and sys.argv[1] == '--download-test':
+        import os
+        from functools import partial
+        from download import open_url
+        # CI uses an ephemeral read-only token to avoid shared-runner API limits.
+        # The GUI does not read or require this token; none is bundled in the app.
+        opener = partial(open_url, token=os.environ.get('DOCEINK_TEST_GITHUB_TOKEN'))
         with tempfile.TemporaryDirectory(prefix='DoceInk-check-') as directory:
-            version = download_latest(directory, lambda *args: None)
+            version = download_latest(directory, lambda *args: None, opener)
             image = verify_image(Path(directory), version)
             Path(sys.argv[2]).write_text(json.dumps({'version': version, 'bytes': image.stat().st_size, 'verified': True}), encoding='utf-8')
         return
