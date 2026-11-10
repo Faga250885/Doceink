@@ -1,67 +1,75 @@
-# Metalio · Doceink
+# DoceInk · Metalio
 
-Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, reloj, calculadora y juegos en una misma interfaz.
+**English** | [Español](README.es.md)
 
-**Versión documentada: 0.75.145.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
+![DoceInk symbol](assets/doceink-symbol.svg)
 
-## Instalar desde cero
+Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 16 MB of flash. Books, local tasks, voice conversations with ChatGPT, RSS news, weather, a clock, a calculator and games in one interface.
 
-### [Descargar el instalador limpio 0.75.145](https://github.com/Faga250885/Doceink/releases/download/v0.75.145/Metalio-0.75.145-instalacion-limpia.zip)
+**Documented version: 0.75.146.** This repository provides downloads and documentation for installing and using Metalio.
 
-Sigue la **[guía de instalación paso a paso](docs/INSTALACION.md)**. Incluye requisitos, instalación por USB desde Windows, alternativa para macOS/Linux y cómo resolver problemas de conexión.
+## Install from scratch
 
-El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
+### [Download for Windows — connect Metalio and run](https://github.com/Faga250885/Doceink/releases/download/v0.75.146/DoceInk-Setup-0.75.146.exe)
 
-> La instalación limpia reemplaza la memoria interna del Metalio de destino y borra sus cuentas y ajustes. **No borra la microSD.** Usa una tarjeta vacía si también quieres empezar sin libros, tareas o historiales anteriores.
+**Connect Metalio → open the `.exe` → click Install.** No Python, terminal commands or separate firmware download. English by default; Spanish is available in the language selector.
+
+Follow the **[step-by-step installation guide](docs/INSTALLATION.md)** for requirements, USB installation on Windows, the macOS/Linux alternative and connection troubleshooting.
+
+The package is built from firmware build outputs and system resources. **It contains no developer accounts, API keys, saved Wi-Fi networks, conversations or personal files.** Each user sets up their own Metalio.
+
+> A clean installation replaces the target Metalio's internal flash, erasing its accounts and settings. **It does not erase the microSD card.** Use an empty card if you also want to start without previous books, tasks or conversations.
 >
-> Estado de validación: compilación, pruebas de software, integridad del ZIP y regiones vacías de la imagen verificadas. La instalación completa desde cero todavía no se ha validado en un Metalio físico.
+> Validation status: firmware build, software tests, ZIP integrity and blank image regions verified. A complete clean installation has not yet been validated on a physical Metalio.
 
-## Elegir la descarga correcta
+## Choose the right download
 
-| Quiero… | Archivo o método | Qué ocurre con mis datos |
+| I want to… | File or method | What happens to my data |
 | --- | --- | --- |
-| Instalar desde cero en un Metalio compatible | `Metalio-0.75.145-instalacion-limpia.zip`, por USB | Reemplaza toda la memoria interna; conserva la microSD |
-| Actualizar un Metalio que ya utiliza Doceink | Ajustes → Sistema → Información → Comprobar actualización | Conserva cuentas, ajustes y archivos |
-| Obtener el firmware de actualización | `Doceink-EInk4.bin` en Releases | Es la aplicación OTA, no un instalador completo |
+| Install from scratch on compatible hardware | `DoceInk-Setup-0.75.146.exe`, over USB | Replaces internal flash; preserves the microSD card |
+| Update Metalio with Doceink already installed | Settings → System → Information → Check for updates | Preserves accounts, settings and files |
+| Download the update firmware | `Doceink-EInk4.bin` in Releases | Contains the OTA application, not a complete installer |
 
-**No uses `Metalio-instalacion-limpia.bin` para actualizar por Wi-Fi.** Tampoco basta con copiar ese archivo a la microSD: se instala por USB siguiendo la guía.
+**Do not use `Metalio-instalacion-limpia.bin` for Wi-Fi updates.** Copying the full image to the microSD card is not an installation method either; follow the USB installation guide.
 
-- [Última publicación y descargas](https://github.com/Faga250885/Doceink/releases/latest)
-- [Actualizar conservando los datos](docs/ACTUALIZACIONES.md)
-- [Huellas SHA-256 de 0.75.145](SHA256SUMS.txt)
-- [Historial de versiones](https://github.com/Faga250885/Doceink/releases)
+- [Latest release and downloads](https://github.com/Faga250885/Doceink/releases/latest)
+- [Update without erasing your data](docs/UPDATES.md)
+- [SHA-256 checksums for 0.75.146](SHA256SUMS.txt)
+- [Release history](https://github.com/Faga250885/Doceink/releases)
 
-## Qué incluye
+## Features
 
-| Sección | Funciones |
+At power-on, the original DoceInk symbol appears centered with **DoceInk** beneath it for two seconds before the main screen.
+
+| Section | Features |
 | --- | --- |
-| Libros | Biblioteca, portadas, lectura y controles de tipografía |
-| Tareas | Listas locales Personal y Trabajo; dictado por Wi-Fi |
-| ChatGPT | Conversaciones por voz e historial en microSD; requiere configurar tu propia clave API |
-| Noticias | Varias fuentes RSS, caché en microSD y actualización manual |
-| Clima | Pronóstico guardado en microSD y actualización manual |
-| Reloj | Reloj, pomodoro, cronómetro y cuenta atrás |
-| Archivos | Disco USB y transferencia por Wi-Fi desde el navegador del teléfono mediante QR |
-| Home y ajustes | Accesos personalizables, fondos, batería, conexión y preferencias |
-| Otras aplicaciones | Calculadora y juegos |
+| Books | Library, covers, reading and typography controls |
+| Tasks | Local Personal and Work lists; dictation over Wi-Fi |
+| ChatGPT | Voice conversations and microSD history; requires your own API key |
+| News | Multiple RSS sources, microSD cache and manual refresh |
+| Weather | Forecast stored on microSD and manual refresh |
+| Clock | Clock, pomodoro, stopwatch and countdown |
+| Files | USB disk mode and QR-based Wi-Fi transfers through your phone's browser |
+| Home and settings | Customizable shortcuts, wallpapers, battery, connectivity and preferences |
+| Other apps | Calculator and games |
 
-Las conversaciones nuevas y el dictado necesitan conexión a internet y la configuración correspondiente. Los historiales y datos ya guardados se consultan desde la microSD. Noticias y Clima necesitan una primera descarga para tener contenido disponible sin conexión.
+New conversations and dictation require internet access and the corresponding account setup. Saved history and downloaded data are read from the microSD card. News and Weather need an initial download before content is available offline.
 
-## Empezar a usarlo
+## Getting started
 
-1. Instala el firmware y arranca Metalio.
-2. Inserta tu microSD y configura tu red Wi-Fi de 2,4 GHz.
-3. Añade tus libros y fondos desde **Ajustes → Archivos**.
-4. Configura tus propias fuentes RSS, ciudad y, si vas a usar ChatGPT, tu clave API.
+1. Install the firmware and start Metalio.
+2. Insert your microSD card and set up a 2.4 GHz Wi-Fi network.
+3. Add books and wallpapers through **Settings → Files**.
+4. Configure your RSS sources, city and, if you plan to use ChatGPT, your API key.
 
-Consulta la [guía de primeros pasos](docs/PRIMEROS-PASOS.md) para conocer los controles, las carpetas y la transferencia de archivos.
+See [Getting started](docs/GETTING-STARTED.md) for controls, folders and file transfers. Some firmware menu labels may still appear in Spanish; the guides include the relevant Spanish names.
 
-## Compatibilidad y ayuda
+## Compatibility and support
 
-Este instalador está preparado **exclusivamente para Metalio E-Ink4, ESP32-S3, flash de 16 MB**. No es un firmware universal para cualquier lector o placa ESP32.
+This installer is intended **only for Metalio E-Ink4 with an ESP32-S3 and 16 MB of flash**. It is not a universal firmware for arbitrary e-readers or ESP32 boards.
 
-- [Preguntas frecuentes y solución de problemas](docs/PREGUNTAS-FRECUENTES.md)
-- [Informar un problema](https://github.com/Faga250885/Doceink/issues/new?template=problema.md)
-- [Licencia incluida con el firmware](LICENSE)
+- [FAQ and troubleshooting](docs/FAQ.md)
+- [Report an issue](https://github.com/Faga250885/Doceink/issues/new?template=bug-report.md)
+- [License included with the firmware](LICENSE)
 
-El firmware se apoya en ESP-IDF, LVGL y otros componentes de terceros, que conservan sus respectivas licencias. La licencia principal no sustituye las de esos componentes.
+The firmware uses ESP-IDF, LVGL and other third-party components, which retain their respective licenses. The main license does not replace those component licenses.

@@ -1,6 +1,8 @@
 # Primeros pasos
 
-[Volver al inicio](../README.md)
+[English](GETTING-STARTED.md) | **Español**
+
+[Volver al inicio](../README.es.md)
 
 ## Controles básicos
 

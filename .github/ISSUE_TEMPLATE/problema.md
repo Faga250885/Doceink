@@ -1,5 +1,5 @@
 ---
-name: Informar un problema
+name: Informar un problema (Español)
 about: Instalación, actualización o funcionamiento de Metalio
 title: ''
 labels: ''

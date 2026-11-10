@@ -1,6 +1,8 @@
 # Preguntas frecuentes
 
-[Volver al inicio](../README.md)
+[English](FAQ.md) | **Español**
+
+[Volver al inicio](../README.es.md)
 
 ### ¿Sirve para cualquier ESP32 o lector de tinta electrónica?
 
@@ -16,7 +18,7 @@ No. La imagen completa reemplaza la memoria interna, pero no formatea la tarjeta
 
 ### ¿Por qué la imagen mide 16 MB si el firmware ocupa menos?
 
-La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.145 la aplicación ocupa 4.985.120 bytes de una partición de 5 MiB. Quedan 257.760 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
+La imagen completa incluye el arranque, las fuentes, los recursos y las regiones vacías. En 0.75.146 la aplicación ocupa 4.988.704 bytes de una partición de 5 MiB. Quedan 254.176 bytes en esa partición; eso no es un espacio de usuario para guardar libros. Los archivos personales se guardan en la microSD.
 
 ### ¿Puedo instalar la imagen completa por Wi-Fi?
 
@@ -30,9 +32,9 @@ Comprueba que el cable permita datos, prueba otro puerto USB y desactiva Disco U
 
 Cierra otros programas que utilicen el COM, comprueba que has elegido el correcto y que Metalio está en modo de descarga. Si la conexión es inestable, prueba otro cable y conexión USB directa. Al informar del problema, copia el error de la herramienta.
 
-### PowerShell impide ejecutar Instalar.ps1
+### Windows muestra un aviso de editor desconocido
 
-La guía incluye un comando que permite ejecutar ese script en un proceso puntual de PowerShell. No necesitas cambiar permanentemente la política de ejecución del ordenador. Antes de ejecutarlo, verifica que procede de la publicación oficial y que el ZIP coincide con la huella publicada.
+El ejecutable todavía no está firmado digitalmente. Descárgalo de la publicación oficial y compara su huella con SHA256SUMS.txt. El método principal no necesita PowerShell ni cambios en la política de ejecución.
 
 ### La imagen no supera la comprobación SHA-256
 
@@ -56,7 +58,7 @@ No en esta versión. ChatGPT y el dictado de tareas usan Wi-Fi. Las tareas se gu
 
 ### ¿Dónde está el código para compilar?
 
-Este repositorio se utiliza actualmente para distribuir el firmware, los instaladores y la documentación de uso. La descarga automática «Source code» de GitHub corresponde al contenido de este repositorio; no sustituye al ZIP de instalación ni contiene el proyecto completo de compilación.
+Este repositorio distribuye firmware y documentación, e incluye el código del instalador Windows en `installer/`. La descarga automática «Source code» de GitHub corresponde al contenido de este repositorio; no sustituye al ZIP de instalación ni contiene el proyecto completo de compilación.
 
 ### ¿Cómo informo de un problema?
 
