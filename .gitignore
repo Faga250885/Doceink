@@ -1,0 +1,9 @@
+# Este repositorio distribuye documentación; los binarios van en Releases.
+*.bin
+*.zip
+*.log
+.env
+.env.*
+__pycache__/
+.DS_Store
+Thumbs.db

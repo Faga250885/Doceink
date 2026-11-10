@@ -1,17 +1,67 @@
-# Doceink
+# Metalio · Doceink
 
-Firmware para el lector de tinta electrónica **Metalio E-Ink4 (ESP32-S3)**. Incluye lectura de libros, tareas, calculadora y conversación con ChatGPT por Wi-Fi mediante la API de OpenAI. El asistente requiere una clave propia con crédito disponible y guarda el historial en la tarjeta del lector.
+Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, reloj, calculadora y juegos en una misma interfaz.
 
-## Actualizar el lector
+**Versión documentada: 0.75.145.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
 
-Conecta el Metalio a Wi-Fi, abre **Ajustes** y pulsa **Comprobar actualización**. Tras el reinicio puedes consultar la versión instalada en Ajustes.
+## Instalar desde cero
 
-La [última versión estable](https://github.com/Faga250885/Doceink/releases/latest) incluye las novedades, el archivo OTA `Doceink-EInk4.bin` y su huella SHA-256. Las versiones anteriores están en el [historial de publicaciones](https://github.com/Faga250885/Doceink/releases).
+### [Descargar el instalador limpio 0.75.145](https://github.com/Faga250885/Doceink/releases/download/v0.75.145/Metalio-0.75.145-instalacion-limpia.zip)
 
-## Doceink 0.42
+Sigue la **[guía de instalación paso a paso](docs/INSTALACION.md)**. Incluye requisitos, instalación por USB desde Windows, alternativa para macOS/Linux y cómo resolver problemas de conexión.
 
-La biblioteca muestra «Cubiertas» y «Lista» según el idioma elegido en Ajustes. Ambas vistas están disponibles en español, inglés y chino simplificado. Las miniaturas tienen un radio uniforme de 4 px en las cuatro esquinas.
+El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 
-En Tareas, el botón físico del micrófono permite dictar por Wi-Fi. La barra superior muestra la onda durante la grabación y los avisos de conexión usan texto de 18 px.
+> La instalación limpia reemplaza la memoria interna del Metalio de destino y borra sus cuentas y ajustes. **No borra la microSD.** Usa una tarjeta vacía si también quieres empezar sin libros, tareas o historiales anteriores.
+>
+> Estado de validación: compilación, pruebas de software, integridad del ZIP y regiones vacías de la imagen verificadas. La instalación completa desde cero todavía no se ha validado en un Metalio físico.
 
-[Descargar el firmware 0.42 y consultar su SHA-256](https://github.com/Faga250885/Doceink/releases/tag/v0.42)
+## Elegir la descarga correcta
+
+| Quiero… | Archivo o método | Qué ocurre con mis datos |
+| --- | --- | --- |
+| Instalar desde cero en un Metalio compatible | `Metalio-0.75.145-instalacion-limpia.zip`, por USB | Reemplaza toda la memoria interna; conserva la microSD |
+| Actualizar un Metalio que ya utiliza Doceink | Ajustes → Sistema → Información → Comprobar actualización | Conserva cuentas, ajustes y archivos |
+| Obtener el firmware de actualización | `Doceink-EInk4.bin` en Releases | Es la aplicación OTA, no un instalador completo |
+
+**No uses `Metalio-instalacion-limpia.bin` para actualizar por Wi-Fi.** Tampoco basta con copiar ese archivo a la microSD: se instala por USB siguiendo la guía.
+
+- [Última publicación y descargas](https://github.com/Faga250885/Doceink/releases/latest)
+- [Actualizar conservando los datos](docs/ACTUALIZACIONES.md)
+- [Huellas SHA-256 de 0.75.145](SHA256SUMS.txt)
+- [Historial de versiones](https://github.com/Faga250885/Doceink/releases)
+
+## Qué incluye
+
+| Sección | Funciones |
+| --- | --- |
+| Libros | Biblioteca, portadas, lectura y controles de tipografía |
+| Tareas | Listas locales Personal y Trabajo; dictado por Wi-Fi |
+| ChatGPT | Conversaciones por voz e historial en microSD; requiere configurar tu propia clave API |
+| Noticias | Varias fuentes RSS, caché en microSD y actualización manual |
+| Clima | Pronóstico guardado en microSD y actualización manual |
+| Reloj | Reloj, pomodoro, cronómetro y cuenta atrás |
+| Archivos | Disco USB y transferencia por Wi-Fi desde el navegador del teléfono mediante QR |
+| Home y ajustes | Accesos personalizables, fondos, batería, conexión y preferencias |
+| Otras aplicaciones | Calculadora y juegos |
+
+Las conversaciones nuevas y el dictado necesitan conexión a internet y la configuración correspondiente. Los historiales y datos ya guardados se consultan desde la microSD. Noticias y Clima necesitan una primera descarga para tener contenido disponible sin conexión.
+
+## Empezar a usarlo
+
+1. Instala el firmware y arranca Metalio.
+2. Inserta tu microSD y configura tu red Wi-Fi de 2,4 GHz.
+3. Añade tus libros y fondos desde **Ajustes → Archivos**.
+4. Configura tus propias fuentes RSS, ciudad y, si vas a usar ChatGPT, tu clave API.
+
+Consulta la [guía de primeros pasos](docs/PRIMEROS-PASOS.md) para conocer los controles, las carpetas y la transferencia de archivos.
+
+## Compatibilidad y ayuda
+
+Este instalador está preparado **exclusivamente para Metalio E-Ink4, ESP32-S3, flash de 16 MB**. No es un firmware universal para cualquier lector o placa ESP32.
+
+- [Preguntas frecuentes y solución de problemas](docs/PREGUNTAS-FRECUENTES.md)
+- [Informar un problema](https://github.com/Faga250885/Doceink/issues/new?template=problema.md)
+- [Licencia incluida con el firmware](LICENSE)
+
+El firmware se apoya en ESP-IDF, LVGL y otros componentes de terceros, que conservan sus respectivas licencias. La licencia principal no sustituye las de esos componentes.

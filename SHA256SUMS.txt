@@ -1,0 +1,3 @@
+5cf6c1ff035b39f3d98664c59be76423f3aa1228016be2e534724233c44ae8a8  Doceink-EInk4.bin
+fd87c1bd35b889833b71fa2ccfcf69bec5377b93d2730cba576de82ca5595211  Metalio-0.75.145-instalacion-limpia.zip
+c2fed1efad31383bd1d6204e87291546f3a529279b77c3c8b38f54ddda1a79cf  Metalio-instalacion-limpia.bin
