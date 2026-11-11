@@ -6,7 +6,7 @@
 
 ## Windows: conectar y ejecutar
 
-1. [Descarga DoceInk Setup 0.75.158.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.159/DoceInk-Setup-0.75.158.1.exe).
+1. [Descarga DoceInk Setup 0.75.158.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.160/DoceInk-Setup-0.75.158.1.exe).
 2. Conecta **Metalio E-Ink4** con un cable USB de datos. Desactiva Disco USB si está activo.
 3. Abre el `.exe`. Incluye las herramientas y descarga automáticamente el firmware estable más reciente de GitHub. No necesitas Python ni comandos. Requiere internet.
 4. Detecta Metalio automáticamente, sin selector de puertos COM. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
@@ -14,14 +14,14 @@
 
 ## macOS: app con detección USB automática
 
-1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.159/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) para M1 o posterior. Requiere **macOS 15 o posterior**.
+1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.160/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) para M1 o posterior. Requiere **macOS 15 o posterior**.
 2. Abre el DMG, arrastra **DoceInk Setup** a Aplicaciones y abre la app.
 3. Conecta Metalio con un cable USB de datos, con Disco USB desactivado. Detecta la conexión automáticamente: no necesitas terminal, instalar Python ni elegir puertos.
 4. Pulsa **Instalar DoceInk** y confirma. Descarga y verifica el firmware estable más reciente de GitHub antes de escribir.
 
 **Firma:** la app tiene una firma ad hoc para comprobar su integridad, pero todavía no tiene firma Apple Developer ID ni notarización. Gatekeeper podría impedir abrirla. Aún no es una distribución notarizada sin avisos; no desactives Gatekeeper. Las compilaciones nativas y las pruebas automáticas no equivalen a una instalación USB física validada.
 
-La versión del instalador **0.75.158.1** es independiente del firmware **0.75.159**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
+La versión del instalador **0.75.158.1** es independiente del firmware **0.75.160**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
 
 ## Qué pasa con los datos
 
@@ -60,7 +60,7 @@ Metalio debería reiniciarse y mostrar el símbolo con **DoceInk** debajo durant
 
 ## Instalación avanzada: Linux o recuperación manual
 
-Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.159/Metalio-0.75.159-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows y Mac normalmente se utiliza el instalador gráfico de arriba.
+Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.160/Metalio-0.75.160-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows y Mac normalmente se utiliza el instalador gráfico de arriba.
 
 En una terminal dentro de la carpeta extraída:
 
@@ -88,6 +88,6 @@ Se utiliza [esptool 4.12.0 de Espressif](https://pypi.org/project/esptool/4.12.0
 
 La compilación del firmware y las pruebas del arranque, pantalla y entrada táctil pasaron. El instalador tiene pruebas automáticas de detección USB, desconexión, cancelación, validación del firmware y descargas. Las comprobaciones de la aplicación empaquetada verifican recursos, interfaz bilingüe y una descarga real sin abrir puertos USB. En macOS también se comprueba el DMG y se monta en modo de solo lectura. **El propietario confirmó una instalación limpia desde Windows en un Metalio físico. Las nuevas funciones requieren prueba física; la instalación USB desde macOS sigue sin validar.**
 
-La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.159-manifest.json).
+La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.160-manifest.json).
 
 La imagen mide 16 MB porque incluye espacio vacío. La aplicación ocupa **5.114.240 bytes**. Ni la imagen completa ni el `.exe` sirven como archivo OTA: para actualizar se utiliza `Doceink-EInk4.bin`.
