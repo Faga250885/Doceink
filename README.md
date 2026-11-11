@@ -8,6 +8,26 @@ Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 1
 
 **Documented version: 0.75.158.** This repository provides downloads and documentation for installing and using Metalio.
 
+## Explore DoceInk
+
+| Home | Reading | Weather |
+| :---: | :---: | :---: |
+| <img src="assets/screenshots/home.png" alt="DoceInk home screen with calendar and apps" width="270"> | <img src="assets/screenshots/reader.png" alt="Ebook reader with reading progress" width="270"> | <img src="assets/screenshots/weather.png" alt="Hourly weather forecast" width="270"> |
+
+<details>
+<summary>See more screens</summary>
+<br>
+
+| ChatGPT | News | Pomodoro |
+| :---: | :---: | :---: |
+| <img src="assets/screenshots/chatgpt.png" alt="Voice conversation with ChatGPT" width="270"> | <img src="assets/screenshots/news.png" alt="RSS news headlines" width="270"> | <img src="assets/screenshots/pomodoro.png" alt="Pomodoro timer" width="270"> |
+| Chess | Calculator | Settings |
+| <img src="assets/screenshots/chess.png" alt="Chess game" width="270"> | <img src="assets/screenshots/calculator.png" alt="Calculator" width="270"> | <img src="assets/screenshots/settings.png" alt="Display settings" width="270"> |
+
+</details>
+
+Screens may vary slightly between firmware versions.
+
 ## Install from scratch
 
 ### Download the installer
@@ -53,7 +73,7 @@ At power-on, the new DoceInk logo and its **doceink** wordmark appear centered f
 | Tasks | Local Personal and Work lists; dictation over Wi-Fi |
 | ChatGPT | Voice conversations and microSD history; requires your own API key |
 | News | Multiple RSS sources, microSD cache and manual refresh |
-| Weather | Forecast stored on microSD and manual refresh |
+| Weather | Forecast stored on microSD, manual refresh and Celsius/Fahrenheit units |
 | Recorder | Offline WAV recording directly to microSD, pause/resume and recording during standby |
 | Clock | Clock, pomodoro, stopwatch and countdown |
 | Files | USB disk mode and QR-based Wi-Fi transfers through your phone's browser |

@@ -6,6 +6,26 @@ Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y
 
 **Versión documentada: 0.75.158.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
 
+## Explora DoceInk
+
+| Inicio | Lectura | Clima |
+| :---: | :---: | :---: |
+| <img src="assets/screenshots/home.png" alt="Pantalla de inicio de DoceInk con calendario y aplicaciones" width="270"> | <img src="assets/screenshots/reader.png" alt="Lector de libros con progreso de lectura" width="270"> | <img src="assets/screenshots/weather.png" alt="Pronóstico del clima por hora" width="270"> |
+
+<details>
+<summary>Ver más pantallas</summary>
+<br>
+
+| ChatGPT | Noticias | Pomodoro |
+| :---: | :---: | :---: |
+| <img src="assets/screenshots/chatgpt.png" alt="Conversación por voz con ChatGPT" width="270"> | <img src="assets/screenshots/news.png" alt="Titulares de noticias RSS" width="270"> | <img src="assets/screenshots/pomodoro.png" alt="Temporizador Pomodoro" width="270"> |
+| Ajedrez | Calculadora | Ajustes |
+| <img src="assets/screenshots/chess.png" alt="Partida de ajedrez" width="270"> | <img src="assets/screenshots/calculator.png" alt="Calculadora" width="270"> | <img src="assets/screenshots/settings.png" alt="Ajustes de pantalla" width="270"> |
+
+</details>
+
+Las pantallas pueden variar ligeramente según la versión del firmware.
+
 ## Instalar desde cero
 
 ### Descargar el instalador
@@ -51,7 +71,7 @@ Al encender, el nuevo logo con la palabra **doceink** aparece centrado durante d
 | Tareas | Listas locales Personal y Trabajo; dictado por Wi-Fi |
 | ChatGPT | Conversaciones por voz e historial en microSD; requiere configurar tu propia clave API |
 | Noticias | Varias fuentes RSS, caché en microSD y actualización manual |
-| Clima | Pronóstico guardado en microSD y actualización manual |
+| Clima | Pronóstico guardado en microSD, actualización manual y unidades Celsius/Fahrenheit |
 | Grabadora | Grabación WAV local en microSD, pausa y reanudación; sigue grabando en standby |
 | Reloj | Reloj, pomodoro, cronómetro y cuenta atrás |
 | Archivos | Disco USB y transferencia por Wi-Fi desde el navegador del teléfono mediante QR |
