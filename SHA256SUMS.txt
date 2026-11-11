@@ -1,7 +1,7 @@
-125c5cf4034c80d4c82298d37d3dc7eadf2e673f66eb39b117259ac0b3d1e541  Doceink-EInk4.bin
-f940508a542a940468a81ac4a939011a1f3ed996fcffa8cacdb161687b526d11  Metalio-0.75.153-instalacion-limpia.zip
-4045ff723e1d09cc158d01be90481c58cf2e42267fcbc6151c5fc62a94fbbf5a  Metalio-instalacion-limpia.bin
-c7a053de0c01c121bfe498218986bd4b6d78a235570b15714c2760e4f24a3b19  v0.75.153-manifest.json
+9fd8307180d944562d7b9f3066eead19d315d964eb65c73c4cd4a41e686780b9  Doceink-EInk4.bin
+ba4868bd8bce9b778c2df07ed6beda2d3a0bed78dc6aef407ac16af0bb2854d9  Metalio-0.75.154-instalacion-limpia.zip
+8b9c256cfe2698ae4515654dfaf426b4209c3436cf0d0dbb90c13ffb69b78e45  Metalio-instalacion-limpia.bin
+1a884e47286f67b75ebc7b82b0117b74808286f855a71e1b4a0aad02cc7f8990  v0.75.154-manifest.json
 
 # Installer 0.75.149.1 remains available in release v0.75.149 and downloads the latest firmware.
 bce79dbc30bfaa62b07af2b85f77ced17c40e885b8b7ffb0c87afedbbef59269  DoceInk-Setup-0.75.149.1.exe
