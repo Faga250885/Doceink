@@ -28,7 +28,7 @@ TEXT = {
  'update': ('Update DoceInk', 'Actualizar DoceInk'),
  'restore': ('Restore original backup', 'Restaurar respaldo original'),
  'backup_option': ('Back up current firmware before installation', 'Respaldar el firmware actual antes de instalar'),
- 'backup_location': ('Backups are stored on this computer and may contain accounts and passwords.', 'Los respaldos se guardan en este ordenador y pueden contener cuentas y contraseñas.'),
+ 'backup_location': ('Backups may contain passwords. A cloud-synced Desktop may upload them.', 'El respaldo puede contener contraseñas. Si el Escritorio se sincroniza, podría subirse a la nube.'),
  'identifying': ('Checking connected Metalio… It may restart.', 'Comprobando el Metalio conectado… Puede reiniciarse.'),
  'detected_doceink': ('DoceInk detected. Choose an update or restore a saved original backup.', 'DoceInk detectado. Elige actualizar o restaurar un respaldo original.'),
  'detected_doceink_no_backup': ('DoceInk detected. No original backup was found on this computer.', 'DoceInk detectado. No se encontró un respaldo original en este ordenador.'),

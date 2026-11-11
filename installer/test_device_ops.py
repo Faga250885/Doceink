@@ -5,6 +5,7 @@ from pathlib import Path
 import struct
 import tempfile
 import unittest
+from unittest import mock
 
 import device_ops as ops
 
@@ -157,6 +158,12 @@ class DeviceTests(unittest.TestCase):
         state = ops.inspect('SIM', self.path, self.emit, self.device)
         self.assertEqual(state['kind'], 'unknown')
         self.assertFalse(ops.is_doceink('0.75.158', 'Other project'))
+
+
+class BackupLocationTest(unittest.TestCase):
+    def test_backup_folder_is_on_actual_desktop(self):
+        with mock.patch.object(ops, 'desktop_directory', return_value=Path('/synced/Desktop')):
+            self.assertEqual(ops.root_directory(), Path('/synced/Desktop/Metalio - Firmware original'))
 
 
 if __name__ == '__main__': unittest.main()

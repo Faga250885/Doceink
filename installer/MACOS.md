@@ -16,7 +16,7 @@ stable firmware from Faga250885/Doceink on GitHub.
 Clean installation erases internal accounts and settings, not the microSD.
 Wi-Fi updates and the installer USB update preserve existing internal settings.
 Restoring replaces current internal data with the saved flash. Backups are
-unencrypted and may contain passwords; keep ~/DoceInk/Backups private.
+unencrypted and may contain passwords; keep Desktop/Metalio - Firmware original private.
 A backup made after DoceInk installation cannot recover original firmware.
 Backup, restore and USB update have not yet been validated on physical hardware.
 Only Metalio E-Ink4 / ESP32-S3 / 16 MB is supported. If more than one compatible
@@ -50,7 +50,7 @@ más reciente de Faga250885/Doceink en GitHub.
 La instalación limpia borra cuentas y ajustes internos, no la microSD.
 La actualización Wi-Fi y la actualización USB conservan los ajustes internos.
 Restaurar reemplaza los datos internos actuales por los del respaldo. Este no
-está cifrado y puede incluir contraseñas: mantén privado ~/DoceInk/Backups.
+está cifrado y puede incluir contraseñas: mantén privado Desktop/Metalio - Firmware original.
 Un respaldo posterior a instalar DoceInk no recupera el firmware original.
 Respaldo, restauración y actualización USB aún requieren prueba física.
 Solo admite Metalio E-Ink4 / ESP32-S3 / 16 MB. Si hay varios dispositivos USB

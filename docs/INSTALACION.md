@@ -33,7 +33,7 @@ El paquete no contiene cuentas, contraseñas, claves API ni conversaciones perso
 
 ## Respaldo del firmware original
 
-Antes de la primera instalación limpia, el respaldo opcional lee dos veces toda la memoria interna y compara los resultados. Confirma que el firmware actual sea el original: un respaldo hecho después de instalar DoceInk no permite recuperarlo. Se guarda sin cifrar en `~/DoceInk/Backups/<identificador>` en la computadora y puede contener contraseñas de Wi-Fi y claves de cuentas. Mantén los dos archivos privados y seguros. La microSD no está incluida.
+Antes de la primera instalación limpia, el respaldo opcional lee dos veces toda la memoria interna y compara los resultados. Confirma que el firmware actual sea el original: un respaldo hecho después de instalar DoceInk no permite recuperarlo. Se guarda sin cifrar en `Escritorio/Metalio - Firmware original/<identificador>` en la computadora y puede contener contraseñas de Wi-Fi y claves de cuentas. Si el Escritorio se sincroniza con la nube, el servicio podría subir el respaldo. Mantén los dos archivos privados y seguros. La microSD no está incluida.
 
 Cuando existe un respaldo verificado del mismo Metalio, el instalador ofrece restaurarlo. Esta operación reemplaza toda la memoria interna, incluidas las cuentas y ajustes actuales, por los datos guardados; no borra la microSD. La detección puede reiniciar Metalio.
 

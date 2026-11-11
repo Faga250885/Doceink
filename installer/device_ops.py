@@ -28,8 +28,31 @@ def digest(path: Path) -> str:
     return h.hexdigest()
 
 
+def desktop_directory() -> Path:
+    """Use the actual Windows Desktop, including OneDrive redirection."""
+    if os.name == 'nt':
+        import ctypes
+        from ctypes import wintypes
+        import uuid
+        class GUID(ctypes.Structure):
+            _fields_ = [('data', ctypes.c_ubyte * 16)]
+        desktop_id = GUID((ctypes.c_ubyte * 16).from_buffer_copy(
+            uuid.UUID('B4BFCC3A-DB2C-424C-B029-7FE99A87C641').bytes_le))
+        path = ctypes.c_wchar_p()
+        shell = ctypes.windll.shell32
+        shell.SHGetKnownFolderPath.argtypes = [ctypes.POINTER(GUID), wintypes.DWORD,
+                                               wintypes.HANDLE, ctypes.POINTER(ctypes.c_wchar_p)]
+        shell.SHGetKnownFolderPath.restype = ctypes.c_long
+        if shell.SHGetKnownFolderPath(ctypes.byref(desktop_id), 0, None, ctypes.byref(path)) == 0:
+            try:
+                return Path(path.value)
+            finally:
+                ctypes.windll.ole32.CoTaskMemFree(ctypes.cast(path, ctypes.c_void_p))
+    return Path.home() / 'Desktop'
+
+
 def root_directory() -> Path:
-    return Path.home() / 'DoceInk' / 'Backups'
+    return desktop_directory() / 'Metalio - Firmware original'
 
 
 def key_for_mac(mac: str) -> str:

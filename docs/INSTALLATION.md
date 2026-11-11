@@ -35,7 +35,7 @@ The firmware package does not include developer accounts, passwords, API keys or
 
 ## Original firmware backup
 
-Before the first clean installation, the optional backup reads the entire internal flash twice and verifies both copies. Confirm that the current firmware really is original: a backup made after DoceInk was installed cannot recover the original firmware. It is stored unencrypted in `~/DoceInk/Backups/<device-id>` on the computer and may contain Wi-Fi passwords and account keys. Keep both backup files private and safe. It does not include the microSD.
+Before the first clean installation, the optional backup reads the entire internal flash twice and verifies both copies. Confirm that the current firmware really is original: a backup made after DoceInk was installed cannot recover the original firmware. It is stored unencrypted in `Desktop/Metalio - Firmware original/<device-id>` on the computer and may contain Wi-Fi passwords and account keys. If your Desktop is cloud-synced, the backup may be uploaded by that service. Keep both backup files private and safe. It does not include the microSD.
 
 When a matching verified backup exists, the installer offers to restore it to the same Metalio. Restoring replaces the entire internal flash, including current accounts and settings, with the saved contents; it does not erase the microSD. Device detection may restart Metalio.
 
