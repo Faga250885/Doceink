@@ -2,7 +2,7 @@
 
 **English** | [Español](README.es.md)
 
-This directory contains the Windows/macOS GUI installer, not the complete firmware source project. End users should download the `.exe` or architecture-specific `.dmg` from [Releases](https://github.com/Faga250885/Doceink/releases/latest). Installer 0.75.149.1 detects USB automatically and has no port selector.
+This directory contains the Windows/macOS GUI installer, not the complete firmware source project. End users should download the `.exe` or architecture-specific `.dmg` from [Releases](https://github.com/Faga250885/Doceink/releases/latest). Installer 0.75.158.1 detects USB automatically and has no port selector.
 
 ## Build
 
@@ -36,13 +36,15 @@ The source distribution attached to the release includes the installer source an
 The packaged executable also supports internal verification modes:
 
 ```powershell
-.\DoceInk-Setup-0.75.149.1.exe --self-test result.json
-.\DoceInk-Setup-0.75.149.1.exe --smoke-test gui.json
-.\DoceInk-Setup-0.75.149.1.exe --download-test download.json
+.\DoceInk-Setup-0.75.158.1.exe --self-test result.json
+.\DoceInk-Setup-0.75.158.1.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.158.1.exe --download-test download.json
 ```
 
 These verify included resources and the GUI without enumerating or opening serial ports. They do not replace a real hardware installation test.
 
 The download test can use `DOCEINK_TEST_GITHUB_TOKEN` to avoid shared CI runner rate limits. This ephemeral token is read only in that test mode, is sent only to the GitHub API without forwarding to download redirects, and is never bundled or required by the GUI.
 
-The installer is a clean-install tool: only a confirmed Install action reaches `run_install()`. Normal Wi-Fi updates use the OTA application and preserve user data.
+Before the initial clean install, the installer can back up the complete current flash twice and compare the reads. Confirm that the current firmware is original before calling it an original backup; original firmware cannot be reconstructed after it has already been replaced. The unencrypted backup is stored locally at `~/DoceInk/Backups/<device-id>` and can include passwords and account keys. Keep it private and retain both files. The microSD is not included.
+
+When a recognized DoceInk device is connected, the installer offers a USB update that writes the inactive application slot and verifies it before switching slots. A verified backup for the same device enables restoration. Restoration replaces the entire internal flash, including current settings and accounts; it does not erase the microSD. Normal Wi-Fi updates also preserve user data. Detection may restart the device. Backup, restore and USB-update workflows have automated simulated tests but have not yet been validated end to end on physical hardware.

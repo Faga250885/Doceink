@@ -10,19 +10,42 @@ import re
 import sys
 import threading
 import tempfile
+import time
 from download import download_latest
+import device_ops
 
-VERSION = '0.75.149.1'
+VERSION = '0.75.158.1'
 FLASH_BYTES = 16 * 1024 * 1024
 TEXT = {
  'title': ('DoceInk Setup', 'Instalar DoceInk'),
- 'subtitle': ('A fresh start for your Metalio.', 'Un nuevo comienzo para tu Metalio.'),
+ 'subtitle': ('Install, update or restore your Metalio.', 'Instala, actualiza o restaura tu Metalio.'),
  'connect': ('Connect Metalio with a USB data cable.', 'Conecta Metalio con un cable USB de datos.'),
  'none': ('Waiting for Metalio…', 'Esperando a Metalio…'),
  'choose': ('Several compatible USB devices detected. Leave only Metalio connected.', 'Hay varios dispositivos USB compatibles. Deja conectado solo el Metalio.'),
  'detect_error': ('Could not detect Metalio. Check the USB connection.', 'No se pudo detectar Metalio. Revisa la conexión USB.'),
  'ready': ('Metalio connection detected. Ready to install.', 'Conexión de Metalio detectada. Listo para instalar.'),
  'install': ('Install DoceInk', 'Instalar DoceInk'),
+ 'update': ('Update DoceInk', 'Actualizar DoceInk'),
+ 'restore': ('Restore original backup', 'Restaurar respaldo original'),
+ 'backup_option': ('Back up current firmware before installation', 'Respaldar el firmware actual antes de instalar'),
+ 'backup_location': ('Backups are stored on this computer and may contain accounts and passwords.', 'Los respaldos se guardan en este ordenador y pueden contener cuentas y contraseñas.'),
+ 'identifying': ('Checking connected Metalio… It may restart.', 'Comprobando el Metalio conectado… Puede reiniciarse.'),
+ 'detected_doceink': ('DoceInk detected. Choose an update or restore a saved original backup.', 'DoceInk detectado. Elige actualizar o restaurar un respaldo original.'),
+ 'detected_doceink_no_backup': ('DoceInk detected. No original backup was found on this computer.', 'DoceInk detectado. No se encontró un respaldo original en este ordenador.'),
+ 'detected_original': ('Metalio detected. Back up its current firmware before installing.', 'Metalio detectado. Respalda su firmware actual antes de instalar.'),
+ 'identify': ('Check Metalio', 'Comprobar Metalio'),
+ 'notice_update': ('Updates preserve internal accounts, settings and microSD files. Restoring a backup replaces internal data.', 'Actualizar conserva las cuentas, ajustes y archivos de la microSD. Restaurar un respaldo reemplaza los datos internos.'),
+ 'no_backup': ('No original backup for this Metalio was found on this computer.', 'No se encontró un respaldo original de este Metalio en este ordenador.'),
+ 'backup_read': ('Backing up the original firmware… Keep USB connected.', 'Respaldando el firmware original… Mantén el USB conectado.'),
+ 'backup_verify': ('Verifying the backup… Keep USB connected.', 'Verificando el respaldo… Mantén el USB conectado.'),
+ 'restoring': ('Restoring backup… Keep USB connected.', 'Restaurando respaldo… Mantén el USB conectado.'),
+ 'restored': ('Original backup restored. Metalio is restarting.', 'Respaldo original restaurado. Metalio se está reiniciando.'),
+ 'updating': ('Updating DoceInk… Keep USB connected.', 'Actualizando DoceInk… Mantén el USB conectado.'),
+ 'switching': ('Finishing update… Keep USB connected.', 'Finalizando actualización… Mantén el USB conectado.'),
+ 'updated': ('DoceInk updated. Metalio is restarting.', 'DoceInk actualizado. Metalio se está reiniciando.'),
+ 'confirm_backup': ('Is the current firmware the original you want to preserve?\n\nAn unencrypted backup, including internal settings and credentials, will be saved on this computer. Keep it private. The microSD is not included.', '¿El firmware actual es el original que quieres conservar?\n\nSe guardará en este ordenador un respaldo sin cifrar, incluidos ajustes y credenciales internos. Guárdalo en privado. La microSD no está incluida.'),
+ 'confirm_update': ('Update DoceInk on this Metalio?\n\nAccounts, settings and microSD files will be preserved. Keep USB connected until it finishes.', '¿Actualizar DoceInk en este Metalio?\n\nSe conservarán las cuentas, los ajustes y los archivos de la microSD. Mantén el USB conectado hasta que termine.'),
+ 'confirm_restore': ('Restore the original backup for this Metalio?\n\nCurrent internal firmware, accounts and settings will be replaced by the contents of the backup. The microSD is not erased. Keep USB connected.', '¿Restaurar el respaldo original de este Metalio?\n\nEl firmware, las cuentas y los ajustes internos actuales serán reemplazados por los del respaldo. La microSD no se borra. Mantén el USB conectado.'),
  'notice': ('Clean installation · Internal accounts and settings will be erased.\nYour microSD card is not erased. Wi-Fi updates preserve your data.', 'Instalación limpia · Se borrarán cuentas y ajustes internos.\nLa microSD no se borra. Las actualizaciones Wi-Fi conservan tus datos.'),
  'compat': ('Only for Metalio E-Ink4 · ESP32-S3 · 16 MB flash', 'Solo para Metalio E-Ink4 · ESP32-S3 · flash de 16 MB'),
  'confirm': ('Install on the connected Metalio?\n\nThis replaces all internal firmware, accounts, Wi-Fi networks and settings. It does not erase the microSD card.\n\nConfirm that the connected device is a Metalio E-Ink4. Keep the cable connected until installation finishes.', '¿Instalar en el Metalio conectado?\n\nSe reemplazarán el firmware, las cuentas, redes Wi-Fi y ajustes internos. La microSD no se borra.\n\nConfirma que conectaste un Metalio E-Ink4. Mantén el cable conectado hasta que termine.'),
@@ -39,7 +62,7 @@ TEXT = {
  'details': ('Details', 'Detalles'),
  'licenses': ('Licenses', 'Licencias'),
  'credit': ('Created by faga12@gmail.com', 'Creado por faga12@gmail.com'),
- 'offline': ('Downloads the latest firmware · Internet required', 'Descarga el firmware más reciente · Requiere internet'),
+ 'offline': ('Install/update require internet · Restore works offline', 'Instalar o actualizar requiere internet · Restaurar funciona sin conexión'),
 }
 
 
@@ -87,7 +110,7 @@ class Capture(io.TextIOBase):
         return False
 
 
-def run_install(folder, port, emit, runner=None, expected_version=None):
+def run_install(folder, port, emit, runner=None, expected_version=None, expected_mac=None):
     """Called only after UI confirmation. No filesystem or SD erase operations."""
     emit('stage', 'checking')
     image = verify_image(folder, expected_version)
@@ -102,6 +125,8 @@ def run_install(folder, port, emit, runner=None, expected_version=None):
         runner(['--chip', 'esp32s3', '--port', port, '--after', 'no_reset', 'flash_id'])
     if not re.search(r'Detected flash size:\s*16MB\b', ''.join(probe.parts)):
         raise ValueError('A 16 MB flash chip is required. Nothing was written. / Se requiere flash de 16 MB. No se escribió nada.')
+    if expected_mac is not None and device_ops.probe(port, emit, runner) != expected_mac:
+        raise ValueError('Connected Metalio changed / Cambió el Metalio conectado')
     emit('stage', 'writing')
     emit('progress', 30)
     output = Capture(emit)
@@ -132,14 +157,19 @@ class Window:
         self.queue = queue.Queue()
         self.busy = False
         self.scan = scan
+        self.device = None
+        self.device_port = ''
+        self.has_backup = False
+        self.ignore_disconnect_until = 0.0
         self.language = tk.StringVar(value='English')
         self.port = tk.StringVar()
+        self.make_backup = tk.BooleanVar(value=True)
         self.stage = 'none'
         self.rows = []
         font = 'Helvetica Neue' if sys.platform == 'darwin' else 'Segoe UI'
         root.title('DoceInk Setup')
-        root.geometry('610x720')
-        root.minsize(610, 720)
+        root.geometry('610x800')
+        root.minsize(610, 800)
         root.configure(bg='#ffffff')
         root.protocol('WM_DELETE_WINDOW', self.close)
         style = ttk.Style()
@@ -161,15 +191,18 @@ class Window:
         except tk.TclError:
             pass
         ttk.Label(panel, text='DoceInk', font=(font, 27, 'bold')).pack()
-        self.subtitle = ttk.Label(panel); self.subtitle.pack(pady=(4, 20))
+        self.subtitle = ttk.Label(panel); self.subtitle.pack(pady=(4, 10))
         self.compat = ttk.Label(panel, foreground='#555555'); self.compat.pack()
         self.firmware = ttk.Label(panel, text='Installer '+VERSION, foreground='#777777')
         self.firmware.pack(pady=(3, 14))
         self.connect = ttk.Label(panel); self.connect.pack(anchor='w')
-        self.status = ttk.Label(panel, wraplength=545); self.status.pack(anchor='w', pady=(16, 16))
+        self.status = ttk.Label(panel, wraplength=545); self.status.pack(anchor='w', pady=(10, 10))
         self.progress = ttk.Progressbar(panel, maximum=100); self.progress.pack(fill='x')
-        self.install = ttk.Button(panel, style='Install.TButton', command=self.start); self.install.pack(fill='x', pady=(16, 12))
+        self.install = ttk.Button(panel, style='Install.TButton', command=self.start); self.install.pack(fill='x', pady=(12, 4))
+        self.restore = ttk.Button(panel, command=self.start_restore); self.restore.pack(fill='x', pady=(4, 4))
+        self.backup_option = ttk.Checkbutton(panel, variable=self.make_backup); self.backup_option.pack(anchor='w', pady=(4, 4))
         self.notice = ttk.Label(panel, wraplength=545, foreground='#555555', font=(font, 10)); self.notice.pack(anchor='w')
+        self.backup_location = ttk.Label(panel, wraplength=545, foreground='#555555', font=(font, 9)); self.backup_location.pack(anchor='w', pady=(4, 0))
         self.offline = ttk.Label(panel, foreground='#777777', font=(font, 9)); self.offline.pack(anchor='w', pady=(10, 8))
         self.credit = ttk.Label(panel, foreground='#555555', font=(font, 10)); self.credit.pack(anchor='w', pady=(0, 12))
         bottom = ttk.Frame(panel); bottom.pack(fill='x')
@@ -186,10 +219,22 @@ class Window:
 
     def translate(self):
         self.root.title(self.text('title'))
-        for name in ('subtitle','compat','connect','install','notice','offline','help','details','licenses','credit'):
+        for name in ('subtitle','compat','connect','offline','help','details','licenses','credit','restore','backup_option'):
             getattr(self, name).configure(text=self.text(name))
+        doceink = bool(self.device and self.device.get('kind') == 'doceink')
+        unknown = self.scan and self.port.get() and not self.device
+        self.install.configure(text=self.text('identify' if unknown else 'update' if doceink else 'install'))
+        self.notice.configure(text=self.text('notice_update' if doceink else 'notice'))
+        self.backup_location.configure(text=self.text('backup_location') + '\n' + str(device_ops.root_directory()))
+        if doceink:
+            self.backup_option.pack_forget()
+        elif not self.backup_option.winfo_manager():
+            self.backup_option.pack(anchor='w', pady=(4, 4), before=self.notice)
         self.status.configure(text=self.text(self.stage))
+        ready = bool(self.port.get() and not self.busy and (self.device or not self.scan))
         self.install.configure(state='normal' if self.port.get() and not self.busy else 'disabled')
+        self.restore.configure(state='normal' if ready and doceink and self.has_backup else 'disabled')
+        self.backup_option.configure(state='normal' if ready and not doceink else 'disabled')
 
     def scan_ports(self):
         if not self.busy:
@@ -200,42 +245,111 @@ class Window:
         from serial.tools.list_ports import comports
         try:
             ports = list(comports())
-            self.port.set(preferred_port(ports))
-            if self.stage not in ('done', 'error'):
-                self.stage = 'ready' if self.port.get() else ('choose' if matching_ports(ports) else 'none')
+            detected = preferred_port(ports)
+            if not detected and self.device and time.monotonic() < self.ignore_disconnect_until:
+                return
+            self.port.set(detected)
+            if not detected:
+                self.device = None
+                self.device_port = ''
+                self.has_backup = False
+                self.stage = 'choose' if matching_ports(ports) else 'none'
+            elif self.scan and detected != self.device_port:
+                self.device = None
+                self.has_backup = False
+                self.device_port = detected
+                self.busy = True
+                self.stage = 'identifying'
+                threading.Thread(target=self.inspect_worker, args=(detected,), daemon=True).start()
+            elif not self.scan and self.stage not in ('done', 'error'):
+                self.stage = 'ready'
         except Exception as exc:
             self.port.set('')
             self.stage = 'detect_error'
             self.log = (self.log + str(exc) + '\n')[-100000:]
         self.translate()
 
+    def inspect_worker(self, port):
+        emit = lambda kind, value: self.queue.put((kind, value))
+        try:
+            try:
+                with tempfile.TemporaryDirectory(prefix='DoceInk-inspect-') as directory:
+                    device = device_ops.inspect(port, Path(directory), emit)
+                    has_backup = device_ops.backup_info(device['mac']) is not None
+            finally:
+                try: device_ops.run_tool(port, ['run'], emit)
+                except (Exception, SystemExit): pass
+            self.queue.put(('inspected', (port, device, has_backup)))
+        except (Exception, SystemExit) as exc:
+            self.queue.put(('log', '\n' + str(exc) + '\n'))
+            self.queue.put(('inspection_failed', port))
+
     def start(self):
         from tkinter import messagebox
         if self.busy: return
         self.refresh_detection()
+        if self.busy: return
         if not self.port.get(): return
-        if not messagebox.askyesno(self.text('title'), self.text('confirm'), parent=self.root, default='no'):
+        if self.scan and not self.device:
+            self.device_port = ''
+            self.refresh_detection()
             return
+        doceink = bool(self.device and self.device.get('kind') == 'doceink')
+        if not messagebox.askyesno(self.text('title'), self.text('confirm_update' if doceink else 'confirm'), parent=self.root, default='no'):
+            return
+        if not doceink and self.make_backup.get() and not self.has_backup:
+            if not messagebox.askyesno(self.text('title'), self.text('confirm_backup'), parent=self.root, default='no'):
+                return
+        self.begin_operation('update' if doceink else 'install')
+
+    def start_restore(self):
+        from tkinter import messagebox
+        if self.busy or not self.device or self.device.get('kind') != 'doceink' or not self.has_backup: return
+        self.refresh_detection()
+        if self.busy or not self.port.get() or not self.device: return
+        if not messagebox.askyesno(self.text('title'), self.text('confirm_restore'), parent=self.root, default='no'):
+            return
+        self.begin_operation('restore')
+
+    def begin_operation(self, action):
         self.busy = True
         port = self.port.get()
+        expected = self.device['mac'] if self.device else None
+        create_backup = self.make_backup.get()
         self.log = ''
-        self.stage = 'latest'
+        self.stage = 'connecting' if action == 'restore' else 'latest'
         self.progress['value'] = 0
         self.lang.configure(state='disabled')
         self.translate()
-        threading.Thread(target=self.worker, args=(port,), daemon=True).start()
+        threading.Thread(target=self.worker, args=(port, action, expected, create_backup), daemon=True).start()
 
-    def worker(self, port):
+    def worker(self, port, action='install', expected=None, create_backup=True):
         try:
             emit = lambda kind, value: self.queue.put((kind, value))
-            # Every installation fetches latest anew; no bundled or cached fallback.
             with tempfile.TemporaryDirectory(prefix='DoceInk-') as directory:
                 folder = Path(directory)
-                version = download_latest(folder, emit)
                 from serial.tools.list_ports import comports
+                version = None
+                if action != 'restore':
+                    # Always verify the latest complete image before touching flash.
+                    version = download_latest(folder, emit)
+                    verify_image(folder, version)
                 if preferred_port(list(comports())) != port:
                     raise RuntimeError('USB connection changed. Reconnect only Metalio and retry. / La conexión USB cambió. Reconecta solo el Metalio y reintenta.')
-                run_install(folder, port, emit, expected_version=version)
+                if action == 'restore':
+                    device_ops.restore_backup(port, expected, emit)
+                else:
+                    state = device_ops.inspect(port, folder, emit)
+                    if expected and state['mac'] != expected:
+                        raise RuntimeError('Connected Metalio changed / Cambió el Metalio conectado')
+                    if action == 'update':
+                        device_ops.update_existing(port, state, folder, emit)
+                    else:
+                        if state['kind'] == 'doceink':
+                            raise RuntimeError('DoceInk is already installed. Use Update. / DoceInk ya está instalado. Usa Actualizar.')
+                        if create_backup and device_ops.backup_info(state['mac']) is None:
+                            device_ops.save_backup(port, state['mac'], emit)
+                        run_install(folder, port, emit, expected_version=version, expected_mac=state['mac'])
         except (Exception, SystemExit) as exc:
             self.queue.put(('log', '\n' + str(exc) + '\n'))
             self.queue.put(('stage','error'))
@@ -250,8 +364,23 @@ class Window:
                 elif kind == 'progress': self.progress['value'] = value
                 elif kind == 'stage': self.stage = value; self.translate()
                 elif kind == 'firmware': self.firmware.configure(text='Firmware '+value)
+                elif kind == 'inspected':
+                    port, device, backup = value
+                    if self.port.get() == port:
+                        self.device, self.has_backup = device, backup
+                        self.stage = ('detected_doceink' if backup else 'detected_doceink_no_backup') if device['kind'] == 'doceink' else 'detected_original'
+                    self.ignore_disconnect_until = time.monotonic() + 5
+                    self.busy = False
+                    self.translate()
+                elif kind == 'inspection_failed':
+                    if self.port.get() == value: self.stage = 'detect_error'
+                    self.busy = False
+                    self.translate()
                 elif kind == 'finished':
                     self.busy = False
+                    self.device = None
+                    self.device_port = ''
+                    self.ignore_disconnect_until = time.monotonic() + 5
                     self.lang.configure(state='readonly')
                     self.translate()
                     if self.stage == 'error': self.show_details()

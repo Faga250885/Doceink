@@ -1,7 +1,7 @@
 # Rebuild the Windows installer; this script never flashes a device.
 $ErrorActionPreference='Stop'
 $project=Split-Path -Parent $PSScriptRoot
-$version='0.75.149.1'
+$version='0.75.158.1'
 $payload=Join-Path $PSScriptRoot 'payload'
 $venv=Join-Path $PSScriptRoot '.venv'
 Push-Location -LiteralPath $project
@@ -16,6 +16,8 @@ try {
     if($LASTEXITCODE -ne 0){throw 'License preparation failed'}
     & $python (Join-Path $PSScriptRoot 'test_installer.py')
     if($LASTEXITCODE -ne 0){throw 'Installer tests failed'}
+    & $python (Join-Path $PSScriptRoot 'test_device_ops.py')
+    if($LASTEXITCODE -ne 0){throw 'Backup/update tests failed'}
     & $python (Join-Path $PSScriptRoot 'test_download.py')
     if($LASTEXITCODE -ne 0){throw 'Download tests failed'}
     # Only static artwork and license notices are bundled. Firmware is fetched at install time.

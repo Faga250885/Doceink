@@ -55,7 +55,7 @@ jobs:
           DOCEINK_TEST_GITHUB_TOKEN: ${{ github.token }}
         shell: pwsh
         run: |
-          $app = Resolve-Path 'installer/dist/DoceInk-Setup-0.75.149.1.exe'
+          $app = Resolve-Path 'installer/dist/DoceInk-Setup-0.75.158.1.exe'
           foreach ($mode in @('self-test', 'smoke-test', 'download-test')) {
             $result = Join-Path $PWD "installer/dist/$mode.json"
             $process = Start-Process -FilePath $app -ArgumentList "--$mode", $result -PassThru -Wait -WindowStyle Hidden

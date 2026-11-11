@@ -79,7 +79,7 @@ class InstallTests(unittest.TestCase):
     def test_target_changed_during_download_never_opens_serial(self):
         import queue
         window=object.__new__(a.Window);window.queue=queue.Queue()
-        with patch.object(a,'download_latest',return_value='0.75.999'),patch('serial.tools.list_ports.comports',return_value=[]),patch.object(a,'run_install') as run:
+        with patch.object(a,'download_latest',return_value='0.75.999'),patch.object(a,'verify_image'),patch('serial.tools.list_ports.comports',return_value=[]),patch.object(a,'run_install') as run:
             window.worker('SIMULATED')
             run.assert_not_called()
         self.assertIn(('stage','error'),list(window.queue.queue))
@@ -95,6 +95,32 @@ class InstallTests(unittest.TestCase):
             self.assertEqual(window.install.cget('text'),'Instalar DoceInk')
             window.language.set('English');window.translate();root.update()
             self.assertEqual(window.install.cget('text'),'Install DoceInk')
+        root.destroy()
+    def test_doceink_presents_update_and_matching_restore(self):
+        import tkinter as tk
+        root=tk.Tk();root.withdraw()
+        with patch.object(a,'assets',return_value=PAYLOAD):
+            window=a.Window(root,scan=False);window.port.set('SIMULATED')
+            window.device={'kind':'doceink','mac':'10:20:ba:6d:64:08'}
+            window.has_backup=True;window.translate();root.update()
+            self.assertEqual(window.install.cget('text'),'Update DoceInk')
+            self.assertNotIn('disabled',window.restore.state())
+            self.assertFalse(window.backup_option.winfo_manager())
+            with patch('serial.tools.list_ports.comports',return_value=[SimpleNamespace(device='SIMULATED',vid=0x303a,pid=0x1001)]),patch('tkinter.messagebox.askyesno',return_value=True),patch.object(window,'begin_operation') as begin:
+                window.start_restore();begin.assert_called_once_with('restore')
+                begin.reset_mock();window.start();begin.assert_called_once_with('update')
+            window.has_backup=False;window.translate()
+            self.assertIn('disabled',window.restore.state())
+        root.destroy()
+
+    def test_new_install_asks_to_confirm_original_before_start(self):
+        import tkinter as tk
+        root=tk.Tk();root.withdraw()
+        with patch.object(a,'assets',return_value=PAYLOAD):
+            window=a.Window(root,scan=False);window.port.set('SIMULATED')
+            window.device={'kind':'unknown','mac':'10:20:ba:6d:64:08'}
+            with patch('serial.tools.list_ports.comports',return_value=[SimpleNamespace(device='SIMULATED',vid=0x303a,pid=0x1001)]),patch('tkinter.messagebox.askyesno',side_effect=[True,False]) as ask,patch.object(window,'begin_operation') as begin:
+                window.start();begin.assert_not_called();self.assertEqual(ask.call_count,2)
         root.destroy()
 
 if __name__=='__main__':unittest.main()

@@ -2,7 +2,7 @@
 
 [English](README.md) | **Español**
 
-Esta carpeta contiene el instalador gráfico para Windows y macOS, no el proyecto completo del firmware. Descarga el `.exe` o el `.dmg` correspondiente a tu Mac en [Releases](https://github.com/Faga250885/Doceink/releases/latest). El instalador 0.75.149.1 detecta el USB automáticamente y no tiene selector de puertos.
+Esta carpeta contiene el instalador gráfico para Windows y macOS, no el proyecto completo del firmware. Descarga el `.exe` o el `.dmg` correspondiente a tu Mac en [Releases](https://github.com/Faga250885/Doceink/releases/latest). El instalador 0.75.158.1 detecta el USB automáticamente y no tiene selector de puertos.
 
 ## Compilar
 
@@ -36,13 +36,15 @@ El paquete de código adjunto a la publicación incluye el instalador y los arch
 El ejecutable admite estos modos de verificación internos:
 
 ```powershell
-.\DoceInk-Setup-0.75.149.1.exe --self-test result.json
-.\DoceInk-Setup-0.75.149.1.exe --smoke-test gui.json
-.\DoceInk-Setup-0.75.149.1.exe --download-test download.json
+.\DoceInk-Setup-0.75.158.1.exe --self-test result.json
+.\DoceInk-Setup-0.75.158.1.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.158.1.exe --download-test download.json
 ```
 
 Comprueban recursos e interfaz sin enumerar ni abrir puertos serie. No sustituyen una prueba de instalación en hardware.
 
 Solo el modo de prueba de descarga admite `DOCEINK_TEST_GITHUB_TOKEN` para evitar límites de servidores CI compartidos. Ese token temporal se envía únicamente a la API de GitHub, no se propaga en redirecciones ni se incluye en la aplicación. La interfaz normal no lo requiere.
 
-El instalador realiza una instalación limpia solo después de confirmar Instalar. Las actualizaciones normales por Wi-Fi utilizan la aplicación OTA y conservan los datos del usuario.
+Antes de la primera instalación limpia, el instalador puede respaldar toda la memoria interna, leerla dos veces y comparar los resultados. Confirma que el firmware actual sea el original: no se puede reconstruir si ya fue reemplazado. El respaldo se guarda sin cifrar en `~/DoceInk/Backups/<identificador>` y puede contener contraseñas y claves de cuentas. Consérvalo en privado y guarda ambos archivos. No incluye la microSD.
+
+Al conectar un Metalio reconocido con DoceInk, el instalador ofrece actualizar por USB en la partición inactiva y verificarla antes de activarla. Si existe un respaldo verificado del mismo Metalio, ofrece restaurarlo. La restauración reemplaza toda la memoria interna, incluidos los ajustes y cuentas actuales; no borra la microSD. Las actualizaciones por Wi-Fi también conservan los datos. La detección puede reiniciar el equipo. Los flujos de respaldo, restauración y actualización USB tienen pruebas automáticas simuladas, pero aún no se han validado de principio a fin en hardware físico.
