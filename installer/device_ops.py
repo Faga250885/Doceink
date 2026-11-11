@@ -206,7 +206,7 @@ def save_backup(port, mac, emit, root=None, runner=None):
     if probe(port, emit, runner) != mac:
         raise ValueError('Connected Metalio changed / Cambió el Metalio conectado')
     directory.mkdir(parents=True, exist_ok=True, mode=0o700)
-    with tempfile.TemporaryDirectory(prefix='capture-', dir=directory) as tmp:
+    with tempfile.TemporaryDirectory(prefix='doceink-capture-') as tmp:
         first, second = Path(tmp) / 'first.bin', Path(tmp) / 'second.bin'
         emit('stage', 'backup_read')
         read_flash(port, 0, FLASH_BYTES, first, emit, runner)
@@ -244,7 +244,7 @@ def restore_backup(port, expected_mac, emit, root=None, runner=None):
     emit('stage', 'restoring')
     run_tool(port, ['--baud', '460800', 'write_flash', '--flash_mode', 'keep', '--flash_freq', 'keep',
                     '--flash_size', 'keep', '0x0', str(image)], emit, runner)
-    with tempfile.TemporaryDirectory(prefix='restore-check-', dir=image.parent) as tmp:
+    with tempfile.TemporaryDirectory(prefix='doceink-restore-check-') as tmp:
         check = Path(tmp) / 'verify.bin'
         read_flash(port, 0, FLASH_BYTES, check, emit, runner)
         if digest(check) != digest(image):
