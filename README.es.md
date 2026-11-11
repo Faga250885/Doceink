@@ -38,13 +38,13 @@ Las pantallas pueden variar ligeramente según la versión del firmware.
 
 | Ordenador | Descarga |
 | --- | --- |
-| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe) |
-| Mac · Apple Silicon (M1 o posterior) · macOS 15+ | [DoceInk Setup para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) |
-| Mac · Intel · macOS 15+ | [DoceInk Setup para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg) |
+| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1.exe) |
+| Mac · Apple Silicon (M1 o posterior) · macOS 15+ | [DoceInk Setup para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) |
+| Mac · Intel · macOS 15+ | [DoceInk Setup para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg) |
 
 **Conecta Metalio → abre DoceInk Setup → pulsa Instalar.** Lo detecta automáticamente, sin elegir puertos COM ni serie. Sin Python, comandos ni descargar el firmware manualmente. Cada instalación obtiene la última versión estable de GitHub y requiere internet. Se abre en inglés y permite cambiar a español. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
 
-El instalador **0.75.149.1** añade detección automática y versiones de macOS; el firmware está en **0.75.158**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
+El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.158**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
 
 El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 

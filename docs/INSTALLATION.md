@@ -6,38 +6,44 @@
 
 ## Windows: connect and run
 
-1. [Download DoceInk Setup 0.75.149.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe).
+1. [Download DoceInk Setup 0.75.158.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1.exe).
 2. Connect **Metalio E-Ink4** with a USB data cable. Disable USB disk mode if it is active.
 3. Open the downloaded `.exe`. It includes the installation tools and downloads the latest stable firmware from GitHub automatically. You do not need Python or terminal commands. Internet access is required.
 4. Metalio is detected automatically. There is no COM-port selector. If several compatible USB devices are connected, leave only Metalio connected.
-5. Click **Install DoceInk**, confirm the clean installation and keep USB connected until it finishes. Metalio then restarts.
+5. On an original device, keep the backup option enabled, confirm the currently installed firmware is original, then confirm the clean installation. Keep USB connected until it finishes. Metalio then restarts. If DoceInk is already installed, choose **Update DoceInk** to preserve internal settings or restore an existing backup for the same device.
 
 The installer opens in English. Select **Español** at the top for Spanish prompts.
 
 ## macOS: app with automatic USB detection
 
-1. Download the [Apple Silicon DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) for M1 or later, or the [Intel DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg). Requires **macOS 15 or later**.
+1. Download the [Apple Silicon DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) for M1 or later, or the [Intel DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg). Requires **macOS 15 or later**.
 2. Open the DMG and drag **DoceInk Setup** to Applications, then open the app.
 3. Connect Metalio with a USB data cable, with USB disk mode disabled. It detects the connection automatically; no terminal commands, Python installation or port selection are needed.
 4. Click **Install DoceInk** and confirm. The app downloads and verifies the latest stable firmware from GitHub before writing.
 
 **Signing status:** the app has an ad-hoc integrity signature, but no Apple Developer ID signature or notarization. Gatekeeper may block its first launch. This is not yet a notarized, warning-free Mac distribution; do not disable Gatekeeper. The native builds and automated tests do not establish a successful physical USB installation.
 
-Installer version **0.75.149.1** and firmware version **0.75.158** are independent. Older online installers also consult the latest release on each installation.
+Installer version **0.75.158.1** and firmware version **0.75.158** are independent. Older online installers also consult the latest release on each installation.
 
 ## What happens to my data?
 
 **This is a clean USB installation. It replaces internal flash and erases accounts, saved networks and settings on the selected Metalio.** It asks for confirmation before writing. The microSD card is not erased. Use an empty card if you also want to start without previous books, tasks or history.
 
-**Normal Wi-Fi updates preserve user data.** If DoceInk is already installed and you want to keep your settings, use [Updates](UPDATES.md), not the clean installer.
+**Normal Wi-Fi updates preserve user data.** The desktop installer also offers a USB update for recognized DoceInk installations, preserving internal settings. Backup, restore and USB-update workflows have simulated tests but have not yet been validated end to end on physical hardware.
 
 The firmware package does not include developer accounts, passwords, API keys or personal conversations. After installation, configure your own network and accounts.
+
+## Original firmware backup
+
+Before the first clean installation, the optional backup reads the entire internal flash twice and verifies both copies. Confirm that the current firmware really is original: a backup made after DoceInk was installed cannot recover the original firmware. It is stored unencrypted in `~/DoceInk/Backups/<device-id>` on the computer and may contain Wi-Fi passwords and account keys. Keep both backup files private and safe. It does not include the microSD.
+
+When a matching verified backup exists, the installer offers to restore it to the same Metalio. Restoring replaces the entire internal flash, including current accounts and settings, with the saved contents; it does not erase the microSD. Device detection may restart Metalio.
 
 ## Requirements and checks
 
 - Metalio E-Ink4, ESP32-S3, **16 MB flash**. Other boards are not supported.
 - Windows 10/11 x64, or macOS 15+ (Apple Silicon or Intel), and a USB data cable.
-- Each installation checks GitHub again and downloads its latest stable release. It verifies the release SHA-256 and image manifest before opening the USB port. There is no older offline fallback.
+- Each installation checks GitHub again and downloads its latest stable release. It verifies the release SHA-256 and image manifest before writing to the USB device. There is no older offline fallback.
 - The installer checks the image size and SHA-256, rejects a different ESP chip, and checks for 16 MB flash before writing. These checks cannot identify every board that uses the same ESP32-S3 chip; connect only the specified Metalio model.
 
 [SHA256SUMS.txt](../SHA256SUMS.txt) lists the executable and firmware checksums. The executable is currently unsigned, so Windows may display an unknown-publisher or SmartScreen notice. Obtain it from this repository's release and verify the download if Windows asks you to review it; no antivirus changes are required.
@@ -82,7 +88,7 @@ This uses [Espressif's esptool 4.12.0](https://pypi.org/project/esptool/4.12.0/)
 
 ## Validation and image contents
 
-The firmware compiles successfully. Startup rendering and display/input regression tests passed. Installer 0.75.149.1 has sixteen automated tests covering automatic USB selection, disconnection, cancellation, firmware validation and download handling. Packaged app checks exercise resources, the bilingual interface and a verified live download without opening a USB port. macOS packages also verify and mount the DMG read-only. **The owner confirmed a clean installation from Windows on a physical Metalio. The new firmware features still need physical validation; macOS USB installation remains unverified.**
+The firmware compiles successfully. Startup rendering and display/input regression tests passed. Installer 0.75.158.1 has sixteen automated tests covering automatic USB selection, disconnection, cancellation, firmware validation and download handling. Packaged app checks exercise resources, the bilingual interface and a verified live download without opening a USB port. macOS packages also verify and mount the DMG read-only. **The owner confirmed a clean installation from Windows on a physical Metalio. The new firmware features still need physical validation; macOS USB installation remains unverified.**
 
 The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.158-manifest.json).
 

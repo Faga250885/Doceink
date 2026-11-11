@@ -38,13 +38,13 @@ Screens may vary slightly between firmware versions.
 
 | Computer | Download |
 | --- | --- |
-| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe) |
-| Mac · Apple Silicon (M1 or later) · macOS 15+ | [DoceInk Setup for Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) |
-| Mac · Intel · macOS 15+ | [DoceInk Setup for Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg) |
+| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1.exe) |
+| Mac · Apple Silicon (M1 or later) · macOS 15+ | [DoceInk Setup for Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) |
+| Mac · Intel · macOS 15+ | [DoceInk Setup for Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg) |
 
 **Connect Metalio → open DoceInk Setup → click Install.** Detection is automatic; there is no COM/serial-port selector. No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release. English by default, with a Spanish selector. If several compatible USB devices are connected, leave only Metalio connected.
 
-Installer **0.75.149.1** adds automatic detection and macOS packages; firmware is now **0.75.158**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
+Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.158**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
 
 The package is built from firmware build outputs and system resources. **It contains no developer accounts, API keys, saved Wi-Fi networks, conversations or personal files.** Each user sets up their own Metalio.
 

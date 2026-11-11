@@ -6,7 +6,7 @@
 
 ## Windows: conectar y ejecutar
 
-1. [Descarga DoceInk Setup 0.75.149.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1.exe).
+1. [Descarga DoceInk Setup 0.75.158.1](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1.exe).
 2. Conecta **Metalio E-Ink4** con un cable USB de datos. Desactiva Disco USB si está activo.
 3. Abre el `.exe`. Incluye las herramientas y descarga automáticamente el firmware estable más reciente de GitHub. No necesitas Python ni comandos. Requiere internet.
 4. Detecta Metalio automáticamente, sin selector de puertos COM. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
@@ -14,22 +14,28 @@
 
 ## macOS: app con detección USB automática
 
-1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-arm64.dmg) para M1 o posterior, o el [DMG para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.149/DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg). Requiere **macOS 15 o posterior**.
+1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) para M1 o posterior, o el [DMG para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg). Requiere **macOS 15 o posterior**.
 2. Abre el DMG, arrastra **DoceInk Setup** a Aplicaciones y abre la app.
 3. Conecta Metalio con un cable USB de datos, con Disco USB desactivado. Detecta la conexión automáticamente: no necesitas terminal, instalar Python ni elegir puertos.
 4. Pulsa **Instalar DoceInk** y confirma. Descarga y verifica el firmware estable más reciente de GitHub antes de escribir.
 
 **Firma:** la app tiene una firma ad hoc para comprobar su integridad, pero todavía no tiene firma Apple Developer ID ni notarización. Gatekeeper podría impedir abrirla. Aún no es una distribución notarizada sin avisos; no desactives Gatekeeper. Las compilaciones nativas y las pruebas automáticas no equivalen a una instalación USB física validada.
 
-La versión del instalador **0.75.149.1** es independiente del firmware **0.75.158**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
+La versión del instalador **0.75.158.1** es independiente del firmware **0.75.158**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
 
 ## Qué pasa con los datos
 
 **Esta es una instalación limpia por USB. Reemplaza la memoria interna y borra cuentas, redes y ajustes del Metalio seleccionado.** Pide confirmación antes de escribir. La microSD no se borra. Usa una tarjeta vacía si también quieres empezar sin libros, tareas ni historiales anteriores.
 
-**Las actualizaciones normales por Wi-Fi conservan los datos del usuario.** Si ya tienes DoceInk y quieres conservar tus ajustes, utiliza [Actualizar](ACTUALIZACIONES.md), no el instalador limpio.
+**Las actualizaciones normales por Wi-Fi conservan los datos del usuario.** El instalador también ofrece actualizar por USB los equipos reconocidos con DoceInk conservando sus ajustes. Los flujos de respaldo, restauración y actualización USB tienen pruebas simuladas, pero aún no se han validado de principio a fin en hardware físico.
 
 El paquete no contiene cuentas, contraseñas, claves API ni conversaciones personales del desarrollador. Cada usuario configura su propia red y cuentas.
+
+## Respaldo del firmware original
+
+Antes de la primera instalación limpia, el respaldo opcional lee dos veces toda la memoria interna y compara los resultados. Confirma que el firmware actual sea el original: un respaldo hecho después de instalar DoceInk no permite recuperarlo. Se guarda sin cifrar en `~/DoceInk/Backups/<identificador>` en la computadora y puede contener contraseñas de Wi-Fi y claves de cuentas. Mantén los dos archivos privados y seguros. La microSD no está incluida.
+
+Cuando existe un respaldo verificado del mismo Metalio, el instalador ofrece restaurarlo. Esta operación reemplaza toda la memoria interna, incluidas las cuentas y ajustes actuales, por los datos guardados; no borra la microSD. La detección puede reiniciar Metalio.
 
 ## Requisitos y comprobaciones
 
@@ -80,7 +86,7 @@ Se utiliza [esptool 4.12.0 de Espressif](https://pypi.org/project/esptool/4.12.0
 
 ## Validación y contenido
 
-La compilación del firmware y las pruebas del arranque, pantalla y entrada táctil pasaron. El instalador 0.75.149.1 tiene dieciséis pruebas automáticas de detección USB, desconexión, cancelación, validación del firmware y descargas. Las comprobaciones de la aplicación empaquetada verifican recursos, interfaz bilingüe y una descarga real sin abrir puertos USB. En macOS también se comprueba el DMG y se monta en modo de solo lectura. **El propietario confirmó una instalación limpia desde Windows en un Metalio físico. Las nuevas funciones requieren prueba física; la instalación USB desde macOS sigue sin validar.**
+La compilación del firmware y las pruebas del arranque, pantalla y entrada táctil pasaron. El instalador tiene pruebas automáticas de detección USB, desconexión, cancelación, validación del firmware y descargas. Las comprobaciones de la aplicación empaquetada verifican recursos, interfaz bilingüe y una descarga real sin abrir puertos USB. En macOS también se comprueba el DMG y se monta en modo de solo lectura. **El propietario confirmó una instalación limpia desde Windows en un Metalio físico. Las nuevas funciones requieren prueba física; la instalación USB desde macOS sigue sin validar.**
 
 La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.158-manifest.json).
 
