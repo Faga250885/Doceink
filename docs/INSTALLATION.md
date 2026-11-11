@@ -23,7 +23,7 @@ The installer opens in English. Select **Español** at the top for Spanish promp
 
 **Signing status:** the app has an ad-hoc integrity signature, but no Apple Developer ID signature or notarization. Gatekeeper may block its first launch. This is not yet a notarized, warning-free Mac distribution; do not disable Gatekeeper. The native builds and automated tests do not establish a successful physical USB installation.
 
-Installer version **0.75.149.1** and firmware version **0.75.154** are independent. Older online installers also consult the latest release on each installation.
+Installer version **0.75.149.1** and firmware version **0.75.155** are independent. Older online installers also consult the latest release on each installation.
 
 ## What happens to my data?
 
@@ -56,7 +56,7 @@ Metalio should restart and show the DoceInk symbol and name for two seconds befo
 
 ## Advanced installation: Linux or manual recovery
 
-Download the [full-image ZIP](https://github.com/Faga250885/Doceink/releases/download/v0.75.154/Metalio-0.75.154-instalacion-limpia.zip) and extract it. The image is `Metalio-instalacion-limpia.bin`; that filename is retained for compatibility. Windows and Mac users normally use the GUI installer above.
+Download the [full-image ZIP](https://github.com/Faga250885/Doceink/releases/download/v0.75.155/Metalio-0.75.155-instalacion-limpia.zip) and extract it. The image is `Metalio-instalacion-limpia.bin`; that filename is retained for compatibility. Windows and Mac users normally use the GUI installer above.
 
 In a terminal inside the extracted folder:
 
@@ -84,6 +84,6 @@ This uses [Espressif's esptool 4.12.0](https://pypi.org/project/esptool/4.12.0/)
 
 The firmware compiles successfully. Startup rendering and display/input regression tests passed. Installer 0.75.149.1 has sixteen automated tests covering automatic USB selection, disconnection, cancellation, firmware validation and download handling. Packaged app checks exercise resources, the bilingual interface and a verified live download without opening a USB port. macOS packages also verify and mount the DMG read-only. **The owner confirmed a clean installation from Windows on a physical Metalio. The new firmware features still need physical validation; macOS USB installation remains unverified.**
 
-The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.154-manifest.json).
+The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.155-manifest.json).
 
-The image is 16 MB including empty space. The application is **5,112,784 bytes**. Neither the complete image nor the `.exe` is an OTA file; use `Doceink-EInk4.bin` for firmware updates.
+The image is 16 MB including empty space. The application is **5,112,960 bytes**. Neither the complete image nor the `.exe` is an OTA file; use `Doceink-EInk4.bin` for firmware updates.
