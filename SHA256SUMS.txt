@@ -5,5 +5,8 @@ cb3625315833a96eef62640aed78f949d25a9f3bcd3f214c0e650fb6c5c2d404  Metalio-0.75.1
 
 # Installer 0.75.149.1 downloads the latest firmware.
 bce79dbc30bfaa62b07af2b85f77ced17c40e885b8b7ffb0c87afedbbef59269  DoceInk-Setup-0.75.149.1.exe
-e43841a324e57191475ac943fe1ba32307e6240b465dd4fa6bfdee177fea74e6  DoceInk-Setup-0.75.149.1-macOS-x86_64.dmg
 aca8f2712dfbd9d26c9ca632d6be4bd19cefbf342f44936af2bdbbeb27767413  DoceInk-Setup-0.75.149.1-macOS-arm64.dmg
+
+# Installer 0.75.158.1
+17ca384a90aa96755223d303ebefab3537c34837cd81dee681b6aa6b18b1cd2a  DoceInk-Setup-0.75.158.1.exe
+ed5eddd5f1e1e829ff56631eec841797f71c19e28bd61bf7ecf6e5a02356a663  DoceInk-Setup-0.75.158.1-macOS-arm64.dmg
