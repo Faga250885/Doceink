@@ -2,6 +2,12 @@
 
 [English](README.md) | **Español**
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/doceink-logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/doceink-logo-light.svg">
+  <img alt="Logo de DoceInk" src="assets/doceink-logo-light.svg" width="240">
+</picture>
+
 Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, grabadora local, reloj, calculadora y juegos en una misma interfaz.
 
 **Versión documentada: 0.75.158.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.

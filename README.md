@@ -2,7 +2,11 @@
 
 **English** | [Español](README.es.md)
 
-![DoceInk symbol](assets/doceink-symbol.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/doceink-logo-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="assets/doceink-logo-light.svg">
+  <img alt="DoceInk logo" src="assets/doceink-logo-light.svg" width="240">
+</picture>
 
 Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 16 MB of flash. Books, local tasks, voice conversations with ChatGPT, RSS news, weather, an offline audio recorder, a clock, a calculator and games in one interface.
 
