@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include: ${{ fromJSON(inputs.target == 'apple-silicon' && '[{"runner":"macos-26","arch":"arm64"}]' || '[{"runner":"macos-15","arch":"arm64"},{"runner":"macos-15-intel","arch":"x86_64"}]') }}
+        include: ${{ fromJSON(inputs.target == 'apple-silicon' && '[{"runner":"macos-26","arch":"arm64"}]' || '[{"runner":"macos-15","arch":"arm64"}]') }}
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 25
     steps:

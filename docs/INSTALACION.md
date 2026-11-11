@@ -14,7 +14,7 @@
 
 ## macOS: app con detección USB automática
 
-1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) para M1 o posterior, o el [DMG para Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg). Requiere **macOS 15 o posterior**.
+1. Descarga el [DMG para Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) para M1 o posterior. Requiere **macOS 15 o posterior**.
 2. Abre el DMG, arrastra **DoceInk Setup** a Aplicaciones y abre la app.
 3. Conecta Metalio con un cable USB de datos, con Disco USB desactivado. Detecta la conexión automáticamente: no necesitas terminal, instalar Python ni elegir puertos.
 4. Pulsa **Instalar DoceInk** y confirma. Descarga y verifica el firmware estable más reciente de GitHub antes de escribir.
@@ -40,7 +40,7 @@ Cuando existe un respaldo verificado del mismo Metalio, el instalador ofrece res
 ## Requisitos y comprobaciones
 
 - Metalio E-Ink4, ESP32-S3 y **flash de 16 MB**. No está preparado para otras placas.
-- Windows 10/11 x64 o macOS 15+ (Apple Silicon o Intel), con cable USB de datos.
+- Windows 10/11 x64 o macOS 15+ (Apple Silicon), con cable USB de datos.
 - Cada instalación consulta GitHub y descarga su última versión estable. Verifica SHA-256 y manifiesto antes de abrir el puerto USB. No recurre a una versión antigua sin conexión.
 - El instalador verifica tamaño y SHA-256 de la imagen, rechaza otros chips ESP y comprueba que la memoria sea de 16 MB antes de escribir. No puede distinguir todas las placas que usan ese mismo chip; conecta únicamente el modelo de Metalio indicado.
 

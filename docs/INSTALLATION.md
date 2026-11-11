@@ -16,7 +16,7 @@ The installer opens in English. Select **Español** at the top for Spanish promp
 
 ## macOS: app with automatic USB detection
 
-1. Download the [Apple Silicon DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) for M1 or later, or the [Intel DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg). Requires **macOS 15 or later**.
+1. Download the [Apple Silicon DMG](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) for M1 or later. Requires **macOS 15 or later**.
 2. Open the DMG and drag **DoceInk Setup** to Applications, then open the app.
 3. Connect Metalio with a USB data cable, with USB disk mode disabled. It detects the connection automatically; no terminal commands, Python installation or port selection are needed.
 4. Click **Install DoceInk** and confirm. The app downloads and verifies the latest stable firmware from GitHub before writing.
@@ -42,7 +42,7 @@ When a matching verified backup exists, the installer offers to restore it to th
 ## Requirements and checks
 
 - Metalio E-Ink4, ESP32-S3, **16 MB flash**. Other boards are not supported.
-- Windows 10/11 x64, or macOS 15+ (Apple Silicon or Intel), and a USB data cable.
+- Windows 10/11 x64, or macOS 15+ (Apple Silicon), and a USB data cable.
 - Each installation checks GitHub again and downloads its latest stable release. It verifies the release SHA-256 and image manifest before writing to the USB device. There is no older offline fallback.
 - The installer checks the image size and SHA-256, rejects a different ESP chip, and checks for 16 MB flash before writing. These checks cannot identify every board that uses the same ESP32-S3 chip; connect only the specified Metalio model.
 

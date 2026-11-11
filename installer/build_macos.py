@@ -22,8 +22,8 @@ def main():
     root = Path(__file__).resolve().parent
     os.chdir(root)
     arch = platform.machine()
-    if arch not in ('arm64', 'x86_64'):
-        raise SystemExit('Unsupported architecture')
+    if arch != 'arm64':
+        raise SystemExit('Apple Silicon is required for the macOS installer')
     payload = root / 'payload'
     payload.mkdir(exist_ok=True)
     shutil.copy2(root.parent / 'assets/doceink-symbol.png', payload)

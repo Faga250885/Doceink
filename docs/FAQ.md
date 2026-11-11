@@ -58,7 +58,7 @@ ChatGPT and task dictation use Wi-Fi. The separate Recorder app captures WAV aud
 
 ### Do I need Python, commands or a COM port on Windows or Mac?
 
-No. Download installer 0.75.149.1 for Windows or your Mac architecture, connect Metalio and open the app. It detects the connection automatically. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or Linux. Mac requires macOS 15+; Developer ID signing/notarization is still pending, so Gatekeeper may block opening the app.
+No. Download installer 0.75.158.1 for Windows or Apple Silicon Mac, connect Metalio and open the app. It detects the connection automatically. Select Spanish if preferred. The ZIP and terminal commands are optional alternatives for manual installation or Linux. Mac requires Apple Silicon and macOS 15+; Developer ID signing/notarization is still pending, so Gatekeeper may block opening the app.
 
 ### Where is the source project for building the firmware?
 

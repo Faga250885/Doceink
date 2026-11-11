@@ -40,7 +40,6 @@ Screens may vary slightly between firmware versions.
 | --- | --- |
 | Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1.exe) |
 | Mac · Apple Silicon (M1 or later) · macOS 15+ | [DoceInk Setup for Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) |
-| Mac · Intel · macOS 15+ | [DoceInk Setup for Intel](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/DoceInk-Setup-0.75.158.1-macOS-x86_64.dmg) |
 
 **Connect Metalio → open DoceInk Setup → click Install.** Detection is automatic; there is no COM/serial-port selector. No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release. English by default, with a Spanish selector. If several compatible USB devices are connected, leave only Metalio connected.
 

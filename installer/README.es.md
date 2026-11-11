@@ -2,7 +2,7 @@
 
 [English](README.md) | **Español**
 
-Esta carpeta contiene el instalador gráfico para Windows y macOS, no el proyecto completo del firmware. Descarga el `.exe` o el `.dmg` correspondiente a tu Mac en [Releases](https://github.com/Faga250885/Doceink/releases/latest). El instalador 0.75.158.1 detecta el USB automáticamente y no tiene selector de puertos.
+Esta carpeta contiene el instalador gráfico para Windows y macOS, no el proyecto completo del firmware. Descarga el `.exe` o el `.dmg` para Apple Silicon en [Releases](https://github.com/Faga250885/Doceink/releases/latest). El instalador 0.75.158.1 detecta el USB automáticamente y no tiene selector de puertos.
 
 ## Compilar
 
@@ -23,7 +23,7 @@ python -m pip install -r installer/requirements-lock.txt
 python installer/build_macos.py
 ```
 
-Genera una `.app` dentro de un DMG para Apple Silicon o Intel. Comprueba recursos, interfaz bilingüe, descarga real y el DMG montado en modo de solo lectura. Ninguna prueba abre puertos serie. [Build desktop installers](../.github/workflows/installers.yml) compila en ambos tipos de Mac y en Windows mediante GitHub Actions con permisos de lectura. La publicación se realiza después, por separado.
+Genera una `.app` dentro de un DMG para Apple Silicon. Comprueba recursos, interfaz bilingüe, descarga real y el DMG montado en modo de solo lectura. Ninguna prueba abre puertos serie. [Build desktop installers](../.github/workflows/installers.yml) compila en Apple Silicon y Windows mediante GitHub Actions con permisos de lectura. La publicación se realiza después, por separado.
 
 La app de macOS tiene firma ad hoc de integridad. **No se ha configurado firma Apple Developer ID ni notarización**; no se garantiza su aceptación por Gatekeeper. Consulta las [notas del paquete](MACOS.md). El instalador Windows tampoco tiene firma digital.
 

@@ -2,7 +2,7 @@
 
 **English** | [Español](README.es.md)
 
-This directory contains the Windows/macOS GUI installer, not the complete firmware source project. End users should download the `.exe` or architecture-specific `.dmg` from [Releases](https://github.com/Faga250885/Doceink/releases/latest). Installer 0.75.158.1 detects USB automatically and has no port selector.
+This directory contains the Windows/macOS GUI installer, not the complete firmware source project. End users should download the `.exe` or Apple Silicon `.dmg` from [Releases](https://github.com/Faga250885/Doceink/releases/latest). Installer 0.75.158.1 detects USB automatically and has no port selector.
 
 ## Build
 
@@ -23,7 +23,7 @@ python -m pip install -r installer/requirements-lock.txt
 python installer/build_macos.py
 ```
 
-The build creates an architecture-specific `.app` inside a DMG for Apple Silicon or Intel. It tests resources, the bilingual UI, live download verification and the read-only mounted DMG. No test opens a serial port. [Build desktop installers](../.github/workflows/installers.yml) runs this on both Mac architectures and Windows through GitHub Actions, with read-only repository permissions. Builds are uploaded as CI artifacts; publication is a separate step.
+The build creates an Apple Silicon `.app` inside a DMG. It tests resources, the bilingual UI, live download verification and the read-only mounted DMG. No test opens a serial port. [Build desktop installers](../.github/workflows/installers.yml) runs this on Apple Silicon and Windows through GitHub Actions, with read-only repository permissions. Builds are uploaded as CI artifacts; publication is a separate step.
 
 The macOS app uses an ad-hoc integrity signature. **Apple Developer ID signing and notarization are not configured**; Gatekeeper acceptance is not claimed. See [macOS package notes](MACOS.md). Windows installers are unsigned as well.
 

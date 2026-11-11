@@ -1,7 +1,7 @@
 DoceInk Setup for macOS — English
 
-Requires macOS 15 or later. Choose arm64 for Apple Silicon (M1 or later),
-or x86_64 for an Intel Mac. Python and installation tools are included.
+Requires macOS 15 or later and Apple Silicon (M1 or later).
+Python and installation tools are included.
 
 1. Open the DMG and drag DoceInk Setup to Applications.
 2. Open DoceInk Setup and connect Metalio with a USB data cable.
@@ -34,8 +34,8 @@ https://github.com/Faga250885/Doceink
 
 DoceInk Setup para macOS — Español
 
-Requiere macOS 15 o posterior. Elige arm64 para Apple Silicon (M1 o posterior)
-o x86_64 para Mac Intel. Incluye Python y las herramientas de instalación.
+Requiere macOS 15 o posterior y Apple Silicon (M1 o posterior).
+Incluye Python y las herramientas de instalación.
 
 1. Abre el DMG y arrastra DoceInk Setup a Aplicaciones.
 2. Abre DoceInk Setup y conecta Metalio con un cable USB de datos.
