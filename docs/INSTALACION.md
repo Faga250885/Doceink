@@ -21,7 +21,7 @@
 
 **Firma:** la app tiene una firma ad hoc para comprobar su integridad, pero todavía no tiene firma Apple Developer ID ni notarización. Gatekeeper podría impedir abrirla. Aún no es una distribución notarizada sin avisos; no desactives Gatekeeper. Las compilaciones nativas y las pruebas automáticas no equivalen a una instalación USB física validada.
 
-La versión del instalador **0.75.149.1** es independiente del firmware **0.75.155**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
+La versión del instalador **0.75.149.1** es independiente del firmware **0.75.158**. Los instaladores online anteriores también consultan la última publicación en cada instalación.
 
 ## Qué pasa con los datos
 
@@ -54,7 +54,7 @@ Metalio debería reiniciarse y mostrar el símbolo con **DoceInk** debajo durant
 
 ## Instalación avanzada: Linux o recuperación manual
 
-Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.155/Metalio-0.75.155-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows y Mac normalmente se utiliza el instalador gráfico de arriba.
+Descarga el [ZIP de imagen completa](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/Metalio-0.75.158-instalacion-limpia.zip) y extráelo. Su imagen se llama `Metalio-instalacion-limpia.bin`. En Windows y Mac normalmente se utiliza el instalador gráfico de arriba.
 
 En una terminal dentro de la carpeta extraída:
 
@@ -67,7 +67,7 @@ python -m pip install esptool==4.12.0
 Comprueba la imagen con `shasum -a 256 Metalio-instalacion-limpia.bin` en macOS o `sha256sum Metalio-instalacion-limpia.bin` en Linux. La huella debe ser:
 
 ```text
-8cf305cf3c9f65e25dcdf3e5f33b9d84a88e25b8a38fee0c61ca30379fb99b71
+015382ef15d4a9cb62be1f3793c77f83463ae61097fc1767289eb92288a8d34f
 ```
 
 Sustituye `PUERTO` por el puerto serie real, normalmente `/dev/cu.usbmodem…` en macOS o `/dev/ttyACM…` en Linux. **Este comando escribe directamente y borra los ajustes internos; no muestra la confirmación del instalador de Windows.**
@@ -82,6 +82,6 @@ Se utiliza [esptool 4.12.0 de Espressif](https://pypi.org/project/esptool/4.12.0
 
 La compilación del firmware y las pruebas del arranque, pantalla y entrada táctil pasaron. El instalador 0.75.149.1 tiene dieciséis pruebas automáticas de detección USB, desconexión, cancelación, validación del firmware y descargas. Las comprobaciones de la aplicación empaquetada verifican recursos, interfaz bilingüe y una descarga real sin abrir puertos USB. En macOS también se comprueba el DMG y se monta en modo de solo lectura. **El propietario confirmó una instalación limpia desde Windows en un Metalio físico. Las nuevas funciones requieren prueba física; la instalación USB desde macOS sigue sin validar.**
 
-La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.155-manifest.json).
+La imagen completa incluye arranque, particiones, aplicación, fuentes y recursos del sistema. Las regiones NVS, PHY, segunda partición de aplicación y volcados de errores están vacías. Consulta el [manifiesto](releases/v0.75.158-manifest.json).
 
-La imagen mide 16 MB porque incluye espacio vacío. La aplicación ocupa **5.112.960 bytes**. Ni la imagen completa ni el `.exe` sirven como archivo OTA: para actualizar se utiliza `Doceink-EInk4.bin`.
+La imagen mide 16 MB porque incluye espacio vacío. La aplicación ocupa **5.114.240 bytes**. Ni la imagen completa ni el `.exe` sirven como archivo OTA: para actualizar se utiliza `Doceink-EInk4.bin`.

@@ -23,7 +23,7 @@ The installer opens in English. Select **Español** at the top for Spanish promp
 
 **Signing status:** the app has an ad-hoc integrity signature, but no Apple Developer ID signature or notarization. Gatekeeper may block its first launch. This is not yet a notarized, warning-free Mac distribution; do not disable Gatekeeper. The native builds and automated tests do not establish a successful physical USB installation.
 
-Installer version **0.75.149.1** and firmware version **0.75.155** are independent. Older online installers also consult the latest release on each installation.
+Installer version **0.75.149.1** and firmware version **0.75.158** are independent. Older online installers also consult the latest release on each installation.
 
 ## What happens to my data?
 
@@ -56,7 +56,7 @@ Metalio should restart and show the DoceInk symbol and name for two seconds befo
 
 ## Advanced installation: Linux or manual recovery
 
-Download the [full-image ZIP](https://github.com/Faga250885/Doceink/releases/download/v0.75.155/Metalio-0.75.155-instalacion-limpia.zip) and extract it. The image is `Metalio-instalacion-limpia.bin`; that filename is retained for compatibility. Windows and Mac users normally use the GUI installer above.
+Download the [full-image ZIP](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/Metalio-0.75.158-instalacion-limpia.zip) and extract it. The image is `Metalio-instalacion-limpia.bin`; that filename is retained for compatibility. Windows and Mac users normally use the GUI installer above.
 
 In a terminal inside the extracted folder:
 
@@ -69,7 +69,7 @@ python -m pip install esptool==4.12.0
 Check the full image with `shasum -a 256 Metalio-instalacion-limpia.bin` on macOS or `sha256sum Metalio-instalacion-limpia.bin` on Linux. Expected SHA-256:
 
 ```text
-8cf305cf3c9f65e25dcdf3e5f33b9d84a88e25b8a38fee0c61ca30379fb99b71
+015382ef15d4a9cb62be1f3793c77f83463ae61097fc1767289eb92288a8d34f
 ```
 
 Replace `PORT` with the actual serial port. Typical names are `/dev/cu.usbmodem…` on macOS or `/dev/ttyACM…` on Linux. **This manual command writes directly, erases internal settings and does not show the Windows installer's confirmation.**
@@ -84,6 +84,6 @@ This uses [Espressif's esptool 4.12.0](https://pypi.org/project/esptool/4.12.0/)
 
 The firmware compiles successfully. Startup rendering and display/input regression tests passed. Installer 0.75.149.1 has sixteen automated tests covering automatic USB selection, disconnection, cancellation, firmware validation and download handling. Packaged app checks exercise resources, the bilingual interface and a verified live download without opening a USB port. macOS packages also verify and mount the DMG read-only. **The owner confirmed a clean installation from Windows on a physical Metalio. The new firmware features still need physical validation; macOS USB installation remains unverified.**
 
-The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.155-manifest.json).
+The complete image contains the bootloader, partition table, application, fonts and system resources. NVS, PHY data, the second application partition and crash-dump regions are blank. See the [manifest](releases/v0.75.158-manifest.json).
 
-The image is 16 MB including empty space. The application is **5,112,960 bytes**. Neither the complete image nor the `.exe` is an OTA file; use `Doceink-EInk4.bin` for firmware updates.
+The image is 16 MB including empty space. The application is **5,114,240 bytes**. Neither the complete image nor the `.exe` is an OTA file; use `Doceink-EInk4.bin` for firmware updates.
