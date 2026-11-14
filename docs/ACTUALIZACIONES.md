@@ -16,12 +16,16 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.194](https://github.com/Faga250885/Doceink/releases/tag/v0.75.194).
-- [Firmware OTA 0.75.194](https://github.com/Faga250885/Doceink/releases/download/v0.75.194/Doceink-EInk4.bin).
+- [Versión documentada 0.75.195](https://github.com/Faga250885/Doceink/releases/tag/v0.75.195).
+- [Firmware OTA 0.75.195](https://github.com/Faga250885/Doceink/releases/download/v0.75.195/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.195
+
+Doble toque sobre una palabra mientras lees para iniciar el subrayado; toca la última palabra en el diálogo de selección y guarda. Funciona con gestos y zonas táctiles sin pasar de página con el primer toque. Subrayar ya no se bloquea por el cálculo de capítulos en segundo plano. El texto del libro no se traduce con la interfaz.
 
 ## Novedades de 0.75.194
 
