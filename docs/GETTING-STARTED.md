@@ -78,3 +78,9 @@ Tasks provides local **Personal** and **Work / Trabajo** lists. Dictation uses W
 Hold a Home shortcut and select **Recorder**. Insert the microSD and disable USB disk mode, then press **Start recording**. Audio is written as you speak to a temporary WAV file on the card, without Wi-Fi, an API key or cloud processing. You can pause and resume. Recording continues during standby; wake Metalio and return to Recorder to stop it. Confirm Stop, then choose Save to microSD or Discard. Files are under `metalio/e-ink/recordings/`. This app records sound; it does not transcribe speech.
 
 Wi-Fi stays disconnected at startup until you explicitly connect or use a feature that needs it, such as Refresh, dictation or a new conversation. Opening cached News, Weather or history does not request a connection.
+
+## Reader fonts and release notes
+
+Open the reader’s Typography controls to browse 30 families. Entries marked Download need Wi-Fi and a mounted microSD with USB disk mode turned off. A selection saves that family at 18, 22, 24, 25, 28, 30 and 36 px; the download is reused offline. The built-in font remains available without the card. Custom TTF/OTF import is still available.
+
+Open Settings → System → Information → Release notes to read the installed version’s changes and the previous version’s changes without connecting to Wi-Fi.

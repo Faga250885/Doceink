@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.182](https://github.com/Faga250885/Doceink/releases/tag/v0.75.182).
-- [Firmware OTA 0.75.182](https://github.com/Faga250885/Doceink/releases/download/v0.75.182/Doceink-EInk4.bin).
+- [Versión documentada 0.75.183](https://github.com/Faga250885/Doceink/releases/tag/v0.75.183).
+- [Firmware OTA 0.75.183](https://github.com/Faga250885/Doceink/releases/download/v0.75.183/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.183
+
+- Notas de actualización en Información: cambios de la versión instalada y la anterior, traducidos y disponibles sin internet.
+- El reloj muestra Configurando... mientras trabaja, con texto blanco legible sobre el botón negro.
+- La justificación reparte el ancho sobrante entre palabras, respeta el final de párrafo y conserva la selección y el texto original. Las iniciales biónicas quedan más marcadas.
+- Catálogo de 30 familias: solo se descarga la elegida a la microSD, con siete tamaños y su licencia OFL. Se verifica SHA-256 y se conserva la fuente actual si falla. Las guardadas funcionan sin internet.
+- El paquete tipográfico interno de instalación limpia pasa de 4.985.431 a 2.585.690 bytes. Se mantienen todos los caracteres originales y los bitmaps conservados, incluidos los símbolos matemáticos. El contenido completo con firmware y recursos ocupa unos 8,29 MB frente a 10,66 MB en 0.75.182. La imagen completa sigue midiendo 16 MB porque incluye las zonas vacías.
+- La OTA por Wi-Fi conserva los datos y la partición de fuentes anterior. El instalador limpio incluye el paquete interno reducido. Se conservan las fuentes existentes de la microSD.
+- Compilación y 81 pruebas de software aprobadas. Falta la validación física de estos cambios.
 
 ## Novedades de 0.75.182
 

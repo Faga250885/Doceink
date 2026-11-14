@@ -1,0 +1,1622 @@
+[
+  {
+    "name": "Literata",
+    "slug": "literata",
+    "source": "https://github.com/google/fonts/tree/main/ofl/literata",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "literata_18_2.ef",
+        "bytes": 23529,
+        "sha256": "aa4cf95ae7c0f612aa58184a6bb26e9ad1123b207f596028132a9894b7d8a138"
+      },
+      {
+        "size": 22,
+        "file": "literata_22_2.ef",
+        "bytes": 30558,
+        "sha256": "37380c3ca07515a90908aea9c78d697678e34c0e79be68dbea2203f0b24009bf"
+      },
+      {
+        "size": 24,
+        "file": "literata_24_2.ef",
+        "bytes": 35000,
+        "sha256": "044698bbfc7c550004cbcefba3745a8f52fe97dfd1e5c795e3a2715672263f4b"
+      },
+      {
+        "size": 25,
+        "file": "literata_25_2.ef",
+        "bytes": 37124,
+        "sha256": "4056b77b22ed8293767f14e43f11b33ae02781329f392d3aa5334a336162ea0a"
+      },
+      {
+        "size": 28,
+        "file": "literata_28_2.ef",
+        "bytes": 44403,
+        "sha256": "249b4b3ff3946c3fd4462fa6b278567140be16ac10a45c2e13eec456f43de379"
+      },
+      {
+        "size": 30,
+        "file": "literata_30_2.ef",
+        "bytes": 49803,
+        "sha256": "62d2a1e4928d8d9a1fe883fb8079c2f56117993fe7e1c8b9774d5efad9a7d290"
+      },
+      {
+        "size": 36,
+        "file": "literata_36_2.ef",
+        "bytes": 67804,
+        "sha256": "4aae9f175bbeb99d0abcfbf6b5dc40624285358d7ad48cb73409dae2717c7ac6"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    }
+  },
+  {
+    "name": "Bitter",
+    "slug": "bitter",
+    "source": "https://github.com/google/fonts/tree/main/ofl/bitter",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "bitter_18_2.ef",
+        "bytes": 21644,
+        "sha256": "befc423e4a7dd51533b30ed08ea61146d4c6d57a6e17437758020d00fa439e17"
+      },
+      {
+        "size": 22,
+        "file": "bitter_22_2.ef",
+        "bytes": 28186,
+        "sha256": "9fc7d241c91b9a8127ff614006d0f776392180ca6ba547627d7d769ae9bab7dc"
+      },
+      {
+        "size": 24,
+        "file": "bitter_24_2.ef",
+        "bytes": 32016,
+        "sha256": "f06ae5950fbd7a9914c47bb1c870f726aa324f75efc9d46bd9cb6107d030c841"
+      },
+      {
+        "size": 25,
+        "file": "bitter_25_2.ef",
+        "bytes": 33930,
+        "sha256": "f8af10c684a8cd5fd0f4fd99cb634cf8fc2eb76bb34208f24abefd3f556433b4"
+      },
+      {
+        "size": 28,
+        "file": "bitter_28_2.ef",
+        "bytes": 40424,
+        "sha256": "be9c506f51f6119a18ffffe266bb32541ffab2e474ceb80698d938b409a4c837"
+      },
+      {
+        "size": 30,
+        "file": "bitter_30_2.ef",
+        "bytes": 44758,
+        "sha256": "1455de246968736d5abb12ae1bc6efdbf1ebe314945ee2beb54adf26cd6b458c"
+      },
+      {
+        "size": 36,
+        "file": "bitter_36_2.ef",
+        "bytes": 60031,
+        "sha256": "4cccbd6b850549b7270803a785451393044fdc34ea67859825f50ba0ca6984ad"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4424,
+      "sha256": "152a1e283e23b42c4940da4c72f2f5bebaa17969cb77c76d7af05903846006f1"
+    }
+  },
+  {
+    "name": "Source Serif 4",
+    "slug": "sourceserif4",
+    "source": "https://github.com/google/fonts/tree/main/ofl/sourceserif4",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "sourceserif4_18_2.ef",
+        "bytes": 19016,
+        "sha256": "0c132cae0eaf2d9cbded9a1a97d80c103072b535709934987460592c83a451b5"
+      },
+      {
+        "size": 22,
+        "file": "sourceserif4_22_2.ef",
+        "bytes": 24760,
+        "sha256": "7c9475543796698d16b1d468d806d33941f6b54dccefd6e3c3629e2952b1bd50"
+      },
+      {
+        "size": 24,
+        "file": "sourceserif4_24_2.ef",
+        "bytes": 27417,
+        "sha256": "3063a4fa39a7522ea730272ef913f1ee5cb291f7c09b5836b6cd4860544f28b5"
+      },
+      {
+        "size": 25,
+        "file": "sourceserif4_25_2.ef",
+        "bytes": 28903,
+        "sha256": "7aa7738624a81f950b38499752607f26959f9d39b758bfb51f3939d48fd9c571"
+      },
+      {
+        "size": 28,
+        "file": "sourceserif4_28_2.ef",
+        "bytes": 34318,
+        "sha256": "15fbb3245cf30265bb589bb2f7dc88e6c246bfb1ec55b3d93c008499cf24ddd5"
+      },
+      {
+        "size": 30,
+        "file": "sourceserif4_30_2.ef",
+        "bytes": 38293,
+        "sha256": "85ddf9e4f994dd90212582afa0d7e8a28b1ba071d399a0a9781904e886dcea38"
+      },
+      {
+        "size": 36,
+        "file": "sourceserif4_36_2.ef",
+        "bytes": 51439,
+        "sha256": "ba38416822a61eb3958feaf88465bcf775c253028e8e6b4266e91253d369c528"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4400,
+      "sha256": "5f94c3fd3a23131a417ab5a0c8452de57e70c3cfb9f604d88241f7065ebf9fd9"
+    }
+  },
+  {
+    "name": "Merriweather",
+    "slug": "merriweather",
+    "source": "https://github.com/google/fonts/tree/main/ofl/merriweather",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "merriweather_18_2.ef",
+        "bytes": 31689,
+        "sha256": "08539719ba1f0574f72b9aa11f6db0dd10ba6bec2533be4853384aa0aa16f0f8"
+      },
+      {
+        "size": 22,
+        "file": "merriweather_22_2.ef",
+        "bytes": 42098,
+        "sha256": "b874a54cd61109a86c5efb0daaaf603a9e9b60d4f6084c485976dbd3b1bd24ed"
+      },
+      {
+        "size": 24,
+        "file": "merriweather_24_2.ef",
+        "bytes": 47758,
+        "sha256": "b0db81938a70843a690fae68a195779ae29890c62d4b2eceaa359153d861a948"
+      },
+      {
+        "size": 25,
+        "file": "merriweather_25_2.ef",
+        "bytes": 51117,
+        "sha256": "cb937d3c84cbc4128cdc328bbdb95277ed50d7c396d86c4fdfa71e35f5747b6f"
+      },
+      {
+        "size": 28,
+        "file": "merriweather_28_2.ef",
+        "bytes": 60669,
+        "sha256": "a9bfe23c53659e6db18a890fdfadceeeab05c2e79788c77712d79c931f68ef83"
+      },
+      {
+        "size": 30,
+        "file": "merriweather_30_2.ef",
+        "bytes": 67698,
+        "sha256": "778e51f6d5973a273523cd9c4412bf6801f0a64ea5af0d9f78bbc183bdf8606f"
+      },
+      {
+        "size": 36,
+        "file": "merriweather_36_2.ef",
+        "bytes": 91637,
+        "sha256": "65df5a634ca0802d4774c0d593bc14becacbb01bc84715ff7c99b0330c183ea5"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4438,
+      "sha256": "715bd349bfa6116f99e351e1548321dcfa25b91df65502d22ca8d624557697d2"
+    }
+  },
+  {
+    "name": "Lora",
+    "slug": "lora",
+    "source": "https://github.com/google/fonts/tree/main/ofl/lora",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "lora_18_2.ef",
+        "bytes": 19929,
+        "sha256": "0f5437f1cc97dc4e443610d12c48a18ebb4a7cebcc11461bf24f469ada28fd80"
+      },
+      {
+        "size": 22,
+        "file": "lora_22_2.ef",
+        "bytes": 25741,
+        "sha256": "394788ada0ff7ebf413b18ba99f40a9edae9607dd168410a4096e329ea693db2"
+      },
+      {
+        "size": 24,
+        "file": "lora_24_2.ef",
+        "bytes": 29249,
+        "sha256": "3e302898c937325f93cc63049f0963bd4c237b0586b9a4a928d801748ffe3d9b"
+      },
+      {
+        "size": 25,
+        "file": "lora_25_2.ef",
+        "bytes": 30892,
+        "sha256": "e339cabb8ed9020e02835d5a9db81d61429dbe84ae2f2b7fabbe37eb81c41cc5"
+      },
+      {
+        "size": 28,
+        "file": "lora_28_2.ef",
+        "bytes": 36964,
+        "sha256": "5349e41bdf61351560fa14e07b219a2e77c87e95ebedefc985a947114cce6c91"
+      },
+      {
+        "size": 30,
+        "file": "lora_30_2.ef",
+        "bytes": 41184,
+        "sha256": "b18768e4b47c13db14ddea11d3e346c61462507bea130827412e7c1aadcc319b"
+      },
+      {
+        "size": 36,
+        "file": "lora_36_2.ef",
+        "bytes": 55715,
+        "sha256": "c1ff06acae1481dd2e0e3989ad87a85324fae43bf224f70d6c8e207c19c0b9d0"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4423,
+      "sha256": "1d9a970809ac804b582a6ce7f0ebc4e7fefcbfd7ff6299cad35ee656a21be716"
+    }
+  },
+  {
+    "name": "Crimson Text",
+    "slug": "crimsontext",
+    "source": "https://github.com/google/fonts/tree/main/ofl/crimsontext",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "crimsontext_18_2.ef",
+        "bytes": 17208,
+        "sha256": "8232d8908d67e70065a0f2d2b4a25f1bfcb520f05ab58ad5a0f83efa70d2089d"
+      },
+      {
+        "size": 22,
+        "file": "crimsontext_22_2.ef",
+        "bytes": 22487,
+        "sha256": "f9df09490403d0b418bb63a4fecef94ade35f41aa7d44883c4bf29f7bd486641"
+      },
+      {
+        "size": 24,
+        "file": "crimsontext_24_2.ef",
+        "bytes": 23927,
+        "sha256": "cd557ff2049196a1af5abca87ef2f3a8330cef5f6cbe4b558f842915433e076a"
+      },
+      {
+        "size": 25,
+        "file": "crimsontext_25_2.ef",
+        "bytes": 26491,
+        "sha256": "1bb6f1d81070ebde46a840399557f01810982be22bc6119de459ae888c7cb6cf"
+      },
+      {
+        "size": 28,
+        "file": "crimsontext_28_2.ef",
+        "bytes": 30438,
+        "sha256": "765aa06a49e8692f2bd2c737c557d3db09ea02d7ad436a1a839dfa7a82ce567d"
+      },
+      {
+        "size": 30,
+        "file": "crimsontext_30_2.ef",
+        "bytes": 34083,
+        "sha256": "eba69468db36e0d02d6fd6519d0eb809a3ebf0119bb9522ce23e7a607bbeeeee"
+      },
+      {
+        "size": 36,
+        "file": "crimsontext_36_2.ef",
+        "bytes": 44454,
+        "sha256": "03b6151a920c8c8ea633ab94523ac7e91af03c2b415799cbd47572e2d203579a"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4393,
+      "sha256": "50fd67cddc097377a5c871e8452b778bc5aedfa3480a705cb27c5e3a078218df"
+    }
+  },
+  {
+    "name": "EB Garamond",
+    "slug": "ebgaramond",
+    "source": "https://github.com/google/fonts/tree/main/ofl/ebgaramond",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "ebgaramond_18_2.ef",
+        "bytes": 28996,
+        "sha256": "aa5538f6d0faf4c8d8d87cf264cca0cea61d70f8fc365aa8b1476b49b4f19192"
+      },
+      {
+        "size": 22,
+        "file": "ebgaramond_22_2.ef",
+        "bytes": 37945,
+        "sha256": "4876bfc6d4253f49e1b192d9447d92f200fa4908ccfb2c3a6c05dcf9175c02d6"
+      },
+      {
+        "size": 24,
+        "file": "ebgaramond_24_2.ef",
+        "bytes": 42238,
+        "sha256": "a2385ea587ac2cbe078401830fd7a8199cb3de447724ce1dd66627ea042e7d61"
+      },
+      {
+        "size": 25,
+        "file": "ebgaramond_25_2.ef",
+        "bytes": 44871,
+        "sha256": "bd5ec27910dbc3b4d02fa9cca2a4870075bf8d004c7b3ef4fe268fa1cd3025f4"
+      },
+      {
+        "size": 28,
+        "file": "ebgaramond_28_2.ef",
+        "bytes": 53495,
+        "sha256": "cff5663f7e0e9574256de067a5ecb153e84abf2d86a3ddf3fee96c46365cefd8"
+      },
+      {
+        "size": 30,
+        "file": "ebgaramond_30_2.ef",
+        "bytes": 58766,
+        "sha256": "56e6f70b0622cd649df0d7f0f5cef87f5b4535f91f1c59258e4fb58da561613a"
+      },
+      {
+        "size": 36,
+        "file": "ebgaramond_36_2.ef",
+        "bytes": 79194,
+        "sha256": "ed28b4677112e4d5de2f4b45c9b8fea8a9925b7f98222455c57960d8bbf12309"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4398,
+      "sha256": "0985066662eb755ed3683ae5482a81a9195b49ce3f7e165cc2388b3dbece7dd7"
+    }
+  },
+  {
+    "name": "Noto Serif",
+    "slug": "notoserif",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notoserif",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "notoserif_18_2.ef",
+        "bytes": 33344,
+        "sha256": "97ca341c58974bd9be7bfb6a64823baa4d18ec28d605db4e67f85213da78b5c2"
+      },
+      {
+        "size": 22,
+        "file": "notoserif_22_2.ef",
+        "bytes": 43412,
+        "sha256": "cddd76ec9b7f5f05c23ce8a08db439494edeec7a2674476d19f198ae7fbe0b79"
+      },
+      {
+        "size": 24,
+        "file": "notoserif_24_2.ef",
+        "bytes": 49436,
+        "sha256": "8e76f1b67747c28001784788f13ec91f5e60b3a5cfbedf16eb1385cb7fac78d2"
+      },
+      {
+        "size": 25,
+        "file": "notoserif_25_2.ef",
+        "bytes": 52424,
+        "sha256": "902e822f3f0b124c96249510069efa859bf773890fca0cbaaaea6656e6bd83f3"
+      },
+      {
+        "size": 28,
+        "file": "notoserif_28_2.ef",
+        "bytes": 62470,
+        "sha256": "8692ae577962f90475d9d1cf52def75f28c15b55d9dc9faab444b434370f8a3b"
+      },
+      {
+        "size": 30,
+        "file": "notoserif_30_2.ef",
+        "bytes": 69689,
+        "sha256": "14251ab424c49345c8bcbab66ebc4efbd4528b3b29ff9efc6cc07de112b9330b"
+      },
+      {
+        "size": 36,
+        "file": "notoserif_36_2.ef",
+        "bytes": 94557,
+        "sha256": "c99ade70477f4ffad9f77c375f94bc36e21b9c10162fd14eb6abac1db7bed348"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    }
+  },
+  {
+    "name": "Noto Sans",
+    "slug": "notosans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notosans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "notosans_18_2.ef",
+        "bytes": 31728,
+        "sha256": "08c41eb6adfb7e231ef1d8ead90ba283a0bcc3cefec02a8ac9849ebbc6548ed9"
+      },
+      {
+        "size": 22,
+        "file": "notosans_22_2.ef",
+        "bytes": 41078,
+        "sha256": "11e36f77d339348bd9973a5861a1b7d43f6d49bc3b207c65caf8b4b4759ddcee"
+      },
+      {
+        "size": 24,
+        "file": "notosans_24_2.ef",
+        "bytes": 46759,
+        "sha256": "f32cb50c35a2d693f72b1c87ba0f7102b2020d93ea3b26499975d3dd1097dd89"
+      },
+      {
+        "size": 25,
+        "file": "notosans_25_2.ef",
+        "bytes": 49056,
+        "sha256": "dd48ec85ee7c97dec50c38991a7b3ef9170da5d30b3220d1cfa612d3f1273558"
+      },
+      {
+        "size": 28,
+        "file": "notosans_28_2.ef",
+        "bytes": 58778,
+        "sha256": "22b04ffb0bcb4fc4cf6a72d02d4dd1f7fdef214a8eaffafe76547ee22987dad0"
+      },
+      {
+        "size": 30,
+        "file": "notosans_30_2.ef",
+        "bytes": 65822,
+        "sha256": "4b5fc3f9e1d5a6f0847cb7c0dcd1f99cb1dd4af431ff1263e3d090587243156f"
+      },
+      {
+        "size": 36,
+        "file": "notosans_36_2.ef",
+        "bytes": 88513,
+        "sha256": "39d25a097b882cb49639195fdc1217d0e0272c7b58905272834d152219a3c678"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4396,
+      "sha256": "cee9892f9f0cc8fe882c9e9537ee6a89621d86ee7ceaf70b02e2b2b1c25c061a"
+    }
+  },
+  {
+    "name": "Lexend",
+    "slug": "lexend",
+    "source": "https://github.com/google/fonts/tree/main/ofl/lexend",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "lexend_18_2.ef",
+        "bytes": 22507,
+        "sha256": "7c606ca2e899bf30b6402807b31131e73e784cfe4f7bb297d7a6e6e5ce96ad8d"
+      },
+      {
+        "size": 22,
+        "file": "lexend_22_2.ef",
+        "bytes": 29029,
+        "sha256": "ceba26af9fec18e8fabf1ca9cfe02ad5649ef20af4a92ad150f619008c0607c9"
+      },
+      {
+        "size": 24,
+        "file": "lexend_24_2.ef",
+        "bytes": 32888,
+        "sha256": "b9076239b1133c9f6dedfb17854c134f9c3c56a8a9805c9baece0759b61fb0c9"
+      },
+      {
+        "size": 25,
+        "file": "lexend_25_2.ef",
+        "bytes": 34952,
+        "sha256": "3750e1837abddf072364e6544fdde3b58a0a458aeaa0d98300e84fb1f1e68ce5"
+      },
+      {
+        "size": 28,
+        "file": "lexend_28_2.ef",
+        "bytes": 41321,
+        "sha256": "6276691e7fdbfd25c545552ae417fdabb8757f04c0b037a0edb645c32a9f9eba"
+      },
+      {
+        "size": 30,
+        "file": "lexend_30_2.ef",
+        "bytes": 46332,
+        "sha256": "66229753e3177c2d2cb19543e074073be6268d05ba6025b8b28f7832507cbe1d"
+      },
+      {
+        "size": 36,
+        "file": "lexend_36_2.ef",
+        "bytes": 63330,
+        "sha256": "b79e33fb7f50665ab1eb8364f02702da5a5991ac5cb4d9ad0ff1ff15ef2cef98"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4436,
+      "sha256": "5da8505887d0fa7fe963445fd58852707fda34adfeb65af25c99d152bab285bd"
+    }
+  },
+  {
+    "name": "Alegreya",
+    "slug": "alegreya",
+    "source": "https://github.com/google/fonts/tree/main/ofl/alegreya",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "alegreya_18_2.ef",
+        "bytes": 21300,
+        "sha256": "356209fc26f6c50f9fc318a7e1a7c7f450cffd153709951c30b1f926af19870b"
+      },
+      {
+        "size": 22,
+        "file": "alegreya_22_2.ef",
+        "bytes": 27669,
+        "sha256": "e45998f4a5eadaa796dc391e3dc3c44c2e2c59e335acb1a07ebeef39733e2d42"
+      },
+      {
+        "size": 24,
+        "file": "alegreya_24_2.ef",
+        "bytes": 31009,
+        "sha256": "de605e9347f4cd89548824fc24d4cee8df5d3dd17deedad3ca890411f35a27b6"
+      },
+      {
+        "size": 25,
+        "file": "alegreya_25_2.ef",
+        "bytes": 32718,
+        "sha256": "fb8629303c2b2126483b4d5c4e97e72e1495f684e72a98ec2b0bc2f897ee64df"
+      },
+      {
+        "size": 28,
+        "file": "alegreya_28_2.ef",
+        "bytes": 38346,
+        "sha256": "bced361443beb3f2eeb52cb4bdaa3c9f90de293c4cd9a92787fafdf664b8dc1a"
+      },
+      {
+        "size": 30,
+        "file": "alegreya_30_2.ef",
+        "bytes": 42610,
+        "sha256": "d9b6be9dfd15e9c8ee9fc4d27852ef46e1830f8c075738f18dcffe556747cad1"
+      },
+      {
+        "size": 36,
+        "file": "alegreya_36_2.ef",
+        "bytes": 57079,
+        "sha256": "6f134db4af1d72b4b1b680f2e63158acc7e94ed2f37edbc22b89f5f137602e48"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4395,
+      "sha256": "f6f60d5d4cf4f4b1fc4e41353c897a2f5a16e6396c0cd8fa8bdfd2f4586a9a68"
+    }
+  },
+  {
+    "name": "Alegreya Sans",
+    "slug": "alegreyasans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/alegreyasans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "alegreyasans_18_2.ef",
+        "bytes": 18789,
+        "sha256": "d79663a2dce5312dd3d59e6ffcc7a05324bd0568373d82a2031ddc532da00d36"
+      },
+      {
+        "size": 22,
+        "file": "alegreyasans_22_2.ef",
+        "bytes": 23512,
+        "sha256": "38beed7b0abedd62b8c0f902b3f2d009e5b8160b3f0c9eae7389f9dcfe016c60"
+      },
+      {
+        "size": 24,
+        "file": "alegreyasans_24_2.ef",
+        "bytes": 25913,
+        "sha256": "53d14623e2901184fbef6424457af3506977253e72448ee6f0dc001a7a9f060b"
+      },
+      {
+        "size": 25,
+        "file": "alegreyasans_25_2.ef",
+        "bytes": 28473,
+        "sha256": "82b1289b0871740fd079ffd78d48784acc7addb29b5689fa8b0e9afd28f9019e"
+      },
+      {
+        "size": 28,
+        "file": "alegreyasans_28_2.ef",
+        "bytes": 32320,
+        "sha256": "2c186fa98e8525b7c0c3e71e5a99c74ac92390f6ed58e8badb2d17b68927d05d"
+      },
+      {
+        "size": 30,
+        "file": "alegreyasans_30_2.ef",
+        "bytes": 35689,
+        "sha256": "51b47b5debc1a36eb1c627a33132597336cdcfc32349de1be84b08a59cf798e4"
+      },
+      {
+        "size": 36,
+        "file": "alegreyasans_36_2.ef",
+        "bytes": 48633,
+        "sha256": "ebd163d873df1684c7adf3ce1110889f3f1d608b6a98aaf80ab335b530d45f82"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4405,
+      "sha256": "0677891e6a143f297350d260ad766ad33bfc18ed5fa4f213acf648d6b597ec1a"
+    }
+  },
+  {
+    "name": "PT Serif",
+    "slug": "ptserif",
+    "source": "https://github.com/google/fonts/tree/main/ofl/ptserif",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "ptserif_18_2.ef",
+        "bytes": 15691,
+        "sha256": "e60696d64dbe2ea0897940e6f9225dc4f8c675f7b20706abaf934f94676d3b17"
+      },
+      {
+        "size": 22,
+        "file": "ptserif_22_2.ef",
+        "bytes": 20309,
+        "sha256": "3d7f5dbfbb99599ddb76bf085e78b14c091e9d972280e04401770da6e574933e"
+      },
+      {
+        "size": 24,
+        "file": "ptserif_24_2.ef",
+        "bytes": 22614,
+        "sha256": "c7ed9a351a5610ed35545879512b3cbf8991b6c8a29bfb70fc9a949ac1aad8d4"
+      },
+      {
+        "size": 25,
+        "file": "ptserif_25_2.ef",
+        "bytes": 24173,
+        "sha256": "1a39403955ab1968b41b973c439482d925e69e0cb3dda92986ea03d7ab60ec61"
+      },
+      {
+        "size": 28,
+        "file": "ptserif_28_2.ef",
+        "bytes": 28548,
+        "sha256": "6b32feb655652d4620a74fa41e38bd25c607caa1376c32095098bcad7720f8e0"
+      },
+      {
+        "size": 30,
+        "file": "ptserif_30_2.ef",
+        "bytes": 31724,
+        "sha256": "c93d0bb6812b51d40b07e85b5f7af30a58a18ca598010ada12ef084e171e64e2"
+      },
+      {
+        "size": 36,
+        "file": "ptserif_36_2.ef",
+        "bytes": 42837,
+        "sha256": "46c50a2e66d90f62870ad0734c742c9968e413b7b32b4cd37d14423ef377d981"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4434,
+      "sha256": "ddf311c28ddf5a5ad9747649837346b67bed9d356789c3072bb27dbce49e514d"
+    }
+  },
+  {
+    "name": "PT Sans",
+    "slug": "ptsans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/ptsans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "ptsans_18_2.ef",
+        "bytes": 13982,
+        "sha256": "930f75a3e356b803ecb1c7eaa016c58c1efcf36fce960fd3ace23d40091f2388"
+      },
+      {
+        "size": 22,
+        "file": "ptsans_22_2.ef",
+        "bytes": 18022,
+        "sha256": "2ed587edb89f5698d709cd58572a1061bdabd4167aa778f8a5693222c602bcfa"
+      },
+      {
+        "size": 24,
+        "file": "ptsans_24_2.ef",
+        "bytes": 19896,
+        "sha256": "5b363b331eee7500906a597cec3c5b20041ac2ccaecd2af42124eda17277524e"
+      },
+      {
+        "size": 25,
+        "file": "ptsans_25_2.ef",
+        "bytes": 21343,
+        "sha256": "7ebdac5ab47864186c0feabb67c773bb56d79a2cc1dd54bdbecbfcc80b58461e"
+      },
+      {
+        "size": 28,
+        "file": "ptsans_28_2.ef",
+        "bytes": 24791,
+        "sha256": "87c7cb0bb2cc75d2d821ae1a79eba9bbd20bd1e476275f2189ae4f99c6b60392"
+      },
+      {
+        "size": 30,
+        "file": "ptsans_30_2.ef",
+        "bytes": 27415,
+        "sha256": "bafc7248b5b2dbfdaa677345b8d85dbbdab70431509151a1b18d8751dc6a7718"
+      },
+      {
+        "size": 36,
+        "file": "ptsans_36_2.ef",
+        "bytes": 37291,
+        "sha256": "d62b73268f6978c3130271d1ece517d016beccb40a042a5cf262a259e5e64eee"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4425,
+      "sha256": "2758cf7a872827f39661cf8cc24188113c030447aefb5ca7145993650076ca8c"
+    }
+  },
+  {
+    "name": "Nunito Sans",
+    "slug": "nunitosans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/nunitosans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "nunitosans_18_2.ef",
+        "bytes": 20690,
+        "sha256": "5e9ea9f18cd12c6bd31468b3307251c6528d972a3a79fbfd052ca6a483560074"
+      },
+      {
+        "size": 22,
+        "file": "nunitosans_22_2.ef",
+        "bytes": 26443,
+        "sha256": "2464d685d90054ba79d910304b0cfad0dffbc0b314304446afceb2f008d91041"
+      },
+      {
+        "size": 24,
+        "file": "nunitosans_24_2.ef",
+        "bytes": 30011,
+        "sha256": "7cad48ba73e514e17edeb6570310fd6e71c32bb5350b906f5784f4054ffe480c"
+      },
+      {
+        "size": 25,
+        "file": "nunitosans_25_2.ef",
+        "bytes": 31695,
+        "sha256": "f33277a2d272bc85b6db7465e8ff3a0b0866236955532428f131f4bbbc672f84"
+      },
+      {
+        "size": 28,
+        "file": "nunitosans_28_2.ef",
+        "bytes": 37964,
+        "sha256": "5385575774f581b1527054c9d742795d0633389ee5ab580046824797ff15fbaa"
+      },
+      {
+        "size": 30,
+        "file": "nunitosans_30_2.ef",
+        "bytes": 42229,
+        "sha256": "eae4a8786f2d165124898dad7c838f55a2dc3357dfce6e094446101254864ccb"
+      },
+      {
+        "size": 36,
+        "file": "nunitosans_36_2.ef",
+        "bytes": 55999,
+        "sha256": "fd991f70a33829a02d57cfdb48b2640a59f340041c9b1f74ae56b50964620260"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4393,
+      "sha256": "efbb0c9e864cef973982d9a17567e6be5c3d1759695574586f3f18c7ecca064b"
+    }
+  },
+  {
+    "name": "Vollkorn",
+    "slug": "vollkorn",
+    "source": "https://github.com/google/fonts/tree/main/ofl/vollkorn",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "vollkorn_18_2.ef",
+        "bytes": 23465,
+        "sha256": "d17ddce1f34dd8403911de60b31f69e8d2ca7c2df2f4e9980fd589f58e002c4f"
+      },
+      {
+        "size": 22,
+        "file": "vollkorn_22_2.ef",
+        "bytes": 30543,
+        "sha256": "25215021ba6efcb1a153311cced32d9ffec1da02eae0fde7edf3dc71de3d08fb"
+      },
+      {
+        "size": 24,
+        "file": "vollkorn_24_2.ef",
+        "bytes": 34567,
+        "sha256": "9dae6d10a1be6d2320f4d034298242571772d443cd95eb2b4772b19f7cf29b9e"
+      },
+      {
+        "size": 25,
+        "file": "vollkorn_25_2.ef",
+        "bytes": 36195,
+        "sha256": "ff1debdd6cfd4521b50004e7e0ce717d93dd78ccdbe5b36d8de81f0d46888f50"
+      },
+      {
+        "size": 28,
+        "file": "vollkorn_28_2.ef",
+        "bytes": 43053,
+        "sha256": "104528166c1702196fa1c8c552776965f501d02e4164d68be9f6735b261f91d4"
+      },
+      {
+        "size": 30,
+        "file": "vollkorn_30_2.ef",
+        "bytes": 47887,
+        "sha256": "2e3df7aa8c7599c2551db6306ae716ba5b56ed17fef5b9c166aab202da5b5807"
+      },
+      {
+        "size": 36,
+        "file": "vollkorn_36_2.ef",
+        "bytes": 63927,
+        "sha256": "14e94538986b664bded873d72dd723e5e59c3dfd9bd7cea3a3b97523e0e1c637"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4489,
+      "sha256": "53f9c99fa3d47f7d632a42ee7bab4a834a60a744f6026d676c3a223cef2b2ef3"
+    }
+  },
+  {
+    "name": "Work Sans",
+    "slug": "worksans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/worksans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "worksans_18_2.ef",
+        "bytes": 21055,
+        "sha256": "c6b01d30ebd5c916c6845a3f8c202d141075086409000e20426e54fbbf64179b"
+      },
+      {
+        "size": 22,
+        "file": "worksans_22_2.ef",
+        "bytes": 26881,
+        "sha256": "0002fecf11f43c9548c8fdeeebb6366569ec7b22d4d1b8ad9b3799daf369e0b3"
+      },
+      {
+        "size": 24,
+        "file": "worksans_24_2.ef",
+        "bytes": 30572,
+        "sha256": "b506b2b98ca7ebd38fe94e1a6ba6c42078dfa0fbc76e82b4039a74a7a7b51bb9"
+      },
+      {
+        "size": 25,
+        "file": "worksans_25_2.ef",
+        "bytes": 32369,
+        "sha256": "f43f9855ee582b550c965703b659484b8c9d101362e4234929e0e58621424f66"
+      },
+      {
+        "size": 28,
+        "file": "worksans_28_2.ef",
+        "bytes": 38703,
+        "sha256": "ae2d534579613e2d785d0611ee666041d0176415d79d3e588542b428706dad22"
+      },
+      {
+        "size": 30,
+        "file": "worksans_30_2.ef",
+        "bytes": 42998,
+        "sha256": "368bdd94a0ad7af404ac7696263f1a063aa84b1ac1a96feb1a895f3f7d5bca0b"
+      },
+      {
+        "size": 36,
+        "file": "worksans_36_2.ef",
+        "bytes": 57598,
+        "sha256": "8e8f201cb45fcc5e6b78ddf48e2048fd5bd539c7508c08f4a61260d467baf110"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4396,
+      "sha256": "749aca05078664ce682dce1b1b10096ac397cb088c1a6df4e1bb56f0092a9272"
+    }
+  },
+  {
+    "name": "DM Sans",
+    "slug": "dmsans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/dmsans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "dmsans_18_2.ef",
+        "bytes": 16235,
+        "sha256": "0789d0ffada52746d713b7f18be09db52e00a2b3774d75b858e741c53cb2fabb"
+      },
+      {
+        "size": 22,
+        "file": "dmsans_22_2.ef",
+        "bytes": 20801,
+        "sha256": "7ca4fdc9c69ef21401722430e980ff686944bc9ecd60ae231634b0c6bd196717"
+      },
+      {
+        "size": 24,
+        "file": "dmsans_24_2.ef",
+        "bytes": 23594,
+        "sha256": "d4e11ea69bd149cb30652499bc3bd90c189ae6e1b39005a6f178039df1fe5a06"
+      },
+      {
+        "size": 25,
+        "file": "dmsans_25_2.ef",
+        "bytes": 25007,
+        "sha256": "2a1037c637396e97cfe7d7f6ee8af7c226110373ea13206160684679367e8d3e"
+      },
+      {
+        "size": 28,
+        "file": "dmsans_28_2.ef",
+        "bytes": 29667,
+        "sha256": "5ac6f76ebabd5414b5684cf7cad9d9247d9beb3a577e79b4735f60c6d9946eb6"
+      },
+      {
+        "size": 30,
+        "file": "dmsans_30_2.ef",
+        "bytes": 32607,
+        "sha256": "4291e44d1932b78535be778972d93679b6d6a9804a512e885edf2f955c40f041"
+      },
+      {
+        "size": 36,
+        "file": "dmsans_36_2.ef",
+        "bytes": 44455,
+        "sha256": "85e622456a5afe89220af53c7e0257479413dc058728fcee291d37b7626dbe82"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4482,
+      "sha256": "9af36190332437f5ecd09974de43c1f7c77a310a996cdd8ceb25628b458840e1"
+    }
+  },
+  {
+    "name": "Libre Baskerville",
+    "slug": "librebaskerville",
+    "source": "https://github.com/google/fonts/tree/main/ofl/librebaskerville",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "librebaskerville_18_2.ef",
+        "bytes": 31180,
+        "sha256": "e3bfff4d5af22b7d4290abc606e22147ad7ee21ce76553a37bcc938edede69dd"
+      },
+      {
+        "size": 22,
+        "file": "librebaskerville_22_2.ef",
+        "bytes": 41966,
+        "sha256": "24789bd8da29bc3c97fe22d7fdc436c234cbee20d259058aa6b11aba2ba1d2ea"
+      },
+      {
+        "size": 24,
+        "file": "librebaskerville_24_2.ef",
+        "bytes": 47452,
+        "sha256": "f3ed3500055f37dac12291b0d4e34780019a068c4c8f44bf36581ee6c4ddb0b7"
+      },
+      {
+        "size": 25,
+        "file": "librebaskerville_25_2.ef",
+        "bytes": 50641,
+        "sha256": "2f97f6e68e8d2d4296c9f17523c2e939c9cf8c7671635d42b863d1f45f371c93"
+      },
+      {
+        "size": 28,
+        "file": "librebaskerville_28_2.ef",
+        "bytes": 60913,
+        "sha256": "24844928389688a263709bca4f140f66069a816dac246c456f2adb656a0d376e"
+      },
+      {
+        "size": 30,
+        "file": "librebaskerville_30_2.ef",
+        "bytes": 68494,
+        "sha256": "c5e2384b7eec80fc17ed46c399b9c695eb33a243dae1870ecc7ef98edbf78c28"
+      },
+      {
+        "size": 36,
+        "file": "librebaskerville_36_2.ef",
+        "bytes": 92952,
+        "sha256": "d5333ebf0534b4085a8eea5921808f1949e0e16558cf1c5a9e84f1104a7ff03f"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4542,
+      "sha256": "3624eddd4c8f8a908130a417ae7cd089c9da69899c4e0ca1a5217d0a6fae16fd"
+    }
+  },
+  {
+    "name": "IBM Plex Serif",
+    "slug": "ibmplexserif",
+    "source": "https://github.com/google/fonts/tree/main/ofl/ibmplexserif",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "ibmplexserif_18_2.ef",
+        "bytes": 17789,
+        "sha256": "daac588a81e692934c12ae64b094aa9def3d773e8d1619487b6f158453ed207c"
+      },
+      {
+        "size": 22,
+        "file": "ibmplexserif_22_2.ef",
+        "bytes": 22434,
+        "sha256": "79cfe8807eb78ef8a566224343f8a155b5f34fddabb90de85e5fd9ba05bd190a"
+      },
+      {
+        "size": 24,
+        "file": "ibmplexserif_24_2.ef",
+        "bytes": 25579,
+        "sha256": "ca5ac732c525afdbb6e2b6306df1efe645458c9e88081208f0a7c92b1eac8257"
+      },
+      {
+        "size": 25,
+        "file": "ibmplexserif_25_2.ef",
+        "bytes": 27128,
+        "sha256": "7d49a89f8168dd12a6642c6cbc4516196f29c70d77b3197196f56967ec0cc3c6"
+      },
+      {
+        "size": 28,
+        "file": "ibmplexserif_28_2.ef",
+        "bytes": 32889,
+        "sha256": "091b7bc3354e084a02bd47c7b11d69630498ac461efabafa149b5275f4820e13"
+      },
+      {
+        "size": 30,
+        "file": "ibmplexserif_30_2.ef",
+        "bytes": 36589,
+        "sha256": "dbdfdaf13e1aab641b3cba42b1c5154aeb37cd2f7495c00a2054cbadf98e321d"
+      },
+      {
+        "size": 36,
+        "file": "ibmplexserif_36_2.ef",
+        "bytes": 49744,
+        "sha256": "0a83eea31b85756ab8310a4dbcea8910489ba0be505c714c8f81b5d80c52a035"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4456,
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+    }
+  },
+  {
+    "name": "Roboto",
+    "slug": "roboto",
+    "source": "https://github.com/google/fonts/tree/main/ofl/roboto",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "roboto_18_2.ef",
+        "bytes": 17438,
+        "sha256": "4a52b030305e368721e61cf56379674fa3138e2ed8f018717534679455649e8c"
+      },
+      {
+        "size": 22,
+        "file": "roboto_22_2.ef",
+        "bytes": 22375,
+        "sha256": "65f005cce2a2d41588af19c5724963f4b354ac5faa960146bcf686bde173cb77"
+      },
+      {
+        "size": 24,
+        "file": "roboto_24_2.ef",
+        "bytes": 24934,
+        "sha256": "1ff81b18e7b38d9a73c20663b6a811ecf8597fcfe1396432c0aa53f11bd6d738"
+      },
+      {
+        "size": 25,
+        "file": "roboto_25_2.ef",
+        "bytes": 26361,
+        "sha256": "366f07ec7e48a9bbe32f9b5525dd21ec845d849842519df164f2f773f87bb25f"
+      },
+      {
+        "size": 28,
+        "file": "roboto_28_2.ef",
+        "bytes": 31300,
+        "sha256": "6cd5bf74e84747a906e4d2e6794c917aa62b7028a203044396f0bfaa8f9dbd90"
+      },
+      {
+        "size": 30,
+        "file": "roboto_30_2.ef",
+        "bytes": 35026,
+        "sha256": "879612b3a9d710c8b39cd5dedd36754d33f172a0841bd36d91a2b38d3c1a7767"
+      },
+      {
+        "size": 36,
+        "file": "roboto_36_2.ef",
+        "bytes": 47001,
+        "sha256": "58ba9ddeeb8505e36dedb7f6ab49cd58f65dca00552a772157b9bf8ca7a7765f"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4394,
+      "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41"
+    }
+  },
+  {
+    "name": "Open Sans",
+    "slug": "opensans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/opensans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "opensans_18_2.ef",
+        "bytes": 17471,
+        "sha256": "5aaa0cdbc9d0d3bcceb53368bd434d31a49e0939e91dd4ebbf7f80d236fcf632"
+      },
+      {
+        "size": 22,
+        "file": "opensans_22_2.ef",
+        "bytes": 22733,
+        "sha256": "c625d33b02e5891484e884427579293bec51bd2f8d26ed2e4f7d5ffcf8b32f33"
+      },
+      {
+        "size": 24,
+        "file": "opensans_24_2.ef",
+        "bytes": 25575,
+        "sha256": "bab9a1edccc9dce2511fb75c909540873919d1365968b37591e31f01b69ba98e"
+      },
+      {
+        "size": 25,
+        "file": "opensans_25_2.ef",
+        "bytes": 26765,
+        "sha256": "8f917cf683bac8640b796f54aeccee526424208dfa53d9fc4a6d07529df290ca"
+      },
+      {
+        "size": 28,
+        "file": "opensans_28_2.ef",
+        "bytes": 32033,
+        "sha256": "8b247e25633b4141ef7dc9b9820621b1a4e24a1919d9a5047524cec67ef0c789"
+      },
+      {
+        "size": 30,
+        "file": "opensans_30_2.ef",
+        "bytes": 35714,
+        "sha256": "da816bc4f806865a89479ec03e498f0f3c011a08aa7e95e52d2bd1049b6ca3ad"
+      },
+      {
+        "size": 36,
+        "file": "opensans_36_2.ef",
+        "bytes": 48106,
+        "sha256": "02de67a833b4a053baceba9e050bfc78be8f74f2d45c0610844b8c979a69d956"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4389,
+      "sha256": "fbbbcfef55318de350562559b671360de6d597112ecc5c73881b05092db89602"
+    }
+  },
+  {
+    "name": "Montserrat",
+    "slug": "montserrat",
+    "source": "https://github.com/google/fonts/tree/main/ofl/montserrat",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "montserrat_18_2.ef",
+        "bytes": 26925,
+        "sha256": "ab2f72d959d7dc4061a6ae109ee5c8f08751a2f2256f4552493709a9504b1588"
+      },
+      {
+        "size": 22,
+        "file": "montserrat_22_2.ef",
+        "bytes": 35338,
+        "sha256": "725e24f984817bb7d688518becc8fcb24535b07208d316fae90a1eecd521a97c"
+      },
+      {
+        "size": 24,
+        "file": "montserrat_24_2.ef",
+        "bytes": 40000,
+        "sha256": "d8bed315f6751b3549ee983846e6623e9d71882ccc4ee8079eb4783e0c20860b"
+      },
+      {
+        "size": 25,
+        "file": "montserrat_25_2.ef",
+        "bytes": 41994,
+        "sha256": "54e2ce548162d07dd8119d868d0383cdeaeef48e675a5a67cfa295bb6d22b5c6"
+      },
+      {
+        "size": 28,
+        "file": "montserrat_28_2.ef",
+        "bytes": 50450,
+        "sha256": "6dcee363c28b2bfee2a6014e69c11945593b7511acb7113f8a85c57da7ae8ea5"
+      },
+      {
+        "size": 30,
+        "file": "montserrat_30_2.ef",
+        "bytes": 56639,
+        "sha256": "aca40296c3b06cbe34295eb3c9bbebd8127485202ed47f677289dc3e93b41ee0"
+      },
+      {
+        "size": 36,
+        "file": "montserrat_36_2.ef",
+        "bytes": 75819,
+        "sha256": "679d1d9a18191902a30f17384faa2e56ed1f9e56934e55c740fb4a69d17928ed"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4400,
+      "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e"
+    }
+  },
+  {
+    "name": "Raleway",
+    "slug": "raleway",
+    "source": "https://github.com/google/fonts/tree/main/ofl/raleway",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "raleway_18_2.ef",
+        "bytes": 20213,
+        "sha256": "3084562badd9249697de319fe50eb967127b5ff77e80dc9a5d5e3bee8dff588f"
+      },
+      {
+        "size": 22,
+        "file": "raleway_22_2.ef",
+        "bytes": 25425,
+        "sha256": "5599c94a898da349e0d88df98b2dcb0d5fdf484e4a73f6f94a074155112c6c44"
+      },
+      {
+        "size": 24,
+        "file": "raleway_24_2.ef",
+        "bytes": 28783,
+        "sha256": "7cd28007982fd5cd925a3869bb7dc0482eddf8d7ee352b1279b3b3522184c3aa"
+      },
+      {
+        "size": 25,
+        "file": "raleway_25_2.ef",
+        "bytes": 30458,
+        "sha256": "c56dea5516259605b04f3dfa450ed1f4c601f3b61ce1189c3af818382b7edf0a"
+      },
+      {
+        "size": 28,
+        "file": "raleway_28_2.ef",
+        "bytes": 35947,
+        "sha256": "8f59d32395933e484b622a1949c67b7ceebcd10fdad42acb6b5eeabea1419675"
+      },
+      {
+        "size": 30,
+        "file": "raleway_30_2.ef",
+        "bytes": 40683,
+        "sha256": "d094b0d2c097216787569b0ebd3e20684cc47094ef95666343a790ce3015ef7d"
+      },
+      {
+        "size": 36,
+        "file": "raleway_36_2.ef",
+        "bytes": 55232,
+        "sha256": "c08f412a0c288507a94532a414c74bd413adc62ccf8c29c4b2e5627bf75d8a3f"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4497,
+      "sha256": "7e946cf1171784d1015279e7dc35f827957a6b5d1f1f659ae0c98e5f5e37ed9b"
+    }
+  },
+  {
+    "name": "Cabin",
+    "slug": "cabin",
+    "source": "https://github.com/google/fonts/tree/main/ofl/cabin",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "cabin_18_2.ef",
+        "bytes": 20225,
+        "sha256": "172c1aef13222687210503c21b40b6c021612a9748630d828983d9eba27cc614"
+      },
+      {
+        "size": 22,
+        "file": "cabin_22_2.ef",
+        "bytes": 26452,
+        "sha256": "81b67506b6d500d217feed75b5cf70fffd42eabcce797f48b1922f1297b109e2"
+      },
+      {
+        "size": 24,
+        "file": "cabin_24_2.ef",
+        "bytes": 29580,
+        "sha256": "1c368b207e2b5b8d1c3b497bf5b1c86e6e307039501fbfb3b0dd738f88ed7bdb"
+      },
+      {
+        "size": 25,
+        "file": "cabin_25_2.ef",
+        "bytes": 31189,
+        "sha256": "a0b4c25a2db440bcf4b6e48ef47c3cbc27c3cfc6fe7b2a5fb1d9e009dba2d9cd"
+      },
+      {
+        "size": 28,
+        "file": "cabin_28_2.ef",
+        "bytes": 36853,
+        "sha256": "e1243fd5ea7e913e79fffbc5469ae617eeef5c432f6d5f582d887e5c316fde9d"
+      },
+      {
+        "size": 30,
+        "file": "cabin_30_2.ef",
+        "bytes": 41103,
+        "sha256": "f96fd334e3751bebb646eafc0c09480ccf21a36895798bf4f0ee1d83fbd628e1"
+      },
+      {
+        "size": 36,
+        "file": "cabin_36_2.ef",
+        "bytes": 55498,
+        "sha256": "97b76f645443297d06f5b1697338820c975bb543ac957ac8bfd424364957bce1"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4477,
+      "sha256": "965bf33673aec648a3b399185639e502b58e52693d004fc03f6bbdf21b1a0094"
+    }
+  },
+  {
+    "name": "Karla",
+    "slug": "karla",
+    "source": "https://github.com/google/fonts/tree/main/ofl/karla",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "karla_18_2.ef",
+        "bytes": 14642,
+        "sha256": "86bc150158485c14e4997239797e2bf57b17683780cdd679d362c0d775e754ef"
+      },
+      {
+        "size": 22,
+        "file": "karla_22_2.ef",
+        "bytes": 18297,
+        "sha256": "157b40203d86a64201185ba6f368c570e138371e7108c5dd36a5c4dd9bf81ace"
+      },
+      {
+        "size": 24,
+        "file": "karla_24_2.ef",
+        "bytes": 20780,
+        "sha256": "8afd44fe5255a9c3587d8bebdddf375d6d122105fa1441123e996ac070d7f1cb"
+      },
+      {
+        "size": 25,
+        "file": "karla_25_2.ef",
+        "bytes": 21922,
+        "sha256": "11e289243e0799ee7e74796a594274066f57a47a413517e775799441594c5053"
+      },
+      {
+        "size": 28,
+        "file": "karla_28_2.ef",
+        "bytes": 25703,
+        "sha256": "2e901372003e8eb877351150aa5e876fdd420847f33583006f0a617373d9c9ce"
+      },
+      {
+        "size": 30,
+        "file": "karla_30_2.ef",
+        "bytes": 28495,
+        "sha256": "3c3c35a4e5d470a76fd89b07dfb951273aa271c696355b56a65b287af87ab121"
+      },
+      {
+        "size": 36,
+        "file": "karla_36_2.ef",
+        "bytes": 37871,
+        "sha256": "46c66eeef66c1210017fc29a96195ce5196ca365db877a100ee7a51aa58909bc"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4384,
+      "sha256": "edf2c840acb9570fe02f40721126aa0da4e4011a0030cc6dce30780569f609b6"
+    }
+  },
+  {
+    "name": "Arvo",
+    "slug": "arvo",
+    "source": "https://github.com/google/fonts/tree/main/ofl/arvo",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "arvo_18_2.ef",
+        "bytes": 10562,
+        "sha256": "49e2b3184d97ace105e699ead0628cbee4aff0940dd0f0d47b5818f24f0e38b0"
+      },
+      {
+        "size": 22,
+        "file": "arvo_22_2.ef",
+        "bytes": 13769,
+        "sha256": "386f617cf7eb4723a2bb8a9e7d5c743539a9c6927a187935d8e329c5d66ca0bc"
+      },
+      {
+        "size": 24,
+        "file": "arvo_24_2.ef",
+        "bytes": 15314,
+        "sha256": "be510cdd4ea3f1ce806751c141d18c3741f3c3b0d83be94c234e381e9f7d88cb"
+      },
+      {
+        "size": 25,
+        "file": "arvo_25_2.ef",
+        "bytes": 15864,
+        "sha256": "d451061dc8918501a796601c7a8a0abe9f30c63e216cbb0e5deba94015d7b475"
+      },
+      {
+        "size": 28,
+        "file": "arvo_28_2.ef",
+        "bytes": 19471,
+        "sha256": "62e67f22dfd0ebfee3fd5d661704f365220ab38c56b5d7a73e9ac71e51f496f0"
+      },
+      {
+        "size": 30,
+        "file": "arvo_30_2.ef",
+        "bytes": 21544,
+        "sha256": "71e92ebeb4e45de5de2385dddb976cd3a5a0bfa31416f759e16f4e14b5af244c"
+      },
+      {
+        "size": 36,
+        "file": "arvo_36_2.ef",
+        "bytes": 29122,
+        "sha256": "795307a46ee31b8de436de2b65e55b6e237c2bf062446c19c41e912ba6ab62bf"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4393,
+      "sha256": "359671bf16c00cae69cb66d041296b2adc7a4becd73a463cb8c5e101d97c7986"
+    }
+  },
+  {
+    "name": "Fira Sans",
+    "slug": "firasans",
+    "source": "https://github.com/google/fonts/tree/main/ofl/firasans",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "firasans_18_2.ef",
+        "bytes": 27854,
+        "sha256": "3be5a99e705f1d967cc9abf664074708947d38b804ff4a1bf6ad580aaff6c5b0"
+      },
+      {
+        "size": 22,
+        "file": "firasans_22_2.ef",
+        "bytes": 35322,
+        "sha256": "211e5d1e5c0cac2525f66c890bfb1b76b22f8094dbd6446eff2947820dcbcde0"
+      },
+      {
+        "size": 24,
+        "file": "firasans_24_2.ef",
+        "bytes": 39669,
+        "sha256": "148de755d6adbabc45a2b5dbf2db965a40fe4d8ac9ff85f354f02671628de380"
+      },
+      {
+        "size": 25,
+        "file": "firasans_25_2.ef",
+        "bytes": 43430,
+        "sha256": "cf4537aa810f0a6b10e0919bdcf6a107084db79914f8bd4b31b73287ce2d819f"
+      },
+      {
+        "size": 28,
+        "file": "firasans_28_2.ef",
+        "bytes": 50305,
+        "sha256": "22d00af7ad567870baa84f6f01b7ac30af40467995f48dbe02f42cb09c061f88"
+      },
+      {
+        "size": 30,
+        "file": "firasans_30_2.ef",
+        "bytes": 55864,
+        "sha256": "f885610b0fa455f579f60500afa9f859eba27440b6932bedc37c8cff2eb3db9f"
+      },
+      {
+        "size": 36,
+        "file": "firasans_36_2.ef",
+        "bytes": 77557,
+        "sha256": "27f39e43776dd6559435bfa91dbc2bc8b6096b71b5072cdb7f84a192c21a3b04"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4370,
+      "sha256": "8f24842e9174beda18a556c2ae7d54f5dc444340c19a3a9ef77e23bca366adbd"
+    }
+  },
+  {
+    "name": "Spectral",
+    "slug": "spectral",
+    "source": "https://github.com/google/fonts/tree/main/ofl/spectral",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "spectral_18_2.ef",
+        "bytes": 18889,
+        "sha256": "513e8a08ccdc8d3dbae9be44e71471414844535f318ab11d7779c9420762afd7"
+      },
+      {
+        "size": 22,
+        "file": "spectral_22_2.ef",
+        "bytes": 24899,
+        "sha256": "0ddb67b71db2b8bc444d6830487a85d3654b01c9becd545922af7ac5a5179727"
+      },
+      {
+        "size": 24,
+        "file": "spectral_24_2.ef",
+        "bytes": 28396,
+        "sha256": "f1c032c93f2c54c3a4e8f15d8e70686436a52f959c016adbe6c7cc82bb9aaa9e"
+      },
+      {
+        "size": 25,
+        "file": "spectral_25_2.ef",
+        "bytes": 31315,
+        "sha256": "7c113f4841f6cfcd3633a33c834a5aa2218026214dbdc15dceff4aa13f994e92"
+      },
+      {
+        "size": 28,
+        "file": "spectral_28_2.ef",
+        "bytes": 36520,
+        "sha256": "d478c413f31607b32a2818bf77be117b2e995d6e2690998b0f1774e4eb374528"
+      },
+      {
+        "size": 30,
+        "file": "spectral_30_2.ef",
+        "bytes": 41070,
+        "sha256": "74456e8ec343ecc7b3385db8f377f91044d9b5b7598204b656121827ed06677e"
+      },
+      {
+        "size": 36,
+        "file": "spectral_36_2.ef",
+        "bytes": 54973,
+        "sha256": "55a4b94bf264b628a9e12bc6e6b0781de7c7881bb2561c32ff3b3562d11ac186"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4392,
+      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+    }
+  },
+  {
+    "name": "Libre Franklin",
+    "slug": "librefranklin",
+    "source": "https://github.com/google/fonts/tree/main/ofl/librefranklin",
+    "license": "SIL Open Font License 1.1",
+    "assets": [
+      {
+        "size": 18,
+        "file": "librefranklin_18_2.ef",
+        "bytes": 20705,
+        "sha256": "6c794e02b6c63544cb79f18f2757a7457c2c6f98d1b561a9e0546f40c7a84e61"
+      },
+      {
+        "size": 22,
+        "file": "librefranklin_22_2.ef",
+        "bytes": 26836,
+        "sha256": "373a189bbe98e5a685c8097790793e5f36e71cd1659df1158bb6dd7d42d64418"
+      },
+      {
+        "size": 24,
+        "file": "librefranklin_24_2.ef",
+        "bytes": 30339,
+        "sha256": "721b34cfaf2dee82d8fb3987284d022ccd2aa8162e22e6b69f0971140335f63b"
+      },
+      {
+        "size": 25,
+        "file": "librefranklin_25_2.ef",
+        "bytes": 32000,
+        "sha256": "16ab63bd149879b49c2c9c2ceed5efe4d2b8936d5253ffbb857d56a3b431dee1"
+      },
+      {
+        "size": 28,
+        "file": "librefranklin_28_2.ef",
+        "bytes": 38070,
+        "sha256": "675ce7fe7be7afbf78794303ff9df8061d71a1db44438d4e06c4ad32b106de4f"
+      },
+      {
+        "size": 30,
+        "file": "librefranklin_30_2.ef",
+        "bytes": 42421,
+        "sha256": "982a865d67bcd6362191caf00a3f89a6a5bf18f4a2862e1907b58e32860093ca"
+      },
+      {
+        "size": 36,
+        "file": "librefranklin_36_2.ef",
+        "bytes": 57156,
+        "sha256": "ace1c3b84fa278099d5569c593c86d0209289929b2947145f16d695d6b512718"
+      }
+    ],
+    "license_asset": {
+      "bytes": 4495,
+      "sha256": "2710268527181a27b8e938617551bae29e714e6525247be6679bf897a9942a60"
+    }
+  }
+]

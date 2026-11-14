@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.182](https://github.com/Faga250885/Doceink/releases/tag/v0.75.182).
-- [OTA firmware: 0.75.182](https://github.com/Faga250885/Doceink/releases/download/v0.75.182/Doceink-EInk4.bin).
+- [Documented version: 0.75.183](https://github.com/Faga250885/Doceink/releases/tag/v0.75.183).
+- [OTA firmware: 0.75.183](https://github.com/Faga250885/Doceink/releases/download/v0.75.183/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.183
+
+- Offline, localized Release notes in Information show changes in the installed version and its predecessor.
+- Automatic clock setup displays Configuring... while busy; its white caption stays readable on the black button.
+- Reader justification distributes extra width between words, preserves the final line of a paragraph, selection and original text. Bionic initials receive stronger emphasis.
+- A 30-family catalog downloads only the chosen family to microSD, with seven sizes and its OFL license. Downloads verify SHA-256 and preserve the current font if they fail. Saved fonts work offline.
+- The clean-install interface font pack drops from 4,985,431 to 2,585,690 bytes. All original codepoints and retained glyph bitmaps remain available, including math symbols. The complete payload, including firmware and other resources, is about 8.29 MB versus 10.66 MB in 0.75.182. Full flash images remain 16 MB including empty regions.
+- Wi-Fi OTA preserves user data and the previous font partition. The smaller internal font pack is supplied by the clean installer. Existing microSD fonts are retained.
+- Firmware build and 81 software tests passed. Physical validation of these changes is pending.
 
 ## Changes in 0.75.182
 

@@ -76,3 +76,9 @@ Tareas ofrece dos listas **Personal** y **Trabajo**, guardadas localmente. El di
 Mantén pulsado un acceso del Home y selecciona **Grabadora**. Inserta la microSD y desactiva Disco USB; pulsa **Empezar a grabar**. El audio se escribe durante la grabación en un WAV temporal de la tarjeta, sin Wi-Fi, clave API ni servicios externos. Puedes pausar y reanudar. La grabación continúa durante standby; despierta Metalio y vuelve a Grabadora para detenerla. Confirma Detener y elige Guardar en microSD o No guardar. Los archivos quedan en `metalio/e-ink/recordings/`. La aplicación graba sonido; no transcribe la voz.
 
 Wi-Fi permanece desconectado al arrancar hasta que lo conectes o uses una función que lo necesite, como Actualizar, dictar o iniciar una conversación. Abrir Noticias, Clima o historial guardados no solicita conexión. El idioma predeterminado al instalar desde cero es inglés; puedes elegir español o chino simplificado en Ajustes. OTA conserva tu elección.
+
+## Tipografías y notas de actualización
+
+En Tipografía del lector encontrarás 30 familias. Las que indican Descargar necesitan Wi-Fi y la microSD montada, con Disco USB desactivado. Al elegir una se guarda con tamaños de 18, 22, 24, 25, 28, 30 y 36 px para reutilizarla sin internet. La fuente integrada está disponible sin tarjeta. Se mantiene la importación de TTF/OTF personalizados.
+
+En Ajustes → Sistema → Información → Notas de actualización puedes consultar sin Wi-Fi los cambios de la versión instalada y la anterior.

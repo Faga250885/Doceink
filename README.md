@@ -10,7 +10,7 @@
 
 Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 16 MB of flash. Books, local tasks, voice conversations with ChatGPT, RSS news, weather, an offline audio recorder, a clock, a calculator and games in one interface.
 
-**Documented version: 0.75.182.** This repository provides downloads and documentation for installing and using Metalio.
+**Documented version: 0.75.183.** This repository provides downloads and documentation for installing and using Metalio.
 
 ## Explore DoceInk
 
@@ -43,7 +43,7 @@ Screens may vary slightly between firmware versions.
 
 **Connect Metalio → open DoceInk Setup → click Install.** Detection is automatic; there is no COM/serial-port selector. No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release. English by default, with a Spanish selector. If several compatible USB devices are connected, leave only Metalio connected.
 
-Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.182**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
+Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.183**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
 
 The package is built from firmware build outputs and system resources. **It contains no developer accounts, API keys, saved Wi-Fi networks, conversations or personal files.** Each user sets up their own Metalio.
 
@@ -63,7 +63,7 @@ The package is built from firmware build outputs and system resources. **It cont
 
 - [Latest release and downloads](https://github.com/Faga250885/Doceink/releases/latest)
 - [Update without erasing your data](docs/UPDATES.md)
-- [SHA-256 checksums for 0.75.182](SHA256SUMS.txt)
+- [SHA-256 checksums for 0.75.183](SHA256SUMS.txt)
 - [Release history](https://github.com/Faga250885/Doceink/releases)
 
 ## Features
@@ -85,6 +85,10 @@ At power-on, the new DoceInk logo and its **doceink** wordmark appear centered f
 | Other apps | Calculator |
 
 Clock setup offers **Configure automatically** over Wi-Fi or **Manual configuration** in a modal. Automatic setup uses approximate IP-based city detection and IANA time-zone rules for daylight saving. It synchronizes when Wi-Fi is connected for a user-requested action; it does not independently connect at startup. Running counters always remain compatible with standby.
+
+Reader fonts are offered in a catalog of **30 downloadable families**. Select one to save it and its supported sizes to the microSD, then use it offline. Downloads run only after selection; existing fonts are retained. Interface fonts stay in internal flash so the UI works without a card. The clean-install interface font pack is reduced from 4.99 MB to 2.59 MB; normal Wi-Fi OTA retains the previously installed font partition.
+
+Information now has **Release notes** below Check for updates, with localized, offline notes for the installed and previous versions. Clock setup displays **Configuring...** while busy. Reader justification fills both margins except paragraph endings, and bionic initials are more distinct.
 
 Game sessions remain in memory while Metalio stays powered on; powering off or restarting clears them.
 

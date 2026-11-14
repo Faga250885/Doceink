@@ -1,0 +1,3 @@
+# Preserve exact checksummed font and license bytes.
+assets/reader-fonts/**/*.ef binary
+assets/reader-fonts/**/OFL.txt -text
