@@ -16,12 +16,26 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.186](https://github.com/Faga250885/Doceink/releases/tag/v0.75.186).
-- [Firmware OTA 0.75.186](https://github.com/Faga250885/Doceink/releases/download/v0.75.186/Doceink-EInk4.bin).
+- [Versión documentada 0.75.187](https://github.com/Faga250885/Doceink/releases/tag/v0.75.187).
+- [Firmware OTA 0.75.187](https://github.com/Faga250885/Doceink/releases/download/v0.75.187/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.187
+
+- La lista de tipografías utiliza exclusivamente la letra de la interfaz. Se eliminan las muestras por fila, su carga de archivos y su temporizador. La fuente elegida se muestra solo en el texto de ejemplo de lectura.
+
+- Las flechas recorren las fuentes instaladas y la integrada. Nunca abren la lista ni inician descargas. Solo el campo central con nombre y chevron abre el catálogo completo.
+
+- Corregido el cambio de fuente en los ajustes de lectura abiertos desde la biblioteca sin un libro activo. Se eliminan las etiquetas antiguas antes de reemplazar su fuente, tanto en la muestra como en el lector activo.
+
+- Los cambios rápidos de preferencias comparten un único trabajador de guardado que agrupa los cambios, en lugar de crear una tarea y una pila por toque. Se conserva el último valor de cada ajuste.
+
+- Las descargas comprueban el sistema de archivos real y coordinan el acceso con Disco USB. Un indicador de montaje desactualizado ya no rechaza una tarjeta accesible. Los errores distinguen archivos ausentes o inválidos, tarjeta inaccesible, llena, de solo lectura u ocupada y acceso por USB.
+
+Validación: compilación y 88 pruebas aprobadas, incluidos 1.000 cambios agrupados de fuente, muestra sin libro abierto, cambios repetidos con flechas sin abrir el catálogo y comprobación de acceso a almacenamiento y USB. Falta confirmar el bloqueo en Metalio; no se dispuso de un registro USB. La OTA conserva los datos y los instaladores descargan la última versión estable.
 
 ## Novedades de 0.75.186
 

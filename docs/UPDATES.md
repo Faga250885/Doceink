@@ -16,12 +16,26 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.186](https://github.com/Faga250885/Doceink/releases/tag/v0.75.186).
-- [OTA firmware: 0.75.186](https://github.com/Faga250885/Doceink/releases/download/v0.75.186/Doceink-EInk4.bin).
+- [Documented version: 0.75.187](https://github.com/Faga250885/Doceink/releases/tag/v0.75.187).
+- [OTA firmware: 0.75.187](https://github.com/Faga250885/Doceink/releases/download/v0.75.187/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.187
+
+- Font lists use only the interface font. Removed all per-row font previews, SD glyph loading and preview polling; the selected typeface is shown only in the reading sample.
+
+- The arrows cycle through installed fonts and the builtin face. They never open the list or start a download. Only the central name/chevron field opens the complete catalog.
+
+- Fixed font changes in reading preferences opened from the library without an active book. Old sample labels are removed before replacing their font; active reader labels are also cleared before freeing a font.
+
+- Rapid preference changes share one coalescing save worker instead of creating a task and stack for every tap. The latest value of each preference is retained.
+
+- Downloads check the actual microSD filesystem while holding the USB/storage ownership lock. A stale mount flag no longer rejects an accessible card. Errors distinguish missing or invalid files, unavailable/full/read-only/busy storage and USB ownership.
+
+Validation: firmware build and 88 software tests passed, including 1,000 coalesced font preference changes, preview refresh without an open book, repeated arrow changes without opening the catalog, and storage/USB ownership checks. On-device confirmation of the reported hang remains pending; no USB log was available. Wi-Fi OTA preserves user data and installers retrieve the latest stable release.
 
 ## Changes in 0.75.186
 
