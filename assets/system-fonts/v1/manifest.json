@@ -1,0 +1,157 @@
+{
+  "format": "DOCEUIF1",
+  "source_commit": "cc39c4c2c304bc368c9b7c311ea2bcc6013299fe",
+  "rasterizer": "FreeType native pixel sizes, forced autohint, grayscale 2 bpp; regular 400 and semibold 600; no bitmap scaling",
+  "roles": [
+    {
+      "pixels": 14,
+      "weight": 400
+    },
+    {
+      "pixels": 18,
+      "weight": 400
+    },
+    {
+      "pixels": 22,
+      "weight": 400
+    },
+    {
+      "pixels": 22,
+      "weight": 600
+    },
+    {
+      "pixels": 24,
+      "weight": 400
+    },
+    {
+      "pixels": 25,
+      "weight": 400
+    },
+    {
+      "pixels": 25,
+      "weight": 600
+    },
+    {
+      "pixels": 28,
+      "weight": 400
+    },
+    {
+      "pixels": 30,
+      "weight": 400
+    },
+    {
+      "pixels": 30,
+      "weight": 600
+    },
+    {
+      "pixels": 36,
+      "weight": 400
+    },
+    {
+      "pixels": 44,
+      "weight": 400
+    },
+    {
+      "pixels": 48,
+      "weight": 400
+    },
+    {
+      "pixels": 56,
+      "weight": 400
+    },
+    {
+      "pixels": 72,
+      "weight": 400
+    },
+    {
+      "pixels": 160,
+      "weight": 400
+    }
+  ],
+  "families": [
+    {
+      "id": "inter",
+      "name": "Inter",
+      "bytes": 306164,
+      "sha256": "61fe43345e50fe695ea673d12603301b489ad6136cc4cd38f0a7384e2f9ff8b8",
+      "source": "https://raw.githubusercontent.com/google/fonts/cc39c4c2c304bc368c9b7c311ea2bcc6013299fe/ofl/inter/Inter%5Bopsz%2Cwght%5D.ttf",
+      "source_sha256": "29160a80ff49ddcab2c97711247e08b1fab27a484a329ce8b813d820dc559031",
+      "license": "https://raw.githubusercontent.com/google/fonts/cc39c4c2c304bc368c9b7c311ea2bcc6013299fe/ofl/inter/OFL.txt",
+      "website": "https://rsms.me/inter/",
+      "native_raster_sizes": {
+        "14/400": 13,
+        "18/400": 15,
+        "22/400": 20,
+        "24/400": 22,
+        "25/400": 24,
+        "28/400": 24,
+        "30/400": 25,
+        "36/400": 33,
+        "44/400": 42,
+        "48/400": 47,
+        "56/400": 53,
+        "72/400": 69,
+        "160/400": 156,
+        "22/600": 20,
+        "25/600": 24,
+        "30/600": 27
+      }
+    },
+    {
+      "id": "sourcesans3",
+      "name": "Source Sans 3",
+      "bytes": 295501,
+      "sha256": "9f69c221778b15ab13c968894723627be5e7d1829763427d936acf7a5f206bb1",
+      "source": "https://raw.githubusercontent.com/google/fonts/cc39c4c2c304bc368c9b7c311ea2bcc6013299fe/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf",
+      "source_sha256": "042fe2cc0b933e328410d7acbd0aa6a1873dca5aef81875f4bc214b08825c7b9",
+      "license": "https://raw.githubusercontent.com/google/fonts/cc39c4c2c304bc368c9b7c311ea2bcc6013299fe/ofl/sourcesans3/OFL.txt",
+      "website": "https://github.com/adobe-fonts/source-sans",
+      "native_raster_sizes": {
+        "14/400": 14,
+        "18/400": 16,
+        "22/400": 22,
+        "24/400": 24,
+        "25/400": 25,
+        "28/400": 26,
+        "30/400": 30,
+        "36/400": 36,
+        "44/400": 44,
+        "48/400": 48,
+        "56/400": 56,
+        "72/400": 72,
+        "160/400": 160,
+        "22/600": 22,
+        "25/600": 25,
+        "30/600": 30
+      }
+    },
+    {
+      "id": "notosans",
+      "name": "Noto Sans",
+      "bytes": 301384,
+      "sha256": "44959357525da131e3a93a252db13af491ecc0e5ff983ad189683ebcabef8085",
+      "source": "https://raw.githubusercontent.com/google/fonts/cc39c4c2c304bc368c9b7c311ea2bcc6013299fe/ofl/notosans/NotoSans%5Bwdth%2Cwght%5D.ttf",
+      "source_sha256": "bfb7bb691513f12e734dc346c03a03f784912432d7e3fa8e56efcf906fe86b3d",
+      "license": "https://raw.githubusercontent.com/google/fonts/cc39c4c2c304bc368c9b7c311ea2bcc6013299fe/ofl/notosans/OFL.txt",
+      "website": "https://notofonts.github.io/",
+      "native_raster_sizes": {
+        "14/400": 13,
+        "18/400": 15,
+        "22/400": 20,
+        "24/400": 20,
+        "25/400": 24,
+        "28/400": 24,
+        "30/400": 26,
+        "36/400": 33,
+        "44/400": 44,
+        "48/400": 46,
+        "56/400": 53,
+        "72/400": 70,
+        "160/400": 160,
+        "22/600": 20,
+        "25/600": 24,
+        "30/600": 27
+      }
+    }
+  ]
+}

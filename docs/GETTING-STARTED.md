@@ -99,6 +99,10 @@ A catalog family can contain seven sizes: 18, 22, 24, 25, 28, 30 and 36 px. The 
 
 ## System typeface
 
-Open **Settings → Display → System typeface**. Atkinson is the built-in default. The list also includes reading fonts already saved as EF files on the microSD, including downloaded catalog fonts and converted local fonts. Download new families from the reader’s font catalog first. Applying a saved font needs no internet.
+Open **Settings → Display → System typeface**. There are exactly four families: **Atkinson** (the original built-in default), **Inter**, **Source Sans 3** and **Noto Sans**. These choices are independent of the reader’s 30-font catalog and local imported reading fonts.
 
-The system uses its own resident copy in PSRAM, closes the SD file and preserves control sizes and icons. Book-body typography remains independent. The choice survives restarts; if its file is missing at boot, the built-in interface remains available. Atkinson can always be selected without a card or while USB Disk is active. Missing glyphs use the built-in Latin/CJK fallback. A font that cannot fit safely in memory is rejected while retaining the current face.
+Atkinson always works without a card or Wi-Fi. Selecting another family downloads its dedicated native-size UI pack once to the microSD. The selector shows Wi-Fi/download status and percentage; leave USB Disk off during the first download. Packs are checked against size and SHA-256, then remain usable offline. They contain true regular and semibold faces for the 16 UI roles, rendered directly at native pixel sizes rather than resizing reading-font bitmaps.
+
+The selected pack is loaded into PSRAM and its SD file is closed, keeping the interface usable after card removal or while USB Disk is active. Existing control sizes and Lucide icons are preserved. Missing glyphs use the original Latin/CJK fallback; reading typography remains separate. Updating from 0.75.190 starts on Atkinson. New choices persist after restart; if a saved pack is absent at boot, Atkinson remains available without automatically starting a download.
+
+See [font sources, licenses and preparation](../assets/system-fonts/v1/README.md).

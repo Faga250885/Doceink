@@ -97,6 +97,10 @@ Cada familia del catálogo puede incluir siete tamaños: 18, 22, 24, 25, 28, 30 
 
 ## Tipografía del sistema
 
-Abre **Ajustes → Pantalla → Tipografía del sistema**. Atkinson es la fuente interna predeterminada. La lista incluye además las fuentes de lectura guardadas como EF en la microSD: las descargadas del catálogo y las locales convertidas. Para añadir familias nuevas, descárgalas primero desde el catálogo del lector. Aplicar una fuente guardada no necesita internet.
+Abre **Ajustes → Pantalla → Tipografía del sistema**. Hay exactamente cuatro familias: **Atkinson** (la predeterminada original integrada), **Inter**, **Source Sans 3** y **Noto Sans**. Estas opciones son independientes del catálogo de 30 fuentes del lector y de las fuentes importadas para leer.
 
-El sistema carga una copia propia en PSRAM, cierra el archivo de la tarjeta y mantiene las dimensiones de controles e iconos. La letra del texto del libro se configura por separado. La elección se conserva al reiniciar; si falta el archivo al arrancar, sigue disponible la interfaz interna. Puedes volver a Atkinson sin tarjeta o con Disco USB activo. Los caracteres ausentes usan el respaldo latino/chino interno. Si una fuente no cabe de forma segura en memoria, se conserva la anterior.
+Atkinson funciona siempre sin tarjeta ni Wi-Fi. Al seleccionar otra familia se descarga una sola vez a la microSD su paquete específico de interfaz. El selector muestra conexión y porcentaje; desactiva Disco USB para la primera descarga. Se verifican tamaño y SHA-256 y después se puede usar sin internet. Los paquetes contienen regular y seminegrita reales para las 16 combinaciones de interfaz, dibujadas a tamaños nativos, sin reescalar imágenes de las letras de lectura.
+
+El paquete queda cargado en PSRAM y su archivo se cierra: la interfaz sigue disponible al retirar la tarjeta o activar Disco USB. Se mantienen las dimensiones de controles y los iconos Lucide. Los caracteres ausentes usan el respaldo latino/chino original y la tipografía del libro sigue configurándose aparte. Al actualizar desde la 0.75.190 se vuelve a Atkinson. Las nuevas elecciones se conservan al reiniciar; si falta el paquete al arrancar, está disponible Atkinson sin iniciar una descarga automática.
+
+Consulta [fuentes originales, licencias y preparación](../assets/system-fonts/v1/README.md).

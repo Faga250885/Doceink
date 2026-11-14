@@ -16,12 +16,28 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.190](https://github.com/Faga250885/Doceink/releases/tag/v0.75.190).
-- [Firmware OTA 0.75.190](https://github.com/Faga250885/Doceink/releases/download/v0.75.190/Doceink-EInk4.bin).
+- [Versión documentada 0.75.191](https://github.com/Faga250885/Doceink/releases/tag/v0.75.191).
+- [Firmware OTA 0.75.191](https://github.com/Faga250885/Doceink/releases/download/v0.75.191/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.191
+
+- Tipografía del sistema queda limitada a cuatro familias: Atkinson, la predeterminada original, Inter, Source Sans 3 y Noto Sans. Las fuentes generales de lectura ya no aparecen en este selector.
+
+- Al actualizar desde la 0.75.190 se restaura Atkinson. Las futuras elecciones de fuentes de interfaz se guardan por separado de la preferencia anterior.
+
+- Sustituido el escalado de imágenes y la negrita artificial por rasterización nativa con FreeType para 16 combinaciones de tamaño y peso, con regular y seminegrita reales. Cada combinación encaja en el espacio original; las letras no se estiran ni se reducen después de dibujarse.
+
+- Los tres paquetes opcionales son independientes de las fuentes de lectura, incluyen sus licencias y se descargan únicamente al seleccionarlos. El campo muestra conexión y porcentaje. Se comprueban el tamaño y SHA-256 antes de instalar.
+
+- El paquete elegido queda en PSRAM con el archivo cerrado: sigue disponible con Disco USB o al retirar la tarjeta. Atkinson funciona sin microSD ni Wi-Fi. Si un cambio falla se conserva la fuente anterior. Los caracteres ausentes y los signos grandes que excedan el espacio usan el respaldo interno original.
+
+- Comprobadas métricas y mapas de píxeles de los tres paquetes en las 16 combinaciones, alineación de mayúsculas, acentos, números, archivo retirado y fallos de almacenamiento, red y memoria.
+
+Validación: 96 pruebas locales superadas. Firmware ESP32-S3 compilado; aplicación de 5.211.904 bytes. Queda pendiente la comprobación en el aparato físico.
 
 ## Novedades de 0.75.190
 

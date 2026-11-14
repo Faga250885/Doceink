@@ -16,12 +16,28 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.190](https://github.com/Faga250885/Doceink/releases/tag/v0.75.190).
-- [OTA firmware: 0.75.190](https://github.com/Faga250885/Doceink/releases/download/v0.75.190/Doceink-EInk4.bin).
+- [Documented version: 0.75.191](https://github.com/Faga250885/Doceink/releases/tag/v0.75.191).
+- [OTA firmware: 0.75.191](https://github.com/Faga250885/Doceink/releases/download/v0.75.191/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.191
+
+- System typeface is limited to four curated families: the original Atkinson default, Inter, Source Sans 3 and Noto Sans. Arbitrary reading fonts no longer appear in this selector.
+
+- Updating from 0.75.190 restores Atkinson. Future choices among the dedicated UI families are saved separately from the previous reader-font preference.
+
+- Replaced bitmap resizing and synthetic bold with native FreeType rasterization for 16 UI size/weight roles, including true regular and semibold. Each role fits the original line box; letters are not stretched or shrunk after rasterization.
+
+- The three optional UI packs are separate from reading fonts, include their open font licenses and download only when selected. The field shows Wi-Fi/download status and progress. Downloads are verified by size and SHA-256 before installation.
+
+- A complete selected pack stays in PSRAM with its SD file closed, so the interface remains available during USB Disk use or after card removal. Atkinson works without SD or Wi-Fi. Failed changes retain the previous face. Missing characters and out-of-box large punctuation use the original built-in fallback.
+
+- Checked native glyph metrics and bitmap bytes for all three packs across 16 size/weight roles, capital baselines, accents, numbers, file removal and storage/network/memory failure paths.
+
+Validation: 96 host tests passed. ESP32-S3 firmware compiled; app size 5,211,904 bytes. Physical-device confirmation remains pending.
 
 ## Changes in 0.75.190
 
