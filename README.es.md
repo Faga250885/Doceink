@@ -10,7 +10,7 @@
 
 Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, grabadora local, reloj, calculadora y juegos en una misma interfaz.
 
-**Versión documentada: 0.75.181.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
+**Versión documentada: 0.75.182.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
 
 ## Explora DoceInk
 
@@ -43,13 +43,13 @@ Las pantallas pueden variar ligeramente según la versión del firmware.
 
 **Conecta Metalio → abre DoceInk Setup → pulsa Instalar.** Lo detecta automáticamente, sin elegir puertos COM ni serie. Sin Python, comandos ni descargar el firmware manualmente. Cada instalación obtiene la última versión estable de GitHub y requiere internet. Se abre en inglés y permite cambiar a español. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
 
-El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.181**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
+El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.182**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
 
 El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 
 > La instalación limpia reemplaza la memoria interna del Metalio de destino y borra sus cuentas y ajustes. **No borra la microSD.** Usa una tarjeta vacía si también quieres empezar sin libros, tareas o historiales anteriores.
 >
-> Estado de validación: compilación, pruebas de software, integridad del ZIP y regiones vacías de la imagen verificadas. El propietario confirmó una instalación limpia completa con el instalador de Windows en un Metalio físico. La grabadora y esta versión todavía requieren prueba física; la instalación USB desde macOS sigue sin validar.
+> Estado de validación: compilación, pruebas de software, integridad del ZIP y regiones vacías de la imagen verificadas. El propietario confirmó una instalación limpia completa con el instalador de Windows en un Metalio físico. Esta versión todavía requiere prueba física; la instalación USB desde macOS sigue sin validar.
 
 ## Elegir la descarga correcta
 
@@ -63,7 +63,7 @@ El paquete se genera con los archivos del firmware y sus recursos: **no incluye 
 
 - [Última publicación y descargas](https://github.com/Faga250885/Doceink/releases/latest)
 - [Actualizar conservando los datos](docs/ACTUALIZACIONES.md)
-- [Huellas SHA-256 de 0.75.181](SHA256SUMS.txt)
+- [Huellas SHA-256 de 0.75.182](SHA256SUMS.txt)
 - [Historial de versiones](https://github.com/Faga250885/Doceink/releases)
 
 ## Qué incluye
@@ -72,7 +72,7 @@ Al encender, el nuevo logo con la palabra **doceink** aparece centrado durante d
 
 | Sección | Funciones |
 | --- | --- |
-| Libros | Biblioteca, portadas, lectura, controles de tipografía, gestos táctiles e índice modal con scroll |
+| Libros | Biblioteca, portadas, gestos táctiles e índice modal con scrollbar e ítems centrados verticalmente; texto de muestra traducido y vista previa de la barra informativa bajo los ajustes |
 | Tareas | Listas locales Personal y Trabajo; dictado por Wi-Fi |
 | ChatGPT | Conversaciones por voz e historial en microSD; requiere configurar tu propia clave API |
 | Noticias | Varias fuentes RSS, caché en microSD y actualización manual |
@@ -83,6 +83,8 @@ Al encender, el nuevo logo con la palabra **doceink** aparece centrado durante d
 | Home y ajustes | Accesos personalizables, fondos, batería, conexión y preferencias |
 | Juegos | Ajedrez, Sudoku, 2048, Buscaminas, Batalla naval y Reversi; partidas que se reanudan al salir o entrar en standby; reinicio desde la toolbar con confirmación |
 | Otras aplicaciones | Calculadora |
+
+El reloj ofrece **Configurar automáticamente** por Wi-Fi o **Configuración manual** en un modal. El modo automático detecta la ciudad aproximada por IP y utiliza reglas IANA para gestionar el horario de verano. Sincroniza cuando hay Wi-Fi por una acción del usuario; no inicia una conexión al encender. Los contadores activos siempre son compatibles con standby.
 
 Las partidas permanecen en memoria mientras Metalio siga encendido; se borran al apagarlo o reiniciarlo.
 

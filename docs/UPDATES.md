@@ -16,12 +16,21 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.158](https://github.com/Faga250885/Doceink/releases/tag/v0.75.158).
-- [OTA firmware: 0.75.158](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/Doceink-EInk4.bin).
+- [Documented version: 0.75.182](https://github.com/Faga250885/Doceink/releases/tag/v0.75.182).
+- [OTA firmware: 0.75.182](https://github.com/Faga250885/Doceink/releases/download/v0.75.182/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.182
+
+- Chapter titles remain left-aligned and are centered vertically within each index item; the scrollbar stays visible.
+- Reader settings move above a localized sample and the selected reader-footer elements, preserving the book position.
+- Clock setup detects an approximate city and IANA time zone over Wi-Fi, synchronizes date/time and handles daylight saving; manual date/time and UTC offset are edited in a modal.
+- Remove the counter-standby toggle: running counters always use the supported standby behavior.
+- Finished-game End game buttons align directly below the board.
+- Firmware build and targeted software regressions passed. Physical verification of these changes is pending.
 
 ## Changes in 0.75.158
 

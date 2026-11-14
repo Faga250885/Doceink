@@ -16,12 +16,21 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.158](https://github.com/Faga250885/Doceink/releases/tag/v0.75.158).
-- [Firmware OTA 0.75.158](https://github.com/Faga250885/Doceink/releases/download/v0.75.158/Doceink-EInk4.bin).
+- [Versión documentada 0.75.182](https://github.com/Faga250885/Doceink/releases/tag/v0.75.182).
+- [Firmware OTA 0.75.182](https://github.com/Faga250885/Doceink/releases/download/v0.75.182/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.182
+
+- Los capítulos conservan la alineación izquierda y quedan centrados verticalmente por ítem; el scrollbar permanece visible.
+- Los ajustes del lector aparecen sobre un texto de muestra traducido y los elementos seleccionados del pie de lectura, conservando la posición del libro.
+- El reloj detecta ciudad aproximada y zona IANA por Wi-Fi, sincroniza fecha y hora y gestiona el horario de verano; la fecha, hora y desfase UTC manuales se editan en un modal.
+- Se retira Suspender con contadores: los contadores activos siempre utilizan el comportamiento compatible con standby.
+- Terminar partida se alinea justo debajo del tablero.
+- Compilación y pruebas de software pertinentes aprobadas. Falta validar estos cambios en el aparato.
 
 ## Novedades de 0.75.158
 
