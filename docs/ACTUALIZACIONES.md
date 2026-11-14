@@ -16,12 +16,26 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.189](https://github.com/Faga250885/Doceink/releases/tag/v0.75.189).
-- [Firmware OTA 0.75.189](https://github.com/Faga250885/Doceink/releases/download/v0.75.189/Doceink-EInk4.bin).
+- [Versión documentada 0.75.190](https://github.com/Faga250885/Doceink/releases/tag/v0.75.190).
+- [Firmware OTA 0.75.190](https://github.com/Faga250885/Doceink/releases/download/v0.75.190/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.190
+
+- Añadida Tipografía del sistema en Ajustes → Pantalla. Permite elegir Atkinson, la fuente interna predeterminada, o una fuente de lectura guardada en la microSD. El texto del libro conserva su configuración independiente.
+
+- La interfaz mantiene las alturas tipográficas, el tamaño de los controles y los iconos. Los caracteres que falten utilizan el respaldo interno latino/chino.
+
+- La fuente se carga en PSRAM antes de aplicarse y se cierra el archivo de la tarjeta. La interfaz sigue dibujándose al activar Disco USB o retirar la microSD. Aplicar una fuente descargada no necesita Wi-Fi.
+
+- La elección se conserva tras reiniciar. Si falta el archivo al arrancar, se utiliza la tipografía interna. Si un cambio falla se conserva la fuente anterior; se puede volver a Atkinson sin microSD.
+
+- Verificadas las 30 familias del catálogo, varios tamaños y pesos de interfaz, el dibujo sin el archivo original y los fallos de almacenamiento, USB, memoria y tareas.
+
+Validación: 96 pruebas locales superadas; firmware ESP32-S3 compilado y archivos verificados contra la compilación. Queda pendiente comprobar el nuevo control en el dispositivo físico.
 
 ## Novedades de 0.75.189
 

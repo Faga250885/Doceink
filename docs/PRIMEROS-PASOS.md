@@ -94,3 +94,9 @@ Los nombres de la lista usan la letra normal del sistema. La fuente elegida se m
 La descarga comprueba que se puede escribir en la carpeta de fuentes antes de conectar. El standby conserva la alimentación mientras carga el wallpaper o descarga fuentes. Un fallo temporal de red reintenta una vez el archivo actual; si persiste, la notificación incluye la operación y el código. Se conservan los archivos ya verificados.
 
 Cada familia del catálogo puede incluir siete tamaños: 18, 22, 24, 25, 28, 30 y 36 px. El check indica una familia completa. Una descarga interrumpida puede dejar tamaños locales utilizables: pulsa el nombre para usarlos sin internet, o el icono de descarga / Descargar tamaños restantes para completar la familia. Al cerrar el catálogo se actualizan las flechas de tamaño. Clima solicita conectar el Wi-Fi y comparte el trabajador de red reservado al iniciar con fuentes, noticias y actualizaciones.
+
+## Tipografía del sistema
+
+Abre **Ajustes → Pantalla → Tipografía del sistema**. Atkinson es la fuente interna predeterminada. La lista incluye además las fuentes de lectura guardadas como EF en la microSD: las descargadas del catálogo y las locales convertidas. Para añadir familias nuevas, descárgalas primero desde el catálogo del lector. Aplicar una fuente guardada no necesita internet.
+
+El sistema carga una copia propia en PSRAM, cierra el archivo de la tarjeta y mantiene las dimensiones de controles e iconos. La letra del texto del libro se configura por separado. La elección se conserva al reiniciar; si falta el archivo al arrancar, sigue disponible la interfaz interna. Puedes volver a Atkinson sin tarjeta o con Disco USB activo. Los caracteres ausentes usan el respaldo latino/chino interno. Si una fuente no cabe de forma segura en memoria, se conserva la anterior.

@@ -96,3 +96,9 @@ Font list names use the system interface font. The selected face is previewed on
 Font downloads verify that the font directory is writable before connecting. Standby keeps peripheral power on while loading its wallpaper or downloading fonts. A transient network failure retries the current file once; persistent failures show an operation and code in the notification. Previously verified files are retained.
 
 A catalog family can contain seven sizes: 18, 22, 24, 25, 28, 30 and 36 px. The check indicates a complete catalog family. An interrupted download can leave usable local sizes: select the name to use them offline, or tap the download icon / Download remaining sizes to finish the family. Closing the catalog refreshes the size arrows. Weather refreshes now explicitly connect Wi-Fi and share the boot-reserved network worker with font downloads, RSS and updates.
+
+## System typeface
+
+Open **Settings → Display → System typeface**. Atkinson is the built-in default. The list also includes reading fonts already saved as EF files on the microSD, including downloaded catalog fonts and converted local fonts. Download new families from the reader’s font catalog first. Applying a saved font needs no internet.
+
+The system uses its own resident copy in PSRAM, closes the SD file and preserves control sizes and icons. Book-body typography remains independent. The choice survives restarts; if its file is missing at boot, the built-in interface remains available. Atkinson can always be selected without a card or while USB Disk is active. Missing glyphs use the built-in Latin/CJK fallback. A font that cannot fit safely in memory is rejected while retaining the current face.

@@ -16,12 +16,26 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.189](https://github.com/Faga250885/Doceink/releases/tag/v0.75.189).
-- [OTA firmware: 0.75.189](https://github.com/Faga250885/Doceink/releases/download/v0.75.189/Doceink-EInk4.bin).
+- [Documented version: 0.75.190](https://github.com/Faga250885/Doceink/releases/tag/v0.75.190).
+- [OTA firmware: 0.75.190](https://github.com/Faga250885/Doceink/releases/download/v0.75.190/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.190
+
+- Added System typeface in Settings → Display. Choose Atkinson, the built-in default, or a reading font already saved on the microSD. The book body keeps its separate typography settings.
+
+- The interface preserves its existing font heights, control sizes and icons. Missing characters use the built-in Latin/CJK fallback.
+
+- The selected face is loaded in PSRAM before applying it and the SD file is closed. The interface continues rendering when USB Disk owns the card or the card is removed. No Wi-Fi is needed to apply a downloaded font.
+
+- The selection is saved across restarts. If its file is unavailable at boot, the internal typeface remains usable. Failed changes retain the previous face; Atkinson can be restored without a microSD.
+
+- Verified the 30 catalog families, multiple UI sizes and weights, resident rendering after file removal, and safe handling of storage, USB, memory and worker failures.
+
+Validation: 96 host tests passed; ESP32-S3 firmware compiled and release assets verified against the build. Physical-device confirmation of the new system-font control remains pending.
 
 ## Changes in 0.75.189
 
