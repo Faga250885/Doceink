@@ -92,3 +92,5 @@ Font downloads display Wi-Fi connection status, live percentage and verification
 The font field between the arrows now displays its name in the interface font and a chevron. A usable local font can be selected offline even when other catalog sizes are absent. Only one font download can run at a time; rows temporarily ignore taps and click vibration while it runs. Failures show their storage, network or download error.
 
 Font list names use the system interface font. The selected face is previewed only in the reading sample, including preferences opened from the library without an active book. Arrows cycle through installed fonts; only the central name/chevron field opens the downloadable catalog.
+
+Font downloads verify that the font directory is writable before connecting. Standby keeps peripheral power on while loading its wallpaper or downloading fonts. A transient network failure retries the current file once; persistent failures show an operation and code in the notification. Previously verified files are retained.

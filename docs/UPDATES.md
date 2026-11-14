@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.187](https://github.com/Faga250885/Doceink/releases/tag/v0.75.187).
-- [OTA firmware: 0.75.187](https://github.com/Faga250885/Doceink/releases/download/v0.75.187/Doceink-EInk4.bin).
+- [Documented version: 0.75.188](https://github.com/Faga250885/Doceink/releases/tag/v0.75.188).
+- [OTA firmware: 0.75.188](https://github.com/Faga250885/Doceink/releases/download/v0.75.188/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.188
+
+- Standby waits for the wallpaper to finish loading before it can cut peripheral power. Active font/network downloads keep power, Wi-Fi and the CPU available; standby sleep and wallpaper slideshows wait until the transfer finishes.
+
+- Font downloads test writing to the actual font folder, create missing folders and remove their probe afterwards. Unrelated folder checks cannot reject a writable font directory. Directory creation preserves the original error.
+
+- Transient network failures retry the affected file once. Existing verified font files are retained. Failures include the operation and error code to distinguish storage errors from HTTP, incomplete responses or checksum errors.
+
+- Verified all 240 published font assets against catalog sizes and SHA-256 hashes. Device confirmation of the intermittent failure remains pending.
 
 ## Changes in 0.75.187
 

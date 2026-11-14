@@ -90,3 +90,5 @@ Las descargas de fuentes muestran el estado de conexión Wi-Fi, porcentaje y ver
 El campo entre las flechas muestra el nombre con la letra de la interfaz y un chevron. Una fuente local utilizable se puede elegir sin internet aunque falten otros tamaños del catálogo. Solo puede ejecutarse una descarga a la vez; las filas desactivan temporalmente los toques y su vibración mientras trabajan. Si falla, aparece el error de tarjeta, conexión o descarga.
 
 Los nombres de la lista usan la letra normal del sistema. La fuente elegida se muestra solo en el texto de ejemplo de lectura, también al abrir los ajustes desde la biblioteca sin un libro activo. Las flechas recorren las fuentes instaladas; solo el campo central con nombre y chevron abre el catálogo descargable.
+
+La descarga comprueba que se puede escribir en la carpeta de fuentes antes de conectar. El standby conserva la alimentación mientras carga el wallpaper o descarga fuentes. Un fallo temporal de red reintenta una vez el archivo actual; si persiste, la notificación incluye la operación y el código. Se conservan los archivos ya verificados.

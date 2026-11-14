@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.187](https://github.com/Faga250885/Doceink/releases/tag/v0.75.187).
-- [Firmware OTA 0.75.187](https://github.com/Faga250885/Doceink/releases/download/v0.75.187/Doceink-EInk4.bin).
+- [Versión documentada 0.75.188](https://github.com/Faga250885/Doceink/releases/tag/v0.75.188).
+- [Firmware OTA 0.75.188](https://github.com/Faga250885/Doceink/releases/download/v0.75.188/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.188
+
+- El standby espera a que termine la carga del wallpaper antes de poder cortar la alimentación de los periféricos. Las descargas activas conservan alimentación, Wi-Fi y CPU; la suspensión y el carrusel esperan a que termine la transferencia.
+
+- La descarga de fuentes prueba la escritura en su propia carpeta, crea las carpetas ausentes y elimina su archivo de prueba. Las comprobaciones de otras carpetas no rechazan una carpeta de fuentes escribible. Se conserva el error original al crear directorios.
+
+- Los fallos temporales de red reintentan una vez el archivo afectado. Se conservan los archivos ya verificados. Los errores indican la operación y el código para distinguir almacenamiento, HTTP, respuestas incompletas y firma incorrecta.
+
+- Comprobados los 240 archivos publicados: tamaños y firmas SHA-256 coinciden con el catálogo. Falta confirmar en Metalio la corrección del fallo intermitente.
 
 ## Novedades de 0.75.187
 
