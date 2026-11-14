@@ -97,10 +97,21 @@ Cada familia del catálogo puede incluir siete tamaños: 18, 22, 24, 25, 28, 30 
 
 ## Tipografía del sistema
 
-Abre **Ajustes → Pantalla → Tipografía del sistema**. Hay exactamente cuatro familias: **Atkinson** (la predeterminada original integrada), **Inter**, **Source Sans 3** y **Noto Sans**. Estas opciones son independientes del catálogo de 30 fuentes del lector y de las fuentes importadas para leer.
+Abre **Ajustes → Pantalla → Apariencia → Tipografía del sistema**. Hay exactamente cuatro familias: **Atkinson** (la predeterminada original integrada), **Inter**, **Source Sans 3** y **Noto Sans**. Estas opciones son independientes del catálogo de 30 fuentes del lector y de las fuentes importadas para leer.
 
 Atkinson funciona siempre sin tarjeta ni Wi-Fi. Al seleccionar otra familia se descarga una sola vez a la microSD su paquete específico de interfaz. El selector muestra conexión y porcentaje; desactiva Disco USB para la primera descarga. Se verifican tamaño y SHA-256 y después se puede usar sin internet. Los paquetes contienen regular y seminegrita reales para las 16 combinaciones de interfaz, dibujadas a tamaños nativos, sin reescalar imágenes de las letras de lectura.
 
 El paquete queda cargado en PSRAM y su archivo se cierra: la interfaz sigue disponible al retirar la tarjeta o activar Disco USB. Se mantienen las dimensiones de controles y los iconos Lucide. Los caracteres ausentes usan el respaldo latino/chino original y la tipografía del libro sigue configurándose aparte. Al actualizar desde la 0.75.190 se vuelve a Atkinson. Las nuevas elecciones se conservan al reiniciar; si falta el paquete al arrancar, está disponible Atkinson sin iniciar una descarga automática.
 
 Consulta [fuentes originales, licencias y preparación](../assets/system-fonts/v1/README.md).
+
+## Ajustes organizados por tarea
+
+| Grupo | Orden y ubicación |
+|---|---|
+| Pantalla | Primero Fondos (galería, carrusel y fondos dinámicos), después la cuadrícula de Home y al final Apariencia (batería, tipografía del sistema y refresco). |
+| Conexiones | Primero Wi-Fi y después el modo y las acciones de Bluetooth; las ayudas siguen a sus controles. |
+| Archivos | Transferencia por Wi-Fi, Disco USB y después estado y capacidad de la microSD. |
+| Sistema | Energía (suspensión, apagado y espera de Wi-Fi), General (idioma y vibración), Reloj (automático y manual), Información (versión, actualización y notas, datos técnicos y créditos). |
+
+Se conservan los valores elegidos. Cada sección permite scroll y al cambiar se cierran sus selectores anteriores y se detienen sus temporizadores de pantalla.

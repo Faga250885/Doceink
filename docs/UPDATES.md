@@ -16,12 +16,26 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.191](https://github.com/Faga250885/Doceink/releases/tag/v0.75.191).
-- [OTA firmware: 0.75.191](https://github.com/Faga250885/Doceink/releases/download/v0.75.191/Doceink-EInk4.bin).
+- [Documented version: 0.75.192](https://github.com/Faga250885/Doceink/releases/tag/v0.75.192).
+- [OTA firmware: 0.75.192](https://github.com/Faga250885/Doceink/releases/download/v0.75.192/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.192
+
+- Reorganized Settings by common tasks. Display now opens Wallpapers first, followed by Home and Appearance. Wallpaper gallery, standby slideshow and dynamic backgrounds stay together. Battery display, system typeface and screen refresh are grouped in Appearance.
+
+- System now separates Energy, General, Clock and Information. Energy puts standby and shutdown timeouts before Wi-Fi power-saving delay; General keeps language and vibration. Existing preferences are preserved.
+
+- Files puts Wi-Fi file transfer and USB Disk ahead of microSD status and capacity. Connections retains Wi-Fi before Bluetooth, with actions before help text.
+
+- Clock puts automatic setup and manual configuration before its detailed explanation. Information puts version, update checking and release notes first, technical details next and logo/credits last.
+
+- Help text uses a smaller secondary style, section tabs stay on one line, and selectors, timers and scrollbars keep their existing behavior.
+
+Validation: 97 host tests passed, including repeated wallpaper/appearance switching in all three locales, late callbacks and leaving while a font applies. ESP32-S3 firmware compiled. Physical-device confirmation remains pending.
 
 ## Changes in 0.75.191
 

@@ -99,10 +99,21 @@ A catalog family can contain seven sizes: 18, 22, 24, 25, 28, 30 and 36 px. The 
 
 ## System typeface
 
-Open **Settings → Display → System typeface**. There are exactly four families: **Atkinson** (the original built-in default), **Inter**, **Source Sans 3** and **Noto Sans**. These choices are independent of the reader’s 30-font catalog and local imported reading fonts.
+Open **Settings → Display → Appearance → System typeface**. There are exactly four families: **Atkinson** (the original built-in default), **Inter**, **Source Sans 3** and **Noto Sans**. These choices are independent of the reader’s 30-font catalog and local imported reading fonts.
 
 Atkinson always works without a card or Wi-Fi. Selecting another family downloads its dedicated native-size UI pack once to the microSD. The selector shows Wi-Fi/download status and percentage; leave USB Disk off during the first download. Packs are checked against size and SHA-256, then remain usable offline. They contain true regular and semibold faces for the 16 UI roles, rendered directly at native pixel sizes rather than resizing reading-font bitmaps.
 
 The selected pack is loaded into PSRAM and its SD file is closed, keeping the interface usable after card removal or while USB Disk is active. Existing control sizes and Lucide icons are preserved. Missing glyphs use the original Latin/CJK fallback; reading typography remains separate. Updating from 0.75.190 starts on Atkinson. New choices persist after restart; if a saved pack is absent at boot, Atkinson remains available without automatically starting a download.
 
 See [font sources, licenses and preparation](../assets/system-fonts/v1/README.md).
+
+## Settings organized by task
+
+| Group | Order and location |
+|---|---|
+| Display | Wallpapers first (gallery, slideshow, dynamic backgrounds), Home shortcut grid, then Appearance (battery, system typeface, screen refresh). |
+| Connections | Wi-Fi setup first, then Bluetooth mode and device actions; help follows its control. |
+| Files | Wi-Fi transfer, USB Disk, then microSD state and capacity. |
+| System | Energy (standby, shutdown, Wi-Fi idle delay), General (language and vibration), Clock (automatic then manual), Information (version, updates and notes, device details, then credits). |
+
+Existing settings are preserved. Each section scrolls independently and switching sections closes its old selectors and stops its page-local timers.

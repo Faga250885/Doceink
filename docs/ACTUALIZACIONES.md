@@ -16,12 +16,26 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.191](https://github.com/Faga250885/Doceink/releases/tag/v0.75.191).
-- [Firmware OTA 0.75.191](https://github.com/Faga250885/Doceink/releases/download/v0.75.191/Doceink-EInk4.bin).
+- [Versión documentada 0.75.192](https://github.com/Faga250885/Doceink/releases/tag/v0.75.192).
+- [Firmware OTA 0.75.192](https://github.com/Faga250885/Doceink/releases/download/v0.75.192/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.192
+
+- Reordenados los ajustes según las tareas habituales. Pantalla abre primero Fondos, seguida de Home y Apariencia. La galería, el carrusel de espera y los fondos dinámicos quedan juntos. Batería, tipografía del sistema y refresco se agrupan en Apariencia.
+
+- Sistema separa Energía, General, Reloj e Información. Energía muestra primero los tiempos de suspensión y apagado, y después la espera de ahorro de Wi-Fi. General mantiene idioma y vibración. Se conservan los valores elegidos.
+
+- Archivos muestra primero la transferencia por Wi-Fi y Disco USB, seguidos del estado y capacidad de la microSD. Conexiones conserva Wi-Fi antes de Bluetooth, con las acciones antes de los textos de ayuda.
+
+- Reloj sitúa la configuración automática y manual antes de la explicación detallada. Información muestra versión, comprobación de actualización y notas primero, después los datos técnicos y al final el logo y los créditos.
+
+- Las ayudas usan un estilo secundario más pequeño, los tabs se mantienen en una línea y se conserva el funcionamiento de selectores, temporizadores y barras de scroll.
+
+Validación: 97 pruebas locales superadas, incluidos cambios repetidos entre Fondos y Apariencia en los tres idiomas, callbacks tardíos y salida mientras se aplica una fuente. Firmware ESP32-S3 compilado. Queda pendiente la comprobación en el aparato físico.
 
 ## Novedades de 0.75.191
 

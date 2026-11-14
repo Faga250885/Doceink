@@ -10,7 +10,7 @@
 
 Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, grabadora local, reloj, calculadora y juegos en una misma interfaz.
 
-**Versión documentada: 0.75.191.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
+**Versión documentada: 0.75.192.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
 
 ## Explora DoceInk
 
@@ -43,7 +43,7 @@ Las pantallas pueden variar ligeramente según la versión del firmware.
 
 **Conecta Metalio → abre DoceInk Setup → pulsa Instalar.** Lo detecta automáticamente, sin elegir puertos COM ni serie. Sin Python, comandos ni descargar el firmware manualmente. Cada instalación obtiene la última versión estable de GitHub y requiere internet. Se abre en inglés y permite cambiar a español. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
 
-El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.191**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
+El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.192**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
 
 El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 
@@ -63,7 +63,7 @@ El paquete se genera con los archivos del firmware y sus recursos: **no incluye 
 
 - [Última publicación y descargas](https://github.com/Faga250885/Doceink/releases/latest)
 - [Actualizar conservando los datos](docs/ACTUALIZACIONES.md)
-- [Huellas SHA-256 de 0.75.191](SHA256SUMS.txt)
+- [Huellas SHA-256 de 0.75.192](SHA256SUMS.txt)
 - [Historial de versiones](https://github.com/Faga250885/Doceink/releases)
 
 ## Qué incluye
@@ -88,7 +88,7 @@ El reloj ofrece **Configurar automáticamente** por Wi-Fi o **Configuración man
 
 Controles del lector: mantén pulsado para el menú, desliza arriba o abajo para los capítulos y horizontalmente para pasar páginas. El campo de la fuente abre un modal con estado de descarga, progreso en cada fila y nombres con la letra normal del sistema. Se puede ajustar el espaciado entre letras. Pantalla → Home permite editar los accesos en la misma cuadrícula de ocho iconos; Configuración permanece fija.
 
-Las tipografías del lector incluyen un catálogo de **30 familias descargables**. Al elegir una se guarda en la microSD con sus tamaños compatibles y después funciona sin internet. Solo se descarga tras seleccionarla; se conservan las fuentes existentes. **Ajustes → Pantalla → Tipografía del sistema** ofrece exactamente cuatro familias para la interfaz: Atkinson (predeterminada integrada), Inter, Source Sans 3 y Noto Sans. Los tres paquetes opcionales, preparados a tamaños nativos, se descargan una vez a la microSD al seleccionarlos y después funcionan sin internet. Al actualizar desde la 0.75.190 se restaura Atkinson. Las fuentes del libro son independientes. El paquete de interfaz queda en PSRAM con el archivo cerrado; los caracteres ausentes usan el respaldo interno. El paquete tipográfico de la instalación limpia baja de 4,99 MB a 2,59 MB; la OTA habitual conserva la partición de fuentes instalada anteriormente.
+Las tipografías del lector incluyen un catálogo de **30 familias descargables**. Al elegir una se guarda en la microSD con sus tamaños compatibles y después funciona sin internet. Solo se descarga tras seleccionarla; se conservan las fuentes existentes. **Ajustes → Pantalla → Apariencia → Tipografía del sistema** ofrece exactamente cuatro familias para la interfaz: Atkinson (predeterminada integrada), Inter, Source Sans 3 y Noto Sans. Los tres paquetes opcionales, preparados a tamaños nativos, se descargan una vez a la microSD al seleccionarlos y después funcionan sin internet. Al actualizar desde la 0.75.190 se restaura Atkinson. Las fuentes del libro son independientes. El paquete de interfaz queda en PSRAM con el archivo cerrado; los caracteres ausentes usan el respaldo interno. El paquete tipográfico de la instalación limpia baja de 4,99 MB a 2,59 MB; la OTA habitual conserva la partición de fuentes instalada anteriormente.
 
 Información incluye **Notas de actualización** bajo Comprobar actualización, con notas traducidas y sin internet de la versión instalada y la anterior. El reloj muestra **Configurando...** mientras trabaja. La justificación llega a ambos márgenes salvo los finales de párrafo y las iniciales biónicas quedan más marcadas.
 
