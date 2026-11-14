@@ -86,3 +86,5 @@ Open the reader’s Typography controls to browse 30 families. Entries marked Do
 Open Settings → System → Information → Release notes to read the installed version’s changes and the previous version’s changes without connecting to Wi-Fi.
 
 Hold the reading screen for its menu; swipe up or down for the chapter index. Tap the central font name between the arrows to open the font modal. A download icon means the family is not installed, a check means it is available locally, and download progress appears inside its row. Installed names are previewed in their own font. Adjust Letter spacing below Font size. To add local TTF/OTF fonts, copy them to `metalio/e-ink/fonts_ttf/` and restart Metalio: missing 25px EF files are converted in the background without Wi-Fi. Existing EF fonts in `metalio/e-ink/fonts/` are discovered automatically.
+
+Font downloads display Wi-Fi connection status, live percentage and verification in the tapped row; tap a failed row to retry. The font picker uses a continuous list with separators and a visible scrollbar. Name samples stay compact regardless of reading size.

@@ -16,12 +16,24 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.184](https://github.com/Faga250885/Doceink/releases/tag/v0.75.184).
-- [OTA firmware: 0.75.184](https://github.com/Faga250885/Doceink/releases/download/v0.75.184/Doceink-EInk4.bin).
+- [Documented version: 0.75.185](https://github.com/Faga250885/Doceink/releases/tag/v0.75.185).
+- [OTA firmware: 0.75.185](https://github.com/Faga250885/Doceink/releases/download/v0.75.185/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.185
+
+- Font downloads show Searching for Wi-Fi, Connecting, Downloading with percentage, and Verifying directly in the tapped row. Failures leave a visible retry message. The connection is requested explicitly and has a 30-second timeout.
+
+- Progress updates as bytes arrive across the complete family, including its license; Verification must succeed before progress reaches 100%.
+
+- The font modal is a continuous list with bottom separators, no rounded item cards, and a visible scrollbar. Arrow selection of a missing family opens its download list.
+
+- Font-name previews use a compact, consistent height independent of the reading size. The central field is limited to 26px line height and the list to 30px; original SD font files and reading sizes are preserved.
+
+Validation: Cabin’s seven font assets were downloaded from GitHub and matched their published copies. Firmware build and 86 software tests passed. On-device validation is pending. Wi-Fi OTA preserves user data. Installers retrieve the latest stable firmware.
 
 ## Changes in 0.75.184
 

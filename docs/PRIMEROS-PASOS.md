@@ -84,3 +84,5 @@ En Tipografía del lector encontrarás 30 familias. Las que indican Descargar ne
 En Ajustes → Sistema → Información → Notas de actualización puedes consultar sin Wi-Fi los cambios de la versión instalada y la anterior.
 
 Mantén pulsada la lectura para el menú y desliza arriba o abajo para el índice. Pulsa el nombre de la fuente entre las flechas para abrir el modal: el icono de descarga indica que falta instalarla y el check que está guardada; el progreso aparece dentro de su fila. Los nombres instalados se muestran con su propia tipografía. Ajusta Espaciado entre letras debajo de Tamaño de letra. Para añadir TTF/OTF locales, cópialas a `metalio/e-ink/fonts_ttf/` y reinicia Metalio: las EF de 25px que falten se convierten en segundo plano, sin Wi-Fi. Las EF en `metalio/e-ink/fonts/` se detectan automáticamente.
+
+Las descargas de fuentes muestran el estado de conexión Wi-Fi, porcentaje y verificación dentro de la fila; pulsa una fila con error para reintentar. El selector utiliza una lista continua con separadores y scrollbar visible. Las muestras de nombres conservan un tamaño compacto, independiente del tamaño de lectura.

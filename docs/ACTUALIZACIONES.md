@@ -16,12 +16,24 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.184](https://github.com/Faga250885/Doceink/releases/tag/v0.75.184).
-- [Firmware OTA 0.75.184](https://github.com/Faga250885/Doceink/releases/download/v0.75.184/Doceink-EInk4.bin).
+- [Versión documentada 0.75.185](https://github.com/Faga250885/Doceink/releases/tag/v0.75.185).
+- [Firmware OTA 0.75.185](https://github.com/Faga250885/Doceink/releases/download/v0.75.185/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.185
+
+- La descarga muestra Buscando Wi-Fi, Conectando, Descargando con porcentaje y Verificando dentro de la fila pulsada. Los fallos dejan un mensaje para reintentar. Se solicita la conexión de forma explícita, con un tiempo de espera de 30 segundos.
+
+- La barra avanza mientras llegan los datos de toda la familia y su licencia; solo llega al 100% tras verificar los archivos.
+
+- El modal de tipografías pasa a ser una lista continua con separadores inferiores, sin tarjetas redondeadas y con scrollbar visible. Elegir una fuente pendiente con las flechas abre su lista de descarga.
+
+- Las muestras de nombres tienen un alto compacto independiente del tamaño de lectura: hasta 26px de altura de línea en el campo central y 30px en la lista. Se conservan los archivos originales y el tamaño elegido para leer.
+
+Validación: se descargaron los siete archivos de Cabin desde GitHub y coinciden con sus copias publicadas. Compilación y 86 pruebas de software aprobadas. Falta verificar en el dispositivo. La OTA conserva los datos y el instalador descarga el último firmware estable.
 
 ## Novedades de 0.75.184
 
