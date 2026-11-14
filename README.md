@@ -10,7 +10,7 @@
 
 Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 16 MB of flash. Books, local tasks, voice conversations with ChatGPT, RSS news, weather, an offline audio recorder, a clock, a calculator and games in one interface.
 
-**Documented version: 0.75.160.** This repository provides downloads and documentation for installing and using Metalio.
+**Documented version: 0.75.179.** This repository provides downloads and documentation for installing and using Metalio.
 
 ## Explore DoceInk
 
@@ -38,12 +38,12 @@ Screens may vary slightly between firmware versions.
 
 | Computer | Download |
 | --- | --- |
-| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/download/v0.75.160/DoceInk-Setup-0.75.158.1.exe) |
-| Mac · Apple Silicon (M1 or later) · macOS 15+ | [DoceInk Setup for Apple Silicon](https://github.com/Faga250885/Doceink/releases/download/v0.75.160/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) |
+| Windows 10/11 · x64 | [DoceInk Setup](https://github.com/Faga250885/Doceink/releases/latest/download/DoceInk-Setup-0.75.158.1.exe) |
+| Mac · Apple Silicon (M1 or later) · macOS 15+ | [DoceInk Setup for Apple Silicon](https://github.com/Faga250885/Doceink/releases/latest/download/DoceInk-Setup-0.75.158.1-macOS-arm64.dmg) |
 
 **Connect Metalio → open DoceInk Setup → click Install.** Detection is automatic; there is no COM/serial-port selector. No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release. English by default, with a Spanish selector. If several compatible USB devices are connected, leave only Metalio connected.
 
-Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.160**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
+Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.179**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
 
 The package is built from firmware build outputs and system resources. **It contains no developer accounts, API keys, saved Wi-Fi networks, conversations or personal files.** Each user sets up their own Metalio.
 
@@ -63,7 +63,7 @@ The package is built from firmware build outputs and system resources. **It cont
 
 - [Latest release and downloads](https://github.com/Faga250885/Doceink/releases/latest)
 - [Update without erasing your data](docs/UPDATES.md)
-- [SHA-256 checksums for 0.75.160](SHA256SUMS.txt)
+- [SHA-256 checksums for 0.75.179](SHA256SUMS.txt)
 - [Release history](https://github.com/Faga250885/Doceink/releases)
 
 ## Features
@@ -81,7 +81,10 @@ At power-on, the new DoceInk logo and its **doceink** wordmark appear centered f
 | Clock | Clock, pomodoro, stopwatch and countdown |
 | Files | USB disk mode and QR-based Wi-Fi transfers through your phone's browser |
 | Home and settings | Customizable shortcuts, wallpapers, battery, connectivity and preferences |
-| Other apps | Calculator and games |
+| Games | Chess, Sudoku, 2048, Minesweeper, Battleship and Reversi; resume matches after navigating away or entering standby; restart from the toolbar with confirmation |
+| Other apps | Calculator |
+
+Game sessions remain in memory while Metalio stays powered on; powering off or restarting clears them.
 
 New conversations and dictation require internet access and the corresponding account setup. Saved history and downloaded data are read from the microSD card. News and Weather need an initial download before content is available offline.
 
@@ -97,6 +100,8 @@ See [Getting started](docs/GETTING-STARTED.md) for controls, folders and file tr
 ## Compatibility and support
 
 This installer is intended **only for Metalio E-Ink4 with an ESP32-S3 and 16 MB of flash**. It is not a universal firmware for arbitrary e-readers or ESP32 boards.
+
+Known issue in 0.75.179: some EPUB books have been reported to stall while opening. This is still being investigated; see the [release notes](https://github.com/Faga250885/Doceink/releases/tag/v0.75.179).
 
 - [FAQ and troubleshooting](docs/FAQ.md)
 - [Report an issue](https://github.com/Faga250885/Doceink/issues/new?template=bug-report.md)
