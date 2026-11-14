@@ -16,12 +16,30 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.185](https://github.com/Faga250885/Doceink/releases/tag/v0.75.185).
-- [OTA firmware: 0.75.185](https://github.com/Faga250885/Doceink/releases/download/v0.75.185/Doceink-EInk4.bin).
+- [Documented version: 0.75.186](https://github.com/Faga250885/Doceink/releases/tag/v0.75.186).
+- [OTA firmware: 0.75.186](https://github.com/Faga250885/Doceink/releases/download/v0.75.186/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.186
+
+- The font field between the arrows now uses the normal interface font: name and chevron only, with no typeface preview or SD font loading.
+
+- Selecting a usable local font no longer requires all seven catalog sizes and never starts a download just because other sizes are absent. Local files are checked before applying them.
+
+- Font downloads consume the final HTTP chunk before verifying completion, fixing rejection of otherwise complete chunked responses while retaining size and SHA-256 checks.
+
+- Only one download can be active. Font rows ignore repeated taps and suspend their click vibration while busy, then become available again. Failure text shows the actual storage, network or download error.
+
+- Font-name previews are detached from labels before their memory is freed when closing the modal or starting a download. Previews pause during downloads to reduce memory and SD activity.
+
+- Fixed reverse scrolling on static content such as System → Information. Overflowing scroll surfaces can receive drag gestures even when their text/cards are not clickable. The shared fix covers vertical and horizontal scrolling while keeping non-scrollable and non-overflowing pass-through objects inert.
+
+- Removed the duplicate ChatGPT subsection from Settings → System. ChatGPT configuration remains available inside the ChatGPT application.
+
+Validation: firmware build and 86 software tests passed, including partial local families, chunked HTTP completion, repeated taps, error handling and 100 preview/modal close cycles. These fixes still require on-device verification; the exact cause of the reported device hang has not been captured. Wi-Fi OTA preserves user data and installers obtain the latest stable release.
 
 ## Changes in 0.75.185
 

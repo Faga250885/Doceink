@@ -16,12 +16,30 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.185](https://github.com/Faga250885/Doceink/releases/tag/v0.75.185).
-- [Firmware OTA 0.75.185](https://github.com/Faga250885/Doceink/releases/download/v0.75.185/Doceink-EInk4.bin).
+- [Versión documentada 0.75.186](https://github.com/Faga250885/Doceink/releases/tag/v0.75.186).
+- [Firmware OTA 0.75.186](https://github.com/Faga250885/Doceink/releases/download/v0.75.186/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.186
+
+- El campo entre las flechas utiliza ahora la letra normal de la interfaz: solo nombre y chevron, sin muestra de la fuente ni carga tipográfica desde la microSD.
+
+- Seleccionar una fuente local utilizable ya no exige los siete tamaños del catálogo ni inicia una descarga porque falten otros tamaños. El archivo local se comprueba antes de aplicarlo.
+
+- La descarga lee el cierre de las respuestas HTTP por bloques antes de comprobar que estén completas. Se mantienen las verificaciones de tamaño y SHA-256.
+
+- Solo se permite una descarga activa. Las filas bloquean los toques repetidos y su vibración mientras trabajan, y vuelven a habilitarse al terminar. Los fallos muestran el error concreto de tarjeta, conexión o descarga.
+
+- Las muestras de nombres se retiran de las etiquetas antes de liberar su memoria al cerrar el modal o iniciar una descarga. Se pausan durante las descargas para reducir memoria y actividad de la microSD.
+
+- Corregido el scroll de regreso en contenido estático, como Sistema → Información. Las superficies con contenido desplazable reciben los gestos aunque sus textos o tarjetas no sean botones. La corrección compartida cubre ambos sentidos en vertical y horizontal, sin activar superficies que no tengan desplazamiento.
+
+- Retirada la subsección duplicada ChatGPT de Ajustes → Sistema. Su configuración sigue disponible dentro de la aplicación ChatGPT.
+
+Validación: compilación y 86 pruebas de software aprobadas, incluidas familias locales incompletas, cierre HTTP por bloques, toques repetidos, fallos y 100 ciclos de cierre del modal con muestras. Falta verificar estas correcciones en Metalio; todavía no se ha capturado la causa exacta del bloqueo reportado. La OTA conserva los datos y los instaladores obtienen la última versión estable.
 
 ## Novedades de 0.75.185
 
