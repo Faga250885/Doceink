@@ -85,7 +85,7 @@ Open the reader’s Typography controls to browse 30 families. Entries marked Do
 
 Open Settings → System → Information → Release notes to read the installed version’s changes and the previous version’s changes without connecting to Wi-Fi.
 
-Hold the reading screen for its menu; swipe up or down for the chapter index. Tap the central font name between the arrows to open the font modal. A download icon means the family is not installed, a check means it is available locally, and download progress appears inside its row. The selected face is shown only in the reading sample; list names use the interface font. Adjust Letter spacing below Font size. To add local TTF/OTF fonts, copy them to `metalio/e-ink/fonts_ttf/` and restart Metalio: missing 25px EF files are converted in the background without Wi-Fi. Existing EF fonts in `metalio/e-ink/fonts/` are discovered automatically.
+Hold the reading screen for its menu; swipe up or down for the chapter index. Tap the central font name between the arrows to open the font modal. A download icon means the family is not installed, a check means its catalog sizes are saved, and download progress appears inside its row. The selected face is shown only in the reading sample; list names use the interface font. Adjust Letter spacing below Font size. To add local TTF/OTF fonts, copy them to `metalio/e-ink/fonts_ttf/` and restart Metalio: missing 25px EF files are converted in the background without Wi-Fi. Existing EF fonts in `metalio/e-ink/fonts/` are discovered automatically.
 
 Font downloads display Wi-Fi connection status, live percentage and verification in the tapped row; tap a failed row to retry. The font picker uses a continuous list with separators and a visible scrollbar. Name samples stay compact regardless of reading size.
 
@@ -94,3 +94,5 @@ The font field between the arrows now displays its name in the interface font an
 Font list names use the system interface font. The selected face is previewed only in the reading sample, including preferences opened from the library without an active book. Arrows cycle through installed fonts; only the central name/chevron field opens the downloadable catalog.
 
 Font downloads verify that the font directory is writable before connecting. Standby keeps peripheral power on while loading its wallpaper or downloading fonts. A transient network failure retries the current file once; persistent failures show an operation and code in the notification. Previously verified files are retained.
+
+A catalog family can contain seven sizes: 18, 22, 24, 25, 28, 30 and 36 px. The check indicates a complete catalog family. An interrupted download can leave usable local sizes: select the name to use them offline, or tap the download icon / Download remaining sizes to finish the family. Closing the catalog refreshes the size arrows. Weather refreshes now explicitly connect Wi-Fi and share the boot-reserved network worker with font downloads, RSS and updates.

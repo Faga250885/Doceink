@@ -16,12 +16,30 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.188](https://github.com/Faga250885/Doceink/releases/tag/v0.75.188).
-- [Firmware OTA 0.75.188](https://github.com/Faga250885/Doceink/releases/download/v0.75.188/Doceink-EInk4.bin).
+- [Versión documentada 0.75.189](https://github.com/Faga250885/Doceink/releases/tag/v0.75.189).
+- [Firmware OTA 0.75.189](https://github.com/Faga250885/Doceink/releases/download/v0.75.189/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.189
+
+- El registro confirmó unos 5 KB de RAM interna libre y un mínimo de 0 KB, pese a unos 7 MB libres de PSRAM. Las asignaciones compatibles del sistema, Wi-Fi y TCP/IP ahora priorizan PSRAM; DMA y tareas del sistema conservan la memoria interna que necesitan.
+
+- La tarea táctil se pausa y se reanuda en standby, en lugar de destruirse y crearse de nuevo. Despertar ya no necesita reservar otra pila táctil de 4 KB después de que Wi-Fi use RAM interna. Probados 1.000 ciclos de reactivación con la creación de tareas forzada a fallar.
+
+- Una descarga de fuente interrumpida ya no muestra el mismo check que una familia completa. Los tamaños guardados siguen disponibles sin internet. Usa Descargar tamaños restantes o el icono de descarga para completar la familia sin cambiar la fuente elegida. Al cerrar el catálogo se actualizan las flechas de tamaño.
+
+- Comprobados los siete tamaños, en ambos sentidos, de las 30 familias del catálogo, incluida Raleway. La recuperación contempla una fuente que solo conserva el archivo de 18 px.
+
+- Las fuentes reutilizan un cliente HTTPS para la licencia y los siete tamaños. Si una petición falla, se descarta el cliente antes del reintento. Se reducen las asignaciones repetidas de TLS y las conexiones.
+
+- Clima usa el trabajador de red reservado al iniciar, en lugar de crear una tarea por actualización. Ahora solicita encender el Wi-Fi cuando hace falta. Su cliente HTTP también se libera si falla una asignación de memoria.
+
+- Al cerrar los ajustes de lectura de la biblioteca se libera su fuente cuando ya se han eliminado las etiquetas de la muestra.
+
+- Corregida una condición del wallpaper de standby: si termina una carga antigua después de volver a entrar, la nueva pantalla inicia su propia carga en lugar de quedarse con el logo. Los fallos al reservar memoria para la imagen se gestionan conservando la selección del wallpaper.
 
 ## Novedades de 0.75.188
 

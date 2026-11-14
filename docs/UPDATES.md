@@ -16,12 +16,30 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.188](https://github.com/Faga250885/Doceink/releases/tag/v0.75.188).
-- [OTA firmware: 0.75.188](https://github.com/Faga250885/Doceink/releases/download/v0.75.188/Doceink-EInk4.bin).
+- [Documented version: 0.75.189](https://github.com/Faga250885/Doceink/releases/tag/v0.75.189).
+- [OTA firmware: 0.75.189](https://github.com/Faga250885/Doceink/releases/download/v0.75.189/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.189
+
+- Serial diagnostics confirmed about 5 KB of free internal RAM, with a recorded minimum of 0 KB, despite about 7 MB of free PSRAM. Eligible general, Wi-Fi and TCP/IP allocations now prefer PSRAM; DMA and RTOS allocations retain their required internal memory.
+
+- The touch-input task is paused and resumed across standby instead of deleted and recreated. Waking no longer needs to allocate a new 4 KB touch stack after Wi-Fi has used internal RAM. Tested 1,000 wake cycles with new task creation forced to fail.
+
+- An interrupted font download no longer shows the same installed check as a complete family. Locally saved sizes remain usable offline. Use Download remaining sizes in the size controls or the download icon to finish the family without changing the selected font. Closing the catalog refreshes the size arrows.
+
+- Checked all seven sizes, forwards and backwards, for all 30 catalog families, including Raleway. The repair path covers a family with only its 18 px file.
+
+- Font downloads reuse one HTTPS client for the license and seven size files. Failed requests discard that client before retrying. This reduces repeated TLS allocations and connections.
+
+- Weather requests use the network worker reserved at boot instead of allocating a new task for each refresh. Weather explicitly starts Wi-Fi when needed. Its HTTP client is also released if a memory allocation fails.
+
+- Closing the library reading-preferences preview releases its unused font after the preview labels are gone.
+
+- Fixed a standby wallpaper race: if an old decode finishes after standby has been entered again, the new overlay starts its own load instead of remaining on the logo. Decode-allocation failures are handled safely and keep the chosen wallpaper setting.
 
 ## Changes in 0.75.188
 
