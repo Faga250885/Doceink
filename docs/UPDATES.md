@@ -16,12 +16,16 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.195](https://github.com/Faga250885/Doceink/releases/tag/v0.75.195).
-- [OTA firmware: 0.75.195](https://github.com/Faga250885/Doceink/releases/download/v0.75.195/Doceink-EInk4.bin).
+- [Documented version: 0.75.196](https://github.com/Faga250885/Doceink/releases/tag/v0.75.196).
+- [OTA firmware: 0.75.196](https://github.com/Faga250885/Doceink/releases/download/v0.75.196/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.196
+
+Updated reading shortcuts: swipe up opens the reading menu; swipe down opens the chapter index. Hold a word to open the underline selector with that word marked, then tap the final word and save. This replaces double-tap selection. Tap-zone single taps respond immediately again. Help and the illustrated welcome guide reflect the new controls.
 
 ## Changes in 0.75.195
 
