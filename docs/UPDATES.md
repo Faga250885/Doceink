@@ -16,12 +16,16 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.193](https://github.com/Faga250885/Doceink/releases/tag/v0.75.193).
-- [OTA firmware: 0.75.193](https://github.com/Faga250885/Doceink/releases/download/v0.75.193/Doceink-EInk4.bin).
+- [Documented version: 0.75.194](https://github.com/Faga250885/Doceink/releases/tag/v0.75.194).
+- [OTA firmware: 0.75.194](https://github.com/Faga250885/Doceink/releases/download/v0.75.194/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.194
+
+Corrects an unsafe reading-preferences reload introduced in 0.75.193 that could restart Metalio when opening a book. Opening, closing and restoring book preferences now use cached defaults instead of reopening internal storage from the interface task. Also unifies Check for updates and View changes with the standard 64 px button size.
 
 ## Changes in 0.75.193
 
