@@ -16,12 +16,30 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.183](https://github.com/Faga250885/Doceink/releases/tag/v0.75.183).
-- [Firmware OTA 0.75.183](https://github.com/Faga250885/Doceink/releases/download/v0.75.183/Doceink-EInk4.bin).
+- [Versión documentada 0.75.184](https://github.com/Faga250885/Doceink/releases/tag/v0.75.184).
+- [Firmware OTA 0.75.184](https://github.com/Faga250885/Doceink/releases/download/v0.75.184/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.184
+
+- Mantén pulsada la lectura para abrir el menú. Desliza hacia arriba o abajo para abrir el índice; los gestos horizontales pasan páginas. La bienvenida y los textos de Controles explican estos gestos.
+
+- Tipografía reutiliza el inventario de la microSD y conserva la vista previa al cambiar de pestaña.
+
+- Pulsa el campo central de la fuente para abrir un modal con scroll, sin título ni botón Volver. Nombres a la izquierda e iconos Lucide de descarga o instalada a la derecha. La descarga muestra su progreso dentro de la fila. Los nombres instalados usan su propia fuente mediante muestras pequeñas que liberan los archivos de la tarjeta al cargarse.
+
+- Se retiran Gestionar tipografías e Importar. Las EF se detectan automáticamente; las TTF/OTF nuevas en fonts_ttf se convierten a 25px en segundo plano al iniciar, sin Wi-Fi ni reemplazar las EF existentes.
+
+- Nuevo espaciado entre letras, de -1 a 4px, bajo el tamaño. Se guarda y se aplica al cálculo de líneas, paginación, justificación y selección. Las iniciales biónicas tienen un nivel menos de grosor.
+
+- Actualización de pantalla utiliza un único control de pestañas Automático/Manual.
+
+- Pantalla → Home reproduce la cuadrícula de ocho accesos. Permite elegir la app de cada posición editable; Configuración permanece fija y desactivada abajo a la derecha.
+
+Validación: compilación del firmware y 86 pruebas de software aprobadas. Falta validar estos cambios en el aparato. La OTA por Wi-Fi conserva los datos. Los instaladores de Windows y Apple Silicon descargan el último firmware estable.
 
 ## Novedades de 0.75.183
 

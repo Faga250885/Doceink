@@ -82,3 +82,5 @@ Wi-Fi permanece desconectado al arrancar hasta que lo conectes o uses una funci�
 En Tipografía del lector encontrarás 30 familias. Las que indican Descargar necesitan Wi-Fi y la microSD montada, con Disco USB desactivado. Al elegir una se guarda con tamaños de 18, 22, 24, 25, 28, 30 y 36 px para reutilizarla sin internet. La fuente integrada está disponible sin tarjeta. Se mantiene la importación de TTF/OTF personalizados.
 
 En Ajustes → Sistema → Información → Notas de actualización puedes consultar sin Wi-Fi los cambios de la versión instalada y la anterior.
+
+Mantén pulsada la lectura para el menú y desliza arriba o abajo para el índice. Pulsa el nombre de la fuente entre las flechas para abrir el modal: el icono de descarga indica que falta instalarla y el check que está guardada; el progreso aparece dentro de su fila. Los nombres instalados se muestran con su propia tipografía. Ajusta Espaciado entre letras debajo de Tamaño de letra. Para añadir TTF/OTF locales, cópialas a `metalio/e-ink/fonts_ttf/` y reinicia Metalio: las EF de 25px que falten se convierten en segundo plano, sin Wi-Fi. Las EF en `metalio/e-ink/fonts/` se detectan automáticamente.

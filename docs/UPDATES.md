@@ -16,12 +16,30 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.183](https://github.com/Faga250885/Doceink/releases/tag/v0.75.183).
-- [OTA firmware: 0.75.183](https://github.com/Faga250885/Doceink/releases/download/v0.75.183/Doceink-EInk4.bin).
+- [Documented version: 0.75.184](https://github.com/Faga250885/Doceink/releases/tag/v0.75.184).
+- [OTA firmware: 0.75.184](https://github.com/Faga250885/Doceink/releases/download/v0.75.184/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.184
+
+- Hold the reading screen to open its menu. Swipe up or down for the chapter index; horizontal swipes turn pages. The welcome guide and Controls text use these gestures.
+
+- Typography reuses the microSD inventory and preserves the reader preview when switching tabs.
+
+- Tap the central font field to open a scrollable modal without a title or Back button. Names align left; Lucide download/check icons align right. Downloads show progress inside their row. Installed names use their own fonts, with small previews that release SD files immediately.
+
+- Removed Manage fonts and Import buttons. Existing EF fonts are discovered automatically; new TTF/OTF files in fonts_ttf are converted at 25px in the background after boot, without Wi-Fi or replacing existing EF files.
+
+- Added persistent letter spacing from -1 to 4px below font size. Text measurement, pagination, justification and selection share the same spacing. Bionic initials are one weight level lighter.
+
+- Screen refresh uses a single segmented Automatic/Manual tab control.
+
+- Display → Home mirrors the eight-shortcut grid. Choose each editable tile’s app; Settings stays fixed and disabled at the bottom right.
+
+Validation: firmware build and 86 software tests passed. On-device verification of these changes is pending. Wi-Fi OTA preserves user data. The Windows and Apple Silicon installers download the latest stable firmware.
 
 ## Changes in 0.75.183
 
