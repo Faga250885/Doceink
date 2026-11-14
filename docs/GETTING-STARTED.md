@@ -117,3 +117,13 @@ See [font sources, licenses and preparation](../assets/system-fonts/v1/README.md
 | System | Energy (standby, shutdown, Wi-Fi idle delay), General (language and vibration), Clock (automatic then manual), Information (version, updates and notes, device details, then credits). |
 
 Existing settings are preserved. Each section scrolls independently and switching sections closes its old selectors and stops its page-local timers.
+
+## Reading settings, profiles and underlines
+
+Each book keeps its own page and typography preferences on microSD. Books without saved settings inherit the defaults. In the reader menu, **Pages** includes independent paragraph spacing, three reading profiles, and actions to use the current preferences as defaults or restore defaults for the current book. Save a profile before applying it to another book. Its selected font must already be installed.
+
+**Typography** adds Regular, Medium and Bold text weight, independent from bionic initials and letter spacing. The chapter index highlights the current chapter in black and opens at that chapter.
+
+To save an underline, open the reader menu → **Controls → Underline text**. In the selection dialog, tap the first word and then the last word, and choose **Save underline**. The selection also works in reverse. Open **Controls → Underlines** to revisit or delete a saved passage. Text anchors survive reflow and font-size changes; images and scanned pages do not support text selection. Preferences and passages are stored alongside the book; keep its companion files when moving or renaming it.
+
+The Home editor uses 48 px icons, with a diagonal hatch on the fixed Settings card. That card stays at the bottom right and cannot be reassigned.

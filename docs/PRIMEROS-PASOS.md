@@ -115,3 +115,13 @@ Consulta [fuentes originales, licencias y preparación](../assets/system-fonts/v
 | Sistema | Energía (suspensión, apagado y espera de Wi-Fi), General (idioma y vibración), Reloj (automático y manual), Información (versión, actualización y notas, datos técnicos y créditos). |
 
 Se conservan los valores elegidos. Cada sección permite scroll y al cambiar se cierran sus selectores anteriores y se detienen sus temporizadores de pantalla.
+
+## Ajustes de lectura, perfiles y subrayados
+
+Cada libro conserva sus preferencias de página y tipografía en la microSD. Los libros sin ajustes propios heredan los predeterminados. En el menú del lector, **Páginas** incluye espacio independiente entre párrafos, tres perfiles de lectura y acciones para usar los ajustes actuales como predeterminados o restaurar los predeterminados para ese libro. Guarda un perfil antes de aplicarlo a otro libro. Su tipografía debe estar instalada.
+
+**Tipografía** agrega grosor Normal, Medio y Grueso, independiente de las iniciales biónicas y el espaciado entre letras. El índice resalta el capítulo actual en negro y se abre en ese capítulo.
+
+Para guardar un subrayado, abre el menú del lector → **Controles → Subrayar texto**. En el diálogo de selección, toca la primera palabra y después la última, y pulsa **Guardar subrayado**. También puedes seleccionarlas en orden inverso. En **Controles → Subrayados** puedes volver a un fragmento o eliminarlo. Los anclajes se conservan al repaginar o cambiar el tamaño de letra; las páginas de imagen o escaneadas no permiten seleccionar texto. Los ajustes y los pasajes se guardan junto al libro: conserva sus archivos asociados si lo mueves o renombras.
+
+El editor de Home usa iconos de 48 px y una trama diagonal en la tarjeta fija de Ajustes. Esa tarjeta permanece abajo a la derecha y no se puede reasignar.

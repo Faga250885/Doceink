@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.192](https://github.com/Faga250885/Doceink/releases/tag/v0.75.192).
-- [Firmware OTA 0.75.192](https://github.com/Faga250885/Doceink/releases/download/v0.75.192/Doceink-EInk4.bin).
+- [Versión documentada 0.75.193](https://github.com/Faga250885/Doceink/releases/tag/v0.75.193).
+- [Firmware OTA 0.75.193](https://github.com/Faga250885/Doceink/releases/download/v0.75.193/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.193
+
+Capítulo actual resaltado en el índice. Ajustes por libro, tres perfiles de lectura, grosor del texto y espacio entre párrafos independientes. Subrayado con dos toques y pasajes guardados en la microSD. Iconos nítidos en el editor de Home y trama diagonal en la tarjeta de Ajustes bloqueada.
+
+Validación: 100 pruebas locales superadas, incluidos ajustes por libro y perfiles, subrayado con dos toques en ambos sentidos, fallo con microSD exportada, grosor de letra, anclajes tras repaginar EPUB y capítulo actual en un índice de 8.000 entradas. Firmware ESP32-S3 compilado. Queda pendiente la verificación en el dispositivo físico.
 
 ## Novedades de 0.75.192
 

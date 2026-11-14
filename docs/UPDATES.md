@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.192](https://github.com/Faga250885/Doceink/releases/tag/v0.75.192).
-- [OTA firmware: 0.75.192](https://github.com/Faga250885/Doceink/releases/download/v0.75.192/Doceink-EInk4.bin).
+- [Documented version: 0.75.193](https://github.com/Faga250885/Doceink/releases/tag/v0.75.193).
+- [OTA firmware: 0.75.193](https://github.com/Faga250885/Doceink/releases/download/v0.75.193/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.193
+
+Current chapter highlighted in the index. Per-book reading settings, three reusable profiles, font weight and separate paragraph spacing. Underline using two taps and save passages on microSD. Sharper Home editor icons and a diagonal hatch on the locked Settings card.
+
+Validation: 100 host tests passed, including per-book settings and profile persistence, two-tap underline selection, reversed selection, microSD export failure, native font weights, EPUB reflow anchors and current-chapter highlighting in an 8,000-entry index. ESP32-S3 firmware compiled. Physical-device verification remains pending.
 
 ## Changes in 0.75.192
 
