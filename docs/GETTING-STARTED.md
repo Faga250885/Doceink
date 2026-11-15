@@ -33,8 +33,7 @@ Data is organized under `metalio/e-ink/` on the card:
 | `metalio/e-ink/fonts_ttf/` | TTF/OTF files for the import process; these are not equivalent to converted `.ef` fonts |
 | `metalio/e-ink/recordings/` | Local WAV recordings |
 | `metalio/e-ink/chat_log/` | Conversation history |
-| `metalio/e-ink/personal_tasks.json` | Personal tasks |
-| `metalio/e-ink/work_tasks.json` | Work tasks |
+| `metalio/e-ink/agenda.json` | Personal/work tasks, dates and recurrence |
 | `metalio/e-ink/weather.json` | Downloaded forecast |
 | `metalio/e-ink/rss_*.xml` | RSS source caches |
 
@@ -54,6 +53,14 @@ The QR code opens that Metalio's microSD file manager. It is not cloud storage o
 ### Copy over USB
 
 Enable **USB disk / Disco USB** in Settings → Files. Copy files from your computer and eject the drive before disabling that mode. While USB disk mode is active, Metalio does not access the microSD in the same way as during normal use.
+
+## Shared calendar and tasks
+
+The month is left aligned and **Tasks**, with its icon, appears on the calendar's right. It opens the Tasks app. Tasks is removed from the eight lower shortcuts and their pickers; an old Tasks tile becomes an available app without duplicating the other shortcuts.
+
+Hold a calendar day to open that same app and start dictation with its date preselected. Swiping across days still changes the month. **Add task** also supports dictation or typing. Before saving, choose Personal or Work, no date or a date, and once, daily, weekly, monthly or yearly repetition. Birthday sets yearly repetition. Dates use DD/MM/YYYY. Editing changes title, date, repetition and list; deletion asks for confirmation.
+
+Tasks live in `metalio/e-ink/agenda.json` on microSD. Existing lists are incorporated on the first save and their original files are retained. Completing a repeating task advances to its next date after today. Monthly tasks retain their original day and use the final day of shorter months. Repetitions do not create extra copies. Limit: 256 tasks total. This agenda does not add due-date alarms or notifications.
 
 ## Books
 
@@ -85,7 +92,7 @@ Open the reader’s Typography controls to browse 30 families. Entries marked Do
 
 Open Settings → System → Information → Release notes to read the installed version’s changes and the previous version’s changes without connecting to Wi-Fi.
 
-Swipe up for the reading menu, down for the chapter index, and sideways to turn pages. Hold a word to open the underline selector. Tap the central font name between the arrows to open the font modal. A download icon means the family is not installed, a check means its catalog sizes are saved, and download progress appears inside its row. The selected face is shown only in the reading sample; list names use the interface font. Adjust Letter spacing below Font size. To add local TTF/OTF fonts, copy them to `metalio/e-ink/fonts_ttf/` and restart Metalio: missing 25px EF files are converted in the background without Wi-Fi. Existing EF fonts in `metalio/e-ink/fonts/` are discovered automatically.
+Swipe up for the reading menu, down for the chapter index, and sideways to turn pages. Hold a word to underline on the original book page. Tap the central font name between the arrows to open the font modal. A download icon means the family is not installed, a check means its catalog sizes are saved, and download progress appears inside its row. The selected face is shown only in the reading sample; list names use the interface font. Adjust Letter spacing below Font size. To add local TTF/OTF fonts, copy them to `metalio/e-ink/fonts_ttf/` and restart Metalio: missing 25px EF files are converted in the background without Wi-Fi. Existing EF fonts in `metalio/e-ink/fonts/` are discovered automatically.
 
 Font downloads display Wi-Fi connection status, live percentage and verification in the tapped row; tap a failed row to retry. The font picker uses a continuous list with separators and a visible scrollbar. Name samples stay compact regardless of reading size.
 
@@ -124,6 +131,8 @@ Each book keeps its own page and typography preferences on microSD. Books withou
 
 **Typography** adds Regular, Medium and Bold text weight, independent from bionic initials and letter spacing. The chapter index highlights the current chapter in black and opens at that chapter.
 
-To save an underline, **hold the first word on the reading page**. The selection dialog opens with that word highlighted. Tap the final word, then choose **Save underline**. You can also start from reader menu → **Controls → Underline text** and tap the first and last word. Reverse selection is supported. **Controls → Underlines** lets you revisit or delete a saved passage. Text anchors survive reflow and font-size changes; images and scanned pages do not support text selection. Preferences and passages are stored alongside the book; keep its companion files when moving or renaming it. The word-hold shortcut works with gestures and tap zones. Double-tap selection has been replaced, and single tap-zone actions are immediate again.
+To save a highlight, **hold the first word on the book page**, then tap the final word. Selection is drawn on the same page with unchanged text positions and reader footer. Swipe sideways to keep selecting across pages, including chapter boundaries. Choosing the final word reveals **Save underline** and **Cancel**; tapping the initial word again cancels selection. Reverse selection is supported. **Advanced → Underlines** opens a scrollable list; tapping a passage opens its full text in a detail dialog with **Delete** and **Close**. The menu's start-underlining button has been removed. **Advanced → Instructions** opens the illustrated gesture guide. Anchors survive reflow and font changes; image pages do not support text selection. Settings and highlights live alongside the book, so keep companion files when moving or renaming it. Selection uses a bounded temporary cache of visited pages; an oversized selection shows an error instead of silently truncating saved text.
 
 The Home editor uses 48 px icons, with a diagonal hatch on the fixed Settings card. That card stays at the bottom right and cannot be reassigned.
+
+ChatGPT: a new conversation blocks the microphone during “Connecting to ChatGPT”. Once ready, its first message says to hold the microphone to ask and shows a right arrow. A press started before readiness does not automatically begin recording when connection finishes.

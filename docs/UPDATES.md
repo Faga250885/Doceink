@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.196](https://github.com/Faga250885/Doceink/releases/tag/v0.75.196).
-- [OTA firmware: 0.75.196](https://github.com/Faga250885/Doceink/releases/download/v0.75.196/Doceink-EInk4.bin).
+- [Documented version: 0.75.197](https://github.com/Faga250885/Doceink/releases/tag/v0.75.197).
+- [OTA firmware: 0.75.197](https://github.com/Faga250885/Doceink/releases/download/v0.75.197/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.197
+
+Calendar and Tasks use one app with dictation, dates, repeating tasks and birthdays on microSD. Saving tasks reuses a reserved worker instead of allocating another internal stack. Tasks moves from the grid to the month header. Inline highlights can span pages; saved highlights have detail and delete dialogs. Advanced settings, an Instructions dialog and 8 px spacing. ChatGPT microphone stays blocked until ready, with an instruction and right arrow. Home icons align consistently and the locked Settings tile has a continuous hatch.
+
+Validation: 104 local tests passed and ESP32-S3 firmware built. Physical confirmation remains pending installation on Metalio.
 
 ## Changes in 0.75.196
 

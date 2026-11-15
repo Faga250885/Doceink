@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.196](https://github.com/Faga250885/Doceink/releases/tag/v0.75.196).
-- [Firmware OTA 0.75.196](https://github.com/Faga250885/Doceink/releases/download/v0.75.196/Doceink-EInk4.bin).
+- [Versión documentada 0.75.197](https://github.com/Faga250885/Doceink/releases/tag/v0.75.197).
+- [Firmware OTA 0.75.197](https://github.com/Faga250885/Doceink/releases/download/v0.75.197/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.197
+
+Calendario y Tareas unidos en una sola aplicación, con dictado, fechas, repeticiones y cumpleaños en microSD. Guardar tareas reutiliza un trabajador reservado para evitar asignar otra pila de RAM interna. Tareas sale de la cuadrícula y queda junto al mes. Subrayado sobre la página original y entre páginas; lista de subrayados con detalle y eliminación. Avanzada, Instrucciones en modal y espaciado de 8 px. Micrófono de ChatGPT bloqueado hasta estar listo, con indicación y flecha. Iconos de Home alineados y trama continua en Ajustes bloqueado.
+
+Validación: 104 pruebas locales aprobadas y compilación para ESP32-S3. La comprobación física queda pendiente de instalar esta versión en Metalio.
 
 ## Novedades de 0.75.196
 

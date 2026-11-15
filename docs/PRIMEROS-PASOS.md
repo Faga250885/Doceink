@@ -31,8 +31,7 @@ El sistema organiza los datos bajo `metalio/e-ink/` en la tarjeta. Algunas ubica
 | `metalio/e-ink/fonts_ttf/` | Archivos TTF/OTF para el proceso de importación; no son equivalentes a una fuente `.ef` ya convertida |
 | `metalio/e-ink/recordings/` | Grabaciones WAV locales |
 | `metalio/e-ink/chat_log/` | Historial de conversaciones |
-| `metalio/e-ink/personal_tasks.json` | Tareas personales |
-| `metalio/e-ink/work_tasks.json` | Tareas de trabajo |
+| `metalio/e-ink/agenda.json` | Tareas personales/de trabajo, fechas y repeticiones |
 | `metalio/e-ink/weather.json` | Pronóstico descargado |
 | `metalio/e-ink/rss_*.xml` | Cachés de las fuentes RSS |
 
@@ -52,6 +51,14 @@ El QR abre el gestor de la microSD de ese Metalio. No es un servicio de almacena
 ### Copiar por USB
 
 Activa **Disco USB** en Ajustes → Archivos. Copia los archivos desde el ordenador y expulsa la unidad antes de desactivar ese modo. Mientras está activo, Metalio no utiliza la microSD de la misma forma que durante su funcionamiento normal.
+
+## Calendario y tareas compartidas
+
+El mes aparece a la izquierda del calendario y **Tareas**, con su icono, a la derecha. Ese botón abre la aplicación de Tareas. Tareas ya no ocupa ni puede elegirse en los ocho accesos inferiores; los accesos antiguos se sustituyen por una aplicación disponible sin duplicar las demás.
+
+Mantén pulsado un día del calendario para abrir la misma aplicación y empezar el dictado con esa fecha. Deslizar sobre los días sigue cambiando de mes. También puedes crear desde **Agregar tarea**, por micrófono o escritura. Antes de guardar, elige Personal o Trabajo, sin fecha o con fecha, y una repetición: una sola vez, diaria, semanal, mensual o anual. Cumpleaños activa la repetición anual. La fecha se escribe como DD/MM/AAAA. Editar permite cambiar el título, fecha, repetición y lista; eliminar pide confirmación.
+
+Las tareas se guardan en `metalio/e-ink/agenda.json` en la microSD. Las listas anteriores se incorporan al primer guardado y sus archivos originales se conservan. Al completar una tarea repetida, avanza a la siguiente fecha posterior a hoy; las mensuales conservan el día original y usan el último día de los meses más cortos. No se crean copias de cada repetición. Límite: 256 tareas en total. Esta agenda no añade alarmas ni notificaciones de vencimiento.
 
 ## Libros
 
@@ -83,7 +90,7 @@ En Tipografía del lector encontrarás 30 familias. Las que indican Descargar ne
 
 En Ajustes → Sistema → Información → Notas de actualización puedes consultar sin Wi-Fi los cambios de la versión instalada y la anterior.
 
-Desliza hacia arriba para el menú, hacia abajo para las secciones y a los lados para pasar páginas. Mantén pulsada una palabra para abrir el selector de subrayado. Pulsa el nombre de la fuente entre las flechas para abrir el modal: el icono de descarga indica que falta instalarla y el check que sus tamaños del catálogo están guardados; el progreso aparece dentro de su fila. Los nombres usan la letra de la interfaz; la fuente elegida se muestra solo en el texto de ejemplo de lectura. Ajusta Espaciado entre letras debajo de Tamaño de letra. Para añadir TTF/OTF locales, cópialas a `metalio/e-ink/fonts_ttf/` y reinicia Metalio: las EF de 25px que falten se convierten en segundo plano, sin Wi-Fi. Las EF en `metalio/e-ink/fonts/` se detectan automáticamente.
+Desliza hacia arriba para el menú, hacia abajo para las secciones y a los lados para pasar páginas. Mantén pulsada una palabra para iniciar el subrayado sobre la página original. Pulsa el nombre de la fuente entre las flechas para abrir el modal: el icono de descarga indica que falta instalarla y el check que sus tamaños del catálogo están guardados; el progreso aparece dentro de su fila. Los nombres usan la letra de la interfaz; la fuente elegida se muestra solo en el texto de ejemplo de lectura. Ajusta Espaciado entre letras debajo de Tamaño de letra. Para añadir TTF/OTF locales, cópialas a `metalio/e-ink/fonts_ttf/` y reinicia Metalio: las EF de 25px que falten se convierten en segundo plano, sin Wi-Fi. Las EF en `metalio/e-ink/fonts/` se detectan automáticamente.
 
 Las descargas de fuentes muestran el estado de conexión Wi-Fi, porcentaje y verificación dentro de la fila; pulsa una fila con error para reintentar. El selector utiliza una lista continua con separadores y scrollbar visible. Las muestras de nombres conservan un tamaño compacto, independiente del tamaño de lectura.
 
@@ -122,6 +129,8 @@ Cada libro conserva sus preferencias de página y tipografía en la microSD. Los
 
 **Tipografía** agrega grosor Normal, Medio y Grueso, independiente de las iniciales biónicas y el espaciado entre letras. El índice resalta el capítulo actual en negro y se abre en ese capítulo.
 
-Para guardar un subrayado, **mantén pulsada la primera palabra en la página del libro**. Se abre el selector con esa palabra resaltada. Toca la última palabra y pulsa **Guardar subrayado**. También puedes empezar desde el menú del lector → **Controles → Subrayar texto**, tocando la primera y la última palabra. Puedes seleccionarlas en orden inverso. En **Controles → Subrayados** puedes volver a un fragmento o eliminarlo. Los anclajes se conservan al repaginar o cambiar el tamaño de letra; las páginas de imagen o escaneadas no permiten seleccionar texto. Los ajustes y los pasajes se guardan junto al libro: conserva sus archivos asociados si lo mueves o renombras. La pulsación sobre palabras funciona con gestos y zonas táctiles. Sustituye al doble toque; las acciones de un toque en las zonas vuelven a ser inmediatas.
+Para guardar un subrayado, **mantén pulsada la primera palabra en la página del libro** y toca la última. La selección se dibuja sobre la misma página, con el mismo texto, posiciones y pie de lectura. Puedes pasar páginas deslizando a los lados y continuar la selección, incluso entre capítulos. Al elegir la última palabra aparecen **Guardar subrayado** y **Cancelar**; tocar de nuevo la primera palabra cancela la selección. Se admite seleccionar en orden inverso. **Avanzada → Subrayados** abre una lista desplazable; tocar un fragmento abre su texto completo en un modal con **Eliminar** y **Cerrar**. El botón para empezar a subrayar se ha retirado del menú. **Avanzada → Instrucciones** muestra la guía ilustrada de gestos. Los anclajes sobreviven a cambios de fuente y repaginación; las páginas de imagen no permiten seleccionar texto. Ajustes y subrayados se guardan junto al libro: conserva sus archivos asociados si lo mueves o renombras. La selección mantiene una copia temporal acotada de las páginas visitadas; una selección excesivamente larga muestra un aviso sin truncar silenciosamente lo guardado.
 
 El editor de Home usa iconos de 48 px y una trama diagonal en la tarjeta fija de Ajustes. Esa tarjeta permanece abajo a la derecha y no se puede reasignar.
+
+ChatGPT: al iniciar una conversación, el micrófono permanece bloqueado durante «Conectando con ChatGPT». Cuando está listo, el primer mensaje indica mantener pulsado el micrófono para preguntar y muestra una flecha a la derecha. Una pulsación iniciada antes de estar listo no comienza a grabar automáticamente al terminar la conexión.
