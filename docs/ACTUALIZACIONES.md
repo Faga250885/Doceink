@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.197](https://github.com/Faga250885/Doceink/releases/tag/v0.75.197).
-- [Firmware OTA 0.75.197](https://github.com/Faga250885/Doceink/releases/download/v0.75.197/Doceink-EInk4.bin).
+- [Versión documentada 0.75.198](https://github.com/Faga250885/Doceink/releases/tag/v0.75.198).
+- [Firmware OTA 0.75.198](https://github.com/Faga250885/Doceink/releases/download/v0.75.198/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.198
+
+El acceso a Tareas del calendario muestra solo su icono, sin texto, borde ni fondo. Conserva una zona cómoda para tocarlo y deja más espacio al mes. Tocar el icono abre la misma aplicación de Tareas.
+
+Durante la selección del libro, el texto queda en negro con letras blancas; al guardar queda solo el subrayado. La lista de subrayados no tiene título ni botón Cerrar y se cierra con el botón rojo. Las filas con fragmentos largos se abren tocando cualquier parte del texto o de la fila.
 
 ## Novedades de 0.75.197
 

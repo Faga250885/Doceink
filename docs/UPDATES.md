@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.197](https://github.com/Faga250885/Doceink/releases/tag/v0.75.197).
-- [OTA firmware: 0.75.197](https://github.com/Faga250885/Doceink/releases/download/v0.75.197/Doceink-EInk4.bin).
+- [Documented version: 0.75.198](https://github.com/Faga250885/Doceink/releases/tag/v0.75.198).
+- [OTA firmware: 0.75.198](https://github.com/Faga250885/Doceink/releases/download/v0.75.198/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.198
+
+The calendar Tasks shortcut now displays only its icon, with no text, border or background. Its touch area remains comfortable and the month heading has more room. Tapping the icon opens the same Tasks app.
+
+Reader selection uses a black background with white text; saving leaves only the underline. The saved-highlights list has no title or Close button and closes with the red back button. Long previews open by tapping anywhere in their text or row.
 
 ## What's new in 0.75.197
 
