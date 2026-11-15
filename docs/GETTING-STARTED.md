@@ -60,7 +60,7 @@ The month is left aligned and the **Tasks** icon appears on the calendar's right
 
 Home application icons measure 50 × 50 pixels without an extra plate behind them. They use Lucide, except ChatGPT, which keeps its original logo scaled proportionally. Forecast variants follow the same icon dimensions.
 
-The upper Home card has Calendar and Today’s Weather widgets: swipe sideways to switch between them. Home remembers your selection after standby and restart. In Calendar, swipe up or down to change months, or tap the heading to choose a month and year. Gray page indicators use a larger dot for the active widget.
+The upper Home card has Calendar and Today’s Weather widgets: swipe sideways to switch between them. Home remembers your selection after standby and restart. In Calendar, swipe up or down to change months, or tap the heading to choose a month and year. Black page indicators use a larger dot for the active widget.
 
 Weather shows the temperature number and a large icon in rounded panels, with a single timeline in two-hour steps below. Tap the gray card to open Weather. The saved update time and refresh icon share one transparent control at the top right; tap either to connect Wi-Fi and update the forecast on the microSD. Both dim while updating. Swiping uses the saved forecast without starting a download. Open Weather to choose a city.
 
@@ -146,3 +146,7 @@ ChatGPT: a new conversation blocks the microphone during “Connecting to ChatGP
 In Information, the DoceInk logo is inside the card above the version and 20% smaller. Battery appearance offers Icon or Number (with %). The removed Icon with percentage mode automatically falls back to Icon.
 
 Touch navigation now uses gestures only. Tap zones and their settings are removed, including for previously saved preferences. Holding a word and tapping the final word still selects a highlight.
+
+Pending reminders appear next to the clock: tap to open the task. Completing a one-time task moves it to Done. Marking a recurring reminder as seen hides only that occurrence; it returns on the next date. Closing keeps the reminder pending.
+
+In Advanced, Footer checkboxes control each item independently. Screen groups orientation and cleaning frequency. Underlines show their chapter and saved date/time; older items without a timestamp display a dash. Deletion always requires confirmation, and Cancel keeps the quote.

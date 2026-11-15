@@ -56,7 +56,7 @@ Activa **Disco USB** en Ajustes → Archivos. Copia los archivos desde el ordena
 
 Los iconos de las aplicaciones del Home miden 50 × 50 píxeles, sin una base adicional detrás. Usan Lucide, excepto ChatGPT, que conserva su logo original escalado proporcionalmente. Las variantes del clima siguen el mismo tamaño.
 
-La tarjeta superior del Home tiene widgets de Calendario y Clima de hoy: desliza a los lados para cambiarlos. El Home recuerda la selección tras standby y reinicio. En Calendario, desliza arriba o abajo para cambiar de mes o toca el encabezado para elegir mes y año. Los indicadores son grises y el widget activo tiene el punto más grande.
+La tarjeta superior del Home tiene widgets de Calendario y Clima de hoy: desliza a los lados para cambiarlos. El Home recuerda la selección tras standby y reinicio. En Calendario, desliza arriba o abajo para cambiar de mes o toca el encabezado para elegir mes y año. Los indicadores son negros y el widget activo tiene el punto más grande.
 
 Clima muestra solo el número de temperatura y un icono grande en paneles redondeados, con una fila de pronóstico cada dos horas debajo. Toca el bloque gris para abrir Clima. La hora guardada y el icono de actualizar comparten un control transparente arriba a la derecha: toca cualquiera para conectar el Wi-Fi y actualizar el pronóstico en la microSD. Ambos se atenúan mientras descargan. Cambiar de widget usa la copia guardada sin iniciar una descarga. Abre Clima para elegir una ciudad.
 
@@ -144,3 +144,7 @@ ChatGPT: al iniciar una conversación, el micrófono permanece bloqueado durante
 En Información, el logo de DoceInk está dentro de la tarjeta, sobre la versión, con un tamaño un 20% menor. La batería ofrece Solo icono o Solo número (con %). El antiguo modo Icono con porcentaje pasa automáticamente a Solo icono.
 
 La navegación táctil usa únicamente gestos. Se eliminan las zonas táctiles y su configuración, también para preferencias guardadas anteriormente. Mantener una palabra y tocar la última sigue permitiendo subrayar.
+
+Los avisos pendientes se muestran junto al reloj: tócalos para ver la tarea. Completar una tarea de una sola fecha la envía a Hechas. Marcar como visto un recordatorio recurrente oculta solo esa aparición; vuelve en la siguiente fecha. Cerrar mantiene el aviso pendiente.
+
+En Avanzada, las casillas de Pie de página controlan cada dato de forma independiente. Pantalla reúne orientación y frecuencia de limpieza. Los subrayados muestran capítulo y fecha/hora de guardado; los antiguos sin fecha muestran un guion. Eliminar siempre pide confirmación y Cancelar conserva la cita.

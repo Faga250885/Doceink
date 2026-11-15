@@ -16,12 +16,24 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.217](https://github.com/Faga250885/Doceink/releases/tag/v0.75.217).
-- [OTA firmware: 0.75.217](https://github.com/Faga250885/Doceink/releases/download/v0.75.217/Doceink-EInk4.bin).
+- [Documented version: 0.75.218](https://github.com/Faga250885/Doceink/releases/tag/v0.75.218).
+- [OTA firmware: 0.75.218](https://github.com/Faga250885/Doceink/releases/download/v0.75.218/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.218
+
+Home widget indicators are now black: 6 px for the active widget and 4 px for the inactive one.
+
+Pending reminders appear next to the clock. One-time reminders stay until completed and move to Done; recurring reminders can be marked as seen for the current occurrence without finishing the series. Closing a reminder does not dismiss it. Tasks remain stored on the microSD.
+
+The highlights list shows the chapter and saved date and time below each quote. Older quotes without a timestamp keep their data and display a dash. Dialogs have rounded corners, and deletion requires confirmation.
+
+The Advanced reader menu places Underlines and Contents together, replaces large footer buttons with compact checkboxes, and groups orientation and ink cleaning under Screen. Existing button styling and all options are preserved.
+
+Validation: 111 local tests passed, including native rendering, reminders and save failures, highlight metadata and deletion confirmation, and menu layout. Physical testing on Metalio remains pending installation.
 
 ## What's new in 0.75.217
 

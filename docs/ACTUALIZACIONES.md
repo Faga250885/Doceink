@@ -16,12 +16,24 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.217](https://github.com/Faga250885/Doceink/releases/tag/v0.75.217).
-- [Firmware OTA 0.75.217](https://github.com/Faga250885/Doceink/releases/download/v0.75.217/Doceink-EInk4.bin).
+- [Versión documentada 0.75.218](https://github.com/Faga250885/Doceink/releases/tag/v0.75.218).
+- [Firmware OTA 0.75.218](https://github.com/Faga250885/Doceink/releases/download/v0.75.218/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.218
+
+Los indicadores del Home ahora son negros: 6 px para el widget activo y 4 px para el inactivo.
+
+Los recordatorios pendientes aparecen junto al reloj. Los de una sola fecha permanecen hasta completarlos y pasan a Hechas; los recurrentes permiten marcar la aparición como vista sin finalizar la serie. Cerrar el aviso no lo descarta. Las tareas siguen guardándose en la microSD.
+
+La lista de subrayados muestra el capítulo y la fecha y hora de guardado debajo de cada cita. Las citas antiguas sin fecha conservan sus datos y muestran un guion. Los modales tienen esquinas redondeadas y eliminar requiere confirmación.
+
+El menú de lectura Avanzada agrupa Subrayados e Índice, sustituye los grandes botones del pie de página por casillas compactas y reúne orientación y limpieza de tinta dentro de Pantalla. Conserva el estilo de los botones y todas las opciones.
+
+Validación: 111 pruebas locales aprobadas, incluidos renderizado nativo, avisos y errores de guardado, metadatos y confirmación de borrado, y distribución del menú. La prueba física en Metalio queda pendiente de instalar.
 
 ## Novedades de 0.75.217
 
