@@ -1,5 +1,5 @@
-5d63917bf1738bd2461fa2ac497e499e58f284071d196193b52af867afcacd55  Doceink-EInk4.bin
-ba5ce11c1df681f72cacec05c02bcf915a4f1be75b12e22bc2d1869c54e48b46  Metalio-0.75.210-instalacion-limpia.zip
+1c2c33452f5325fc0a8c634c77b0c0f7757b7efcfaa7b231e013d376672068c8  Doceink-EInk4.bin
+6ff1187ba555dac1f6da78e63dd6b9b3b939e438131e0ab295fd3b7335b1682b  Metalio-0.75.211-instalacion-limpia.zip
 17ca384a90aa96755223d303ebefab3537c34837cd81dee681b6aa6b18b1cd2a  DoceInk-Setup-0.75.158.1.exe
 ed5eddd5f1e1e829ff56631eec841797f71c19e28bd61bf7ecf6e5a02356a663  DoceInk-Setup-0.75.158.1-macOS-arm64.dmg
-dda0e6ae6db96cb6a53bf8a3fc46f91163846a88ca65b4a1f49c13e62c027d6c  v0.75.210-manifest.json
+472210456cf5d807592e78bb90fffb7ada68a625fbe59d65f4b09b5e1a54d00a  v0.75.211-manifest.json

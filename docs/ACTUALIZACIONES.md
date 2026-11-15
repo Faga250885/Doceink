@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.210](https://github.com/Faga250885/Doceink/releases/tag/v0.75.210).
-- [Firmware OTA 0.75.210](https://github.com/Faga250885/Doceink/releases/download/v0.75.210/Doceink-EInk4.bin).
+- [Versión documentada 0.75.211](https://github.com/Faga250885/Doceink/releases/tag/v0.75.211).
+- [Firmware OTA 0.75.211](https://github.com/Faga250885/Doceink/releases/download/v0.75.211/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.211
+
+Todos los iconos de las aplicaciones del Home usan Lucide, con la misma escala y grosor que Libros. ChatGPT usa el icono de asistente de Lucide. Las variantes del clima, el editor del Home y el selector comparten el conjunto. Los iconos van integrados en su tamaño de pantalla para actualizar por Wi-Fi.
+
+Validación: 106 pruebas locales aprobadas, incluidos todos los iconos y las variantes del clima sobre blanco y negro, en color y monocromo. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.210
 

@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.210](https://github.com/Faga250885/Doceink/releases/tag/v0.75.210).
-- [OTA firmware: 0.75.210](https://github.com/Faga250885/Doceink/releases/download/v0.75.210/Doceink-EInk4.bin).
+- [Documented version: 0.75.211](https://github.com/Faga250885/Doceink/releases/tag/v0.75.211).
+- [OTA firmware: 0.75.211](https://github.com/Faga250885/Doceink/releases/download/v0.75.211/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.211
+
+Home application icons now all use Lucide with the same scale and stroke as Books. ChatGPT uses Lucide's assistant icon. Forecast variants, the Home editor and application picker use the same set. Icons are bundled at their display sizes for app-only Wi-Fi updates.
+
+Validation: 106 local tests passed, including all application icons and forecast variants rendered on white/black in color and monochrome buffers. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.210
 
