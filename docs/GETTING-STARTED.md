@@ -138,3 +138,5 @@ The Home editor uses 48 px icons, with a diagonal hatch on the fixed Settings ca
 ChatGPT: a new conversation blocks the microphone during “Connecting to ChatGPT”. Once ready, its first message says to hold the microphone to ask and shows a right arrow. A press started before readiness does not automatically begin recording when connection finishes.
 
 In Information, the DoceInk logo is inside the card above the version and 20% smaller. Battery appearance offers Icon or Number (with %). The removed Icon with percentage mode automatically falls back to Icon.
+
+Touch navigation now uses gestures only. Tap zones and their settings are removed, including for previously saved preferences. Holding a word and tapping the final word still selects a highlight.

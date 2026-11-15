@@ -136,3 +136,5 @@ El editor de Home usa iconos de 48 px y una trama diagonal en la tarjeta fija de
 ChatGPT: al iniciar una conversación, el micrófono permanece bloqueado durante «Conectando con ChatGPT». Cuando está listo, el primer mensaje indica mantener pulsado el micrófono para preguntar y muestra una flecha a la derecha. Una pulsación iniciada antes de estar listo no comienza a grabar automáticamente al terminar la conexión.
 
 En Información, el logo de DoceInk está dentro de la tarjeta, sobre la versión, con un tamaño un 20% menor. La batería ofrece Solo icono o Solo número (con %). El antiguo modo Icono con porcentaje pasa automáticamente a Solo icono.
+
+La navegación táctil usa únicamente gestos. Se eliminan las zonas táctiles y su configuración, también para preferencias guardadas anteriormente. Mantener una palabra y tocar la última sigue permitiendo subrayar.
