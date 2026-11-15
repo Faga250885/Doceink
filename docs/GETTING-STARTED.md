@@ -58,7 +58,7 @@ Enable **USB disk / Disco USB** in Settings → Files. Copy files from your comp
 
 The month is left aligned and the **Tasks** icon appears on the calendar's right, without text, border or background. Tapping it opens the Tasks app. Tasks is removed from the eight lower shortcuts and their pickers; an old Tasks tile becomes an available app without duplicating the other shortcuts.
 
-Hold a calendar day to open that same app and start dictation with its date preselected. Swiping across days still changes the month. **Add task** also supports dictation or typing. Before saving, choose Personal or Work, no date or a date, and once, daily, weekly, monthly or yearly repetition. Birthday sets yearly repetition. Dates use DD/MM/YYYY. Editing changes title, date, repetition and list; deletion asks for confirmation.
+Days with pending dated tasks or birthdays have a black dotted rounded outline without fill, including Personal/Work recurrence. Today keeps its black fill. Hold a day: Metalio vibrates and asks whether to add a task. Only accepting opens the same app to start dictation with that date. Cancel or the red back button dismisses the question. Swiping across days still changes the month. **Add task** also supports dictation or typing. Before saving, choose Personal or Work, no date or a date, and once, daily, weekly, monthly or yearly repetition. Birthday sets yearly repetition. Dates use DD/MM/YYYY. Editing changes title, date, repetition and list; deletion asks for confirmation.
 
 Tasks live in `metalio/e-ink/agenda.json` on microSD. Existing lists are incorporated on the first save and their original files are retained. Completing a repeating task advances to its next date after today. Monthly tasks retain their original day and use the final day of shorter months. Repetitions do not create extra copies. Limit: 256 tasks total. This agenda does not add due-date alarms or notifications.
 
@@ -136,3 +136,5 @@ To save a highlight, **hold the first word on the book page**, then tap the fina
 The Home editor uses 48 px icons, with a diagonal hatch on the fixed Settings card. That card stays at the bottom right and cannot be reassigned.
 
 ChatGPT: a new conversation blocks the microphone during “Connecting to ChatGPT”. Once ready, its first message says to hold the microphone to ask and shows a right arrow. A press started before readiness does not automatically begin recording when connection finishes.
+
+In Information, the DoceInk logo is inside the card above the version and 20% smaller. Battery appearance offers Icon or Number (with %). The removed Icon with percentage mode automatically falls back to Icon.

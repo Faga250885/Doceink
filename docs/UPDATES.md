@@ -16,12 +16,16 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.198](https://github.com/Faga250885/Doceink/releases/tag/v0.75.198).
-- [OTA firmware: 0.75.198](https://github.com/Faga250885/Doceink/releases/download/v0.75.198/Doceink-EInk4.bin).
+- [Documented version: 0.75.199](https://github.com/Faga250885/Doceink/releases/tag/v0.75.199).
+- [OTA firmware: 0.75.199](https://github.com/Faga250885/Doceink/releases/download/v0.75.199/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.199
+
+The calendar gives pending dated tasks and birthdays a black dotted rounded outline, including Personal/Work recurring dates. Today keeps its black fill. Holding a day vibrates and asks for confirmation; only accepting opens creation for that date. The DoceInk logo returns inside the Information card above the version, 20% smaller. Icon with percentage is removed: only Icon and Number remain; the old setting falls back to Icon.
 
 ## What's new in 0.75.198
 
