@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.213](https://github.com/Faga250885/Doceink/releases/tag/v0.75.213).
-- [OTA firmware: 0.75.213](https://github.com/Faga250885/Doceink/releases/download/v0.75.213/Doceink-EInk4.bin).
+- [Documented version: 0.75.214](https://github.com/Faga250885/Doceink/releases/tag/v0.75.214).
+- [OTA firmware: 0.75.214](https://github.com/Faga250885/Doceink/releases/download/v0.75.214/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.214
+
+Today’s Weather on Home now matches the Calendar widget’s side margins and header alignment. The city line is removed, and the current two-hour period has a larger icon and temperature with a closer time range. A single timeline shows the day in two-hour steps, with the whole-day high and low below it.
+
+The refresh icon immediately left of the Weather shortcut connects Wi-Fi and saves the updated forecast to the microSD. It shows Updating while busy, prevents duplicate downloads and allows retries after network or storage errors. A failed refresh preserves the last saved forecast.
+
+Validation: all 109 local tests passed, including native rendering, aligned headers, gestures, refresh retries and error handling. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.213
 

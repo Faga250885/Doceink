@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.213](https://github.com/Faga250885/Doceink/releases/tag/v0.75.213).
-- [Firmware OTA 0.75.213](https://github.com/Faga250885/Doceink/releases/download/v0.75.213/Doceink-EInk4.bin).
+- [Versión documentada 0.75.214](https://github.com/Faga250885/Doceink/releases/tag/v0.75.214).
+- [Firmware OTA 0.75.214](https://github.com/Faga250885/Doceink/releases/download/v0.75.214/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.214
+
+Clima de hoy en el Home comparte los márgenes laterales y la alineación del encabezado del Calendario. Se elimina la ciudad y se amplían el icono y la temperatura del tramo actual de dos horas, con el horario más cerca. Una sola fila muestra el pronóstico cada dos horas; debajo quedan la máxima y mínima del día completo.
+
+El icono de actualizar, inmediatamente a la izquierda del acceso a Clima, conecta el Wi-Fi y guarda el pronóstico actualizado en la microSD. Muestra Actualizando mientras trabaja, evita descargas duplicadas y permite reintentar tras errores de conexión o almacenamiento. Un fallo conserva el último pronóstico guardado.
+
+Validación: las 109 pruebas locales aprobaron, incluidos renderizado nativo, encabezados alineados, gestos, reintentos y manejo de errores. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.213
 
