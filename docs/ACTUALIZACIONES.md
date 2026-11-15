@@ -16,12 +16,16 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.203](https://github.com/Faga250885/Doceink/releases/tag/v0.75.203).
-- [Firmware OTA 0.75.203](https://github.com/Faga250885/Doceink/releases/download/v0.75.203/Doceink-EInk4.bin).
+- [Versión documentada 0.75.204](https://github.com/Faga250885/Doceink/releases/tag/v0.75.204).
+- [Firmware OTA 0.75.204](https://github.com/Faga250885/Doceink/releases/download/v0.75.204/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.204
+
+Las fechas de tareas incluyen el día de la semana. El editor compacto elimina Tipo y usa un tab Con fecha / Sin fecha. Un único campo con icono de calendario abre día, mes y año con scroll; el selector solo tiene Guardar y Cancelar. Las acciones de confirmación comparten una fila: confirmar o activar a la izquierda, cancelar o desactivar a la derecha.
 
 ## Novedades de 0.75.203
 
