@@ -16,12 +16,16 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.202](https://github.com/Faga250885/Doceink/releases/tag/v0.75.202).
-- [OTA firmware: 0.75.202](https://github.com/Faga250885/Doceink/releases/download/v0.75.202/Doceink-EInk4.bin).
+- [Documented version: 0.75.203](https://github.com/Faga250885/Doceink/releases/tag/v0.75.203).
+- [OTA firmware: 0.75.203](https://github.com/Faga250885/Doceink/releases/download/v0.75.203/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.203
+
+Dictated tasks recognize Spanish weekdays, relative dates, explicit dates and monthly/yearly recurrence locally. A detected date opens a confirmation with Create task and Edit details; editing opens the full form. To do and Done replace Personal/Work and the separate filter; existing tasks from both lists remain visible. Dates follow the local clock and can be checked before saving.
 
 ## What's new in 0.75.202
 

@@ -33,7 +33,7 @@ Data is organized under `metalio/e-ink/` on the card:
 | `metalio/e-ink/fonts_ttf/` | TTF/OTF files for the import process; these are not equivalent to converted `.ef` fonts |
 | `metalio/e-ink/recordings/` | Local WAV recordings |
 | `metalio/e-ink/chat_log/` | Conversation history |
-| `metalio/e-ink/agenda.json` | Personal/work tasks, dates and recurrence |
+| `metalio/e-ink/agenda.json` | Tasks, dates and recurrence |
 | `metalio/e-ink/weather.json` | Downloaded forecast |
 | `metalio/e-ink/rss_*.xml` | RSS source caches |
 
@@ -58,7 +58,7 @@ Enable **USB disk / Disco USB** in Settings → Files. Copy files from your comp
 
 The month is left aligned and the **Tasks** icon appears on the calendar's right at the height of the month text, without a button container, text, border or background. Tapping it opens the Tasks app. Tasks is removed from the eight lower shortcuts and their pickers; an old Tasks tile becomes an available app without duplicating the other shortcuts.
 
-Days with pending dated tasks or birthdays have a black dotted rounded outline without fill, including Personal/Work recurrence. Today keeps its black fill. Hold a day: Metalio vibrates and asks whether to add a task. Only accepting opens the same app to start dictation with that date. Cancel or the red back button dismisses the question. Swiping across days still changes the month. **Add task** also supports dictation or typing. Before saving, choose Personal or Work, no date or a date, and once, daily, weekly, monthly or yearly repetition. Birthday sets yearly repetition. Dates use DD/MM/YYYY. Editing changes title, date, repetition and list; deletion asks for confirmation.
+Days with pending dated tasks or birthdays have a black dotted rounded outline without fill, including recurring tasks. Today keeps its black fill. Hold a day: Metalio vibrates and asks whether to add a task. Only accepting opens the same app to start dictation with that date. Cancel or the red back button dismisses the question. Swiping across days still changes the month. **Add task** also supports dictation or typing. Dictation can detect the date and recurrence, then offers Create task or Edit details. Manual editing supports no date or a date, and once, daily, weekly, monthly or yearly repetition. Birthday sets yearly repetition. Dates use DD/MM/YYYY. Editing changes title, date and repetition; deletion asks for confirmation.
 
 Tasks live in `metalio/e-ink/agenda.json` on microSD. Existing lists are incorporated on the first save and their original files are retained. Completing a repeating task advances to its next date after today. Monthly tasks retain their original day and use the final day of shorter months. Repetitions do not create extra copies. Limit: 256 tasks total. This agenda does not add due-date alarms or notifications.
 
@@ -78,7 +78,7 @@ Configure your own API key in ChatGPT settings. The package does not include a s
 
 A new conversation requires internet access. History stored on microSD can be opened offline for reading; voice messages are disabled in history. Start a new conversation to send voice messages.
 
-Tasks provides local **Personal** and **Work / Trabajo** lists. Dictation uses Wi-Fi; this version does not offer offline speech recognition. Jira is not required.
+Tasks provides **To do** and **Done** tabs, combining tasks from the previous Personal and Work lists without an additional filter. Dictation uses Wi-Fi; this version does not offer offline speech recognition. Jira is not required.
 
 ## Offline Recorder
 
