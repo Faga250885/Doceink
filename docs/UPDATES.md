@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.211](https://github.com/Faga250885/Doceink/releases/tag/v0.75.211).
-- [OTA firmware: 0.75.211](https://github.com/Faga250885/Doceink/releases/download/v0.75.211/Doceink-EInk4.bin).
+- [Documented version: 0.75.212](https://github.com/Faga250885/Doceink/releases/tag/v0.75.212).
+- [OTA firmware: 0.75.212](https://github.com/Faga250885/Doceink/releases/download/v0.75.212/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.212
+
+Home application icons now measure 50 × 50 pixels and no longer have a separate white plate behind them. The original ChatGPT logo returns, scaled proportionally to the new display size. Cards keep their dimensions, spacing and labels.
+
+Validation: 107 local tests passed, including actual creation and rebuilding of all eight cards, and native icon rendering on white/black in color and monochrome buffers. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.211
 

@@ -54,7 +54,7 @@ Activa **Disco USB** en Ajustes → Archivos. Copia los archivos desde el ordena
 
 ## Calendario y tareas compartidas
 
-Los iconos de las aplicaciones del Home usan Lucide, con la misma escala y grosor que Libros, también en las variantes del clima y al elegir aplicaciones.
+Los iconos de las aplicaciones del Home miden 50 × 50 píxeles, sin una base adicional detrás. Usan Lucide, excepto ChatGPT, que conserva su logo original escalado proporcionalmente. Las variantes del clima siguen el mismo tamaño.
 
 El mes aparece a la izquierda del calendario y el icono de **Tareas** a la derecha, con el alto del texto del mes y sin contenedor de botón, texto, borde ni fondo. Tocar el icono abre la aplicación de Tareas. Tareas ya no ocupa ni puede elegirse en los ocho accesos inferiores; los accesos antiguos se sustituyen por una aplicación disponible sin duplicar las demás.
 
