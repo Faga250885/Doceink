@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.207](https://github.com/Faga250885/Doceink/releases/tag/v0.75.207).
-- [Firmware OTA 0.75.207](https://github.com/Faga250885/Doceink/releases/download/v0.75.207/Doceink-EInk4.bin).
+- [Versión documentada 0.75.208](https://github.com/Faga250885/Doceink/releases/tag/v0.75.208).
+- [Firmware OTA 0.75.208](https://github.com/Faga250885/Doceink/releases/download/v0.75.208/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.208
+
+El teclado numérico escribe directamente en el campo original de día, mes o año. Solo muestra números y un icono de retroceso: sin texto de rango, campo duplicado ni fila de aceptar/cancelar. Se cierra con el botón rojo o tocando fuera. Guardar cambios valida y guarda la fecha; las fechas incompletas o inválidas no se pueden guardar.
+
+Validación: 105 pruebas locales aprobadas, incluido el teclado real dentro del editor de tareas. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.207
 

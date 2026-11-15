@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.207](https://github.com/Faga250885/Doceink/releases/tag/v0.75.207).
-- [OTA firmware: 0.75.207](https://github.com/Faga250885/Doceink/releases/download/v0.75.207/Doceink-EInk4.bin).
+- [Documented version: 0.75.208](https://github.com/Faga250885/Doceink/releases/tag/v0.75.208).
+- [OTA firmware: 0.75.208](https://github.com/Faga250885/Doceink/releases/download/v0.75.208/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.208
+
+The numeric keypad edits the original day, month or year field directly. It shows only digits and an icon for backspace: no range hint, duplicate input or accept/cancel row. Close it with the red button or by tapping outside. The form validates and saves the date through Save changes; incomplete or invalid dates cannot be saved.
+
+Validation: 105 local tests passed, including the real keypad inside the task editor. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.207
 
