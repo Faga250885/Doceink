@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.214](https://github.com/Faga250885/Doceink/releases/tag/v0.75.214).
-- [OTA firmware: 0.75.214](https://github.com/Faga250885/Doceink/releases/download/v0.75.214/Doceink-EInk4.bin).
+- [Documented version: 0.75.215](https://github.com/Faga250885/Doceink/releases/tag/v0.75.215).
+- [OTA firmware: 0.75.215](https://github.com/Faga250885/Doceink/releases/download/v0.75.215/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.215
+
+The current weather icon, temperature and time range share a rounded panel with Home’s original gray dot pattern. The panel fills the space between the heading and hourly forecast while retaining the calendar’s side margins. The temperature and time range now have 16 px of visual separation, up from 8 px.
+
+Validation: 109 local tests passed, including native rendering, the panel’s bounds and pattern, spacing, gestures and refresh retries. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.214
 

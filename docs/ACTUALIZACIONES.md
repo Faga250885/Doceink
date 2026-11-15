@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.214](https://github.com/Faga250885/Doceink/releases/tag/v0.75.214).
-- [Firmware OTA 0.75.214](https://github.com/Faga250885/Doceink/releases/download/v0.75.214/Doceink-EInk4.bin).
+- [Versión documentada 0.75.215](https://github.com/Faga250885/Doceink/releases/tag/v0.75.215).
+- [Firmware OTA 0.75.215](https://github.com/Faga250885/Doceink/releases/download/v0.75.215/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.215
+
+El icono del clima actual, la temperatura y el horario comparten un contenedor redondeado con la trama gris punteada original del Home. El panel ocupa el espacio entre el encabezado y el pronóstico, conservando los márgenes laterales del calendario. La separación visual entre la temperatura y el horario aumenta de 8 a 16 px.
+
+Validación: 109 pruebas locales aprobadas, incluidos renderizado nativo, límites y trama del panel, espaciado, gestos y reintentos de actualización. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.214
 
