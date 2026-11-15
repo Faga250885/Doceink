@@ -54,7 +54,7 @@ Activa **Disco USB** en Ajustes → Archivos. Copia los archivos desde el ordena
 
 ## Calendario y tareas compartidas
 
-El mes aparece a la izquierda del calendario y el icono de **Tareas** a la derecha, sin texto, borde ni fondo. Tocar el icono abre la aplicación de Tareas. Tareas ya no ocupa ni puede elegirse en los ocho accesos inferiores; los accesos antiguos se sustituyen por una aplicación disponible sin duplicar las demás.
+El mes aparece a la izquierda del calendario y el icono de **Tareas** a la derecha, con el alto del texto del mes y sin contenedor de botón, texto, borde ni fondo. Tocar el icono abre la aplicación de Tareas. Tareas ya no ocupa ni puede elegirse en los ocho accesos inferiores; los accesos antiguos se sustituyen por una aplicación disponible sin duplicar las demás.
 
 Los días con tareas pendientes con fecha o cumpleaños tienen un contorno negro punteado y redondeado, sin relleno; se incluyen las repeticiones de Personal y Trabajo. Hoy conserva su fondo negro. Mantén pulsado un día: Metalio vibra y pregunta si quieres agregar una tarea. Solo al aceptar se abre la misma aplicación para empezar el dictado con esa fecha; Cancelar o el botón rojo cierran la pregunta. Deslizar sobre los días sigue cambiando de mes. También puedes crear desde **Agregar tarea**, por micrófono o escritura. Antes de guardar, elige Personal o Trabajo, sin fecha o con fecha, y una repetición: una sola vez, diaria, semanal, mensual o anual. Cumpleaños activa la repetición anual. La fecha se escribe como DD/MM/AAAA. Editar permite cambiar el título, fecha, repetición y lista; eliminar pide confirmación.
 

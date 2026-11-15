@@ -56,7 +56,7 @@ Enable **USB disk / Disco USB** in Settings → Files. Copy files from your comp
 
 ## Shared calendar and tasks
 
-The month is left aligned and the **Tasks** icon appears on the calendar's right, without text, border or background. Tapping it opens the Tasks app. Tasks is removed from the eight lower shortcuts and their pickers; an old Tasks tile becomes an available app without duplicating the other shortcuts.
+The month is left aligned and the **Tasks** icon appears on the calendar's right at the height of the month text, without a button container, text, border or background. Tapping it opens the Tasks app. Tasks is removed from the eight lower shortcuts and their pickers; an old Tasks tile becomes an available app without duplicating the other shortcuts.
 
 Days with pending dated tasks or birthdays have a black dotted rounded outline without fill, including Personal/Work recurrence. Today keeps its black fill. Hold a day: Metalio vibrates and asks whether to add a task. Only accepting opens the same app to start dictation with that date. Cancel or the red back button dismisses the question. Swiping across days still changes the month. **Add task** also supports dictation or typing. Before saving, choose Personal or Work, no date or a date, and once, daily, weekly, monthly or yearly repetition. Birthday sets yearly repetition. Dates use DD/MM/YYYY. Editing changes title, date, repetition and list; deletion asks for confirmation.
 

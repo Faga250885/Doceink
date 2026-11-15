@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.199](https://github.com/Faga250885/Doceink/releases/tag/v0.75.199).
-- [Firmware OTA 0.75.199](https://github.com/Faga250885/Doceink/releases/download/v0.75.199/Doceink-EInk4.bin).
+- [Versión documentada 0.75.200](https://github.com/Faga250885/Doceink/releases/tag/v0.75.200).
+- [Firmware OTA 0.75.200](https://github.com/Faga250885/Doceink/releases/download/v0.75.200/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.200
+
+El acceso a Tareas del calendario es el propio icono pulsable, sin contenedor de botón, borde, fondo ni texto. Tiene el alto del texto del mes y queda alineado a la derecha. Tocarlo abre la misma aplicación de Tareas.
+
+Validación: 104 pruebas locales aprobadas y compilación para ESP32-S3. La comprobación física queda pendiente de instalar esta versión.
 
 ## Novedades de 0.75.199
 
