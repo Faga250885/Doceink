@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.216](https://github.com/Faga250885/Doceink/releases/tag/v0.75.216).
-- [OTA firmware: 0.75.216](https://github.com/Faga250885/Doceink/releases/download/v0.75.216/Doceink-EInk4.bin).
+- [Documented version: 0.75.217](https://github.com/Faga250885/Doceink/releases/tag/v0.75.217).
+- [OTA firmware: 0.75.217](https://github.com/Faga250885/Doceink/releases/download/v0.75.217/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.217
+
+Home remembers the selected Calendar or Weather widget after standby, shutdown and restart. The page indicators are both gray, with a 6 px active dot and a smaller 4 px inactive dot.
+
+The weather card uses the freed vertical space, with 16 px padding and rounded gray and white panels. The main temperature shows only its number. The duplicate time range, separator and whole-day high/low summary are removed. Tapping anywhere in the gray card opens Weather; swiping still switches widgets.
+
+The last saved update time appears immediately left of Refresh. Together they form one transparent control, with no background or border. Either area updates the forecast, and both dim while busy. The time comes from the saved forecast; failed refreshes preserve it and allow a retry.
+
+Validation: all 109 local tests passed, including native RGB/one-bit rendering, combined touch targets, retries, saved time parsing, page-dot sizing and widget preference restoration. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.216
 

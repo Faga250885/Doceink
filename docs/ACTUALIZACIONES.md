@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.216](https://github.com/Faga250885/Doceink/releases/tag/v0.75.216).
-- [Firmware OTA 0.75.216](https://github.com/Faga250885/Doceink/releases/download/v0.75.216/Doceink-EInk4.bin).
+- [Versión documentada 0.75.217](https://github.com/Faga250885/Doceink/releases/tag/v0.75.217).
+- [Firmware OTA 0.75.217](https://github.com/Faga250885/Doceink/releases/download/v0.75.217/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.217
+
+El Home recuerda el widget elegido, Calendario o Clima, después del standby, apagado y reinicio. Ambos indicadores de página son grises: el activo mide 6 px y el inactivo 4 px.
+
+La tarjeta del clima aprovecha el alto liberado, con padding de 16 px y contenedores gris y blanco redondeados. La temperatura principal muestra solo el número. Se eliminan el horario duplicado, el separador y el resumen de máximas/mínimas. Tocar cualquier parte del bloque gris abre Clima; deslizar sigue cambiando de widget.
+
+La hora de la última actualización guardada aparece a la izquierda de Actualizar. Ambos forman un único control transparente, sin fondo ni borde. Se puede tocar cualquiera de las dos partes y ambas se atenúan mientras descargan. La hora proviene del pronóstico guardado: se conserva si falla una descarga y permite reintentar.
+
+Validación: las 109 pruebas locales aprobaron, incluidos renderizado RGB y de un bit, zonas táctiles combinadas, reintentos, lectura de la hora, tamaño de indicadores y restauración del widget elegido. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.216
 
