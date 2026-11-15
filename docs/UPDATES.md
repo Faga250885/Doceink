@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.212](https://github.com/Faga250885/Doceink/releases/tag/v0.75.212).
-- [OTA firmware: 0.75.212](https://github.com/Faga250885/Doceink/releases/download/v0.75.212/Doceink-EInk4.bin).
+- [Documented version: 0.75.213](https://github.com/Faga250885/Doceink/releases/tag/v0.75.213).
+- [OTA firmware: 0.75.213](https://github.com/Faga250885/Doceink/releases/download/v0.75.213/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.213
+
+Home’s upper card now switches between Calendar and Today’s Weather with horizontal swipes. Vertical swipes on Calendar change the month. Weather shows the day summary, city, a large icon and temperature for the current two-hour period, daily high/low and all 24 hourly forecasts. Its upper-right icon opens Weather.
+
+Tapping the calendar heading opens month and year selectors. The action starts as Go to current month and changes to Go to selected month when the choice differs.
+
+The weather widget uses the saved forecast and reloads the local cache in a background worker after a date change; it does not open Wi-Fi on each swipe. Open Weather to update the forecast or choose a city.
+
+Validation: 109 local tests passed, including real gestures, shortcut isolation, month/year selection, hourly parsing, summary hours, units, missing data, cache retries and native large-icon rendering. Physical confirmation remains pending installation.
 
 ## What's new in 0.75.212
 

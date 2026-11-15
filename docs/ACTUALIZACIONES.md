@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.212](https://github.com/Faga250885/Doceink/releases/tag/v0.75.212).
-- [Firmware OTA 0.75.212](https://github.com/Faga250885/Doceink/releases/download/v0.75.212/Doceink-EInk4.bin).
+- [Versión documentada 0.75.213](https://github.com/Faga250885/Doceink/releases/tag/v0.75.213).
+- [Firmware OTA 0.75.213](https://github.com/Faga250885/Doceink/releases/download/v0.75.213/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.213
+
+La tarjeta superior del Home cambia entre Calendario y Clima de hoy al deslizar a los lados. En Calendario, deslizar arriba o abajo cambia de mes. Clima muestra el resumen del día, la ciudad, un icono grande y la temperatura del tramo actual de dos horas, máximas/mínimas y las 24 horas del pronóstico. El icono superior derecho abre Clima.
+
+Al tocar el encabezado del calendario se abren selectores de mes y año. El botón comienza como Ir al mes actual y cambia a Ir al mes seleccionado cuando eliges otra fecha.
+
+El widget usa el pronóstico guardado y recarga la caché local en segundo plano al cambiar de día; no abre Wi-Fi en cada gesto. Abre Clima para actualizar el pronóstico o elegir una ciudad.
+
+Validación: 109 pruebas locales aprobadas, incluidos gestos reales, accesos sin activaciones accidentales, mes/año, horas del pronóstico, resumen diurno, unidades, datos ausentes, reintentos de caché e iconos grandes nativos. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.212
 
