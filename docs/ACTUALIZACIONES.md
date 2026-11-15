@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.208](https://github.com/Faga250885/Doceink/releases/tag/v0.75.208).
-- [Firmware OTA 0.75.208](https://github.com/Faga250885/Doceink/releases/download/v0.75.208/Doceink-EInk4.bin).
+- [Versión documentada 0.75.209](https://github.com/Faga250885/Doceink/releases/tag/v0.75.209).
+- [Firmware OTA 0.75.209](https://github.com/Faga250885/Doceink/releases/download/v0.75.209/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.209
+
+La creación de tareas muestra siempre arriba un campo con borde, durante el dictado, la revisión y la edición. Tocar el campo vacío del dictado abre el editor con teclado; el texto dictado se puede corregir directamente antes de guardar. Se elimina la franja adicional del contador en Por hacer y Hechas.
+
+Validación: 105 pruebas locales aprobadas, incluida la escritura con el teclado real y el guardado del texto corregido. La confirmación física queda pendiente de instalar.
 
 ## Novedades de 0.75.208
 
