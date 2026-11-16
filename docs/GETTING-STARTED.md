@@ -74,7 +74,7 @@ In **Settings → Display → Appearance → Home widgets**, enable Calendar, We
 
 ## Experimental AI usage widget
 
-Install **0.75.224** through the normal Wi-Fi updater. To link an account without finding its JSON:
+Install **0.75.225** through the normal Wi-Fi updater. To link an account without finding its JSON:
 
 1. Enable **AI Usage** in **Settings → Display → Appearance**, then switch to its Home widget.
 2. Tap **ChatGPT · Codex** or **Claude**, then **Link**. Keep this screen open.
@@ -83,7 +83,7 @@ Install **0.75.224** through the normal Wi-Fi updater. To link an account withou
 
 The QR opens the same page without typing the code. If your PC or network cannot resolve `doceink.local`, use the IP address shown below it or scan the QR. The local name is available only while linking is open. Guest networks with client isolation must be replaced with a network that allows local device communication.
 
-The Windows command finds Codex `auth.json` in `CODEX_HOME` or `.codex`, or Claude Code `.credentials.json` in `CLAUDE_CONFIG_DIR` or `.claude`. That PC must already have the session file. It does not extract browser cookies or sessions stored exclusively in the OS credential vault. For macOS/Linux or another location, expand **Choose file manually** on the page and select the existing session file or prepared `ai_usage-auth.json`. The [local preparation helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.224/preparar-sesiones.html) remains available.
+The Windows command finds Codex `auth.json` in `CODEX_HOME` or `.codex`, or Claude Code `.credentials.json` in `CLAUDE_CONFIG_DIR` or `.claude`. That PC must already have the session file. It does not extract browser cookies or sessions stored exclusively in the OS credential vault. For macOS/Linux or another location, expand **Choose file manually** on the page and select the existing session file or prepared `ai_usage-auth.json`. The [local preparation helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.225/preparar-sesiones.html) remains available.
 
 Metalio saves the access automatically to `metalio/e-ink/ai_usage-auth.json` on microSD, closes the QR and refreshes the widget. Only the selected provider is replaced; the other remains linked. Disable USB Disk before saving. Close the dialog or use the red button to cancel. The single-use link expires after 15 minutes; the code allows five attempts.
 
