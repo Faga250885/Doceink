@@ -16,12 +16,16 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.223](https://github.com/Faga250885/Doceink/releases/tag/v0.75.223).
-- [Firmware OTA 0.75.223](https://github.com/Faga250885/Doceink/releases/download/v0.75.223/Doceink-EInk4.bin).
+- [Versión documentada 0.75.224](https://github.com/Faga250885/Doceink/releases/tag/v0.75.224).
+- [Firmware OTA 0.75.224](https://github.com/Faga250885/Doceink/releases/download/v0.75.224/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.224
+
+Cuando Consumo de IA no puede iniciar la vinculación, muestra un código para identificar en qué etapa falló.
 
 ## Novedades de 0.75.223
 
