@@ -28,7 +28,7 @@ def main():
     payload.mkdir(exist_ok=True)
     shutil.copy2(root.parent / 'assets/doceink-symbol.png', payload)
     run(sys.executable, root / 'prepare_notices.py')
-    run(sys.executable, '-m', 'unittest', 'test_installer', 'test_download', 'test_device_ops', 'test_account_link')
+    run(sys.executable, '-m', 'unittest', '-v', 'test_installer', 'test_download', 'test_device_ops', 'test_account_link', timeout=120)
     build = root / 'build'
     build.mkdir(exist_ok=True)
     # iconutil preserves the app icon in Finder; all sizes use the original mark.

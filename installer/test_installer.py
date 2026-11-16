@@ -130,6 +130,17 @@ class InstallTests(unittest.TestCase):
             window.link_dialog.close();self.assertIsNone(window.link_dialog)
         root.destroy()
 
+    def test_destroy_cancels_main_and_pairing_timers(self):
+        import tkinter as tk
+        root=tk.Tk();root.withdraw()
+        window=a.Window(root,scan=True)
+        window.start_accounts();dialog=window.link_dialog
+        pump,scan,pair=window.pump_timer,window.scan_timer,dialog.timer
+        root.destroy()
+        self.assertTrue(window.closed and dialog.closed and dialog.cancel.is_set())
+        remaining=root.tk.call('after','info')
+        self.assertNotIn(pump,remaining);self.assertNotIn(scan,remaining);self.assertNotIn(pair,remaining)
+
     def test_new_install_asks_to_confirm_original_before_start(self):
         import tkinter as tk
         root=tk.Tk();root.withdraw()

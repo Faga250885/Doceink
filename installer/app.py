@@ -14,7 +14,7 @@ import time
 from download import download_latest
 import device_ops
 
-VERSION = '0.75.221.1'
+VERSION = '0.75.221.2'
 FLASH_BYTES = 16 * 1024 * 1024
 TEXT = {
  'title': ('DoceInk Setup', 'Instalar DoceInk'),
@@ -163,6 +163,8 @@ class Window:
         self.device_port = ''
         self.has_backup = False
         self.link_dialog = None
+        self.closed = False
+        self.pump_timer = self.scan_timer = None
         self.ignore_disconnect_until = 0.0
         self.language = tk.StringVar(value='English')
         self.port = tk.StringVar()
@@ -176,6 +178,7 @@ class Window:
         root.minsize(610, min(600, height))
         root.configure(bg='#ffffff')
         root.protocol('WM_DELETE_WINDOW', self.close)
+        root.bind('<Destroy>', self.destroyed, add='+')
         style = ttk.Style()
         style.theme_use('clam')
         style.configure('TFrame', background='white')
@@ -224,8 +227,8 @@ class Window:
         self.licenses = ttk.Button(bottom, command=self.show_licenses); self.licenses.pack(side='right')
         self.log = ''
         self.translate()
-        self.root.after(100, self.pump)
-        if scan: self.root.after(100, self.scan_ports)
+        self.pump_timer = self.root.after(100, self.pump)
+        if scan: self.scan_timer = self.root.after(100, self.scan_ports)
 
     def text(self, key):
         return TEXT[key][int(self.language.get() == 'Español')]
@@ -251,9 +254,10 @@ class Window:
         self.accounts.configure(state='disabled' if self.busy else 'normal')
 
     def scan_ports(self):
+        if self.closed: return
         if not self.busy:
             self.refresh_detection()
-        self.root.after(1500, self.scan_ports)
+        self.scan_timer = self.root.after(1500, self.scan_ports)
 
     def refresh_detection(self):
         from serial.tools.list_ports import comports
@@ -371,6 +375,7 @@ class Window:
             self.queue.put(('finished', None))
 
     def pump(self):
+        if self.closed: return
         try:
             while True:
                 kind, value = self.queue.get_nowait()
@@ -400,7 +405,16 @@ class Window:
                     if self.stage == 'error': self.show_details()
         except queue.Empty:
             pass
-        self.root.after(100, self.pump)
+        self.pump_timer = self.root.after(100, self.pump)
+
+    def destroyed(self, event):
+        if event.widget != self.root: return
+        self.closed = True
+        for timer in (self.pump_timer, self.scan_timer):
+            if timer:
+                try: self.root.after_cancel(timer)
+                except self.tk.TclError: pass
+        if self.link_dialog: self.link_dialog.close()
 
     def show_help(self):
         from tkinter import messagebox
