@@ -63,3 +63,15 @@ Las pruebas de software no sustituyen una instalación USB física.
 
 Creado por faga12@gmail.com
 https://github.com/Faga250885/Doceink
+
+Account linking / Vincular cuentas (Setup 0.75.221.1)
+
+Choose Link accounts over Wi-Fi, paste the temporary AI Usage QR link from
+Metalio 0.75.221 or later, then click Link. No USB or manual JSON export is
+needed. Only the selected file-backed Codex/Claude Code session is imported.
+OS keychain-only sessions are not supported by this version.
+
+Elige Vincular cuentas por Wi-Fi, pega el enlace temporal del QR de Consumo
+de IA del Metalio 0.75.221 o posterior y pulsa Vincular. No requiere USB ni
+exportar JSON manualmente. Solo se importa la sesión elegida de Codex/Claude
+Code guardada en archivo; esta versión no extrae sesiones del llavero.

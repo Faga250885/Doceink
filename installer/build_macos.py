@@ -28,7 +28,7 @@ def main():
     payload.mkdir(exist_ok=True)
     shutil.copy2(root.parent / 'assets/doceink-symbol.png', payload)
     run(sys.executable, root / 'prepare_notices.py')
-    run(sys.executable, '-m', 'unittest', 'test_installer', 'test_download', 'test_device_ops')
+    run(sys.executable, '-m', 'unittest', 'test_installer', 'test_download', 'test_device_ops', 'test_account_link')
     build = root / 'build'
     build.mkdir(exist_ok=True)
     # iconutil preserves the app icon in Finder; all sizes use the original mark.
@@ -51,7 +51,7 @@ def main():
     bundle = root / 'dist/DoceInk Setup.app'
     info = bundle / 'Contents/Info.plist'
     data = plistlib.loads(info.read_bytes())
-    data.update(CFBundleShortVersionString='0.75.158', CFBundleVersion='158.1',
+    data.update(CFBundleShortVersionString='.'.join(VERSION.split('.')[:3]), CFBundleVersion='.'.join(VERSION.split('.')[-2:]),
                 LSMinimumSystemVersion='15.0', NSHighResolutionCapable=True)
     info.write_bytes(plistlib.dumps(data))
     # Ad-hoc signing permits local integrity verification. It is NOT Developer ID/notarization.

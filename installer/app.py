@@ -14,7 +14,7 @@ import time
 from download import download_latest
 import device_ops
 
-VERSION = '0.75.158.1'
+VERSION = '0.75.221.1'
 FLASH_BYTES = 16 * 1024 * 1024
 TEXT = {
  'title': ('DoceInk Setup', 'Instalar DoceInk'),
@@ -25,6 +25,8 @@ TEXT = {
  'detect_error': ('Could not detect Metalio. Check the USB connection.', 'No se pudo detectar Metalio. Revisa la conexión USB.'),
  'ready': ('Metalio connection detected. Ready to install.', 'Conexión de Metalio detectada. Listo para instalar.'),
  'install': ('Install DoceInk', 'Instalar DoceInk'),
+ 'accounts': ('Link accounts over Wi-Fi', 'Vincular cuentas por Wi-Fi'),
+ 'unverified': ('Metalio connected. Click Check Metalio to identify its firmware.', 'Metalio conectado. Pulsa Comprobar Metalio para identificar su firmware.'),
  'update': ('Update DoceInk', 'Actualizar DoceInk'),
  'restore': ('Restore original backup', 'Restaurar respaldo original'),
  'backup_option': ('Back up current firmware before installation', 'Respaldar el firmware actual antes de instalar'),
@@ -160,6 +162,7 @@ class Window:
         self.device = None
         self.device_port = ''
         self.has_backup = False
+        self.link_dialog = None
         self.ignore_disconnect_until = 0.0
         self.language = tk.StringVar(value='English')
         self.port = tk.StringVar()
@@ -168,8 +171,9 @@ class Window:
         self.rows = []
         font = 'Helvetica Neue' if sys.platform == 'darwin' else 'Segoe UI'
         root.title('DoceInk Setup')
-        root.geometry('610x800')
-        root.minsize(610, 800)
+        height = min(800, max(400, root.winfo_screenheight()-100))
+        root.geometry(f'610x{height}')
+        root.minsize(610, min(600, height))
         root.configure(bg='#ffffff')
         root.protocol('WM_DELETE_WINDOW', self.close)
         style = ttk.Style()
@@ -179,8 +183,16 @@ class Window:
         style.configure('TButton', font=(font, 11), padding=(16, 10))
         style.configure('Install.TButton', background='#111111', foreground='white', font=(font, 12, 'bold'))
         style.map('Install.TButton', background=[('active', '#333333'), ('disabled', '#e4e4e4')], foreground=[('disabled', '#777777')])
-        panel = ttk.Frame(root, padding=28)
-        panel.pack(fill='both', expand=True)
+        scroll = ttk.Scrollbar(root, orient='vertical')
+        scroll.pack(side='right', fill='y')
+        canvas = tk.Canvas(root, bg='white', highlightthickness=0, yscrollcommand=scroll.set)
+        canvas.pack(side='left', fill='both', expand=True)
+        scroll.configure(command=canvas.yview)
+        panel = ttk.Frame(canvas, padding=28)
+        content = canvas.create_window(0, 0, window=panel, anchor='nw')
+        panel.bind('<Configure>', lambda _: canvas.configure(scrollregion=canvas.bbox('all')))
+        canvas.bind('<Configure>', lambda e: canvas.itemconfigure(content, width=e.width))
+        root.bind('<MouseWheel>', lambda e: canvas.yview_scroll(-1 if e.delta > 0 else 1, 'units') if e.widget.winfo_toplevel() == root else None)
         top = ttk.Frame(panel); top.pack(fill='x')
         self.lang = ttk.Combobox(top, textvariable=self.language, values=['English', 'Español'], state='readonly', width=12)
         self.lang.pack(side='right'); self.lang.bind('<<ComboboxSelected>>', lambda _: self.translate())
@@ -195,6 +207,7 @@ class Window:
         self.compat = ttk.Label(panel, foreground='#555555'); self.compat.pack()
         self.firmware = ttk.Label(panel, text='Installer '+VERSION, foreground='#777777')
         self.firmware.pack(pady=(3, 14))
+        self.accounts = ttk.Button(panel, command=self.start_accounts); self.accounts.pack(fill='x', pady=(0, 16))
         self.connect = ttk.Label(panel); self.connect.pack(anchor='w')
         self.status = ttk.Label(panel, wraplength=545); self.status.pack(anchor='w', pady=(10, 10))
         self.progress = ttk.Progressbar(panel, maximum=100); self.progress.pack(fill='x')
@@ -219,7 +232,7 @@ class Window:
 
     def translate(self):
         self.root.title(self.text('title'))
-        for name in ('subtitle','compat','connect','offline','help','details','licenses','credit','restore','backup_option'):
+        for name in ('subtitle','compat','connect','offline','help','details','licenses','credit','restore','backup_option','accounts'):
             getattr(self, name).configure(text=self.text(name))
         doceink = bool(self.device and self.device.get('kind') == 'doceink')
         unknown = self.scan and self.port.get() and not self.device
@@ -235,6 +248,7 @@ class Window:
         self.install.configure(state='normal' if self.port.get() and not self.busy else 'disabled')
         self.restore.configure(state='normal' if ready and doceink and self.has_backup else 'disabled')
         self.backup_option.configure(state='normal' if ready and not doceink else 'disabled')
+        self.accounts.configure(state='disabled' if self.busy else 'normal')
 
     def scan_ports(self):
         if not self.busy:
@@ -258,9 +272,7 @@ class Window:
                 self.device = None
                 self.has_backup = False
                 self.device_port = detected
-                self.busy = True
-                self.stage = 'identifying'
-                threading.Thread(target=self.inspect_worker, args=(detected,), daemon=True).start()
+                self.stage = 'unverified'
             elif not self.scan and self.stage not in ('done', 'error'):
                 self.stage = 'ready'
         except Exception as exc:
@@ -291,8 +303,10 @@ class Window:
         if self.busy: return
         if not self.port.get(): return
         if self.scan and not self.device:
-            self.device_port = ''
-            self.refresh_detection()
+            self.busy = True
+            self.stage = 'identifying'
+            self.translate()
+            threading.Thread(target=self.inspect_worker, args=(self.port.get(),), daemon=True).start()
             return
         doceink = bool(self.device and self.device.get('kind') == 'doceink')
         if not messagebox.askyesno(self.text('title'), self.text('confirm_update' if doceink else 'confirm'), parent=self.root, default='no'):
@@ -392,6 +406,14 @@ class Window:
         from tkinter import messagebox
         messagebox.showinfo(self.text('help'), self.text('help_text'), parent=self.root)
 
+    def start_accounts(self):
+        if self.busy: return
+        if self.link_dialog and not self.link_dialog.closed:
+            self.link_dialog.window.lift(); return
+        from account_link_ui import AccountLinkDialog
+        def closed(): self.link_dialog = None
+        self.link_dialog = AccountLinkDialog(self.root, self.language.get() == 'Español', closed)
+
     def show_text(self, title, content):
         dialog = self.tk.Toplevel(self.root); dialog.title(title); dialog.geometry('640x400')
         field = self.tk.Text(dialog, wrap='word', font=('Consolas', 10)); field.pack(fill='both', expand=True, padx=12, pady=12)
@@ -406,7 +428,9 @@ class Window:
     def close(self):
         from tkinter import messagebox
         if self.busy: messagebox.showinfo(self.text('title'), self.text('wait'), parent=self.root)
-        else: self.root.destroy()
+        else:
+            if self.link_dialog: self.link_dialog.close()
+            self.root.destroy()
 
 
 def main():
@@ -431,6 +455,9 @@ def main():
         assert (assets() / 'THIRD-PARTY.txt').is_file()
         from download import LATEST
         result = {'latest_endpoint': LATEST, 'esptool': esptool.__version__}
+        import account_link
+        assert account_link.parse_link('http://192.168.1.2:8765/?t='+'a'*32).host == '192.168.1.2'
+        result['account_link'] = True
         # Load the exact ESP32-S3 stub resource the real installer will need.
         from esptool.targets.esp32s3 import ESP32S3ROM
         from esptool.loader import StubFlasher
@@ -447,7 +474,10 @@ def main():
         root.update()
         window.language.set('Español'); window.translate(); root.update()
         window.language.set('English'); window.translate(); root.update()
-        Path(sys.argv[2]).write_text(json.dumps({'gui':True,'languages':['en','es']}),encoding='utf-8')
+        window.start_accounts(); root.update()
+        assert window.link_dialog and window.link_dialog.entry.winfo_exists()
+        window.link_dialog.close(); root.update()
+        Path(sys.argv[2]).write_text(json.dumps({'gui':True,'languages':['en','es'],'account_link':True}),encoding='utf-8')
         root.destroy()
         return
     root.mainloop()
