@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.227](https://github.com/Faga250885/Doceink/releases/tag/v0.75.227).
-- [Firmware OTA 0.75.227](https://github.com/Faga250885/Doceink/releases/download/v0.75.227/Doceink-EInk4.bin).
+- [Versión documentada 0.75.228](https://github.com/Faga250885/Doceink/releases/tag/v0.75.228).
+- [Firmware OTA 0.75.228](https://github.com/Faga250885/Doceink/releases/download/v0.75.228/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.228
+
+Corrige un fallo de 0.75.227 que podía detener el Wi-Fi antes de abrir la transferencia de archivos. Se restaura por precaución el procedimiento de conexión anterior.
+
+Cuando falla la descarga de Clima, se muestra un diagnóstico. Los fallos de descarga anteriores a 0.75.227 continúan en investigación.
 
 ## Novedades de 0.75.227
 

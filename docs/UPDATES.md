@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.227](https://github.com/Faga250885/Doceink/releases/tag/v0.75.227).
-- [OTA firmware: 0.75.227](https://github.com/Faga250885/Doceink/releases/download/v0.75.227/Doceink-EInk4.bin).
+- [Documented version: 0.75.228](https://github.com/Faga250885/Doceink/releases/tag/v0.75.228).
+- [OTA firmware: 0.75.228](https://github.com/Faga250885/Doceink/releases/download/v0.75.228/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.228
+
+Fixes a 0.75.227 issue that could stop Wi-Fi before file transfer starts and restores the previous connection procedure as a precaution.
+
+Weather download failures display diagnostics. The pre-existing download issue remains under investigation.
 
 ## What's new in 0.75.227
 
