@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.218](https://github.com/Faga250885/Doceink/releases/tag/v0.75.218).
-- [Firmware OTA 0.75.218](https://github.com/Faga250885/Doceink/releases/download/v0.75.218/Doceink-EInk4.bin).
+- [Versión documentada 0.75.220](https://github.com/Faga250885/Doceink/releases/tag/v0.75.220).
+- [Firmware OTA 0.75.220](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.220
+
+Disponible por el actualizador Wi-Fi habitual, también desde la beta 0.75.219. En **Ajustes → Pantalla → Apariencia**, activa por separado Calendario, Clima y el widget experimental de Consumo de IA. Debe quedar al menos uno activo. Los gestos omiten los desactivados, con uno solo no hay puntos y la selección se conserva tras standby y reinicio.
+
+El tipo de batería usa tabs **Icono / Número**. Los tabs dentro de tarjetas blancas tienen un fondo gris con trama y la opción seleccionada negra, también en pantalla monocroma.
+
+El widget opcional de IA consulta directamente por Wi-Fi los porcentajes de cuota de sesión y semana de **Codex con cuenta ChatGPT** y **Claude**, sin servidor ni PC encendido. No cuenta tokens exactos ni garantiza mostrar el consumo de todas las conversaciones de ChatGPT. Para vincularlo, importa los accesos de una sesión existente con la [herramienta local](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/preparar-sesiones.html); consulta las [instrucciones](PRIMEROS-PASOS.md#widget-experimental-de-consumo-de-ia). Los endpoints privados pueden cambiar o rechazar la cuenta, incluida Claude Team. Si la sesión caduca hay que importarla de nuevo. Las cuentas sin vincular no muestran lecturas inventadas.
 
 ## Novedades de 0.75.218
 

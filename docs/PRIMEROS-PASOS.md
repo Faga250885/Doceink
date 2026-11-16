@@ -56,7 +56,7 @@ Activa **Disco USB** en Ajustes → Archivos. Copia los archivos desde el ordena
 
 Los iconos de las aplicaciones del Home miden 50 × 50 píxeles, sin una base adicional detrás. Usan Lucide, excepto ChatGPT, que conserva su logo original escalado proporcionalmente. Las variantes del clima siguen el mismo tamaño.
 
-La tarjeta superior del Home tiene widgets de Calendario y Clima de hoy: desliza a los lados para cambiarlos. El Home recuerda la selección tras standby y reinicio. En Calendario, desliza arriba o abajo para cambiar de mes o toca el encabezado para elegir mes y año. Los indicadores son negros y el widget activo tiene el punto más grande.
+La tarjeta superior del Home ofrece Calendario, Clima de hoy y Consumo de IA experimental: desliza a los lados para cambiar entre los widgets activos. El Home recuerda la selección tras standby y reinicio. En Calendario, desliza arriba o abajo para cambiar de mes o toca el encabezado para elegir mes y año. Los indicadores son negros y el widget activo tiene el punto más grande; se ocultan si solo queda uno.
 
 Clima muestra solo el número de temperatura y un icono grande en paneles redondeados, con una fila de pronóstico cada dos horas debajo. Toca el bloque gris para abrir Clima. La hora guardada y el icono de actualizar comparten un control transparente arriba a la derecha: toca cualquiera para conectar el Wi-Fi y actualizar el pronóstico en la microSD. Ambos se atenúan mientras descargan. Cambiar de widget usa la copia guardada sin iniciar una descarga. Abre Clima para elegir una ciudad.
 
@@ -65,6 +65,23 @@ El mes aparece a la izquierda del calendario y el icono de **Tareas** a la derec
 Los días con tareas pendientes con fecha o cumpleaños tienen un contorno negro punteado y redondeado, sin relleno; se incluyen las tareas repetidas. Hoy conserva su fondo negro. Mantén pulsado un día: Metalio vibra y pregunta si quieres agregar una tarea. Solo al aceptar se abre la misma aplicación para empezar el dictado con esa fecha; Cancelar o el botón rojo cierran la pregunta. Desliza arriba o abajo en Calendario para cambiar de mes. También puedes crear desde **Agregar tarea**, por micrófono o escritura. La pantalla inicial de dictado no tiene campo de texto. Pulsa Escribir tarea para abrir el editor, o dicta y revisa el texto reconocido en su campo editable. El texto queda centrado verticalmente y alineado a la izquierda, también con el teclado abierto. Por hacer y Hechas muestran la lista directamente debajo de las pestañas, sin franja de contador. El dictado puede detectar la fecha y la repetición; después permite Crear tarea o Editar información. Manualmente puedes elegir sin fecha o con fecha y una repetición: una sola vez, diaria, semanal, mensual o anual. Para cumpleaños utiliza repetición anual. El tab Con fecha / Sin fecha controla la fecha; los tres campos de día, mes y año abren un teclado solo numérico que escribe directamente en el campo elegido. Ciérralo con el botón rojo o tocando fuera y usa Guardar cambios en el formulario para validar y guardar la fecha. Editar permite cambiar el título, fecha y repetición; eliminar pide confirmación.
 
 Las tareas se guardan en `metalio/e-ink/agenda.json` en la microSD. Las listas anteriores se incorporan al primer guardado y sus archivos originales se conservan. Al completar una tarea repetida, avanza a la siguiente fecha posterior a hoy; las mensuales conservan el día original y usan el último día de los meses más cortos. No se crean copias de cada repetición. Límite: 256 tareas en total. Esta agenda no añade alarmas ni notificaciones de vencimiento.
+
+## Apariencia del Home
+
+En **Ajustes → Pantalla → Apariencia → Widgets del Home**, activa Calendario, Clima o Consumo de IA por separado. Debe quedar al menos uno activo; con uno solo no se muestran los puntos. El Home recuerda los widgets activos y el último seleccionado tras standby y reinicio. La batería se elige con tabs **Icono / Número**. Los tabs dentro de tarjetas blancas tienen fondo gris con trama.
+
+## Widget experimental de consumo de IA
+
+Actualiza normalmente por Wi-Fi a **0.75.220**. Para instalar el firmware no necesitas la herramienta ni USB. Vincular las cuentas es un paso independiente:
+
+1. Descarga [preparar-sesiones.html](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/preparar-sesiones.html) y ábrelo localmente en un navegador.
+2. Selecciona el archivo `auth.json` de una sesión existente de Codex (normalmente `.codex/auth.json`) y/o `.credentials.json` de Claude Code (normalmente `.claude/.credentials.json`). Deben existir previamente en tus aplicaciones con sesión iniciada. La herramienta no extrae accesos del almacén del sistema ni de cookies del navegador. Usa solo cuentas que tengas autorización para vincular.
+3. Exporta `ai_usage-auth.json` y cópialo a **`metalio/e-ink/` en la microSD**. La herramienta funciona localmente sin subir los archivos seleccionados. El archivo exportado contiene accesos reales con sus permisos originales: mantenlo privado y no lo envíes por chat.
+4. Activa **Consumo de IA** en Apariencia, entra a su widget del Home y toca Actualizar. Metalio consulta a los proveedores directamente por Wi-Fi, sin servidor intermedio ni ordenador encendido.
+
+Las barras muestran **porcentajes de cuota** de sesión y semana, no tokens exactos. La lectura de OpenAI corresponde a Codex con cuenta ChatGPT y no garantiza el total de todas las conversaciones de ChatGPT. Claude Team u otras cuentas pueden devolver un error de acceso: son endpoints privados experimentales, no una integración pública garantizada. Si caduca la sesión debes importarla nuevamente; no se renuevan credenciales automáticamente. El refresco automático funciona cada 15 minutos mientras el widget está visible, además del refresco manual.
+
+Toca un proveedor para actualizarlo o desvincularlo. Desvincular elimina su acceso local de la microSD y su lectura, sin revocar la sesión de la aplicación original. Las claves y los saldos de la API son independientes de este widget.
 
 ## Libros
 
@@ -122,7 +139,7 @@ Consulta [fuentes originales, licencias y preparación](../assets/system-fonts/v
 
 | Grupo | Orden y ubicación |
 |---|---|
-| Pantalla | Primero Fondos (galería, carrusel y fondos dinámicos), después la cuadrícula de Home y al final Apariencia (batería, tipografía del sistema y refresco). |
+| Pantalla | Primero Fondos (galería, carrusel y fondos dinámicos), después la cuadrícula de Home y al final Apariencia (widgets, batería, tipografía del sistema y refresco). |
 | Conexiones | Primero Wi-Fi y después el modo y las acciones de Bluetooth; las ayudas siguen a sus controles. |
 | Archivos | Transferencia por Wi-Fi, Disco USB y después estado y capacidad de la microSD. |
 | Sistema | Energía (suspensión, apagado y espera de Wi-Fi), General (idioma y vibración), Reloj (automático y manual), Información (versión, actualización y notas, datos técnicos y créditos). |

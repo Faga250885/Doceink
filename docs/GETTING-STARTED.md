@@ -60,13 +60,30 @@ The month is left aligned and the **Tasks** icon appears on the calendar's right
 
 Home application icons measure 50 × 50 pixels without an extra plate behind them. They use Lucide, except ChatGPT, which keeps its original logo scaled proportionally. Forecast variants follow the same icon dimensions.
 
-The upper Home card has Calendar and Today’s Weather widgets: swipe sideways to switch between them. Home remembers your selection after standby and restart. In Calendar, swipe up or down to change months, or tap the heading to choose a month and year. Black page indicators use a larger dot for the active widget.
+The upper Home card offers Calendar, Today’s Weather and experimental AI Usage: swipe sideways to switch between enabled widgets. Home remembers your selection after standby and restart. In Calendar, swipe up or down to change months, or tap the heading to choose a month and year. Black page indicators use a larger dot for the active widget and disappear when only one is enabled.
 
 Weather shows the temperature number and a large icon in rounded panels, with a single timeline in two-hour steps below. Tap the gray card to open Weather. The saved update time and refresh icon share one transparent control at the top right; tap either to connect Wi-Fi and update the forecast on the microSD. Both dim while updating. Swiping uses the saved forecast without starting a download. Open Weather to choose a city.
 
 Days with pending dated tasks or birthdays have a black dotted rounded outline without fill, including recurring tasks. Today keeps its black fill. Hold a day: Metalio vibrates and asks whether to add a task. Only accepting opens the same app to start dictation with that date. Cancel or the red back button dismisses the question. Swipe up or down on Calendar to change the month. **Add task** also supports dictation or typing. The initial dictation screen has no text field. Choose Write task to open the editor, or dictate and review the recognized text in its editable field. The field text is vertically centered with left alignment, including while the keyboard is open. To do and Done show the list directly below the tabs, without a counter strip. Dictation can detect the date and recurrence, then offers Create task or Edit details. Manual editing supports no date or a date, and once, daily, weekly, monthly or yearly repetition. For birthdays, use yearly repetition. The With date / No date tab controls the date; the three date fields open a numeric-only keypad that writes directly into the chosen field. Close it with the red button or tap outside, then use Save changes in the form to validate and save the date. Editing changes title, date and repetition; deletion asks for confirmation.
 
 Tasks live in `metalio/e-ink/agenda.json` on microSD. Existing lists are incorporated on the first save and their original files are retained. Completing a repeating task advances to its next date after today. Monthly tasks retain their original day and use the final day of shorter months. Repetitions do not create extra copies. Limit: 256 tasks total. This agenda does not add due-date alarms or notifications.
+
+## Home appearance
+
+In **Settings → Display → Appearance → Home widgets**, enable Calendar, Weather or AI Usage independently. At least one stays enabled; with only one, page dots disappear. Home remembers the enabled widgets and last selection after standby and restart. Battery display is selected with **Icon / Number** tabs. Gray tab rails distinguish these controls inside white cards.
+
+## Experimental AI usage widget
+
+Update normally over Wi-Fi to **0.75.220**. Firmware installation does not require the helper or USB. Account linking is separate:
+
+1. Download [preparar-sesiones.html](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/preparar-sesiones.html) and open it locally in a browser.
+2. Choose an existing Codex `auth.json` file (normally `.codex/auth.json`) and/or a Claude Code `.credentials.json` file (normally `.claude/.credentials.json`). These files must already exist from your signed-in applications. This helper does not retrieve credentials from a system vault or browser cookies. Use only an account you are authorized to connect.
+3. Export `ai_usage-auth.json` and copy it to **`metalio/e-ink/` on the microSD**. The helper works locally without uploading the selected files. The export contains real access credentials with their original privileges; keep it private and never post it in chat.
+4. Enable **AI Usage** in Appearance, switch to its Home card and tap Refresh. Metalio queries the providers directly over Wi-Fi. No intermediary server or always-on computer is used.
+
+Bars show available session/weekly **quota percentages**, not exact tokens. OpenAI readings concern Codex usage backed by ChatGPT, not a guaranteed total for all ChatGPT chats. Claude Team or other accounts can return an access error: these private endpoints are experimental, not a guaranteed public integration. An expired session must be imported again; there is no automatic credential renewal. Refresh runs while the widget is visible, at most every 15 minutes automatically, plus manual refresh.
+
+Tap a provider to refresh or unlink it. Unlinking removes its local access from the microSD and clears its reading; it does not revoke the original application session. API keys and API credit balances are unrelated to this widget.
 
 ## Books
 
@@ -124,7 +141,7 @@ See [font sources, licenses and preparation](../assets/system-fonts/v1/README.md
 
 | Group | Order and location |
 |---|---|
-| Display | Wallpapers first (gallery, slideshow, dynamic backgrounds), Home shortcut grid, then Appearance (battery, system typeface, screen refresh). |
+| Display | Wallpapers first (gallery, slideshow, dynamic backgrounds), Home shortcut grid, then Appearance (widgets, battery, system typeface, screen refresh). |
 | Connections | Wi-Fi setup first, then Bluetooth mode and device actions; help follows its control. |
 | Files | Wi-Fi transfer, USB Disk, then microSD state and capacity. |
 | System | Energy (standby, shutdown, Wi-Fi idle delay), General (language and vibration), Clock (automatic then manual), Information (version, updates and notes, device details, then credits). |

@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.218](https://github.com/Faga250885/Doceink/releases/tag/v0.75.218).
-- [OTA firmware: 0.75.218](https://github.com/Faga250885/Doceink/releases/download/v0.75.218/Doceink-EInk4.bin).
+- [Documented version: 0.75.220](https://github.com/Faga250885/Doceink/releases/tag/v0.75.220).
+- [OTA firmware: 0.75.220](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.220
+
+Available through the normal Wi-Fi updater, including from the 0.75.219 beta. In **Settings → Display → Appearance**, choose Calendar, Weather and the experimental AI Usage widget independently. At least one must stay enabled. Swipes skip disabled widgets, a single widget has no page dots, and the choice survives standby and restart.
+
+Battery display now uses **Icon / Number** tabs. Tab controls inside white cards use a gray patterned rail with a black selected option, including on the monochrome display.
+
+The optional AI widget reads current session and weekly quota percentages directly over Wi-Fi for **ChatGPT-backed Codex** and **Claude**, without a server or an always-on PC. It does not report exact token counts or guarantee usage across ordinary ChatGPT conversations. Linking requires importing existing session access credentials once using the [local helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/preparar-sesiones.html); see the [setup instructions](GETTING-STARTED.md#experimental-ai-usage-widget). Private provider endpoints may reject the account, including Claude Team, or change; expired sessions require reimporting. Unlinked accounts show no fabricated readings.
 
 ## What's new in 0.75.218
 
