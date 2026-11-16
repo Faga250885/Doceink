@@ -2,15 +2,7 @@
 
 **English** | [Español](README.es.md)
 
-This directory contains the Windows/macOS GUI installer, not the complete firmware source project. End users should download the `.exe` or Apple Silicon `.dmg` from [Releases](https://github.com/Faga250885/Doceink/releases/latest). Installer 0.75.221.1 detects USB automatically and has no port selector.
-
-## Link an existing account over Wi-Fi
-
-Setup **0.75.221.1** adds **Link accounts over Wi-Fi**, available without USB. On Metalio firmware **0.75.221 or later**, open **AI Usage → account → Link**, scan the QR and copy its temporary link into Setup. Click **Link**. Setup identifies the selected provider and reads only its standard local session file: Codex `auth.json` under `$CODEX_HOME` or `~/.codex/`, or Claude Code `.credentials.json` under `$CLAUDE_CONFIG_DIR` or `~/.claude/`. Only the access token and optional Codex account ID go directly to the selected Metalio on trusted local Wi-Fi. No JSON export, local credential copy, provider login, proxy or intermediary server is used.
-
-This version supports file-backed sessions; sessions kept only in an OS keychain or vault are reported as unavailable. It does not extract browser cookies or renew sessions. Source files retain their original permissions and remain unchanged. Account compatibility and quota endpoints remain experimental. Closing cancels any steps not yet sent; an upload already in progress may still complete.
-
-Opening Setup enumerates USB devices without probing/resetting them. Firmware identification that may restart Metalio now starts only when **Check Metalio** is clicked. The main window scrolls on smaller screens. Existing install, backup, update and restore confirmations remain.
+This directory contains the Windows/macOS GUI installer, not the complete firmware source project. End users should download the `.exe` or Apple Silicon `.dmg` from [Releases](https://github.com/Faga250885/Doceink/releases/latest). Installer 0.75.158.1 detects USB automatically and has no port selector.
 
 ## Build
 
@@ -44,9 +36,9 @@ The source distribution attached to the release includes the installer source an
 The packaged executable also supports internal verification modes:
 
 ```powershell
-.\DoceInk-Setup-0.75.221.1.exe --self-test result.json
-.\DoceInk-Setup-0.75.221.1.exe --smoke-test gui.json
-.\DoceInk-Setup-0.75.221.1.exe --download-test download.json
+.\DoceInk-Setup-0.75.158.1.exe --self-test result.json
+.\DoceInk-Setup-0.75.158.1.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.158.1.exe --download-test download.json
 ```
 
 These verify included resources and the GUI without enumerating or opening serial ports. They do not replace a real hardware installation test.

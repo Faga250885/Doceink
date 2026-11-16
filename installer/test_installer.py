@@ -113,23 +113,6 @@ class InstallTests(unittest.TestCase):
             self.assertIn('disabled',window.restore.state())
         root.destroy()
 
-    def test_account_link_available_without_usb_and_no_serial_probe_on_open(self):
-        import tkinter as tk
-        root=tk.Tk();root.withdraw()
-        window=a.Window(root,scan=True)
-        port=SimpleNamespace(device='SIMULATED',vid=0x303a,pid=0x1001)
-        with patch('serial.tools.list_ports.comports',return_value=[port]),patch.object(a.threading,'Thread') as thread:
-            window.refresh_detection();thread.assert_not_called()
-            self.assertEqual(window.stage,'unverified')
-            self.assertEqual(window.install.cget('text'),'Check Metalio')
-            window.start();thread.assert_called_once()
-        window.busy=False;window.port.set('');window.translate()
-        self.assertNotIn('disabled',window.accounts.state())
-        with patch('account_link.load_session') as load:
-            window.start_accounts();root.update();self.assertIsNotNone(window.link_dialog);load.assert_not_called()
-            window.link_dialog.close();self.assertIsNone(window.link_dialog)
-        root.destroy()
-
     def test_new_install_asks_to_confirm_original_before_start(self):
         import tkinter as tk
         root=tk.Tk();root.withdraw()
