@@ -42,7 +42,6 @@ class AccountLinkDialog:
         self.window.transient(parent)
         self.window.configure(bg='white')
         self.window.protocol('WM_DELETE_WINDOW', self.close)
-        self.window.bind('<Destroy>', self.destroyed, add='+')
         self.window.bind('<Escape>', lambda _: self.close())
         if parent.winfo_viewable(): self.window.grab_set()
         panel = ttk.Frame(self.window, padding=24); panel.pack(fill='both', expand=True)
@@ -104,15 +103,6 @@ class AccountLinkDialog:
         self.closed = True
         self.cancel.set()
         self.url.set('')
-        try: self.window.after_cancel(self.timer)
-        except tk.TclError: pass
+        self.window.after_cancel(self.timer)
         self.window.destroy()
-        self.on_close()
-
-    def destroyed(self, event):
-        if event.widget != self.window or self.closed: return
-        self.closed = True
-        self.cancel.set()
-        try: self.window.after_cancel(self.timer)
-        except tk.TclError: pass
         self.on_close()

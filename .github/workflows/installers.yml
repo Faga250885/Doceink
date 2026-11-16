@@ -8,7 +8,6 @@ on:
         default: all
         options:
           - all
-          - all-alternate
           - apple-silicon
 permissions:
   contents: read
@@ -17,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        include: ${{ fromJSON((inputs.target == 'apple-silicon' || inputs.target == 'all-alternate') && '[{"runner":"macos-26","arch":"arm64"}]' || '[{"runner":"macos-15","arch":"arm64"}]') }}
+        include: ${{ fromJSON(inputs.target == 'apple-silicon' && '[{"runner":"macos-26","arch":"arm64"}]' || '[{"runner":"macos-15","arch":"arm64"}]') }}
     runs-on: ${{ matrix.runner }}
     timeout-minutes: 25
     steps:

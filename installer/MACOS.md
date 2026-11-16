@@ -64,7 +64,7 @@ Las pruebas de software no sustituyen una instalación USB física.
 Creado por faga12@gmail.com
 https://github.com/Faga250885/Doceink
 
-Account linking / Vincular cuentas (Setup 0.75.221.2)
+Account linking / Vincular cuentas (Setup 0.75.221.1)
 
 Choose Link accounts over Wi-Fi, paste the temporary AI Usage QR link from
 Metalio 0.75.221 or later, then click Link. No USB or manual JSON export is

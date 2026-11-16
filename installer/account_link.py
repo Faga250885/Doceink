@@ -145,8 +145,6 @@ def link_account(value, *, opener=local_open, loader=load_session, cancelled=lam
     except LinkError:
         raise
     except urllib.error.HTTPError as error:
-        code = 'expired_link' if error.code == 403 else 'save'
-        error.close()
-        raise LinkError(code) from None
+        raise LinkError('expired_link' if error.code == 403 else 'save') from None
     except (OSError, ValueError, UnicodeError, RecursionError):
         raise LinkError('network') from None

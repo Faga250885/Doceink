@@ -2,11 +2,11 @@
 
 [English](README.md) | **Español**
 
-Esta carpeta contiene el instalador gráfico para Windows y macOS, no el proyecto completo del firmware. Descarga el `.exe` o el `.dmg` para Apple Silicon en [Releases](https://github.com/Faga250885/Doceink/releases/latest). El instalador 0.75.221.2 detecta el USB automáticamente y no tiene selector de puertos.
+Esta carpeta contiene el instalador gráfico para Windows y macOS, no el proyecto completo del firmware. Descarga el `.exe` o el `.dmg` para Apple Silicon en [Releases](https://github.com/Faga250885/Doceink/releases/latest). El instalador 0.75.221.1 detecta el USB automáticamente y no tiene selector de puertos.
 
 ## Vincular una cuenta existente por Wi-Fi
 
-Setup **0.75.221.2** añade **Vincular cuentas por Wi-Fi**, disponible sin USB. En Metalio con firmware **0.75.221 o posterior**, abre **Consumo de IA → cuenta → Vincular**, escanea el QR y copia su enlace temporal en Setup. Pulsa **Vincular**. Setup identifica el proveedor elegido y lee solo su archivo de sesión local habitual: `auth.json` de Codex en `$CODEX_HOME` o `~/.codex/`, o `.credentials.json` de Claude Code en `$CLAUDE_CONFIG_DIR` o `~/.claude/`. Envía únicamente el acceso y el identificador opcional de Codex directamente al Metalio elegido por una red local de confianza. Sin exportar JSON, crear otra copia local de las credenciales, iniciar sesión en proveedores ni usar proxies o servidores intermedios.
+Setup **0.75.221.1** añade **Vincular cuentas por Wi-Fi**, disponible sin USB. En Metalio con firmware **0.75.221 o posterior**, abre **Consumo de IA → cuenta → Vincular**, escanea el QR y copia su enlace temporal en Setup. Pulsa **Vincular**. Setup identifica el proveedor elegido y lee solo su archivo de sesión local habitual: `auth.json` de Codex en `$CODEX_HOME` o `~/.codex/`, o `.credentials.json` de Claude Code en `$CLAUDE_CONFIG_DIR` o `~/.claude/`. Envía únicamente el acceso y el identificador opcional de Codex directamente al Metalio elegido por una red local de confianza. Sin exportar JSON, crear otra copia local de las credenciales, iniciar sesión en proveedores ni usar proxies o servidores intermedios.
 
 Esta versión admite sesiones guardadas en archivos; si están únicamente en el llavero del sistema, indica que no están disponibles. No extrae cookies ni renueva sesiones. No modifica los archivos originales ni sus permisos. La compatibilidad de las cuentas y los endpoints de cuotas sigue siendo experimental. Cerrar cancela los pasos aún no enviados; un envío ya iniciado podría completarse.
 
@@ -44,9 +44,9 @@ El paquete de código adjunto a la publicación incluye el instalador y los arch
 El ejecutable admite estos modos de verificación internos:
 
 ```powershell
-.\DoceInk-Setup-0.75.221.2.exe --self-test result.json
-.\DoceInk-Setup-0.75.221.2.exe --smoke-test gui.json
-.\DoceInk-Setup-0.75.221.2.exe --download-test download.json
+.\DoceInk-Setup-0.75.221.1.exe --self-test result.json
+.\DoceInk-Setup-0.75.221.1.exe --smoke-test gui.json
+.\DoceInk-Setup-0.75.221.1.exe --download-test download.json
 ```
 
 Comprueban recursos e interfaz sin enumerar ni abrir puertos serie. No sustituyen una prueba de instalación en hardware.
