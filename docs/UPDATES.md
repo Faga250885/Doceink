@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.221](https://github.com/Faga250885/Doceink/releases/tag/v0.75.221).
-- [OTA firmware: 0.75.221](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/Doceink-EInk4.bin).
+- [Documented version: 0.75.222](https://github.com/Faga250885/Doceink/releases/tag/v0.75.222).
+- [OTA firmware: 0.75.222](https://github.com/Faga250885/Doceink/releases/download/v0.75.222/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.222
+
+AI Usage linking is simpler: open **http://doceink.local** on the PC where you use Codex or Claude Code, enter Metalio's code and choose **Copy command**. Paste it into PowerShell to send the access directly over Wi-Fi, without finding the JSON or using Setup. QR, numeric IP and manual file import remain available.
+
+The local name is active only while linking. The link remains temporary and single-use. This does not change experimental quota access or add provider sign-in. See the [guide](GETTING-STARTED.md#experimental-ai-usage-widget).
+
+Language switching uses a more compact generated table, preserving all 1,653 strings in each language.
+
+The Wi-Fi setup page is stored compressed and decoded by the browser. Firmware and the built-in font pack remain in internal flash, with no partition migration.
 
 ## What's new in 0.75.221
 

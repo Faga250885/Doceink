@@ -72,20 +72,24 @@ En **Ajustes → Pantalla → Apariencia → Widgets del Home**, activa Calendar
 
 ## Widget experimental de consumo de IA
 
-Instala **0.75.221** por el actualizador Wi-Fi habitual. Para vincular una cuenta:
+Instala **0.75.222** con el actualizador Wi-Fi habitual. Para vincular una cuenta sin buscar su JSON:
 
 1. Activa **Consumo de IA** en **Ajustes → Pantalla → Apariencia** y entra a su widget del Home.
-2. Toca **ChatGPT · Codex** o **Claude** y pulsa **Vincular**.
-3. Escanea el QR desde un teléfono conectado a la **misma red Wi-Fi de confianza**.
-4. Elige el archivo de una sesión existente: `auth.json` de Codex (normalmente `.codex/auth.json`), `.credentials.json` de Claude Code (normalmente `.claude/.credentials.json`) o un `ai_usage-auth.json` preparado.
+2. Toca **ChatGPT · Codex** o **Claude** y pulsa **Vincular**. Mantén esa pantalla abierta.
+3. En el PC donde usas Codex o Claude Code, conectado al mismo Wi-Fi, abre **http://doceink.local** e introduce el código de seis cifras que muestra Metalio.
+4. Pulsa **Copiar comando**, pégalo en **PowerShell** y pulsa Enter. El comando detecta el archivo de sesión del proveedor elegido y envía únicamente su acceso directamente al Metalio. No instala programas ni crea un JSON exportado.
 
-Al elegirlo, Metalio lo guarda automáticamente en `metalio/e-ink/ai_usage-auth.json` de la microSD, cierra el QR y actualiza el widget. Reemplaza solo el proveedor elegido y conserva el otro. No hace falta copiar manualmente a la tarjeta, un servidor intermedio ni un PC encendido. Cierra el modal o pulsa el botón rojo para cancelar. El enlace funciona una vez y caduca a los 15 minutos. Desactiva Disco USB antes de guardar.
+El QR abre la misma página sin escribir el código. Si tu red o PC no resuelve `doceink.local`, usa la dirección IP que aparece debajo o escanea el QR. El nombre local solo está disponible mientras la vinculación está abierta. En redes de invitados con aislamiento entre dispositivos, ambos deben pasar a una red que permita la comunicación local.
 
-Esto es una **importación local**, no un nuevo inicio de sesión en los proveedores. El archivo debe existir previamente y estar disponible en el dispositivo que abre la página. La página no extrae sesiones del navegador ni del almacén de credenciales del sistema. Envía solo el acceso de sesión y el identificador opcional de Codex al Metalio, sin contraseña, ID token ni refresh token. Esos accesos conservan sus permisos originales: mantén el archivo privado y no lo envíes por chat. Si lo necesitas, siguen disponibles la [herramienta de preparación local](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/preparar-sesiones.html) y la copia manual a microSD.
+El comando para Windows busca el `auth.json` de Codex en `CODEX_HOME` o `.codex`, o el `.credentials.json` de Claude Code en `CLAUDE_CONFIG_DIR` o `.claude`. La sesión debe existir previamente en ese PC. No extrae cookies del navegador ni accesos guardados exclusivamente en el almacén de credenciales del sistema. Para macOS/Linux o una ubicación diferente, abre **Elegir archivo manualmente** en la página y selecciona el archivo de sesión existente o un `ai_usage-auth.json` preparado. Sigue disponible la [herramienta de preparación local](https://github.com/Faga250885/Doceink/releases/download/v0.75.222/preparar-sesiones.html).
 
-Las barras muestran **porcentajes de cuota** de sesión y semana, no tokens exactos ni créditos API. La lectura de OpenAI corresponde a Codex con cuenta ChatGPT; no garantiza el total de chats normales. Los endpoints privados pueden cambiar o rechazar la cuenta, incluida Claude Team. Usa solo cuentas que tengas autorización para vincular. No hay renovación automática de credenciales: importa una nueva sesión cuando caduque. El refresco automático funciona cada 15 minutos mientras se ve el widget, además del refresco manual.
+Metalio guarda el acceso automáticamente en `metalio/e-ink/ai_usage-auth.json` de la microSD, cierra el QR y actualiza el widget. Reemplaza solo el proveedor elegido y conserva el otro. Desactiva Disco USB antes de guardar. Cierra el modal o pulsa el botón rojo para cancelar. El enlace es de un solo uso y caduca a los 15 minutos; el código admite cinco intentos.
 
-Toca un proveedor vinculado para actualizarlo o desvincularlo. Desvincular quita su copia local y su lectura sin revocar la sesión de la aplicación original. La compatibilidad con cuentas reales sigue siendo experimental.
+Esta es una importación local, no un nuevo inicio de sesión del proveedor. Usa una red Wi-Fi de confianza y cuentas que tengas autorización para vincular. Se envían solo el acceso y el identificador opcional de Codex, sin contraseña, ID token ni refresh token; el acceso conserva sus permisos originales. No se usa servidor intermediario y el PC puede apagarse después de vincular. No hay renovación automática: importa una sesión nueva cuando caduque.
+
+Las barras muestran **porcentajes de cuota** de sesión y semana, no tokens exactos ni créditos API. La lectura de OpenAI corresponde a Codex con cuenta ChatGPT; no garantiza el total de chats normales. Los endpoints privados pueden cambiar o rechazar la cuenta, incluida Claude Team. La compatibilidad con cuentas reales sigue siendo experimental.
+
+El refresco automático funciona cada 15 minutos mientras se ve el widget, además del manual. Toca un proveedor vinculado para actualizarlo o desvincularlo. Desvincular quita su copia local y su lectura sin revocar la sesión de la aplicación original.
 
 ## Libros
 

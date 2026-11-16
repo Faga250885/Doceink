@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.221](https://github.com/Faga250885/Doceink/releases/tag/v0.75.221).
-- [Firmware OTA 0.75.221](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/Doceink-EInk4.bin).
+- [Versión documentada 0.75.222](https://github.com/Faga250885/Doceink/releases/tag/v0.75.222).
+- [Firmware OTA 0.75.222](https://github.com/Faga250885/Doceink/releases/download/v0.75.222/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.222
+
+Vincular Consumo de IA es más sencillo: abre **http://doceink.local** en el PC donde usas Codex o Claude Code, introduce el código de Metalio y pulsa **Copiar comando**. Pégalo en PowerShell para enviar el acceso directamente por Wi-Fi, sin buscar el JSON ni usar Setup. El QR y la IP siguen disponibles, así como la selección manual de archivo.
+
+El nombre local se activa solo durante la vinculación. El enlace sigue siendo temporal y de un solo uso. No cambia el acceso experimental a las cuotas ni añade inicio de sesión de los proveedores. Consulta la [guía](PRIMEROS-PASOS.md#widget-experimental-de-consumo-de-ia).
+
+La tabla de cambio de idioma se genera de forma más compacta, conservando las 1.653 traducciones de cada idioma.
+
+La página de configuración Wi-Fi se guarda comprimida y la descomprime el navegador. El firmware y el paquete integrado de fuentes permanecen en flash interna, sin migrar particiones.
 
 ## Novedades de 0.75.221
 

@@ -74,20 +74,24 @@ In **Settings → Display → Appearance → Home widgets**, enable Calendar, We
 
 ## Experimental AI usage widget
 
-Install **0.75.221** through the normal Wi-Fi updater. To link an account:
+Install **0.75.222** through the normal Wi-Fi updater. To link an account without finding its JSON:
 
 1. Enable **AI Usage** in **Settings → Display → Appearance**, then switch to its Home widget.
-2. Tap **ChatGPT · Codex** or **Claude**, then **Link**.
-3. Scan the QR with a phone connected to the **same trusted Wi-Fi network**.
-4. Choose the existing session file: Codex `auth.json` (normally `.codex/auth.json`), Claude Code `.credentials.json` (normally `.claude/.credentials.json`), or a prepared `ai_usage-auth.json`.
+2. Tap **ChatGPT · Codex** or **Claude**, then **Link**. Keep this screen open.
+3. On the PC where you use Codex or Claude Code, connected to the same Wi-Fi, open **http://doceink.local** and enter the six-digit code shown by Metalio.
+4. Choose **Copy command**, paste it into **PowerShell** and press Enter. The command finds the selected provider's session file and sends only its access directly to Metalio. It installs nothing and creates no exported JSON.
 
-Choosing the file saves it automatically to `metalio/e-ink/ai_usage-auth.json` on Metalio microSD, closes the QR and refreshes the widget. Only the selected provider is replaced; the other remains linked. No manual card copy, intermediary server or always-on PC is required. Close the dialog or use the red button to cancel. The one-use link expires after 15 minutes. Disable USB Disk before saving.
+The QR opens the same page without typing the code. If your PC or network cannot resolve `doceink.local`, use the IP address shown below it or scan the QR. The local name is available only while linking is open. Guest networks with client isolation must be replaced with a network that allows local device communication.
 
-This is **local file import**, not a new provider sign-in. The session file must already exist and be available on the device opening the page. The page does not extract sessions from browser cookies or an OS credential vault. It sends only the session access token and optional Codex account ID to your Metalio, without password, ID token or refresh token. These access credentials retain their original permissions: keep the source file private and never post it in chat. If needed, the [local preparation helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/preparar-sesiones.html) and manual microSD import remain available.
+The Windows command finds Codex `auth.json` in `CODEX_HOME` or `.codex`, or Claude Code `.credentials.json` in `CLAUDE_CONFIG_DIR` or `.claude`. That PC must already have the session file. It does not extract browser cookies or sessions stored exclusively in the OS credential vault. For macOS/Linux or another location, expand **Choose file manually** on the page and select the existing session file or prepared `ai_usage-auth.json`. The [local preparation helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.222/preparar-sesiones.html) remains available.
 
-Bars show session/weekly **quota percentages**, not exact tokens or API credits. OpenAI readings concern Codex backed by ChatGPT, not a guaranteed total for ordinary ChatGPT chats. Private provider endpoints may change or deny the account, including Claude Team. Use only accounts you are authorized to connect. There is no automatic credential renewal; import a new session when it expires. Automatic refresh runs every 15 minutes while the widget is visible, with manual refresh available.
+Metalio saves the access automatically to `metalio/e-ink/ai_usage-auth.json` on microSD, closes the QR and refreshes the widget. Only the selected provider is replaced; the other remains linked. Disable USB Disk before saving. Close the dialog or use the red button to cancel. The single-use link expires after 15 minutes; the code allows five attempts.
 
-Tap a linked provider to refresh or unlink it. Unlinking removes its local copy and reading without revoking the original application session. Real account compatibility remains experimental.
+This is local import, not a new provider sign-in. Use a trusted Wi-Fi network and accounts you are authorized to link. Only the access token and optional Codex account ID are sent, without password, ID token or refresh token; the access retains its original permissions. No intermediary server is used, and the PC may be shut down after linking. There is no automatic renewal: import a new session when it expires.
+
+Bars show session/weekly **quota percentages**, not exact tokens or API credits. OpenAI readings concern Codex backed by ChatGPT, not a guaranteed total for ordinary ChatGPT chats. Private provider endpoints may change or deny the account, including Claude Team. Real account compatibility remains experimental.
+
+Automatic refresh runs every 15 minutes while the widget is visible, with manual refresh available. Tap a linked provider to refresh or unlink it. Unlinking removes its local copy and reading without revoking the original application session.
 
 ## Books
 
