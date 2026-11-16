@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.220](https://github.com/Faga250885/Doceink/releases/tag/v0.75.220).
-- [Firmware OTA 0.75.220](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/Doceink-EInk4.bin).
+- [Versión documentada 0.75.221](https://github.com/Faga250885/Doceink/releases/tag/v0.75.221).
+- [Firmware OTA 0.75.221](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.221
+
+La vinculación del Consumo de IA ahora usa QR: toca una cuenta, pulsa **Vincular**, escanea desde un teléfono conectado al mismo Wi-Fi y elige su archivo de sesión existente. Se guarda automáticamente en la microSD, se cierra la vinculación y se actualiza el widget. Sin copiar archivos manualmente a la tarjeta ni usar un servidor intermedio.
+
+El enlace temporal funciona una vez, caduca a los 15 minutos y se cierra al salir del modal. Se reemplaza solo la cuenta elegida y se conserva la otra. Se envían únicamente el acceso y el identificador opcional de Codex, sin contraseña, ID token ni refresh token. Usa una red Wi-Fi de confianza. Consulta la [guía](PRIMEROS-PASOS.md#widget-experimental-de-consumo-de-ia).
+
+Esto facilita importar el archivo; no añade inicio de sesión de los proveedores ni garantiza sus cuotas. Se mantienen los límites experimentales de acceso de la 0.75.220.
 
 ## Novedades de 0.75.220
 

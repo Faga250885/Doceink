@@ -72,16 +72,20 @@ En **Ajustes → Pantalla → Apariencia → Widgets del Home**, activa Calendar
 
 ## Widget experimental de consumo de IA
 
-Actualiza normalmente por Wi-Fi a **0.75.220**. Para instalar el firmware no necesitas la herramienta ni USB. Vincular las cuentas es un paso independiente:
+Instala **0.75.221** por el actualizador Wi-Fi habitual. Para vincular una cuenta:
 
-1. Descarga [preparar-sesiones.html](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/preparar-sesiones.html) y ábrelo localmente en un navegador.
-2. Selecciona el archivo `auth.json` de una sesión existente de Codex (normalmente `.codex/auth.json`) y/o `.credentials.json` de Claude Code (normalmente `.claude/.credentials.json`). Deben existir previamente en tus aplicaciones con sesión iniciada. La herramienta no extrae accesos del almacén del sistema ni de cookies del navegador. Usa solo cuentas que tengas autorización para vincular.
-3. Exporta `ai_usage-auth.json` y cópialo a **`metalio/e-ink/` en la microSD**. La herramienta funciona localmente sin subir los archivos seleccionados. El archivo exportado contiene accesos reales con sus permisos originales: mantenlo privado y no lo envíes por chat.
-4. Activa **Consumo de IA** en Apariencia, entra a su widget del Home y toca Actualizar. Metalio consulta a los proveedores directamente por Wi-Fi, sin servidor intermedio ni ordenador encendido.
+1. Activa **Consumo de IA** en **Ajustes → Pantalla → Apariencia** y entra a su widget del Home.
+2. Toca **ChatGPT · Codex** o **Claude** y pulsa **Vincular**.
+3. Escanea el QR desde un teléfono conectado a la **misma red Wi-Fi de confianza**.
+4. Elige el archivo de una sesión existente: `auth.json` de Codex (normalmente `.codex/auth.json`), `.credentials.json` de Claude Code (normalmente `.claude/.credentials.json`) o un `ai_usage-auth.json` preparado.
 
-Las barras muestran **porcentajes de cuota** de sesión y semana, no tokens exactos. La lectura de OpenAI corresponde a Codex con cuenta ChatGPT y no garantiza el total de todas las conversaciones de ChatGPT. Claude Team u otras cuentas pueden devolver un error de acceso: son endpoints privados experimentales, no una integración pública garantizada. Si caduca la sesión debes importarla nuevamente; no se renuevan credenciales automáticamente. El refresco automático funciona cada 15 minutos mientras el widget está visible, además del refresco manual.
+Al elegirlo, Metalio lo guarda automáticamente en `metalio/e-ink/ai_usage-auth.json` de la microSD, cierra el QR y actualiza el widget. Reemplaza solo el proveedor elegido y conserva el otro. No hace falta copiar manualmente a la tarjeta, un servidor intermedio ni un PC encendido. Cierra el modal o pulsa el botón rojo para cancelar. El enlace funciona una vez y caduca a los 15 minutos. Desactiva Disco USB antes de guardar.
 
-Toca un proveedor para actualizarlo o desvincularlo. Desvincular elimina su acceso local de la microSD y su lectura, sin revocar la sesión de la aplicación original. Las claves y los saldos de la API son independientes de este widget.
+Esto es una **importación local**, no un nuevo inicio de sesión en los proveedores. El archivo debe existir previamente y estar disponible en el dispositivo que abre la página. La página no extrae sesiones del navegador ni del almacén de credenciales del sistema. Envía solo el acceso de sesión y el identificador opcional de Codex al Metalio, sin contraseña, ID token ni refresh token. Esos accesos conservan sus permisos originales: mantén el archivo privado y no lo envíes por chat. Si lo necesitas, siguen disponibles la [herramienta de preparación local](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/preparar-sesiones.html) y la copia manual a microSD.
+
+Las barras muestran **porcentajes de cuota** de sesión y semana, no tokens exactos ni créditos API. La lectura de OpenAI corresponde a Codex con cuenta ChatGPT; no garantiza el total de chats normales. Los endpoints privados pueden cambiar o rechazar la cuenta, incluida Claude Team. Usa solo cuentas que tengas autorización para vincular. No hay renovación automática de credenciales: importa una nueva sesión cuando caduque. El refresco automático funciona cada 15 minutos mientras se ve el widget, además del refresco manual.
+
+Toca un proveedor vinculado para actualizarlo o desvincularlo. Desvincular quita su copia local y su lectura sin revocar la sesión de la aplicación original. La compatibilidad con cuentas reales sigue siendo experimental.
 
 ## Libros
 

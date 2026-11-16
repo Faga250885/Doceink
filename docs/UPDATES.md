@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.220](https://github.com/Faga250885/Doceink/releases/tag/v0.75.220).
-- [OTA firmware: 0.75.220](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/Doceink-EInk4.bin).
+- [Documented version: 0.75.221](https://github.com/Faga250885/Doceink/releases/tag/v0.75.221).
+- [OTA firmware: 0.75.221](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.221
+
+AI Usage account linking now uses a QR code: tap an account, choose **Link**, scan on a phone connected to the same Wi-Fi, and select its existing session file. The page saves automatically to Metalio microSD, closes the linking dialog and refreshes the widget. No manual card copy or intermediary server is needed.
+
+The temporary link works once, expires after 15 minutes and closes when you leave the dialog. Only the chosen account is replaced; the other is preserved. The upload contains only the access token and optional Codex account ID, with no refresh token, password or ID token. Use a trusted Wi-Fi network. See the [setup guide](GETTING-STARTED.md#experimental-ai-usage-widget).
+
+This changes local file import, not provider sign-in or quota availability. The experimental account-access limits from 0.75.220 still apply.
 
 ## What's new in 0.75.220
 

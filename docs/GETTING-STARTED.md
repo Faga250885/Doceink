@@ -74,16 +74,20 @@ In **Settings → Display → Appearance → Home widgets**, enable Calendar, We
 
 ## Experimental AI usage widget
 
-Update normally over Wi-Fi to **0.75.220**. Firmware installation does not require the helper or USB. Account linking is separate:
+Install **0.75.221** through the normal Wi-Fi updater. To link an account:
 
-1. Download [preparar-sesiones.html](https://github.com/Faga250885/Doceink/releases/download/v0.75.220/preparar-sesiones.html) and open it locally in a browser.
-2. Choose an existing Codex `auth.json` file (normally `.codex/auth.json`) and/or a Claude Code `.credentials.json` file (normally `.claude/.credentials.json`). These files must already exist from your signed-in applications. This helper does not retrieve credentials from a system vault or browser cookies. Use only an account you are authorized to connect.
-3. Export `ai_usage-auth.json` and copy it to **`metalio/e-ink/` on the microSD**. The helper works locally without uploading the selected files. The export contains real access credentials with their original privileges; keep it private and never post it in chat.
-4. Enable **AI Usage** in Appearance, switch to its Home card and tap Refresh. Metalio queries the providers directly over Wi-Fi. No intermediary server or always-on computer is used.
+1. Enable **AI Usage** in **Settings → Display → Appearance**, then switch to its Home widget.
+2. Tap **ChatGPT · Codex** or **Claude**, then **Link**.
+3. Scan the QR with a phone connected to the **same trusted Wi-Fi network**.
+4. Choose the existing session file: Codex `auth.json` (normally `.codex/auth.json`), Claude Code `.credentials.json` (normally `.claude/.credentials.json`), or a prepared `ai_usage-auth.json`.
 
-Bars show available session/weekly **quota percentages**, not exact tokens. OpenAI readings concern Codex usage backed by ChatGPT, not a guaranteed total for all ChatGPT chats. Claude Team or other accounts can return an access error: these private endpoints are experimental, not a guaranteed public integration. An expired session must be imported again; there is no automatic credential renewal. Refresh runs while the widget is visible, at most every 15 minutes automatically, plus manual refresh.
+Choosing the file saves it automatically to `metalio/e-ink/ai_usage-auth.json` on Metalio microSD, closes the QR and refreshes the widget. Only the selected provider is replaced; the other remains linked. No manual card copy, intermediary server or always-on PC is required. Close the dialog or use the red button to cancel. The one-use link expires after 15 minutes. Disable USB Disk before saving.
 
-Tap a provider to refresh or unlink it. Unlinking removes its local access from the microSD and clears its reading; it does not revoke the original application session. API keys and API credit balances are unrelated to this widget.
+This is **local file import**, not a new provider sign-in. The session file must already exist and be available on the device opening the page. The page does not extract sessions from browser cookies or an OS credential vault. It sends only the session access token and optional Codex account ID to your Metalio, without password, ID token or refresh token. These access credentials retain their original permissions: keep the source file private and never post it in chat. If needed, the [local preparation helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.221/preparar-sesiones.html) and manual microSD import remain available.
+
+Bars show session/weekly **quota percentages**, not exact tokens or API credits. OpenAI readings concern Codex backed by ChatGPT, not a guaranteed total for ordinary ChatGPT chats. Private provider endpoints may change or deny the account, including Claude Team. Use only accounts you are authorized to connect. There is no automatic credential renewal; import a new session when it expires. Automatic refresh runs every 15 minutes while the widget is visible, with manual refresh available.
+
+Tap a linked provider to refresh or unlink it. Unlinking removes its local copy and reading without revoking the original application session. Real account compatibility remains experimental.
 
 ## Books
 
