@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.225](https://github.com/Faga250885/Doceink/releases/tag/v0.75.225).
-- [Firmware OTA 0.75.225](https://github.com/Faga250885/Doceink/releases/download/v0.75.225/Doceink-EInk4.bin).
+- [Versión documentada 0.75.226](https://github.com/Faga250885/Doceink/releases/tag/v0.75.226).
+- [Firmware OTA 0.75.226](https://github.com/Faga250885/Doceink/releases/download/v0.75.226/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.226
+
+La galería de fondos abre en una lista sencilla y permite cambiar a la vista de miniaturas. Se mantienen la previsualización y la selección de fondos.
+
+El widget de clima ajusta el espacio para mostrar completa la temperatura, incluso con cifras de distinto ancho. El widget experimental de consumo de IA se retira temporalmente del Home y sus ajustes.
+
+Los accesos que se hubieran guardado previamente en la microSD se conservan; retirar el widget no revoca sesiones ni borra esos archivos.
 
 ## Novedades de 0.75.225
 

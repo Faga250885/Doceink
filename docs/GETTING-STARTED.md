@@ -60,7 +60,7 @@ The month is left aligned and the **Tasks** icon appears on the calendar's right
 
 Home application icons measure 50 × 50 pixels without an extra plate behind them. They use Lucide, except ChatGPT, which keeps its original logo scaled proportionally. Forecast variants follow the same icon dimensions.
 
-The upper Home card offers Calendar, Today’s Weather and experimental AI Usage: swipe sideways to switch between enabled widgets. Home remembers your selection after standby and restart. In Calendar, swipe up or down to change months, or tap the heading to choose a month and year. Black page indicators use a larger dot for the active widget and disappear when only one is enabled.
+The upper Home card offers Calendar and Today’s Weather: swipe sideways to switch between enabled widgets. Home remembers your selection after standby and restart. In Calendar, swipe up or down to change months, or tap the heading to choose a month and year. Black page indicators use a larger dot for the active widget and disappear when only one is enabled.
 
 Weather shows the temperature number and a large icon in rounded panels, with a single timeline in two-hour steps below. Tap the gray card to open Weather. The saved update time and refresh icon share one transparent control at the top right; tap either to connect Wi-Fi and update the forecast on the microSD. Both dim while updating. Swiping uses the saved forecast without starting a download. Open Weather to choose a city.
 
@@ -70,28 +70,15 @@ Tasks live in `metalio/e-ink/agenda.json` on microSD. Existing lists are incorpo
 
 ## Home appearance
 
-In **Settings → Display → Appearance → Home widgets**, enable Calendar, Weather or AI Usage independently. At least one stays enabled; with only one, page dots disappear. Home remembers the enabled widgets and last selection after standby and restart. Battery display is selected with **Icon / Number** tabs. Gray tab rails distinguish these controls inside white cards.
+The wallpaper gallery opens as a simple list in a card. Select **Thumbnails** to switch to the grid; tap a wallpaper to preview it or hold it to select it.
 
-## Experimental AI usage widget
+In **Settings → Display → Appearance → Home widgets**, enable Calendar or Weather independently. At least one stays enabled; with only one, page dots disappear. Home remembers the enabled widgets and last selection after standby and restart. Battery display is selected with **Icon / Number** tabs. Gray tab rails distinguish these controls inside white cards.
 
-Install **0.75.225** through the normal Wi-Fi updater. To link an account without finding its JSON:
+## AI usage
 
-1. Enable **AI Usage** in **Settings → Display → Appearance**, then switch to its Home widget.
-2. Tap **ChatGPT · Codex** or **Claude**, then **Link**. Keep this screen open.
-3. On the PC where you use Codex or Claude Code, connected to the same Wi-Fi, open **http://doceink.local** and enter the six-digit code shown by Metalio.
-4. Choose **Copy command**, paste it into **PowerShell** and press Enter. The command finds the selected provider's session file and sends only its access directly to Metalio. It installs nothing and creates no exported JSON.
+Starting in **0.75.226**, the AI usage widget is temporarily unavailable in Home and its widget settings.
 
-The QR opens the same page without typing the code. If your PC or network cannot resolve `doceink.local`, use the IP address shown below it or scan the QR. The local name is available only while linking is open. Guest networks with client isolation must be replaced with a network that allows local device communication.
-
-The Windows command finds Codex `auth.json` in `CODEX_HOME` or `.codex`, or Claude Code `.credentials.json` in `CLAUDE_CONFIG_DIR` or `.claude`. That PC must already have the session file. It does not extract browser cookies or sessions stored exclusively in the OS credential vault. For macOS/Linux or another location, expand **Choose file manually** on the page and select the existing session file or prepared `ai_usage-auth.json`. The [local preparation helper](https://github.com/Faga250885/Doceink/releases/download/v0.75.225/preparar-sesiones.html) remains available.
-
-Metalio saves the access automatically to `metalio/e-ink/ai_usage-auth.json` on microSD, closes the QR and refreshes the widget. Only the selected provider is replaced; the other remains linked. Disable USB Disk before saving. Close the dialog or use the red button to cancel. The single-use link expires after 15 minutes; the code allows five attempts.
-
-This is local import, not a new provider sign-in. Use a trusted Wi-Fi network and accounts you are authorized to link. Only the access token and optional Codex account ID are sent, without password, ID token or refresh token; the access retains its original permissions. No intermediary server is used, and the PC may be shut down after linking. There is no automatic renewal: import a new session when it expires.
-
-Bars show session/weekly **quota percentages**, not exact tokens or API credits. OpenAI readings concern Codex backed by ChatGPT, not a guaranteed total for ordinary ChatGPT chats. Private provider endpoints may change or deny the account, including Claude Team. Real account compatibility remains experimental.
-
-Automatic refresh runs every 15 minutes while the widget is visible, with manual refresh available. Tap a linked provider to refresh or unlink it. Unlinking removes its local copy and reading without revoking the original application session.
+If an account was linked in an earlier version, removing the widget does not delete `metalio/e-ink/ai_usage-auth.json` on microSD or revoke provider sessions. That file may contain session access credentials: keep it private and delete it from the card if no longer needed. Use provider controls to revoke a session.
 
 ## Books
 

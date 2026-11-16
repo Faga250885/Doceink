@@ -56,7 +56,7 @@ Activa **Disco USB** en Ajustes → Archivos. Copia los archivos desde el ordena
 
 Los iconos de las aplicaciones del Home miden 50 × 50 píxeles, sin una base adicional detrás. Usan Lucide, excepto ChatGPT, que conserva su logo original escalado proporcionalmente. Las variantes del clima siguen el mismo tamaño.
 
-La tarjeta superior del Home ofrece Calendario, Clima de hoy y Consumo de IA experimental: desliza a los lados para cambiar entre los widgets activos. El Home recuerda la selección tras standby y reinicio. En Calendario, desliza arriba o abajo para cambiar de mes o toca el encabezado para elegir mes y año. Los indicadores son negros y el widget activo tiene el punto más grande; se ocultan si solo queda uno.
+La tarjeta superior del Home ofrece Calendario y Clima de hoy: desliza a los lados para cambiar entre los widgets activos. El Home recuerda la selección tras standby y reinicio. En Calendario, desliza arriba o abajo para cambiar de mes o toca el encabezado para elegir mes y año. Los indicadores son negros y el widget activo tiene el punto más grande; se ocultan si solo queda uno.
 
 Clima muestra solo el número de temperatura y un icono grande en paneles redondeados, con una fila de pronóstico cada dos horas debajo. Toca el bloque gris para abrir Clima. La hora guardada y el icono de actualizar comparten un control transparente arriba a la derecha: toca cualquiera para conectar el Wi-Fi y actualizar el pronóstico en la microSD. Ambos se atenúan mientras descargan. Cambiar de widget usa la copia guardada sin iniciar una descarga. Abre Clima para elegir una ciudad.
 
@@ -68,28 +68,15 @@ Las tareas se guardan en `metalio/e-ink/agenda.json` en la microSD. Las listas a
 
 ## Apariencia del Home
 
-En **Ajustes → Pantalla → Apariencia → Widgets del Home**, activa Calendario, Clima o Consumo de IA por separado. Debe quedar al menos uno activo; con uno solo no se muestran los puntos. El Home recuerda los widgets activos y el último seleccionado tras standby y reinicio. La batería se elige con tabs **Icono / Número**. Los tabs dentro de tarjetas blancas tienen fondo gris con trama.
+La galería de fondos abre con una lista sencilla dentro de una tarjeta. Usa **Miniaturas** para cambiar a la cuadrícula; toca un fondo para previsualizarlo o mantenlo pulsado para seleccionarlo.
 
-## Widget experimental de consumo de IA
+En **Ajustes → Pantalla → Apariencia → Widgets del Home**, activa Calendario o Clima por separado. Debe quedar al menos uno activo; con uno solo no se muestran los puntos. El Home recuerda los widgets activos y el último seleccionado tras standby y reinicio. La batería se elige con tabs **Icono / Número**. Los tabs dentro de tarjetas blancas tienen fondo gris con trama.
 
-Instala **0.75.225** con el actualizador Wi-Fi habitual. Para vincular una cuenta sin buscar su JSON:
+## Consumo de IA
 
-1. Activa **Consumo de IA** en **Ajustes → Pantalla → Apariencia** y entra a su widget del Home.
-2. Toca **ChatGPT · Codex** o **Claude** y pulsa **Vincular**. Mantén esa pantalla abierta.
-3. En el PC donde usas Codex o Claude Code, conectado al mismo Wi-Fi, abre **http://doceink.local** e introduce el código de seis cifras que muestra Metalio.
-4. Pulsa **Copiar comando**, pégalo en **PowerShell** y pulsa Enter. El comando detecta el archivo de sesión del proveedor elegido y envía únicamente su acceso directamente al Metalio. No instala programas ni crea un JSON exportado.
+Desde la versión **0.75.226**, el widget de consumo de IA está retirado temporalmente. No aparece en el Home ni en su selector de widgets.
 
-El QR abre la misma página sin escribir el código. Si tu red o PC no resuelve `doceink.local`, usa la dirección IP que aparece debajo o escanea el QR. El nombre local solo está disponible mientras la vinculación está abierta. En redes de invitados con aislamiento entre dispositivos, ambos deben pasar a una red que permita la comunicación local.
-
-El comando para Windows busca el `auth.json` de Codex en `CODEX_HOME` o `.codex`, o el `.credentials.json` de Claude Code en `CLAUDE_CONFIG_DIR` o `.claude`. La sesión debe existir previamente en ese PC. No extrae cookies del navegador ni accesos guardados exclusivamente en el almacén de credenciales del sistema. Para macOS/Linux o una ubicación diferente, abre **Elegir archivo manualmente** en la página y selecciona el archivo de sesión existente o un `ai_usage-auth.json` preparado. Sigue disponible la [herramienta de preparación local](https://github.com/Faga250885/Doceink/releases/download/v0.75.225/preparar-sesiones.html).
-
-Metalio guarda el acceso automáticamente en `metalio/e-ink/ai_usage-auth.json` de la microSD, cierra el QR y actualiza el widget. Reemplaza solo el proveedor elegido y conserva el otro. Desactiva Disco USB antes de guardar. Cierra el modal o pulsa el botón rojo para cancelar. El enlace es de un solo uso y caduca a los 15 minutos; el código admite cinco intentos.
-
-Esta es una importación local, no un nuevo inicio de sesión del proveedor. Usa una red Wi-Fi de confianza y cuentas que tengas autorización para vincular. Se envían solo el acceso y el identificador opcional de Codex, sin contraseña, ID token ni refresh token; el acceso conserva sus permisos originales. No se usa servidor intermediario y el PC puede apagarse después de vincular. No hay renovación automática: importa una sesión nueva cuando caduque.
-
-Las barras muestran **porcentajes de cuota** de sesión y semana, no tokens exactos ni créditos API. La lectura de OpenAI corresponde a Codex con cuenta ChatGPT; no garantiza el total de chats normales. Los endpoints privados pueden cambiar o rechazar la cuenta, incluida Claude Team. La compatibilidad con cuentas reales sigue siendo experimental.
-
-El refresco automático funciona cada 15 minutos mientras se ve el widget, además del manual. Toca un proveedor vinculado para actualizarlo o desvincularlo. Desvincular quita su copia local y su lectura sin revocar la sesión de la aplicación original.
+Si se vinculó una cuenta en una versión anterior, retirar el widget no borra el archivo `metalio/e-ink/ai_usage-auth.json` de la microSD ni revoca las sesiones de los proveedores. Ese archivo puede contener accesos de sesión: trátalo como privado y elimínalo de la tarjeta si ya no deseas conservarlo. Para revocar una sesión consulta los controles del proveedor.
 
 ## Libros
 

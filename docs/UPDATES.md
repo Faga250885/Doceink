@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.225](https://github.com/Faga250885/Doceink/releases/tag/v0.75.225).
-- [OTA firmware: 0.75.225](https://github.com/Faga250885/Doceink/releases/download/v0.75.225/Doceink-EInk4.bin).
+- [Documented version: 0.75.226](https://github.com/Faga250885/Doceink/releases/tag/v0.75.226).
+- [OTA firmware: 0.75.226](https://github.com/Faga250885/Doceink/releases/download/v0.75.226/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.226
+
+The wallpaper gallery opens in a simple list and can be switched to thumbnail view. Preview and selection remain available.
+
+The weather widget adjusts the space to show the complete temperature, including digits of different widths. The experimental AI usage widget is temporarily removed from Home and settings.
+
+Previously saved microSD credentials are retained; removing the widget does not revoke sessions or delete those files.
 
 ## What's new in 0.75.225
 
