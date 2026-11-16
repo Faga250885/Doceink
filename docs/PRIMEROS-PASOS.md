@@ -72,7 +72,7 @@ En **Ajustes → Pantalla → Apariencia → Widgets del Home**, activa Calendar
 
 ## Widget experimental de consumo de IA
 
-Instala **0.75.222** con el actualizador Wi-Fi habitual. Para vincular una cuenta sin buscar su JSON:
+Instala **0.75.223** con el actualizador Wi-Fi habitual. Para vincular una cuenta sin buscar su JSON:
 
 1. Activa **Consumo de IA** en **Ajustes → Pantalla → Apariencia** y entra a su widget del Home.
 2. Toca **ChatGPT · Codex** o **Claude** y pulsa **Vincular**. Mantén esa pantalla abierta.
@@ -81,7 +81,7 @@ Instala **0.75.222** con el actualizador Wi-Fi habitual. Para vincular una cuent
 
 El QR abre la misma página sin escribir el código. Si tu red o PC no resuelve `doceink.local`, usa la dirección IP que aparece debajo o escanea el QR. El nombre local solo está disponible mientras la vinculación está abierta. En redes de invitados con aislamiento entre dispositivos, ambos deben pasar a una red que permita la comunicación local.
 
-El comando para Windows busca el `auth.json` de Codex en `CODEX_HOME` o `.codex`, o el `.credentials.json` de Claude Code en `CLAUDE_CONFIG_DIR` o `.claude`. La sesión debe existir previamente en ese PC. No extrae cookies del navegador ni accesos guardados exclusivamente en el almacén de credenciales del sistema. Para macOS/Linux o una ubicación diferente, abre **Elegir archivo manualmente** en la página y selecciona el archivo de sesión existente o un `ai_usage-auth.json` preparado. Sigue disponible la [herramienta de preparación local](https://github.com/Faga250885/Doceink/releases/download/v0.75.222/preparar-sesiones.html).
+El comando para Windows busca el `auth.json` de Codex en `CODEX_HOME` o `.codex`, o el `.credentials.json` de Claude Code en `CLAUDE_CONFIG_DIR` o `.claude`. La sesión debe existir previamente en ese PC. No extrae cookies del navegador ni accesos guardados exclusivamente en el almacén de credenciales del sistema. Para macOS/Linux o una ubicación diferente, abre **Elegir archivo manualmente** en la página y selecciona el archivo de sesión existente o un `ai_usage-auth.json` preparado. Sigue disponible la [herramienta de preparación local](https://github.com/Faga250885/Doceink/releases/download/v0.75.223/preparar-sesiones.html).
 
 Metalio guarda el acceso automáticamente en `metalio/e-ink/ai_usage-auth.json` de la microSD, cierra el QR y actualiza el widget. Reemplaza solo el proveedor elegido y conserva el otro. Desactiva Disco USB antes de guardar. Cierra el modal o pulsa el botón rojo para cancelar. El enlace es de un solo uso y caduca a los 15 minutos; el código admite cinco intentos.
 
