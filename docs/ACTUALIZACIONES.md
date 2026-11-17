@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.235](https://github.com/Faga250885/Doceink/releases/tag/v0.75.235).
-- [Firmware OTA 0.75.235](https://github.com/Faga250885/Doceink/releases/download/v0.75.235/Doceink-EInk4.bin).
+- [Versión documentada 0.75.236](https://github.com/Faga250885/Doceink/releases/tag/v0.75.236).
+- [Firmware OTA 0.75.236](https://github.com/Faga250885/Doceink/releases/download/v0.75.236/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.236
+
+- Nueva aplicación **Audiolibros**, configurable en los iconos del Home: MP3 y WAV PCM de 16 bits en microSD.
+- Lista y miniaturas, portadas externas opcionales, capítulos en orden natural, reproducir/pausar y empezar desde el principio con confirmación.
+- Posición guardada en microSD y reproducción en segundo plano durante standby. El volumen usa los botones físicos.
+- Reduce las tablas de nombres cortos FAT, manteniendo UTF-8 para nombres largos. Pruebas de tildes, chino y cirílico aprobadas.
+- [Guía y MP3 de prueba](AUDIOLIBROS.md). Bluetooth y texto sincronizado quedan para más adelante.
 
 ## Novedades de 0.75.235
 

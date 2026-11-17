@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.235](https://github.com/Faga250885/Doceink/releases/tag/v0.75.235).
-- [OTA firmware: 0.75.235](https://github.com/Faga250885/Doceink/releases/download/v0.75.235/Doceink-EInk4.bin).
+- [Documented version: 0.75.236](https://github.com/Faga250885/Doceink/releases/tag/v0.75.236).
+- [OTA firmware: 0.75.236](https://github.com/Faga250885/Doceink/releases/download/v0.75.236/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.236
+
+- New **Audiobooks** application, available in the Home icon picker: MP3 and 16-bit PCM WAV from microSD.
+- List and thumbnails, optional sidecar covers, naturally ordered chapters, play/pause and confirmed restart from the beginning.
+- Position saved to microSD and background playback during standby. Volume uses the physical buttons.
+- Reduce FAT short-name tables while retaining UTF-8 long file names. Accented, Chinese and Cyrillic filename tests pass.
+- [Guide and sample MP3](AUDIOBOOKS.md). Bluetooth headphones and synchronized text remain future work.
 
 ## What's new in 0.75.235
 

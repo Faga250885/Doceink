@@ -10,7 +10,7 @@
 
 Firmware para **Metalio E-Ink4**, el lector de tinta electrónica con ESP32-S3 y memoria flash de 16 MB. Libros, tareas locales, ChatGPT por voz, noticias RSS, clima, grabadora local, reloj, calculadora y juegos en una misma interfaz.
 
-**Versión documentada: 0.75.235.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
+**Versión documentada: 0.75.236.** Este repositorio reúne descargas y documentación para instalar y utilizar Metalio.
 
 ## Explora DoceInk
 
@@ -43,7 +43,7 @@ Las pantallas pueden variar ligeramente según la versión del firmware.
 
 **Conecta Metalio → abre DoceInk Setup → pulsa Instalar.** Lo detecta automáticamente, sin elegir puertos COM ni serie. Sin Python, comandos ni descargar el firmware manualmente. Cada instalación obtiene la última versión estable de GitHub y requiere internet. Se abre en inglés y permite cambiar a español. Si hay varios dispositivos USB compatibles, deja conectado solo el Metalio.
 
-El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.235**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
+El instalador **0.75.158.1** añade respaldo y restauración opcionales del firmware original, y actualización USB para equipos con DoceInk; el firmware está en **0.75.236**. La app de Mac todavía no tiene firma Apple Developer ID ni notarización, por lo que Gatekeeper podría impedir abrirla. Sigue la **[guía de instalación](docs/INSTALACION.md)** para consultar requisitos, firma y conexión.
 
 El paquete se genera con los archivos del firmware y sus recursos: **no incluye cuentas, claves API, redes Wi-Fi guardadas, conversaciones ni archivos personales del desarrollador**. Cada persona configura su propio Metalio.
 
@@ -63,7 +63,7 @@ El paquete se genera con los archivos del firmware y sus recursos: **no incluye 
 
 - [Última publicación y descargas](https://github.com/Faga250885/Doceink/releases/latest)
 - [Actualizar conservando los datos](docs/ACTUALIZACIONES.md)
-- [Huellas SHA-256 de 0.75.235](SHA256SUMS.txt)
+- [Huellas SHA-256 de 0.75.236](SHA256SUMS.txt)
 - [Historial de versiones](https://github.com/Faga250885/Doceink/releases)
 
 ## Qué incluye
@@ -78,6 +78,7 @@ Al encender, el nuevo logo con la palabra **doceink** aparece centrado durante d
 | Noticias | Varias fuentes RSS, caché en microSD y actualización manual |
 | Clima | Pronóstico guardado en microSD, resumen diurno de 08:00 a 20:00, actualización manual y unidades Celsius/Fahrenheit |
 | Grabadora | Grabación WAV local en microSD, pausa y reanudación; sigue grabando en standby |
+| Audiolibros | MP3 y WAV en microSD, lista y miniaturas, capítulos, pausa y posición guardada; sigue reproduciendo en standby. [Cómo añadirlos](docs/AUDIOLIBROS.md) |
 | Reloj | Reloj, pomodoro, cronómetro y cuenta atrás |
 | Archivos | Disco USB y transferencia por Wi-Fi desde el navegador del teléfono mediante QR |
 | Home y ajustes | Accesos personalizables, fondos, batería, conexión y preferencias |
