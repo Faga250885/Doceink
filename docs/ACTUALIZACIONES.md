@@ -16,12 +16,17 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.231](https://github.com/Faga250885/Doceink/releases/tag/v0.75.231).
-- [Firmware OTA 0.75.231](https://github.com/Faga250885/Doceink/releases/download/v0.75.231/Doceink-EInk4.bin).
+- [Versión documentada 0.75.232](https://github.com/Faga250885/Doceink/releases/tag/v0.75.232).
+- [Firmware OTA 0.75.232](https://github.com/Faga250885/Doceink/releases/download/v0.75.232/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.232
+
+- Coordina la lectura y escritura sobre el mismo contexto TLS de voz.
+- Reintenta correctamente las condiciones temporales de entrada y salida sin bloquear el contexto.
 
 ## Novedades de 0.75.231
 
