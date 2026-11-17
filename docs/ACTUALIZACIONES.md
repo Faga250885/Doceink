@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.236](https://github.com/Faga250885/Doceink/releases/tag/v0.75.236).
-- [Firmware OTA 0.75.236](https://github.com/Faga250885/Doceink/releases/download/v0.75.236/Doceink-EInk4.bin).
+- [Versión documentada 0.75.237](https://github.com/Faga250885/Doceink/releases/tag/v0.75.237).
+- [Firmware OTA 0.75.237](https://github.com/Faga250885/Doceink/releases/download/v0.75.237/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.237
+
+- Corrige el envío de audiolibros de 44.100 y 22.050 Hz al conversor de voz, que no admite esas frecuencias y puede provocar un reinicio.
+- Convierte el audio a los 16.000 Hz de la bocina con un filtro contra aliasing, conservando la duración y la continuidad entre bloques.
+- Protege la ruta de voz contra frecuencias incompatibles. Se mantienen el volumen físico y la reproducción en standby.
 
 ## Novedades de 0.75.236
 

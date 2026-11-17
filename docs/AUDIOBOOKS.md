@@ -1,5 +1,7 @@
 # Audiobooks on Metalio
 
+Use **0.75.237 or later** to fix the restart when playing 44,100 or 22,050 Hz files.
+
 Available in **0.75.236**. This first version supports **MP3** and **16-bit PCM WAV**, mono or stereo, at 8–48 kHz, stored on microSD. MP3 is recommended for its smaller size. M4B, M4A/AAC and DRM-protected files are not supported yet.
 
 Long-press a configurable Home icon and choose **Audiobooks**, marked with headphones. The Settings tile keeps its fixed position.

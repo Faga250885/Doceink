@@ -1,5 +1,7 @@
 # Audiolibros en Metalio
 
+Usa **0.75.237 o posterior**: corrige el reinicio al reproducir archivos de 44.100 o 22.050 Hz.
+
 Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. M4B, M4A/AAC y otros formatos todavía no se admiten.
 
 ## Añadir la aplicación al Home
