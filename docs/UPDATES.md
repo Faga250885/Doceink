@@ -25,6 +25,8 @@ Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files ar
 
 ## What's new in 0.75.231
 
+- Detects incomplete audio transmissions.
+
 - Recover the voice session after an upload failure or response timeout.
 - Recover the recording indicator if the button release event is missed.
 

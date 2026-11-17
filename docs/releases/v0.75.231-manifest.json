@@ -3,7 +3,7 @@
   "target": "Metalio E-Ink4 / ESP32-S3 / 16 MB",
   "image": "Metalio-instalacion-limpia.bin",
   "bytes": 16777216,
-  "sha256": "28240872c6dac915e40b9ded770ba8a8b1ae4b08d2c48d204975ad7895e6ee86",
+  "sha256": "7f4131fe6f50ce89f80b4b9766ccaf1a7fb643453ebd317c7d34b5a1242fc627",
   "inputs": [
     {
       "offset": "0x0",
@@ -32,8 +32,8 @@
     {
       "offset": "0x80000",
       "file": "Metalio-E-Ink4.bin",
-      "bytes": 5213392,
-      "sha256": "921978f150e48f9d84cddbaa950a405c51646ae77025c8b68d01e93d7ed213b4"
+      "bytes": 5213408,
+      "sha256": "2dd0324bbe13c4babaac71010f892948a068d8a5519f461027b68591de837790"
     },
     {
       "offset": "0xa80000",

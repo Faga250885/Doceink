@@ -25,6 +25,8 @@ No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No interc
 
 ## Novedades de 0.75.231
 
+- Detecta envíos de audio incompletos.
+
 - Recuperación de la sesión de voz al fallar el envío o agotarse la espera.
 - Protección para cerrar las ondas si se pierde el evento de soltar el botón.
 
