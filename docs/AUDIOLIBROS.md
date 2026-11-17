@@ -1,6 +1,6 @@
 # Audiolibros en Metalio
 
-Usa **0.75.238 o posterior**: incluye la corrección de frecuencias de audio y el guardado correcto de la posición al pausar.
+Usa **0.75.239 o posterior**: incluye el guardado de posición al pausar, la caché del fondo de standby y la corrección de esperas que podían ralentizar los menús durante la reproducción.
 
 Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. M4B, M4A/AAC y otros formatos todavía no se admiten.
 

@@ -1,6 +1,6 @@
 # Audiobooks on Metalio
 
-Use **0.75.238 or later** for the media-rate correction and reliable position storage when pausing.
+Use **0.75.239 or later** for saved pause positions, cached standby wallpapers and the correction to waits that could slow menus during playback.
 
 Available in **0.75.236**. This first version supports **MP3** and **16-bit PCM WAV**, mono or stereo, at 8–48 kHz, stored on microSD. MP3 is recommended for its smaller size. M4B, M4A/AAC and DRM-protected files are not supported yet.
 

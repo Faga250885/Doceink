@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.238](https://github.com/Faga250885/Doceink/releases/tag/v0.75.238).
-- [OTA firmware: 0.75.238](https://github.com/Faga250885/Doceink/releases/download/v0.75.238/Doceink-EInk4.bin).
+- [Documented version: 0.75.239](https://github.com/Faga250885/Doceink/releases/tag/v0.75.239).
+- [OTA firmware: 0.75.239](https://github.com/Faga250885/Doceink/releases/download/v0.75.239/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.239
+
+- Keep selected standby and shutdown wallpapers in PSRAM. Prepare them at startup and when selecting or editing an image; displaying a prepared fixed wallpaper does not reread microSD.
+- Replace or release the cache when changing, disabling or deleting a wallpaper. Preserve carousel behavior.
+- Fix a playback wait that rounded down to zero with the device task clock and could slow navigation.
+- Run audiobook reading and decoding separately from the UI core, retaining the audio reserve and pause position behavior of 0.75.238.
+- Menu responsiveness and audio continuity during standby need testing on Metalio after updating.
 
 ## What's new in 0.75.238
 

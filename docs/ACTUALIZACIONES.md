@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.238](https://github.com/Faga250885/Doceink/releases/tag/v0.75.238).
-- [Firmware OTA 0.75.238](https://github.com/Faga250885/Doceink/releases/download/v0.75.238/Doceink-EInk4.bin).
+- [Versión documentada 0.75.239](https://github.com/Faga250885/Doceink/releases/tag/v0.75.239).
+- [Firmware OTA 0.75.239](https://github.com/Faga250885/Doceink/releases/download/v0.75.239/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.239
+
+- Conserva en PSRAM los fondos seleccionados de espera y apagado. Se preparan al iniciar y al elegir o editar una imagen; el fondo fijo preparado se muestra sin releer la microSD en ese momento.
+- Reemplaza o libera la caché al cambiar, desactivar o eliminar el fondo, y conserva el funcionamiento del carrusel.
+- Corrige una espera del reproductor que se convertía en cero con el reloj de tareas del aparato y podía ralentizar la navegación.
+- Separa la lectura y decodificación de audiolibros del núcleo de la interfaz, manteniendo la reserva de audio y el punto de pausa de 0.75.238.
+- La respuesta de los menús y la continuidad del audio durante standby requieren comprobarse en Metalio tras actualizar.
 
 ## Novedades de 0.75.238
 
