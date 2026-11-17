@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.234](https://github.com/Faga250885/Doceink/releases/tag/v0.75.234).
-- [Firmware OTA 0.75.234](https://github.com/Faga250885/Doceink/releases/download/v0.75.234/Doceink-EInk4.bin).
+- [Versión documentada 0.75.235](https://github.com/Faga250885/Doceink/releases/tag/v0.75.235).
+- [Firmware OTA 0.75.235](https://github.com/Faga250885/Doceink/releases/download/v0.75.235/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.235
+
+- Reduce los búferes internos de transmisión Wi-Fi de 6 a 3 y usa desde el inicio los 5.760 bytes de DMA de audio compactos, en lugar de 10.240.
+- Añade al registro la memoria DMA disponible al trabajar con red y ante fallos de voz.
+- El registro del dispositivo confirma un fallo de reserva de memoria para la microSD. Falta validar en Metalio si esta reducción recupera voz y grabación; el fallo DNS de conexión también sigue en observación.
 
 ## Novedades de 0.75.234
 
