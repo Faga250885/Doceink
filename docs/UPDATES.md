@@ -16,12 +16,21 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.251](https://github.com/Faga250885/Doceink/releases/tag/v0.75.251).
-- [OTA firmware: 0.75.251](https://github.com/Faga250885/Doceink/releases/download/v0.75.251/Doceink-EInk4.bin).
+- [Documented version: 0.75.252](https://github.com/Faga250885/Doceink/releases/tag/v0.75.252).
+- [OTA firmware: 0.75.252](https://github.com/Faga250885/Doceink/releases/download/v0.75.252/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.252
+
+- Connected and saved headphones show a **Lucide ellipsis menu on the right**, with disconnect and confirmed delete actions.
+- Bluetooth uses **one white card filling the available height**, **8 px** below the Network/Bluetooth tabs. Internal sections share this surface.
+- Fixes I2S timeout units: the API takes milliseconds and now receives 1000 ms; converted ticks previously resulted in 100 ms with this configuration.
+- Preserves the module's initial route on connection. A real zero-byte timeout triggers one bounded compatibility-recovery attempt per playback session, without rebooting or increasing DMA.
+- Shows **Preparing…** until output accepts samples and distinguishes **Connected** from **Connected · No audio**.
+- 141 software tests passed, including timeout units, simulated missing clocks, recovery, partial writes, menus and states. Audible playback with the user's headphones still needs a physical test after updating.
 
 ## What's new in 0.75.251
 

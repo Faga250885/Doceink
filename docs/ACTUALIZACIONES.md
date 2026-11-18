@@ -16,12 +16,21 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.251](https://github.com/Faga250885/Doceink/releases/tag/v0.75.251).
-- [Firmware OTA 0.75.251](https://github.com/Faga250885/Doceink/releases/download/v0.75.251/Doceink-EInk4.bin).
+- [Versión documentada 0.75.252](https://github.com/Faga250885/Doceink/releases/tag/v0.75.252).
+- [Firmware OTA 0.75.252](https://github.com/Faga250885/Doceink/releases/download/v0.75.252/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.252
+
+- Los audífonos conectados y guardados muestran un menú de **tres puntos Lucide a la derecha**, con acciones para desconectar y eliminar. Eliminar pide confirmación.
+- Todo el contenido de Bluetooth queda dentro de **una tarjeta blanca que ocupa el alto disponible**, a **8 px** de los tabs Red/Bluetooth. Las secciones interiores comparten esa superficie.
+- Corrige los tiempos de espera de I2S: la API recibe milisegundos y ahora espera 1000 ms; se le estaban pasando ticks, equivalentes a 100 ms con la configuración actual.
+- Mantiene intacta la ruta inicial del módulo al conectar. Si una escritura real devuelve cero bytes por timeout, intenta una recuperación de compatibilidad una vez por reproducción, sin reiniciar el aparato ni ampliar DMA.
+- El reproductor muestra **Preparando…** hasta que la salida acepta muestras. Bluetooth distingue **Conectado** de **Conectado · Sin audio**.
+- 141 pruebas de software aprobadas: timeout real, falta de reloj simulada, recuperación, escrituras parciales, menús y estados. La reproducción audible con los audífonos del usuario requiere prueba física tras actualizar.
 
 ## Novedades de 0.75.251
 

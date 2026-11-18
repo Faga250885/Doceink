@@ -6,9 +6,9 @@ Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM
 
 ## Audífonos Bluetooth
 
-Desde **0.75.251**, abre **Ajustes → Conexiones → Bluetooth** y pulsa **Activado**, a la izquierda. Ponlos en modo de emparejamiento, pulsa **Buscar audífonos**, toca su nombre y elige **Conectar**. Espera la confirmación y reproduce el libro. El perfil de música se prepara automáticamente.
+Desde **0.75.252**, abre **Ajustes → Conexiones → Bluetooth** y pulsa **Activado**, a la izquierda. Ponlos en modo de emparejamiento, pulsa **Buscar audífonos**, toca su nombre y elige **Conectar**. Espera la confirmación y reproduce el libro. El enlace conserva su ruta inicial. Si la salida no acepta audio, intenta una recuperación de compatibilidad acotada. El reproductor muestra **Preparando…** hasta que se aceptan muestras.
 
-Los dispositivos conectados se guardan en Metalio para volver a conectarlos sin otra búsqueda. Toca el dispositivo conectado o una fila guardada para ver **Conectar**, **Desconectar** u **Olvidar**. Olvidar pide confirmación y elimina la entrada de la lista guardada; si estaba conectado, vuelve al altavoz. Se guardan hasta doce dispositivos. La lista persiste tras reiniciar.
+Los dispositivos conectados se guardan en Metalio para volver a conectarlos sin otra búsqueda. Pulsa los **tres puntos a la derecha** del dispositivo conectado o de una fila guardada para ver **Conectar**, **Desconectar** o **Eliminar**. Eliminar pide confirmación y quita la entrada de la lista guardada; si estaba conectado, vuelve al altavoz. Se guardan hasta doce dispositivos. La lista persiste tras reiniciar.
 
 Pulsa **Desactivado**, a la derecha, para volver al altavoz. Desactivar Bluetooth o desconectar pausa el audiolibro y conserva la posición; pulsa **Reanudar** para continuar. Los audífonos guardados se conservan al desactivar. Los botones físicos controlan el volumen y también envían el ajuste al módulo Bluetooth al usar audífonos. El icono de Bluetooth se apaga al volver al altavoz.
 
@@ -65,3 +65,5 @@ Esta versión no muestra texto sincronizado. No reproduce a la vez una conversac
 - [Portada del libro](https://archive.org/download/cuentosdelaselva_1603_librivox/cuentos_selva_1603.jpg).
 
 La grabación procede de LibriVox; su página identifica la obra, los narradores y las condiciones de dominio público. El audio no está incluido en el firmware.
+
+La sección Bluetooth usa una sola tarjeta blanca a todo el alto disponible, separada 8 px de Red/Bluetooth. **Conectado** indica el enlace; **Conectado · Sin audio** indica que la salida todavía no acepta muestras. La recuperación utiliza los comandos de compatibilidad de la [familia BH1098 documentados por el fabricante](https://github.com/CloudZao/Metalio-E-INK4-Plus/blob/main/docs/bh1098-audio-protocol.md); su resultado depende del firmware del módulo y de los audífonos.
