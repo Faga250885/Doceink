@@ -28,7 +28,7 @@ Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files ar
 - Adds DRM-free M4B/M4A with AAC-LC audio, mono/stereo at 8–48 kHz, pause and saved position. Internal MP4 chapter navigation and embedded artwork are not exposed in this first implementation.
 - Persistent wallpaper thumbnails on microSD, regenerated after edits, replacement or deletion.
 - Audiobook library tabs move up below the status bar and the content fills the available height.
-- Removes the player's outer border, black cover outline and standby caption. A white Library button with its icon sits on the left of the player toolbar.
+- Removes the player's outer border, black cover outline and standby caption. A borderless white Library button with its icon sits on the left of the player toolbar.
 - [AAC decoder license](THIRD-PARTY-NOTICES.txt).
 
 ## What's new in 0.75.240

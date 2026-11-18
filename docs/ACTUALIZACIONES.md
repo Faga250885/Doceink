@@ -28,7 +28,7 @@ No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No interc
 - Reproduce M4B y M4A con audio AAC-LC sin DRM, mono o estéreo de 8 a 48 kHz, con pausa y posición guardada. Esta primera implementación no ofrece navegación por capítulos internos ni portadas incrustadas.
 - Caché persistente de miniaturas de fondos en la microSD: reutiliza la vista preparada y la regenera al editar, reemplazar o eliminar una imagen.
 - Biblioteca de audiolibros sin cabecera: las pestañas Lista/Miniaturas suben y el contenido aprovecha el alto disponible.
-- Reproductor sin borde exterior ni contorno negro en la portada. Barra superior con botón blanco Biblioteca a la izquierda, con su icono; elimina el texto sobre standby.
+- Reproductor sin borde exterior ni contorno negro en la portada. Barra superior con botón blanco Biblioteca sin borde negro a la izquierda, con su icono; elimina el texto sobre standby.
 - [Licencia del decodificador AAC](THIRD-PARTY-NOTICES.txt).
 
 ## Novedades de 0.75.240
