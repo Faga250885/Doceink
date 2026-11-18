@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.252](https://github.com/Faga250885/Doceink/releases/tag/v0.75.252).
-- [OTA firmware: 0.75.252](https://github.com/Faga250885/Doceink/releases/download/v0.75.252/Doceink-EInk4.bin).
+- [Documented version: 0.75.253](https://github.com/Faga250885/Doceink/releases/tag/v0.75.253).
+- [OTA firmware: 0.75.253](https://github.com/Faga250885/Doceink/releases/download/v0.75.253/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.253
+
+- Standby shows a **Lucide charging icon at the top right** while the battery is charging, aligned and spaced like the activity indicators.
+- Appears on the first standby frame when charging and hides when charging stops. Recording, timer and audiobook indicators remain on the left.
+- Reuses existing status updates without animation or additional wake timers. Repaints only when charging state changes; during light sleep it checks when execution resumes.
+- 141 software tests passed, including initial charging, unplugging, unchanged-state repaint deduplication and coexistence with activity indicators. Physical-screen validation remains pending after updating Metalio.
 
 ## What's new in 0.75.252
 

@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.252](https://github.com/Faga250885/Doceink/releases/tag/v0.75.252).
-- [Firmware OTA 0.75.252](https://github.com/Faga250885/Doceink/releases/download/v0.75.252/Doceink-EInk4.bin).
+- [Versión documentada 0.75.253](https://github.com/Faga250885/Doceink/releases/tag/v0.75.253).
+- [Firmware OTA 0.75.253](https://github.com/Faga250885/Doceink/releases/download/v0.75.253/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.253
+
+- El standby muestra un **icono Lucide de carga arriba a la derecha** mientras la batería se está cargando, con el mismo margen y alineación que los indicadores de actividad.
+- Se muestra desde el primer fotograma al entrar cargando y se oculta cuando deja de cargar. Los iconos de grabación, contador y audiolibro permanecen a la izquierda.
+- Reutiliza la actualización de estado existente, sin animaciones ni temporizadores nuevos que despierten el dispositivo. La pantalla se repinta únicamente cuando cambia el estado de carga; en sueño ligero se comprueba al reanudarse la ejecución.
+- 141 pruebas de software aprobadas, incluyendo carga inicial, desconexión, ausencia de repintados repetidos y convivencia con los indicadores existentes. La validación en pantalla física queda pendiente de actualizar el Metalio.
 
 ## Novedades de 0.75.252
 
