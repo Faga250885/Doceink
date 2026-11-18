@@ -27,6 +27,7 @@ Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files ar
 
 - The audiobook player toolbar is a floating rounded white card. Eight-pixel gaps separate it from the top bar, both side edges and the content below, revealing the gray dotted background.
 - Library stays on the left; Restart stays on the right in a small black-bordered icon-only button, with confirmation before restarting.
+- The **15s** backward and forward buttons fit their icon and label; Play/Pause fills the remaining width.
 - Retains 15-second seeking, progress percentage and the corrected wallpaper gallery from 0.75.244.
 
 ## Changes in 0.75.244

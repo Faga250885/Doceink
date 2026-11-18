@@ -27,6 +27,7 @@ No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No interc
 
 - La toolbar del reproductor de audiolibros es una tarjeta blanca flotante con esquinas redondeadas. Tiene ocho píxeles de separación respecto al topbar, ambos laterales y el contenido inferior, sobre el fondo gris punteado.
 - Conserva Biblioteca a la izquierda y Reiniciar a la derecha, en un botón pequeño de solo icono con borde negro y confirmación antes de volver al principio.
+- Los botones **15s**, sin espacio entre el número y la letra, se ajustan al ancho de su icono y texto; Reproducir/Pausar ocupa todo el espacio restante.
 - Conserva los saltos de 15 segundos, el porcentaje de avance y la galería corregida de 0.75.244.
 
 ## Novedades de 0.75.244
