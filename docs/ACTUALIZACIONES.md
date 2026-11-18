@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.240](https://github.com/Faga250885/Doceink/releases/tag/v0.75.240).
-- [Firmware OTA 0.75.240](https://github.com/Faga250885/Doceink/releases/download/v0.75.240/Doceink-EInk4.bin).
+- [Versión documentada 0.75.241](https://github.com/Faga250885/Doceink/releases/tag/v0.75.241).
+- [Firmware OTA 0.75.241](https://github.com/Faga250885/Doceink/releases/download/v0.75.241/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.241
+
+- Reproduce M4B y M4A con audio AAC-LC sin DRM, mono o estéreo de 8 a 48 kHz, con pausa y posición guardada. Esta primera implementación no ofrece navegación por capítulos internos ni portadas incrustadas.
+- Caché persistente de miniaturas de fondos en la microSD: reutiliza la vista preparada y la regenera al editar, reemplazar o eliminar una imagen.
+- Biblioteca de audiolibros sin cabecera: las pestañas Lista/Miniaturas suben y el contenido aprovecha el alto disponible.
+- Reproductor sin borde exterior ni contorno negro en la portada. Barra superior con botón blanco Biblioteca a la izquierda, con su icono; elimina el texto sobre standby.
+- [Licencia del decodificador AAC](THIRD-PARTY-NOTICES.txt).
 
 ## Novedades de 0.75.240
 

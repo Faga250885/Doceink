@@ -10,7 +10,7 @@
 
 Firmware for **Metalio E-Ink4**, an e-paper reader powered by an ESP32-S3 with 16 MB of flash. Books, local tasks, voice conversations with ChatGPT, RSS news, weather, an offline audio recorder, a clock, a calculator and games in one interface.
 
-**Documented version: 0.75.240.** This repository provides downloads and documentation for installing and using Metalio.
+**Documented version: 0.75.241.** This repository provides downloads and documentation for installing and using Metalio.
 
 ## Explore DoceInk
 
@@ -43,7 +43,7 @@ Screens may vary slightly between firmware versions.
 
 **Connect Metalio → open DoceInk Setup → click Install.** Detection is automatic; there is no COM/serial-port selector. No Python, terminal commands or manual firmware download. Internet is required: every installation downloads the latest stable GitHub release. English by default, with a Spanish selector. If several compatible USB devices are connected, leave only Metalio connected.
 
-Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.240**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
+Installer **0.75.158.1** adds optional original-firmware backup and restoration, and USB updates for recognized DoceInk devices; firmware is now **0.75.241**. The macOS app is not Apple Developer ID signed or notarized, so Gatekeeper may block opening it. See the **[installation guide](docs/INSTALLATION.md)** for requirements, signing status and troubleshooting.
 
 The package is built from firmware build outputs and system resources. **It contains no developer accounts, API keys, saved Wi-Fi networks, conversations or personal files.** Each user sets up their own Metalio.
 
@@ -63,7 +63,7 @@ The package is built from firmware build outputs and system resources. **It cont
 
 - [Latest release and downloads](https://github.com/Faga250885/Doceink/releases/latest)
 - [Update without erasing your data](docs/UPDATES.md)
-- [SHA-256 checksums for 0.75.240](SHA256SUMS.txt)
+- [SHA-256 checksums for 0.75.241](SHA256SUMS.txt)
 - [Release history](https://github.com/Faga250885/Doceink/releases)
 
 ## Features
@@ -78,7 +78,7 @@ At power-on, the new DoceInk logo and its **doceink** wordmark appear centered f
 | News | Multiple RSS sources, microSD cache and manual refresh |
 | Weather | Forecast stored on microSD, daytime summaries for 08:00–20:00, manual refresh and Celsius/Fahrenheit units |
 | Recorder | Offline WAV recording directly to microSD, pause/resume and recording during standby |
-| Audiobooks | MP3 and WAV from microSD, list and thumbnails, chapters, pause and saved position; playback continues in standby. [Add audiobooks](docs/AUDIOBOOKS.md) |
+| Audiobooks | MP3, M4B/M4A AAC-LC and WAV from microSD, list and thumbnails, chapters, pause and saved position; playback continues in standby. [Add audiobooks](docs/AUDIOBOOKS.md) |
 | Clock | Clock, pomodoro, stopwatch and countdown |
 | Files | USB disk mode and QR-based Wi-Fi transfers through your phone's browser |
 | Home and settings | Customizable shortcuts, wallpapers, battery, connectivity and preferences |

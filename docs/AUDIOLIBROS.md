@@ -1,8 +1,8 @@
 # Audiolibros en Metalio
 
-Usa **0.75.240 o posterior** para el diseño Portada, con imagen grande, tiempos separados y controles al pie. Conserva el guardado de posición y las mejoras de rendimiento de 0.75.239.
+Usa **0.75.241 o posterior** para M4B/M4A y el reproductor simplificado: portada sin contorno, botón Biblioteca arriba a la izquierda y controles al pie.
 
-Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. M4B, M4A/AAC y otros formatos todavía no se admiten.
+Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. Desde **0.75.241** también admite **M4B y M4A con AAC-LC**, mono o estéreo de 8 a 48 kHz, sin DRM y menores de 2 GB. No admite HE-AAC, ALAC ni MP4 fragmentado. Un M4B se reproduce como una sola pista: todavía no se muestran sus capítulos internos ni su portada incrustada.
 
 ## Añadir la aplicación al Home
 
@@ -13,7 +13,7 @@ Mantén pulsado un icono configurable del Home y elige **Audiolibros**, identifi
 1. Descarga un archivo MP3 en tu teléfono o computadora. Puedes usar el ejemplo de abajo.
 2. En Metalio, abre **Ajustes → Archivos → Transferir archivos por Wi-Fi** y usa el QR o la dirección que muestra el aparato.
 3. En la página de transferencia, entra en **metalio → e-ink → audiobooks** y sube el MP3.
-4. Cierra la transferencia, abre **Audiolibros** y pulsa actualizar si no aparece todavía.
+4. Cierra la transferencia, abre **Audiolibros** ; si ya estaba abierta, sal y vuelve a entrar para releer los archivos.
 
 Para la primera prueba basta un único MP3. Se muestra como un libro y su nombre de archivo es el título. Puedes renombrarlo, por ejemplo, a `La abeja haragana.mp3` antes de subirlo.
 
@@ -31,9 +31,9 @@ metalio/e-ink/audiobooks/
     cover.jpg
 ```
 
-Los capítulos se ordenan por nombre, reconociendo números: 2 se reproduce antes de 10. Al acabar un capítulo, continúa el siguiente. Una carpeta puede contener MP3 y WAV. Esta primera versión muestra hasta 64 libros y 512 pistas en total, con hasta 256 pistas por libro.
+Los capítulos se ordenan por nombre, reconociendo números: 2 se reproduce antes de 10. Al acabar un capítulo, continúa el siguiente. Una carpeta puede contener MP3, WAV y M4B/M4A compatibles. Esta primera versión muestra hasta 64 libros y 512 pistas en total, con hasta 256 pistas por libro.
 
-La portada es opcional. Para un archivo suelto, usa el mismo nombre con extensión `.jpg` o `.png`; para una carpeta, usa `cover.jpg` o `cover.png`. Sin portada, el reproductor muestra una cubierta sencilla con el título y un icono de auriculares. Las portadas incrustadas en etiquetas MP3 no se extraen en esta versión.
+La portada es opcional. Para un archivo suelto, usa el mismo nombre con extensión `.jpg` o `.png`; para una carpeta, usa `cover.jpg` o `cover.png`. Sin portada, el reproductor muestra una cubierta sencilla con el título y un icono de auriculares. Las portadas incrustadas en MP3 o M4B/M4A no se extraen en esta versión.
 
 ## Escuchar y continuar después
 

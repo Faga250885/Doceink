@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.240](https://github.com/Faga250885/Doceink/releases/tag/v0.75.240).
-- [OTA firmware: 0.75.240](https://github.com/Faga250885/Doceink/releases/download/v0.75.240/Doceink-EInk4.bin).
+- [Documented version: 0.75.241](https://github.com/Faga250885/Doceink/releases/tag/v0.75.241).
+- [OTA firmware: 0.75.241](https://github.com/Faga250885/Doceink/releases/download/v0.75.241/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.241
+
+- Adds DRM-free M4B/M4A with AAC-LC audio, mono/stereo at 8–48 kHz, pause and saved position. Internal MP4 chapter navigation and embedded artwork are not exposed in this first implementation.
+- Persistent wallpaper thumbnails on microSD, regenerated after edits, replacement or deletion.
+- Audiobook library tabs move up below the status bar and the content fills the available height.
+- Removes the player's outer border, black cover outline and standby caption. A white Library button with its icon sits on the left of the player toolbar.
+- [AAC decoder license](THIRD-PARTY-NOTICES.txt).
 
 ## What's new in 0.75.240
 

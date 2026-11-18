@@ -1,16 +1,16 @@
 # Audiobooks on Metalio
 
-Use **0.75.240 or later** for the Cover player layout with large artwork, separate elapsed/total times and bottom controls. It retains saved positions and the performance improvements of 0.75.239.
+Use **0.75.241 or later** for M4B/M4A support and the simplified Cover player with no black artwork outline and a white Library button at the top left.
 
-Available in **0.75.236**. This first version supports **MP3** and **16-bit PCM WAV**, mono or stereo, at 8–48 kHz, stored on microSD. MP3 is recommended for its smaller size. M4B, M4A/AAC and DRM-protected files are not supported yet.
+Available in **0.75.236**. This first version supports **MP3** and **16-bit PCM WAV**, mono or stereo, at 8–48 kHz, stored on microSD. MP3 is recommended for its smaller size. Since **0.75.241**, DRM-free **M4B and M4A with AAC-LC** are also supported, mono/stereo at 8–48 kHz and below 2 GB. HE-AAC, ALAC and fragmented MP4 are not supported. M4B plays as one track; internal chapters and embedded artwork are not exposed yet.
 
 Long-press a configurable Home icon and choose **Audiobooks**, marked with headphones. The Settings tile keeps its fixed position.
 
-Open **Settings → Files → Transfer files over Wi-Fi**, follow the QR/link, and upload a file into `metalio/e-ink/audiobooks`. Close the transfer and open Audiobooks; tap refresh if needed. A single MP3 is enough for the first test.
+Open **Settings → Files → Transfer files over Wi-Fi**, follow the QR/link, and upload a file into `metalio/e-ink/audiobooks`. Close the transfer and open Audiobooks; leave and reopen the library if it was already open. A single MP3 is enough for the first test.
 
 When preparing the card on a computer, you can group numbered chapter files in one folder per book. Chapters play in natural filename order, so 2 precedes 10, and playback continues automatically to the next chapter. Limits are 64 books, 512 tracks in total and 256 tracks per book.
 
-List and thumbnail views are available. Optional covers use the same basename as a standalone audio file, with `.jpg` or `.png`, or `cover.jpg` / `cover.png` inside a chapter folder. Embedded MP3 artwork is not extracted yet.
+List and thumbnail views are available. Optional covers use the same basename as a standalone audio file, with `.jpg` or `.png`, or `cover.jpg` / `cover.png` inside a chapter folder. Embedded MP3 or M4B/M4A artwork is not extracted yet.
 
 Select a book to play, pause/resume or restart from the beginning with confirmation. The player displays large artwork or a simple title cover when artwork is missing. Use Metalio's physical volume buttons. Playback continues when leaving the app and during standby. The CPU, speaker and microSD stay powered for playback; Wi-Fi is not required. Progress updates about every ten seconds while visible, and stops updating in standby.
 
