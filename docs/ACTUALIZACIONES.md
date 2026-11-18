@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.245](https://github.com/Faga250885/Doceink/releases/tag/v0.75.245).
-- [Firmware OTA 0.75.245](https://github.com/Faga250885/Doceink/releases/download/v0.75.245/Doceink-EInk4.bin).
+- [Versión documentada 0.75.246](https://github.com/Faga250885/Doceink/releases/tag/v0.75.246).
+- [Firmware OTA 0.75.246](https://github.com/Faga250885/Doceink/releases/download/v0.75.246/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.246
+
+- Unifica la vibración de los controles táctiles desde la entrada de LVGL. Incluye filas de audiolibros, botones y otros controles que no tenían una configuración individual.
+- Confirma cada clic válido una vez, antes de que su acción pueda eliminar el control o cambiar de pantalla. Conserva la preferencia de vibración y la intensidad seleccionadas.
+- Evita pulsos adicionales por gestos de desplazamiento, controles desactivados, teclas deshabilitadas y espacios vacíos.
+- Elimina la antigua tabla de 96 zonas y sus callbacks de geometría y dibujo: libera su reserva de memoria y deja de mantener coordenadas durante el renderizado.
 
 ## Novedades de 0.75.245
 

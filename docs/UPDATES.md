@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.245](https://github.com/Faga250885/Doceink/releases/tag/v0.75.245).
-- [OTA firmware: 0.75.245](https://github.com/Faga250885/Doceink/releases/download/v0.75.245/Doceink-EInk4.bin).
+- [Documented version: 0.75.246](https://github.com/Faga250885/Doceink/releases/tag/v0.75.246).
+- [OTA firmware: 0.75.246](https://github.com/Faga250885/Doceink/releases/download/v0.75.246/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.246
+
+- Centralizes touch feedback at the LVGL input layer, covering audiobook rows, buttons and controls without individual haptic setup.
+- Confirms each valid click once, before its action can delete the control or switch screens. Keeps the selected vibration preference and intensity.
+- Avoids extra pulses for scrolling gestures, disabled controls and keys, and blank areas.
+- Removes the obsolete 96-zone table and its geometry/draw callbacks, releasing the reserved memory and avoiding coordinate bookkeeping during rendering.
 
 ## Changes in 0.75.245
 
