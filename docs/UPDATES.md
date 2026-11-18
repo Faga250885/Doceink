@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.256](https://github.com/Faga250885/Doceink/releases/tag/v0.75.256).
-- [OTA firmware: 0.75.256](https://github.com/Faga250885/Doceink/releases/download/v0.75.256/Doceink-EInk4.bin).
+- [Documented version: 0.75.257](https://github.com/Faga250885/Doceink/releases/tag/v0.75.257).
+- [OTA firmware: 0.75.257](https://github.com/Faga250885/Doceink/releases/download/v0.75.257/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.257
+
+- Bluetooth lists saved and available headphones separately. Tapping a result immediately requests its address. A confirmed link saves the headset.
+- Each saved row has a working disconnect and forget menu. Unsolicited module responses no longer identify the last saved device as connected. Late connection events can arrive during discovery.
+- To test from an empty list, open **Settings → Connections → Bluetooth → Forget saved headphones** and confirm. This disconnects the headset and clears the firmware list, search results and legacy last-device hint on this Metalio. The vendor does not document a command to erase the radio's internal bond memory.
+- Software tests exercise selection, reconnect and reset using simulated UART replies. Audible output and earbud synchronization require a physical listening test.
 
 ## What's new in 0.75.256
 

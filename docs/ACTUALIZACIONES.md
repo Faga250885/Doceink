@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.256](https://github.com/Faga250885/Doceink/releases/tag/v0.75.256).
-- [Firmware OTA 0.75.256](https://github.com/Faga250885/Doceink/releases/download/v0.75.256/Doceink-EInk4.bin).
+- [Versión documentada 0.75.257](https://github.com/Faga250885/Doceink/releases/tag/v0.75.257).
+- [Firmware OTA 0.75.257](https://github.com/Faga250885/Doceink/releases/download/v0.75.257/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.257
+
+- Bluetooth muestra los dispositivos guardados y los resultados de búsqueda en listas separadas. Al tocar un resultado se solicita su dirección de inmediato. La confirmación del enlace guarda el audífono.
+- Cada fila guardada tiene su propio menú para desconectar o eliminar. Una respuesta espontánea del módulo ya no se asigna al último audífono guardado. La búsqueda tolera avisos tardíos de conexión.
+- Para probar desde cero, abre **Ajustes → Conexiones → Bluetooth → Borrar audífonos guardados** y confirma. Esta acción desconecta los audífonos y borra la lista del firmware, los resultados y la referencia antigua al último dispositivo en ese Metalio. El fabricante no documenta una orden para borrar la memoria interna de emparejamiento del módulo.
+- Las pruebas verifican el flujo de selección, reconexión y borrado con UART simulada. La salida audible y la sincronización entre auriculares requieren comprobación física.
 
 ## Novedades de 0.75.256
 
