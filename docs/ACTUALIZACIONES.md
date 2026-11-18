@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.243](https://github.com/Faga250885/Doceink/releases/tag/v0.75.243).
-- [Firmware OTA 0.75.243](https://github.com/Faga250885/Doceink/releases/download/v0.75.243/Doceink-EInk4.bin).
+- [Versión documentada 0.75.244](https://github.com/Faga250885/Doceink/releases/tag/v0.75.244).
+- [Firmware OTA 0.75.244](https://github.com/Faga250885/Doceink/releases/download/v0.75.244/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.244
+
+- Añade controles para retroceder y adelantar 15 segundos, a ambos lados de Reproducir/Pausar. Funcionan durante la reproducción y en pausa, también al cruzar archivos de capítulos. Reiniciar es un botón pequeño de solo icono con borde negro en el extremo derecho de la barra blanca y conserva su confirmación.
+- Muestra el porcentaje de progreso con dos decimales para que el avance sea visible incluso en audiolibros muy largos. La barra conserva su actualización aproximadamente cada diez segundos.
+- Corrige el ancho de la galería de fondos al cambiar de Lista a Miniaturas: muestra tres columnas y hasta nueve fondos por página. Usa los controles físicos de navegación para ver las páginas siguientes.
+- Elimina la selección mediante pulsación prolongada en las miniaturas de fondos y aprovecha todo el alto disponible. La selección múltiple de la vista Lista se conserva y solo reserva espacio al activarla.
+- Validación: 139 pruebas de software aprobadas, incluidos saltos de audio, marcadores entre capítulos, un índice MP4 de 23 horas y el cambio de vistas de la galería. El audio físico de esta versión requiere prueba en Metalio.
 
 ## Novedades de 0.75.243
 

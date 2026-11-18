@@ -16,12 +16,20 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.243](https://github.com/Faga250885/Doceink/releases/tag/v0.75.243).
-- [OTA firmware: 0.75.243](https://github.com/Faga250885/Doceink/releases/download/v0.75.243/Doceink-EInk4.bin).
+- [Documented version: 0.75.244](https://github.com/Faga250885/Doceink/releases/tag/v0.75.244).
+- [OTA firmware: 0.75.244](https://github.com/Faga250885/Doceink/releases/download/v0.75.244/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.244
+
+- Adds 15-second backward and forward controls around Play/Pause. They work during playback and while paused, including across chapter files. Restart is a small black-bordered icon-only button at the right edge of the white toolbar and still asks for confirmation.
+- Shows progress to two decimal places so small advances remain visible in very long audiobooks. The progress bar retains its approximately ten-second update interval.
+- Fixes wallpaper gallery width when switching from List to Thumbnails: three columns and up to nine wallpapers per page. Use the physical navigation controls for subsequent pages.
+- Removes long-press selection from wallpaper thumbnails and uses the full available height. List multi-selection remains available and only reserves space when active.
+- Validation: 139 passing software tests, including audio seeking, cross-chapter bookmarks, a 23-hour MP4 index and wallpaper view switching. Physical audio playback of this version still requires testing on Metalio.
 
 ## Changes in 0.75.243
 
