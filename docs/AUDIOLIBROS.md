@@ -1,6 +1,6 @@
 # Audiolibros en Metalio
 
-Usa **0.75.239 o posterior**: incluye el guardado de posición al pausar, la caché del fondo de standby y la corrección de esperas que podían ralentizar los menús durante la reproducción.
+Usa **0.75.240 o posterior** para el diseño Portada, con imagen grande, tiempos separados y controles al pie. Conserva el guardado de posición y las mejoras de rendimiento de 0.75.239.
 
 Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. M4B, M4A/AAC y otros formatos todavía no se admiten.
 
@@ -33,11 +33,11 @@ metalio/e-ink/audiobooks/
 
 Los capítulos se ordenan por nombre, reconociendo números: 2 se reproduce antes de 10. Al acabar un capítulo, continúa el siguiente. Una carpeta puede contener MP3 y WAV. Esta primera versión muestra hasta 64 libros y 512 pistas en total, con hasta 256 pistas por libro.
 
-La portada es opcional. Para un archivo suelto, usa el mismo nombre con extensión `.jpg` o `.png`; para una carpeta, usa `cover.jpg` o `cover.png`. Sin portada aparece un icono de auriculares. Las portadas incrustadas en etiquetas MP3 no se extraen en esta versión.
+La portada es opcional. Para un archivo suelto, usa el mismo nombre con extensión `.jpg` o `.png`; para una carpeta, usa `cover.jpg` o `cover.png`. Sin portada, el reproductor muestra una cubierta sencilla con el título y un icono de auriculares. Las portadas incrustadas en etiquetas MP3 no se extraen en esta versión.
 
 ## Escuchar y continuar después
 
-Selecciona un libro y pulsa **Reproducir**. **Pausar** guarda la posición y libera el audio para usar la grabadora o la conversación. **Desde el inicio** pide confirmación y vuelve al primer capítulo. El volumen se ajusta con los botones físicos de Metalio.
+Selecciona un libro y pulsa **Reproducir**. **Pausar** guarda la posición y libera el audio para usar la grabadora o la conversación. **Reanudar** continúa desde ese punto. **Reiniciar** pide confirmación y vuelve al primer capítulo. El volumen se ajusta con los botones físicos de Metalio.
 
 Puedes regresar al Home o entrar en standby mientras suena. En standby se conserva el audio y el acceso a la microSD; no es una suspensión completa del procesador y no requiere Wi-Fi. La pantalla del reproductor actualiza el progreso aproximadamente cada diez segundos y deja de hacerlo durante standby.
 
