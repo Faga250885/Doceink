@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.246](https://github.com/Faga250885/Doceink/releases/tag/v0.75.246).
-- [Firmware OTA 0.75.246](https://github.com/Faga250885/Doceink/releases/download/v0.75.246/Doceink-EInk4.bin).
+- [Versión documentada 0.75.247](https://github.com/Faga250885/Doceink/releases/tag/v0.75.247).
+- [Firmware OTA 0.75.247](https://github.com/Faga250885/Doceink/releases/download/v0.75.247/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.247
+
+- Añade separadores negros finos entre los audiolibros de la vista Lista, con el mismo tratamiento que la lista de subrayados.
+- Aplica la trama elegida de puntos finos detrás de la portada del reproductor. Usa un patrón estático pequeño y repetido.
+- Al saltar 15 segundos, el botón central muestra Retrocediendo… o Adelantando… y bloquea nuevos saltos mientras procesa la petición. En reproducción mantiene el indicador hasta confirmar la salida de audio; en pausa vuelve a Reanudar cuando termina el salto.
+- Prepara y empieza a reproducir audio antes de guardar el marcador de un salto, con un pequeño búfer de audio para acompañar la escritura en microSD. Conserva el guardado al pausar o detenerse.
 
 ## Novedades de 0.75.246
 

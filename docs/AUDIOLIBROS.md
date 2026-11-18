@@ -1,6 +1,6 @@
 # Audiolibros en Metalio
 
-Usa **0.75.245 o posterior** para los controles de retroceder y adelantar 15 segundos, el porcentaje con dos decimales y la barra blanca flotante con Biblioteca a la izquierda y Reiniciar a la derecha. La barra tiene esquinas redondeadas y ocho píxeles de separación arriba, a ambos lados y respecto al contenido. Conserva la portada sin contorno y M4B/M4A de 0.75.241.
+Usa **0.75.247 o posterior** para los controles de retroceder y adelantar 15 segundos, el porcentaje con dos decimales y la barra blanca flotante con Biblioteca a la izquierda y Reiniciar a la derecha. La barra tiene esquinas redondeadas y ocho píxeles de separación arriba, a ambos lados y respecto al contenido. Incluye puntos finos detrás de la portada, separadores entre audiolibros y el estado del salto en el botón central. Conserva M4B/M4A de 0.75.241.
 
 Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. Desde **0.75.241** también admite **M4B y M4A con AAC-LC**, mono o estéreo de 8 a 48 kHz, sin DRM y menores de 2 GB. No admite HE-AAC, ALAC ni MP4 fragmentado. Un M4B se reproduce como una sola pista: todavía no se muestran sus capítulos internos ni su portada incrustada.
 
@@ -37,7 +37,7 @@ La portada es opcional. Para un archivo suelto, usa el mismo nombre con extensi�
 
 ## Escuchar y continuar después
 
-Selecciona un libro y pulsa **Reproducir**. **Pausar** guarda la posición y libera el audio para usar la grabadora o la conversación. **Reanudar** continúa desde ese punto. Los controles **15 s**, a ambos lados de Reproducir/Pausar, retroceden o adelantan y también funcionan en pausa. Los saltos pueden cruzar archivos de capítulos y actualizan la posición guardada. El botón de icono con borde negro **Reiniciar**, arriba a la derecha en la barra blanca, pide confirmación y vuelve al primer capítulo. El volumen se ajusta con los botones físicos de Metalio.
+Selecciona un libro y pulsa **Reproducir**. **Pausar** guarda la posición y libera el audio para usar la grabadora o la conversación. **Reanudar** continúa desde ese punto. Los controles **15 s**, a ambos lados de Reproducir/Pausar, retroceden o adelantan y también funcionan en pausa. Los saltos pueden cruzar archivos de capítulos y actualizan la posición guardada. Durante el salto, el botón central indica **Retrocediendo…** o **Adelantando…** hasta que continúa el audio; si estaba en pausa, permanece en pausa al terminar. El botón de icono con borde negro **Reiniciar**, arriba a la derecha en la barra blanca, pide confirmación y vuelve al primer capítulo. El volumen se ajusta con los botones físicos de Metalio.
 
 Puedes regresar al Home o entrar en standby mientras suena. En standby se conserva el audio y el acceso a la microSD; no es una suspensión completa del procesador y no requiere Wi-Fi. La pantalla del reproductor actualiza el progreso aproximadamente cada diez segundos y deja de hacerlo durante standby. Muestra el porcentaje con dos decimales: en un libro de 23 horas, un píxel de la barra equivale a unos tres minutos; el porcentaje permite ver avances más pequeños.
 

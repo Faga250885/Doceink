@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.246](https://github.com/Faga250885/Doceink/releases/tag/v0.75.246).
-- [OTA firmware: 0.75.246](https://github.com/Faga250885/Doceink/releases/download/v0.75.246/Doceink-EInk4.bin).
+- [Documented version: 0.75.247](https://github.com/Faga250885/Doceink/releases/tag/v0.75.247).
+- [OTA firmware: 0.75.247](https://github.com/Faga250885/Doceink/releases/download/v0.75.247/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.247
+
+- Adds thin black dividers between audiobooks in List view, matching the saved highlights list.
+- Applies the selected fine-dot pattern behind the player cover, using a small static repeated tile.
+- During a 15-second skip, the center button shows Rewinding… or Forwarding… and prevents repeated requests. During playback it keeps this feedback until audio output resumes; paused seeking returns to Resume when complete.
+- Prepares and starts fresh audio before saving a seek bookmark, keeping a small audio buffer for the microSD write. Position is still saved on pause or stop.
 
 ## Changes in 0.75.246
 
