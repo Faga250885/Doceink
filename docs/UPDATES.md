@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.258](https://github.com/Faga250885/Doceink/releases/tag/v0.75.258).
-- [OTA firmware: 0.75.258](https://github.com/Faga250885/Doceink/releases/download/v0.75.258/Doceink-EInk4.bin).
+- [Documented version: 0.75.259](https://github.com/Faga250885/Doceink/releases/tag/v0.75.259).
+- [OTA firmware: 0.75.259](https://github.com/Faga250885/Doceink/releases/download/v0.75.259/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.259
+
+- Tapping a saved headset can confirm transmitter mode through discovery or a successful directed connection. Connection attempts remain time-limited.
+- Playback diagnostics now record digital output progress, gaps between writes, and why playback ended.
+- A temporary failure saving a bookmark allows playback to continue and the position to be saved again at the next checkpoint.
+- The charge controller checks for external input power before attempting to restart charging.
 
 ## What's new in 0.75.258
 

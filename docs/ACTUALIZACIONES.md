@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.258](https://github.com/Faga250885/Doceink/releases/tag/v0.75.258).
-- [Firmware OTA 0.75.258](https://github.com/Faga250885/Doceink/releases/download/v0.75.258/Doceink-EInk4.bin).
+- [Versión documentada 0.75.259](https://github.com/Faga250885/Doceink/releases/tag/v0.75.259).
+- [Firmware OTA 0.75.259](https://github.com/Faga250885/Doceink/releases/download/v0.75.259/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.259
+
+- Al tocar un audífono guardado, Metalio puede confirmar el modo de transmisión mediante una búsqueda o la respuesta de conexión a la dirección seleccionada. Cada intento tiene un límite de tiempo.
+- El registro de diagnóstico del reproductor incluye el avance de la salida digital, los intervalos entre escrituras y el motivo por el que termina la reproducción.
+- Si falla un guardado intermedio de la posición, el libro sigue sonando y el reproductor vuelve a intentar guardarla.
+- El controlador de carga comprueba que haya una fuente de alimentación externa antes de intentar reactivar la carga.
 
 ## Novedades de 0.75.258
 
