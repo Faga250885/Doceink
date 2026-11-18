@@ -6,11 +6,11 @@ Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM
 
 ## Audífonos Bluetooth
 
-Desde **0.75.254**, abre **Ajustes → Conexiones → Bluetooth**. Se gestiona automáticamente y no tiene un interruptor manual. Pon tus audífonos en modo de emparejamiento, pulsa **Buscar audífonos**, toca su nombre y elige **Conectar**. Abrir la sección no pausa el altavoz; la salida se selecciona al confirmar la conexión. El reproductor muestra **Preparando…** hasta que se aceptan muestras.
+Desde **0.75.255**, abre **Ajustes → Conexiones → Bluetooth**. Se gestiona automáticamente y no tiene un interruptor manual. Pon tus audífonos en modo de emparejamiento, pulsa **Buscar audífonos** y toca la fila del dispositivo para conectarlo. Durante la búsqueda el botón muestra **Buscando audífonos…**. Abrir la sección no pausa el altavoz; la salida se selecciona al confirmar la conexión. El reproductor muestra **Preparando…** hasta que se aceptan muestras.
 
-Los dispositivos conectados se guardan para reconectarlos sin eliminarlos ni emparejarlos de nuevo. Al conectar uno guardado se renueva internamente la búsqueda del módulo y se espera su confirmación. Pulsa los **tres puntos a la derecha** para **Conectar**, **Desconectar** o **Eliminar**. Eliminar pide confirmación y quita la entrada guardada. Se guardan hasta doce dispositivos y persisten tras reiniciar.
+Los dispositivos conectados se guardan para reconectarlos sin eliminarlos ni emparejarlos de nuevo. Toca su fila para conectar directamente. Los **tres puntos a la derecha** abren **Desconectar**, **Eliminar** y **Cerrar**; Desconectar queda inactivo cuando no hay conexión. Eliminar pide confirmación y quita la entrada guardada. Se guardan hasta doce dispositivos y persisten tras reiniciar.
 
-En standby solo se mantiene el enlace si hay audífonos conectados y un audiolibro reproduciéndose. Pausar o terminar desconecta automáticamente; al despertar puedes reconectar desde la lista guardada. **Desconectar** manualmente pausa y conserva la posición antes de volver al altavoz. Los botones físicos controlan el volumen. El icono Bluetooth indica una conexión real.
+En standby solo se mantiene el enlace si hay audífonos conectados y un audiolibro reproduciéndose. El icono Bluetooth aparece arriba a la derecha, junto al de carga cuando corresponde. Pausar o terminar desconecta automáticamente; al despertar puedes reconectar desde la lista guardada. **Desconectar** manualmente pausa y conserva la posición antes de volver al altavoz. Los botones físicos controlan el volumen. El icono Bluetooth indica una conexión real.
 
 Tras actualizar, prueba varios minutos de audio, pausa/reanudación y standby. Las pruebas automáticas verifican el flujo de software; la continuidad audible necesita comprobarse con tus audífonos.
 

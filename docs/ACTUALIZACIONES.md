@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.254](https://github.com/Faga250885/Doceink/releases/tag/v0.75.254).
-- [Firmware OTA 0.75.254](https://github.com/Faga250885/Doceink/releases/download/v0.75.254/Doceink-EInk4.bin).
+- [Versión documentada 0.75.255](https://github.com/Faga250885/Doceink/releases/tag/v0.75.255).
+- [Firmware OTA 0.75.255](https://github.com/Faga250885/Doceink/releases/download/v0.75.255/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.255
+
+- Acepta respuestas Bluetooth terminadas en CR, LF o CRLF, también divididas entre lecturas. Reconoce una conexión real aunque llegue antes de la confirmación del modo y no permite que un timeout antiguo derribe un enlace activo.
+- La búsqueda comienza después de liberar la tarea de cambio de modo. Una conexión espera a que termine la búsqueda; reconectar un dispositivo guardado no inicia otra búsqueda automáticamente. La inicialización al despertar conserva las acciones pendientes.
+- El botón muestra **Buscando audífonos…** durante la búsqueda y conserva texto legible, sin la franja gris del tratamiento anterior.
+- Tocar la fila conecta directamente. Los tres puntos abren **Desconectar, Eliminar y Cerrar**; Desconectar queda inactivo si el dispositivo no está conectado. Tocar un dispositivo ya conectado no lo desconecta.
+- El standby muestra Bluetooth arriba a la derecha mientras suena por audífonos, junto al icono de carga si corresponde. Sin reproducción, espera a que se libere el enlace antes de permitir el sueño ligero normal.
+- Amplía a seis segundos el audio local preparado para amortiguar escrituras lentas en microSD. La cola adicional se limita a PCM local en PSRAM; mantiene el límite de voz de red y el DMA de 5760 bytes.
+- 141 pruebas de software aprobadas: eventos partidos, reconexión temprana, comandos sin superposición, filas y elipsis, texto de búsqueda, iconos sin solapamiento, despertar y reposo. La estabilidad audible y la sincronización de ambos audífonos necesitan prueba física con esta versión.
 
 ## Novedades de 0.75.254
 

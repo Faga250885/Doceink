@@ -22,11 +22,11 @@ For a Spanish test recording, see [Cuentos de la selva para los niños by Horaci
 
 ## Bluetooth headphones
 
-In **0.75.254**, open **Settings → Connections → Bluetooth**. It is managed automatically, without an on/off switch. Put the headphones in pairing mode, tap **Search headphones**, select their name and choose **Connect**. Opening the section does not pause the speaker; headphone output is selected after a successful connection. The player shows **Preparing…** until samples are accepted.
+In **0.75.255**, open **Settings → Connections → Bluetooth**. It is managed automatically, without an on/off switch. Put the headphones in pairing mode, tap **Search headphones**, tap the device row to connect. During discovery the button shows **Searching headphones…**. Opening the section does not pause the speaker; headphone output is selected after a successful connection. The player shows **Preparing…** until samples are accepted.
 
-Connected devices are saved for reconnection without deleting or pairing again. A saved connection refreshes module discovery and waits for acknowledgement. Use the **ellipsis on the right** to connect, disconnect or delete. Deletion asks for confirmation and removes the saved entry. Up to twelve saved devices persist across restarts.
+Connected devices are saved for reconnection without deleting or pairing again. Tap a saved row to connect directly. The **ellipsis on the right** opens Disconnect, Delete and Close; Disconnect is disabled while disconnected. Deletion asks for confirmation and removes the saved entry. Up to twelve saved devices persist across restarts.
 
-Standby retains the link only while headphones are connected and an audiobook is playing. Pausing or finishing disconnects automatically; reconnect from the saved list after waking. Manual **Disconnect** pauses and preserves the position before returning to the speaker. Physical buttons control volume. The Bluetooth icon indicates an actual connection.
+Standby retains the link only while headphones are connected and an audiobook is playing. Its Bluetooth icon appears at the top right, next to charging when applicable. Pausing or finishing disconnects automatically; reconnect from the saved list after waking. Manual **Disconnect** pauses and preserves the position before returning to the speaker. Physical buttons control volume. The Bluetooth icon indicates an actual connection.
 
 After updating, test several minutes of audio, pause/resume and standby. Automated tests verify software behavior; audible continuity needs a physical test with your headphones.
 

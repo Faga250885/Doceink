@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.254](https://github.com/Faga250885/Doceink/releases/tag/v0.75.254).
-- [OTA firmware: 0.75.254](https://github.com/Faga250885/Doceink/releases/download/v0.75.254/Doceink-EInk4.bin).
+- [Documented version: 0.75.255](https://github.com/Faga250885/Doceink/releases/tag/v0.75.255).
+- [OTA firmware: 0.75.255](https://github.com/Faga250885/Doceink/releases/download/v0.75.255/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.255
+
+- Parses Bluetooth CR, LF and CRLF responses across read boundaries. Recognizes a real connection before mode acknowledgement and ignores stale timeouts on a healthy link.
+- Starts discovery after the mode task releases its busy state; connection waits for inquiry completion. Saved-device reconnection avoids launching another search. Wake initialization preserves pending actions.
+- Search displays **Searching headphones…** with readable text instead of the former gray busy treatment.
+- Tapping a row connects directly. Ellipsis opens **Disconnect, Delete and Close**; Disconnect is disabled when not connected. Tapping a connected peer does not disconnect it.
+- Standby shows Bluetooth at the top right during headphone playback, alongside charging when applicable. Without playback it waits for link release before normal light sleep.
+- Prepares six seconds of local audio to absorb slow microSD writes. Additional queued PCM stays bounded in PSRAM; network-voice limits and the 5760-byte DMA remain unchanged.
+- 141 software tests passed, covering split replies, early reconnects, non-overlapping commands, row/ellipsis actions, search text, icon spacing, wake and sleep readiness. Audible stability and earbud synchronization still need physical testing with this version.
 
 ## What's new in 0.75.254
 
