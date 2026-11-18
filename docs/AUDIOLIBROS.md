@@ -1,6 +1,6 @@
 # Audiolibros en Metalio
 
-Usa **0.75.241 o posterior** para M4B/M4A y el reproductor simplificado: portada sin contorno, botón Biblioteca arriba a la izquierda y controles al pie.
+Usa **0.75.242 o posterior** para el reproductor con barra blanca estándar y botón Biblioteca a la izquierda con borde negro. Conserva la portada sin contorno, los controles al pie y M4B/M4A de 0.75.241.
 
 Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. Desde **0.75.241** también admite **M4B y M4A con AAC-LC**, mono o estéreo de 8 a 48 kHz, sin DRM y menores de 2 GB. No admite HE-AAC, ALAC ni MP4 fragmentado. Un M4B se reproduce como una sola pista: todavía no se muestran sus capítulos internos ni su portada incrustada.
 

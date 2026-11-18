@@ -16,12 +16,17 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.241](https://github.com/Faga250885/Doceink/releases/tag/v0.75.241).
-- [OTA firmware: 0.75.241](https://github.com/Faga250885/Doceink/releases/download/v0.75.241/Doceink-EInk4.bin).
+- [Documented version: 0.75.242](https://github.com/Faga250885/Doceink/releases/tag/v0.75.242).
+- [OTA firmware: 0.75.242](https://github.com/Faga250885/Doceink/releases/download/v0.75.242/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.242
+
+- The audiobook player toolbar now has a white background and standard dimensions: 64 px tall, 8 px padding and an 8 px gap before the content card.
+- Its white Library button sits on the left with a black border and an icon before the text. The cover remains white with no black outline.
 
 ## Changes in 0.75.241
 
