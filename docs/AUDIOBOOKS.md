@@ -16,6 +16,12 @@ Select a book to play, pause/resume or restart from the beginning with confirmat
 
 Position is saved periodically and when stopping in small microSD sidecar files. An unexpected power cut can lose the last few seconds. Finished books restart from the beginning on the next play. MP3 duration is approximate, especially for VBR files. Pause playback before recording or using a voice conversation.
 
-Bluetooth headphones and synchronized text are planned for later.
+Synchronized text is planned for later.
 
 For a Spanish test recording, see [Cuentos de la selva para los niños by Horacio Quiroga on LibriVox](https://librivox.org/cuentos-de-la-selva-para-los-ninos-by-horacio-quiroga/) and [download the first chapter, La abeja haragana](https://archive.org/download/cuentosdelaselva_1603_librivox/cuentosdelaselva_01_quiroga_128kb.mp3). This is about 13.6 MB and 14 minutes. LibriVox's source page lists its readers and public-domain information. Audio is not bundled in the firmware.
+
+## Bluetooth headphones
+
+From **0.75.249**, open **Settings → Connections → Bluetooth**, select **Headphones**, put your headphones in pairing mode, tap **Find headphones** and choose their name. Wait for confirmation before playing your audiobook. Pause playback before changing the output. Pairing and sound require a physical test on Metalio.
+
+Tap the timer, recording or audiobook indicator beside the clock to reopen its activity. Each has a separate 44 × 44 px touch target.

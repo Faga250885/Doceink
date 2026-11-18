@@ -4,6 +4,12 @@ Usa **0.75.248 o posterior** para los controles de retroceder y adelantar 15 seg
 
 Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM de 16 bits**, mono o estéreo, entre 8 y 48 kHz. Para empezar recomendamos MP3: ocupa mucho menos espacio que WAV. Los archivos deben estar en la microSD, sin protección DRM. Desde **0.75.241** también admite **M4B y M4A con AAC-LC**, mono o estéreo de 8 a 48 kHz, sin DRM y menores de 2 GB. No admite HE-AAC, ALAC ni MP4 fragmentado. Un M4B se reproduce como una sola pista: todavía no se muestran sus capítulos internos ni su portada incrustada.
 
+## Audífonos Bluetooth
+
+Desde **0.75.249**, abre **Ajustes → Conexiones → Bluetooth** y selecciona **Audífonos**. Pon tus audífonos en modo de emparejamiento, pulsa **Buscar audífonos** y toca su nombre. Espera la confirmación y abre el audiolibro. Para volver al altavoz, pausa primero el audio y selecciona **Altavoz**. La compatibilidad de los audífonos y la reproducción requieren prueba física en Metalio.
+
+Toca el indicador de auriculares junto a la hora para volver al reproductor actual. Su zona táctil es de 44 × 44 px. Los indicadores de contador y grabación también abren sus respectivas aplicaciones.
+
 ## Añadir la aplicación al Home
 
 Mantén pulsado un icono configurable del Home y elige **Audiolibros**, identificado por los auriculares. También puedes cambiar los iconos desde la configuración del Home. Ajustes conserva su posición fija.
@@ -43,7 +49,7 @@ Puedes regresar al Home o entrar en standby mientras suena. En standby se conser
 
 La posición se guarda periódicamente y al detener la reproducción en pequeños archivos de la microSD. No los borres si quieres conservar el punto de escucha. Un apagado inesperado puede perder los últimos segundos. Tras terminar un libro, la siguiente reproducción comienza desde el inicio. La duración mostrada para MP3 es aproximada, especialmente en archivos VBR.
 
-Esta primera versión no muestra texto sincronizado ni conecta auriculares Bluetooth. No reproduce a la vez una conversación de voz o una grabación.
+Esta versión no muestra texto sincronizado. No reproduce a la vez una conversación de voz o una grabación.
 
 ## Audio de prueba
 

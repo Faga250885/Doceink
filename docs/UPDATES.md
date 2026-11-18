@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.248](https://github.com/Faga250885/Doceink/releases/tag/v0.75.248).
-- [OTA firmware: 0.75.248](https://github.com/Faga250885/Doceink/releases/download/v0.75.248/Doceink-EInk4.bin).
+- [Documented version: 0.75.249](https://github.com/Faga250885/Doceink/releases/tag/v0.75.249).
+- [OTA firmware: 0.75.249](https://github.com/Faga250885/Doceink/releases/download/v0.75.249/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.249
+
+- Tap the timer, recording or audiobook indicator beside the clock to return to its activity. Icons keep their visual sizes and use separate **44 × 44 px** touch targets.
+- The timer opens a running counter; headphones open the current audiobook without starting another playback session.
+- **Settings → Connections → Bluetooth** provides **Speaker**, **Headphones** and **Receive audio**. Select Headphones, put them in pairing mode, tap **Find headphones** and select their name. Then open Audiobooks.
+- Pause audio or stop recording before changing the output. This uses the device's existing Bluetooth module; pairing and sound with physical headphones still need testing on the device.
 
 ## Changes in 0.75.248
 

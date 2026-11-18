@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.248](https://github.com/Faga250885/Doceink/releases/tag/v0.75.248).
-- [Firmware OTA 0.75.248](https://github.com/Faga250885/Doceink/releases/download/v0.75.248/Doceink-EInk4.bin).
+- [Versión documentada 0.75.249](https://github.com/Faga250885/Doceink/releases/tag/v0.75.249).
+- [Firmware OTA 0.75.249](https://github.com/Faga250885/Doceink/releases/download/v0.75.249/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.249
+
+- Toca los indicadores de contador, grabación o audiolibro junto a la hora para volver a la actividad correspondiente. Los iconos conservan su tamaño y tienen una zona táctil de **44 × 44 px**, sin superponerse.
+- El contador abre un temporizador en marcha y los auriculares abren el audiolibro actual, sin iniciar otra reproducción.
+- **Ajustes → Conexiones → Bluetooth** reúne las salidas **Altavoz**, **Audífonos** y **Recibir audio**. Selecciona Audífonos, ponlos en modo de emparejamiento, pulsa **Buscar audífonos** y toca su nombre. Después abre Audiolibros.
+- Pausa el audio o detén la grabación antes de cambiar de salida. Se conserva el módulo Bluetooth del equipo; el emparejamiento y el audio con audífonos físicos quedan pendientes de prueba en el aparato.
 
 ## Novedades de 0.75.248
 
