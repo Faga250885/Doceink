@@ -67,3 +67,5 @@ Esta versión no muestra texto sincronizado. No reproduce a la vez una conversac
 La grabación procede de LibriVox; su página identifica la obra, los narradores y las condiciones de dominio público. El audio no está incluido en el firmware.
 
 La sección Bluetooth usa una sola tarjeta blanca a todo el alto disponible, separada 8 px de Red/Bluetooth. **Conectado** indica el enlace; **Conectado · Sin audio** indica que la salida todavía no acepta muestras. La recuperación utiliza los comandos de compatibilidad de la [familia BH1098 documentados por el fabricante](https://github.com/CloudZao/Metalio-E-INK4-Plus/blob/main/docs/bh1098-audio-protocol.md); su resultado depende del firmware del módulo y de los audífonos.
+
+Con **0.75.256**, pausa la reproducción por audífonos antes de buscar otros dispositivos. Los errores de búsqueda y conexión se liberan automáticamente al vencer su plazo, incluso después de salir de Ajustes. La actualización conserva los dispositivos guardados. La estabilidad audible requiere comprobar varios minutos de reproducción y un salto de 15 segundos en el aparato.

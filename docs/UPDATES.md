@@ -16,12 +16,22 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.255](https://github.com/Faga250885/Doceink/releases/tag/v0.75.255).
-- [OTA firmware: 0.75.255](https://github.com/Faga250885/Doceink/releases/download/v0.75.255/Doceink-EInk4.bin).
+- [Documented version: 0.75.256](https://github.com/Faga250885/Doceink/releases/tag/v0.75.256).
+- [OTA firmware: 0.75.256](https://github.com/Faga250885/Doceink/releases/download/v0.75.256/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.256
+
+- Fixes a Bluetooth state that could remain stuck after an unanswered initialization. Startup configuration and mode changes share serialization; at most two attempts run before releasing the operation for retry.
+- Inquiry and connection deadlines belong to the Bluetooth service and continue after closing Settings. Unsolicited CONNECTING events also expire instead of leaving a permanent Please wait state.
+- A 15-second seek invalidates old output. A write completing or failing after cancellation cannot advance the new counter, clear the replacement queue or relatch an old failure. Seeking waits a bounded interval for cancelled output before preparing the new stream.
+- Removes 0.75.255's six-second PCM expansion, restoring one second of read-ahead and a 40-packet queue. Submits complete frames through a reusable conversion buffer and keeps the 5760-byte DMA.
+- Audio recovery cannot interleave its command sequence with a mode transition. Searching during headphone playback asks the user to pause before starting another radio inquiry.
+- Adds phase, disconnect, audio-profile, I2S-error and slow-checkpoint diagnostics without recording audio or credentials. Preserves saved devices, row/ellipsis actions, search text and standby Bluetooth status.
+- 141 software tests passed plus targeted command-exclusion testing, covering missing initialization ACKs, bounded retries, deadlines outside Settings, timeout recovery and a stale failed write during seeking. Audible stability and earbud synchronization still need physical validation on Metalio.
 
 ## What's new in 0.75.255
 

@@ -16,12 +16,22 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.255](https://github.com/Faga250885/Doceink/releases/tag/v0.75.255).
-- [Firmware OTA 0.75.255](https://github.com/Faga250885/Doceink/releases/download/v0.75.255/Doceink-EInk4.bin).
+- [Versión documentada 0.75.256](https://github.com/Faga250885/Doceink/releases/tag/v0.75.256).
+- [Firmware OTA 0.75.256](https://github.com/Faga250885/Doceink/releases/download/v0.75.256/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.256
+
+- Corrige el estado que podía quedar bloqueado después de una inicialización Bluetooth sin respuesta. La configuración de arranque y los cambios de modo se serializan; se realizan como máximo dos intentos y después se libera la operación para poder reintentar.
+- Los plazos de búsqueda y conexión pertenecen al servicio Bluetooth y siguen funcionando al cerrar Ajustes. Los avisos CONNECTING sin solicitud previa también quedan acotados, en lugar de producir un Por favor espere permanente.
+- Un salto de 15 segundos invalida la salida anterior. Una escritura vieja que termina o falla después del salto ya no avanza el contador nuevo, borra su cola ni vuelve a marcar su error. El salto espera de forma acotada a que termine la escritura cancelada antes de preparar la nueva salida.
+- Retira la ampliación PCM de seis segundos de 0.75.255 y vuelve a un segundo de preparación y una cola máxima de 40 paquetes. Envía cuadros completos mediante un búfer reutilizable, conservando el DMA de 5760 bytes.
+- La recuperación de audio no puede intercalar su secuencia de comandos con un cambio de modo. Durante reproducción por audífonos, Buscar pide pausar antes de iniciar otra exploración de radio.
+- Añade registros de fase, desconexión, perfil de audio, errores I2S y escrituras lentas de posición, sin guardar audio ni credenciales. Conserva favoritos, acciones de fila/ellipsis, texto de búsqueda y Bluetooth en standby.
+- 141 pruebas de software aprobadas y prueba específica de exclusión de comandos: inicialización sin ACK, reintentos limitados, plazos fuera de Ajustes, recuperación tras timeout y fallo de una escritura anterior al salto. La estabilidad audible y la sincronización de los audífonos siguen pendientes de comprobar en Metalio físico.
 
 ## Novedades de 0.75.255
 
