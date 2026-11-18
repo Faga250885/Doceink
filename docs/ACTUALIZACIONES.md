@@ -16,12 +16,19 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.247](https://github.com/Faga250885/Doceink/releases/tag/v0.75.247).
-- [Firmware OTA 0.75.247](https://github.com/Faga250885/Doceink/releases/download/v0.75.247/Doceink-EInk4.bin).
+- [Versión documentada 0.75.248](https://github.com/Faga250885/Doceink/releases/tag/v0.75.248).
+- [Firmware OTA 0.75.248](https://github.com/Faga250885/Doceink/releases/download/v0.75.248/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.248
+
+- Restaura el fondo gris anterior detrás de la portada del reproductor y retira la trama de puntos finos.
+- Muestra un icono de auriculares junto a la hora mientras se reproduce un audiolibro. Permanece al cambiar de sección y aparece también arriba a la izquierda durante standby.
+- Oculta el indicador al pausar, terminar o fallar la reproducción. Los saltos realizados en pausa no lo activan.
+- Ajusta el espacio de los indicadores de temporizador, grabación y recordatorios para evitar superposiciones con el icono y los mensajes centrales.
 
 ## Novedades de 0.75.247
 

@@ -1,6 +1,6 @@
 # Audiobooks on Metalio
 
-Use **0.75.247 or later** for 15-second backward/forward controls, progress to two decimal places and a floating rounded white toolbar with Library on the left and Restart on the right. Eight-pixel gaps separate it from the top bar, side edges and content. Includes a fine-dot cover backdrop, list dividers and seek feedback on the center button. M4B/M4A support from 0.75.241 remains.
+Use **0.75.248 or later** for 15-second backward/forward controls, progress to two decimal places and a floating rounded white toolbar with Library on the left and Restart on the right. Eight-pixel gaps separate it from the top bar, side edges and content. Includes a gray cover backdrop, list dividers and seek feedback on the center button. A headphone icon beside the clock indicates audiobook playback, including other screens and standby; it disappears when paused or finished. M4B/M4A support from 0.75.241 remains.
 
 Available in **0.75.236**. This first version supports **MP3** and **16-bit PCM WAV**, mono or stereo, at 8–48 kHz, stored on microSD. MP3 is recommended for its smaller size. Since **0.75.241**, DRM-free **M4B and M4A with AAC-LC** are also supported, mono/stereo at 8–48 kHz and below 2 GB. HE-AAC, ALAC and fragmented MP4 are not supported. M4B plays as one track; internal chapters and embedded artwork are not exposed yet.
 

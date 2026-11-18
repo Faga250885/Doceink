@@ -16,12 +16,19 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.247](https://github.com/Faga250885/Doceink/releases/tag/v0.75.247).
-- [OTA firmware: 0.75.247](https://github.com/Faga250885/Doceink/releases/download/v0.75.247/Doceink-EInk4.bin).
+- [Documented version: 0.75.248](https://github.com/Faga250885/Doceink/releases/tag/v0.75.248).
+- [OTA firmware: 0.75.248](https://github.com/Faga250885/Doceink/releases/download/v0.75.248/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## Changes in 0.75.248
+
+- Restores the previous gray background behind the player cover and removes the fine-dot pattern.
+- Shows a headphone icon beside the clock during audiobook playback. It persists across screens and also appears at the upper left in standby.
+- Hides the indicator when playback pauses, finishes or fails. Seeking while paused does not activate it.
+- Accounts for timer, recording and reminder indicators so the icon and centered notices do not overlap.
 
 ## Changes in 0.75.247
 
