@@ -16,12 +16,20 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.242](https://github.com/Faga250885/Doceink/releases/tag/v0.75.242).
-- [Firmware OTA 0.75.242](https://github.com/Faga250885/Doceink/releases/download/v0.75.242/Doceink-EInk4.bin).
+- [Versión documentada 0.75.243](https://github.com/Faga250885/Doceink/releases/tag/v0.75.243).
+- [Firmware OTA 0.75.243](https://github.com/Faga250885/Doceink/releases/download/v0.75.243/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.243
+
+- Reduce el tamaño del firmware con piezas de ajedrez en formato indexado sin pérdida y una sola copia de los recursos de iconos compartidos.
+- Retira del firmware el widget de consumo de IA deshabilitado y su antiguo flujo de importación de sesiones.
+- Reutiliza una base de tarjetas y fondos de modal en varias apps, y una sola implementación de traducción para las páginas web locales, con menos asignaciones temporales.
+- Al entrar en una sección, su nombre aparece durante cinco segundos en el centro de la barra superior. Los mensajes de aplicación y conexión tienen prioridad.
+- [Mediciones y validación de la optimización](OPTIMIZACION.md).
 
 ## Novedades de 0.75.242
 
