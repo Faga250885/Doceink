@@ -16,12 +16,21 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.249](https://github.com/Faga250885/Doceink/releases/tag/v0.75.249).
-- [OTA firmware: 0.75.249](https://github.com/Faga250885/Doceink/releases/download/v0.75.249/Doceink-EInk4.bin).
+- [Documented version: 0.75.250](https://github.com/Faga250885/Doceink/releases/tag/v0.75.250).
+- [OTA firmware: 0.75.250](https://github.com/Faga250885/Doceink/releases/download/v0.75.250/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.250
+
+- Bluetooth shows the connected device, **saved headphones** and **nearby devices** by name. Tap a device to connect, disconnect or forget it. Forgetting requires confirmation and removes its entry from Metalio's saved list. Saved devices persist across restarts.
+- Automatically selects the music profile for audiobooks, removes the technical Music/Call buttons and uses the Lucide Bluetooth icon.
+- Physical volume keys also adjust the Bluetooth module. Headphones use less software attenuation; the speaker curve is unchanged.
+- Switching to Speaker clears the indicator and ignores late connection responses. Duplicate connection messages do not resend playback commands.
+- Keeps the external module powered during a connection, protects active output from the idle timer and counts only written samples. Persistent output failure stops playback with an error message.
+- Software tests cover persistence, reconnection, removal/cancellation, timeouts, late events and partial/failed writes. Continuous playback and volume with your headphones require a physical test after updating.
 
 ## What's new in 0.75.249
 

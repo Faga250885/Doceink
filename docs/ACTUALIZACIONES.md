@@ -16,12 +16,21 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.249](https://github.com/Faga250885/Doceink/releases/tag/v0.75.249).
-- [Firmware OTA 0.75.249](https://github.com/Faga250885/Doceink/releases/download/v0.75.249/Doceink-EInk4.bin).
+- [Versión documentada 0.75.250](https://github.com/Faga250885/Doceink/releases/tag/v0.75.250).
+- [Firmware OTA 0.75.250](https://github.com/Faga250885/Doceink/releases/download/v0.75.250/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.250
+
+- Bluetooth muestra el dispositivo conectado, **audífonos guardados** y **dispositivos cercanos** por nombre. Toca un dispositivo para conectar, desconectar u olvidar. Olvidar pide confirmación y elimina su entrada de los guardados de Metalio. La lista se conserva entre reinicios.
+- Selecciona automáticamente el perfil de música para audiolibros. Retira los botones técnicos Música/Llamada y usa el icono Bluetooth de Lucide.
+- Los botones físicos de volumen ajustan también el módulo Bluetooth. La salida de audífonos usa una curva de ganancia menos atenuada; el altavoz conserva su curva.
+- Al cambiar a Altavoz, limpia el indicador e ignora confirmaciones tardías de la conexión anterior. Una respuesta duplicada de conexión no vuelve a enviar la orden de reproducción.
+- Conserva la alimentación del módulo durante una conexión, protege la salida activa del temporizador de inactividad y cuenta solo las muestras escritas. Un fallo persistente de salida detiene el reproductor con un mensaje.
+- Las pruebas de software cubren persistencia, reconexión, borrado/cancelación, tiempos de espera, respuestas tardías y escrituras parciales/fallidas. La continuidad y el volumen con tus audífonos requieren una prueba física tras actualizar.
 
 ## Novedades de 0.75.249
 
