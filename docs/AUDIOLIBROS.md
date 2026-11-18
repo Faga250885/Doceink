@@ -6,11 +6,11 @@ Disponible desde **0.75.236**. La primera versión reproduce **MP3** y **WAV PCM
 
 ## Audífonos Bluetooth
 
-Desde **0.75.250**, abre **Ajustes → Conexiones → Bluetooth** y selecciona **Audífonos**. Ponlos en modo de emparejamiento, pulsa **Buscar audífonos**, toca su nombre y elige **Conectar**. Espera la confirmación y reproduce el libro. El perfil de música se prepara automáticamente.
+Desde **0.75.251**, abre **Ajustes → Conexiones → Bluetooth** y pulsa **Activado**, a la izquierda. Ponlos en modo de emparejamiento, pulsa **Buscar audífonos**, toca su nombre y elige **Conectar**. Espera la confirmación y reproduce el libro. El perfil de música se prepara automáticamente.
 
 Los dispositivos conectados se guardan en Metalio para volver a conectarlos sin otra búsqueda. Toca el dispositivo conectado o una fila guardada para ver **Conectar**, **Desconectar** u **Olvidar**. Olvidar pide confirmación y elimina la entrada de la lista guardada; si estaba conectado, vuelve al altavoz. Se guardan hasta doce dispositivos. La lista persiste tras reiniciar.
 
-Cambiar la salida o desconectar pausa el audiolibro y conserva la posición. Pulsa **Reanudar** después de elegir la salida. Los botones físicos controlan el volumen y también envían el ajuste al módulo Bluetooth al usar audífonos. El icono de Bluetooth se apaga al volver al altavoz.
+Pulsa **Desactivado**, a la derecha, para volver al altavoz. Desactivar Bluetooth o desconectar pausa el audiolibro y conserva la posición; pulsa **Reanudar** para continuar. Los audífonos guardados se conservan al desactivar. Los botones físicos controlan el volumen y también envían el ajuste al módulo Bluetooth al usar audífonos. El icono de Bluetooth se apaga al volver al altavoz.
 
 La continuidad de la reproducción y el volumen dependen también de los audífonos: tras actualizar, prueba un minuto de audio, pausa/reanudación y standby. Las pruebas automáticas verifican el flujo de software, los tiempos de espera y la recuperación de fallos de salida.
 

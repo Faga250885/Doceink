@@ -22,11 +22,11 @@ For a Spanish test recording, see [Cuentos de la selva para los niños by Horaci
 
 ## Bluetooth headphones
 
-In **0.75.250**, open **Settings → Connections → Bluetooth**, select **Headphones**, put yours in pairing mode, tap **Find headphones**, choose their name and select **Connect**. Wait for confirmation before playing. The music profile is configured automatically.
+In **0.75.251**, open **Settings → Connections → Bluetooth**, tap **Enabled** on the left, put yours in pairing mode, tap **Find headphones**, choose their name and select **Connect**. Wait for confirmation before playing. The music profile is configured automatically.
 
 Connected devices are saved for reconnection without another search. Tap the connected device or a saved row to connect, disconnect or forget it. Forgetting asks for confirmation and removes the entry from Metalio's saved list; if connected, it returns to the speaker. Up to twelve devices persist across restarts.
 
-Changing the output or disconnecting pauses the book and keeps its position. Tap **Resume** after selecting an output. Physical volume keys also adjust the Bluetooth module when using headphones. The Bluetooth indicator clears on returning to the speaker.
+Tap **Disabled** on the right to return to the speaker. Disabling Bluetooth or disconnecting pauses the book and keeps its position; tap **Resume** to continue. Saved headphones are retained when Bluetooth is disabled. Physical volume keys also adjust the Bluetooth module when using headphones. The Bluetooth indicator clears on returning to the speaker.
 
 Test one minute of audio, pause/resume and standby after updating. Automated tests verify software transitions, timeouts and output-failure recovery; continuous sound and volume still require a physical test with your headphones.
 
