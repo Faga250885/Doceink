@@ -22,14 +22,14 @@ For a Spanish test recording, see [Cuentos de la selva para los niños by Horaci
 
 ## Bluetooth headphones
 
-In **0.75.252**, open **Settings → Connections → Bluetooth**, tap **Enabled** on the left, put yours in pairing mode, tap **Find headphones**, choose their name and select **Connect**. Wait for confirmation before playing. The initial module route is preserved; output failure triggers a bounded compatibility-recovery attempt. The player shows **Preparing…** until samples are accepted.
+In **0.75.254**, open **Settings → Connections → Bluetooth**. It is managed automatically, without an on/off switch. Put the headphones in pairing mode, tap **Search headphones**, select their name and choose **Connect**. Opening the section does not pause the speaker; headphone output is selected after a successful connection. The player shows **Preparing…** until samples are accepted.
 
-Connected devices are saved for reconnection without another search. Use the **ellipsis on the right** of a connected or saved device to connect, disconnect or delete it. Deletion asks for confirmation and removes the entry from Metalio's saved list; if connected, it returns to the speaker. Up to twelve devices persist across restarts.
+Connected devices are saved for reconnection without deleting or pairing again. A saved connection refreshes module discovery and waits for acknowledgement. Use the **ellipsis on the right** to connect, disconnect or delete. Deletion asks for confirmation and removes the saved entry. Up to twelve saved devices persist across restarts.
 
-Tap **Disabled** on the right to return to the speaker. Disabling Bluetooth or disconnecting pauses the book and keeps its position; tap **Resume** to continue. Saved headphones are retained when Bluetooth is disabled. Physical volume keys also adjust the Bluetooth module when using headphones. The Bluetooth indicator clears on returning to the speaker.
+Standby retains the link only while headphones are connected and an audiobook is playing. Pausing or finishing disconnects automatically; reconnect from the saved list after waking. Manual **Disconnect** pauses and preserves the position before returning to the speaker. Physical buttons control volume. The Bluetooth icon indicates an actual connection.
 
-Test one minute of audio, pause/resume and standby after updating. Automated tests verify software transitions, timeouts and output-failure recovery; continuous sound and volume still require a physical test with your headphones.
+After updating, test several minutes of audio, pause/resume and standby. Automated tests verify software behavior; audible continuity needs a physical test with your headphones.
 
 Tap the timer, recording or audiobook indicator beside the clock to reopen its activity. Each has a separate 44 × 44 px touch target.
 
-Bluetooth uses one full-height white card, 8 px below Network/Bluetooth. **Connected** indicates the link; **Connected · No audio** indicates that output cannot accept samples. Compatibility recovery follows the manufacturer’s [BH1098-family protocol](https://github.com/CloudZao/Metalio-E-INK4-Plus/blob/main/docs/bh1098-audio-protocol.md); results depend on the fitted module firmware and headset.
+Bluetooth uses one full-height white card, 8 px below Network/Bluetooth. Compatibility recovery follows the manufacturer's [BH1098-family protocol](https://github.com/CloudZao/Metalio-E-INK4-Plus/blob/main/docs/bh1098-audio-protocol.md); results depend on module firmware and headphones.

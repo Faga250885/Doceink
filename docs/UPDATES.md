@@ -16,12 +16,21 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.253](https://github.com/Faga250885/Doceink/releases/tag/v0.75.253).
-- [OTA firmware: 0.75.253](https://github.com/Faga250885/Doceink/releases/download/v0.75.253/Doceink-EInk4.bin).
+- [Documented version: 0.75.254](https://github.com/Faga250885/Doceink/releases/tag/v0.75.254).
+- [OTA firmware: 0.75.254](https://github.com/Faga250885/Doceink/releases/download/v0.75.254/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.254
+
+- Bluetooth is managed automatically; removes the On/Off tabs. Opening its section does not pause audiobook playback or select headphone output.
+- Standby retains the link only while connected headphones are playing audio. Pausing or finishing disconnects and releases the link power reservation. Local audio hardware stays powered when needed for speaker playback or recording.
+- Saved-device reconnection waits for mode acknowledgement and refreshes module discovery without deleting the device. Late responses from a previous mode cannot erase a newer request; mode commands are serialized.
+- Headphone output is selected after connection succeeds. Speaker amplification is disabled while audiobooks play through headphones. Manual disconnection pauses and saves progress before returning to speaker output.
+- Queues one second of audio before periodic microSD bookmark writes and removes per-block I2S heap allocation. Keeps the 5760-byte DMA and Wi-Fi configuration unchanged.
+- 141 software tests passed, covering saved reconnection, late responses, bounded waits, playback continuity when opening Bluetooth, standby playback/pause and partial writes. The user confirmed audible playback in 0.75.253; reduced physical audio gaps still need testing with this version.
 
 ## What's new in 0.75.253
 

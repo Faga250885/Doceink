@@ -16,12 +16,21 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.253](https://github.com/Faga250885/Doceink/releases/tag/v0.75.253).
-- [Firmware OTA 0.75.253](https://github.com/Faga250885/Doceink/releases/download/v0.75.253/Doceink-EInk4.bin).
+- [Versión documentada 0.75.254](https://github.com/Faga250885/Doceink/releases/tag/v0.75.254).
+- [Firmware OTA 0.75.254](https://github.com/Faga250885/Doceink/releases/download/v0.75.254/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.254
+
+- Bluetooth se gestiona automáticamente: elimina los tabs Activado/Desactivado. Entrar a su sección no pausa el audiolibro ni selecciona la salida de audífonos.
+- En standby conserva el enlace solo mientras hay audífonos conectados y audio reproduciéndose. Al pausar o terminar desconecta y libera la reserva de energía del enlace; el módulo de audio local permanece alimentado cuando lo necesita el altavoz o la grabación.
+- Reconectar un dispositivo guardado espera la confirmación del modo y renueva la búsqueda del módulo, sin borrar el dispositivo. Las respuestas tardías del modo anterior no borran la solicitud nueva y las órdenes se serializan.
+- La salida de audífonos se selecciona al confirmar una conexión. El amplificador del altavoz deja de alimentarse durante reproducción por audífonos. Desconectar manualmente pausa y conserva la posición antes de volver al altavoz.
+- Prepara un segundo de audio antes de escribir los marcadores periódicos en microSD y evita una asignación de memoria en cada bloque I2S. Conserva el DMA de 5760 bytes y la configuración de Wi-Fi.
+- 141 pruebas de software aprobadas: reconexión guardada, respuestas tardías, espera limitada, continuidad al abrir Bluetooth, standby con reproducción/pausa y escrituras parciales. El usuario confirmó audio audible con 0.75.253; la reducción de sus microcortes requiere prueba física con esta versión.
 
 ## Novedades de 0.75.253
 
