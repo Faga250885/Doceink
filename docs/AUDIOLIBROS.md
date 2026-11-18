@@ -71,3 +71,5 @@ La sección Bluetooth usa una sola tarjeta blanca a todo el alto disponible, sep
 Con **0.75.256**, pausa la reproducción por audífonos antes de buscar otros dispositivos. Los errores de búsqueda y conexión se liberan automáticamente al vencer su plazo, incluso después de salir de Ajustes. La actualización conserva los dispositivos guardados. La estabilidad audible requiere comprobar varios minutos de reproducción y un salto de 15 segundos en el aparato.
 
 Para probar desde cero, abre **Ajustes → Conexiones → Bluetooth → Borrar audífonos guardados** y confirma. Esta acción desconecta los audífonos y borra la lista del firmware, los resultados y la referencia antigua al último dispositivo en ese Metalio. El fabricante no documenta una orden para borrar la memoria interna de emparejamiento del módulo.
+
+Durante la escucha por Bluetooth se omite la escritura periódica de estadísticas del sistema. La continuidad del sonido en los AeroClip queda pendiente de una prueba física.

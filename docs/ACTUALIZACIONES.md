@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.257](https://github.com/Faga250885/Doceink/releases/tag/v0.75.257).
-- [Firmware OTA 0.75.257](https://github.com/Faga250885/Doceink/releases/download/v0.75.257/Doceink-EInk4.bin).
+- [Versión documentada 0.75.258](https://github.com/Faga250885/Doceink/releases/tag/v0.75.258).
+- [Firmware OTA 0.75.258](https://github.com/Faga250885/Doceink/releases/download/v0.75.258/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.258
+
+- Buscar audífonos intenta iniciar el escaneo incluso cuando falta la confirmación inicial del módulo. Si el módulo sigue sin responder, Metalio indica en qué paso falló y permite volver a intentar.
+- Eliminar un audífono cancela su conexión pendiente. Si falla la reconexión directa con un audífono guardado, Metalio busca su dirección una vez antes de terminar el intento.
+- Durante la escucha por Bluetooth se omite la escritura periódica de estadísticas del sistema. La continuidad del sonido en los AeroClip queda pendiente de una prueba física.
 
 ## Novedades de 0.75.257
 

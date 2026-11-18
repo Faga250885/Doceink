@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.257](https://github.com/Faga250885/Doceink/releases/tag/v0.75.257).
-- [OTA firmware: 0.75.257](https://github.com/Faga250885/Doceink/releases/download/v0.75.257/Doceink-EInk4.bin).
+- [Documented version: 0.75.258](https://github.com/Faga250885/Doceink/releases/tag/v0.75.258).
+- [OTA firmware: 0.75.258](https://github.com/Faga250885/Doceink/releases/download/v0.75.258/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.258
+
+- Headphone search attempts discovery even if the initial radio acknowledgement is missing. If the radio remains silent, Metalio reports where the attempt failed and allows another search.
+- Forgetting a headset cancels its pending connection. When a direct reconnect times out, Metalio searches once for the saved headset's address.
+- Periodic system-statistics logging is skipped during Bluetooth playback. Continuous audible output on AeroClip earbuds still needs a hardware test.
 
 ## What's new in 0.75.257
 

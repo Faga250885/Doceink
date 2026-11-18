@@ -37,3 +37,5 @@ Bluetooth uses one full-height white card, 8 px below Network/Bluetooth. Compati
 In **0.75.256**, pause headphone playback before searching for other devices. Inquiry and connection errors expire automatically even after leaving Settings. Updating preserves saved devices. Audible stability needs several minutes of playback and a 15-second seek test on the device.
 
 To test from an empty list, open **Settings → Connections → Bluetooth → Forget saved headphones** and confirm. This disconnects the headset and clears the firmware list, search results and legacy last-device hint on this Metalio. The vendor does not document a command to erase the radio's internal bond memory.
+
+Periodic system-statistics logging is skipped during Bluetooth playback. Continuous audible output on AeroClip earbuds still needs a hardware test.
