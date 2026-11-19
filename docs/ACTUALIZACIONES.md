@@ -16,12 +16,17 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.259](https://github.com/Faga250885/Doceink/releases/tag/v0.75.259).
-- [Firmware OTA 0.75.259](https://github.com/Faga250885/Doceink/releases/download/v0.75.259/Doceink-EInk4.bin).
+- [Versión documentada 0.75.260](https://github.com/Faga250885/Doceink/releases/tag/v0.75.260).
+- [Firmware OTA 0.75.260](https://github.com/Faga250885/Doceink/releases/download/v0.75.260/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.260
+
+- La búsqueda manual de audífonos mantiene su ventana de 30 segundos cuando el módulo tarda en confirmar el modo de transmisión. Si llega tarde el aviso de inicio, se conservan los resultados recibidos.
+- Al eliminar el último audífono guardado con un enlace sin identificar, Metalio solicita volver al altavoz.
 
 ## Novedades de 0.75.259
 

@@ -16,12 +16,17 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.259](https://github.com/Faga250885/Doceink/releases/tag/v0.75.259).
-- [OTA firmware: 0.75.259](https://github.com/Faga250885/Doceink/releases/download/v0.75.259/Doceink-EInk4.bin).
+- [Documented version: 0.75.260](https://github.com/Faga250885/Doceink/releases/tag/v0.75.260).
+- [OTA firmware: 0.75.260](https://github.com/Faga250885/Doceink/releases/download/v0.75.260/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.260
+
+- Manual headphone discovery keeps its 30-second window when transmitter acknowledgement is delayed. A late start event preserves results already received.
+- Forgetting the last saved headset while an unidentified link is active requests a return to the speaker.
 
 ## What's new in 0.75.259
 
