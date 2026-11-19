@@ -1,4 +1,4 @@
-Doceink 0.75.261 - Third-party AAC decoder notice
+Doceink 0.75.263 - Third-party AAC decoder notice
 
 Espressif esp_audio_codec AAC decoder, esp-adf-libs commit 7162d32381d6e1f8c8cba2ee5edcbfe82bc964b1.
 https://github.com/espressif/esp-adf-libs/tree/7162d32381d6e1f8c8cba2ee5edcbfe82bc964b1/esp_audio_codec
