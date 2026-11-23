@@ -16,12 +16,17 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.263](https://github.com/Faga250885/Doceink/releases/tag/v0.75.263).
-- [Firmware OTA 0.75.263](https://github.com/Faga250885/Doceink/releases/download/v0.75.263/Doceink-EInk4.bin).
+- [Versión documentada 0.75.284](https://github.com/Faga250885/Doceink/releases/tag/v0.75.284).
+- [Firmware OTA 0.75.284](https://github.com/Faga250885/Doceink/releases/download/v0.75.284/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.284
+
+- El fondo **Calendario y clima** divide la pantalla en dos mitades. Arriba muestra el mes con el día de hoy resaltado y abajo el pronóstico guardado, con intervalos de dos horas.
+- En **Ajustes → Pantalla → Fondos**, activa **En espera**, **Apagado** o ambos. El fondo usa los datos guardados y se puede mostrar sin Wi-Fi.
 
 ## Novedades de 0.75.263
 

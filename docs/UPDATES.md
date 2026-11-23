@@ -16,12 +16,17 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.263](https://github.com/Faga250885/Doceink/releases/tag/v0.75.263).
-- [OTA firmware: 0.75.263](https://github.com/Faga250885/Doceink/releases/download/v0.75.263/Doceink-EInk4.bin).
+- [Documented version: 0.75.284](https://github.com/Faga250885/Doceink/releases/tag/v0.75.284).
+- [OTA firmware: 0.75.284](https://github.com/Faga250885/Doceink/releases/download/v0.75.284/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.284
+
+- The **Calendar and weather** background splits the screen evenly. The top half shows the month with today's date highlighted. The bottom half shows the saved forecast in two-hour intervals.
+- In the display's background settings, turn on **Standby**, **Power-off**, or both. The background can display the saved forecast offline.
 
 ## What's new in 0.75.263
 
