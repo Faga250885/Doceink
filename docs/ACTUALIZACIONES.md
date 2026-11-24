@@ -16,12 +16,18 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.284](https://github.com/Faga250885/Doceink/releases/tag/v0.75.284).
-- [Firmware OTA 0.75.284](https://github.com/Faga250885/Doceink/releases/download/v0.75.284/Doceink-EInk4.bin).
+- [Versión documentada 0.75.285-rtc1](https://github.com/Faga250885/Doceink/releases/tag/v0.75.285-rtc1).
+- [Firmware OTA 0.75.285-rtc1](https://github.com/Faga250885/Doceink/releases/download/v0.75.285-rtc1/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.285-rtc1
+
+- El fondo **Calendario y clima** usa la tipografía y la alineación de los widgets de inicio. La fecha y la hora de la última actualización del clima aparecen juntas a la derecha, tanto en espera como al apagar el equipo.
+- Puedes comprobar si tu Metalio arranca automáticamente un minuto después de apagarse. Desconecta el USB y abre **Ajustes → Sistema → Energía → Probar encendido en 1 minuto**. La prueba solo empieza al pulsar **Apagar y probar**.
+- Espera 90 segundos sin tocar el botón. Si aparece el logo de arranque por sí solo cerca del minuto, la prueba funcionó en tu equipo. Si sigue apagado, enciéndelo con el botón y vuelve a **Energía** para consultar si el temporizador del reloj llegó a vencer.
 
 ## Novedades de 0.75.284
 

@@ -16,12 +16,18 @@ Normal updates preserve accounts, settings and microSD files. A clean USB instal
 ## Downloads
 
 - [Latest release](https://github.com/Faga250885/Doceink/releases/latest).
-- [Documented version: 0.75.284](https://github.com/Faga250885/Doceink/releases/tag/v0.75.284).
-- [OTA firmware: 0.75.284](https://github.com/Faga250885/Doceink/releases/download/v0.75.284/Doceink-EInk4.bin).
+- [Documented version: 0.75.285-rtc1](https://github.com/Faga250885/Doceink/releases/tag/v0.75.285-rtc1).
+- [OTA firmware: 0.75.285-rtc1](https://github.com/Faga250885/Doceink/releases/download/v0.75.285-rtc1/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` contains only the update application. It does not include the bootloader, partition table or complete resource package needed for a fresh installation. For that, use the [clean installation guide](INSTALLATION.md).
 
 Do not use `Metalio-instalacion-limpia.bin` in the Wi-Fi updater. These files are not interchangeable just because both end in `.bin`.
+
+## What's new in 0.75.285-rtc1
+
+- The **Calendar and weather** wallpaper uses the same typography and alignment as the Home widgets. The date and time of the last weather update appear together on the right in standby and at power-off.
+- You can test whether your Metalio starts up automatically one minute after powering off. Unplug USB and open **Settings → System → Power**. Select **Probar encendido en 1 minuto**. The test starts only when you tap **Apagar y probar**.
+- Wait 90 seconds without pressing the power button. If the startup logo appears on its own around the one-minute mark, the test worked on your device. If it stays off, use the power button and return to the same settings page to see whether the clock timer expired.
 
 ## What's new in 0.75.284
 
