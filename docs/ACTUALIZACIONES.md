@@ -16,12 +16,16 @@ Las actualizaciones normales conservan las cuentas, los ajustes y los archivos d
 ## Descargas
 
 - [Última versión publicada](https://github.com/Faga250885/Doceink/releases/latest).
-- [Versión documentada 0.75.286](https://github.com/Faga250885/Doceink/releases/tag/v0.75.286).
-- [Firmware OTA 0.75.286](https://github.com/Faga250885/Doceink/releases/download/v0.75.286/Doceink-EInk4.bin).
+- [Versión documentada 0.75.287](https://github.com/Faga250885/Doceink/releases/tag/v0.75.287).
+- [Firmware OTA 0.75.287](https://github.com/Faga250885/Doceink/releases/download/v0.75.287/Doceink-EInk4.bin).
 
 `Doceink-EInk4.bin` es únicamente la aplicación de actualización. No contiene el arranque, la tabla de particiones ni todo el paquete de recursos necesario para empezar desde cero. Para eso utiliza la [guía de instalación limpia](INSTALACION.md).
 
 No utilices `Metalio-instalacion-limpia.bin` en el actualizador Wi-Fi. No intercambies los archivos por tener ambos extensión `.bin`.
+
+## Novedades de 0.75.287
+
+- En **Galería de fondos → Extra**, activa **Carrusel de imágenes** para standby. Elige el orden por nombre o al azar y un intervalo de 30 min, 1 h, 2 h, 6 h o 24 h. Guarda tus imágenes BMP o A2I1 en `metalio/e-ink/wallpaper/carousel` de la microSD.
 
 ## Novedades de 0.75.286
 
